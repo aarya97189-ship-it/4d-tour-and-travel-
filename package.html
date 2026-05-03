@@ -3,150 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Tour Packages | 4D Tour and Travel</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Premium Tour Packages | 4D Tour and Travel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; background: #f8f9fa; color: #333; }
-        nav { background: #111; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
-        .logo { color: white; font-size: 22px; font-weight: 700; text-decoration: none; text-transform: uppercase; }
-        .logo span { color: #f39c12; }
-        nav a { color: white; text-decoration: none; margin-left: 20px; font-size: 13px; font-weight: 600; }
+        body { font-family: 'Poppins', sans-serif; background: #f4f7f6; color: #333; }
 
-        .header { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1548013146-72479768bbaa?auto=format&fit=crop&w=1500&q=80'); padding: 80px 20px; text-align: center; color: white; background-size: cover; background-position: center; }
+        /* Navigation with Logo */
+        nav { background: #000; padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; border-bottom: 2px solid #f39c12; }
+        .logo-box { display: flex; align-items: center; text-decoration: none; }
+        .logo-img { height: 55px; width: 55px; border-radius: 50%; background: white; border: 2px solid #f39c12; margin-right: 12px; }
+        .logo-text { color: white; font-size: 20px; font-weight: 700; font-family: 'Montserrat'; }
+        .logo-text span { color: #f39c12; }
+        nav a.nav-link { color: white; text-decoration: none; margin-left: 20px; font-size: 13px; font-weight: 600; text-transform: uppercase; }
+
+        /* Header Area */
+        .header { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1506461883276-594a12b11cf3?auto=format&fit=crop&w=1500&q=80'); padding: 80px 20px; text-align: center; color: white; }
+        .header h1 { font-size: 38px; font-family: 'Montserrat'; margin-bottom: 10px; }
+
+        /* Package Grid */
+        .container { padding: 50px 7%; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.05); transition: 0.4s; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.15); }
         
-        .container { padding: 50px 8%; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: 0.3s; border: 1px solid #eee; }
-        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
-        .card-img { height: 180px; background-size: cover; background-position: center; }
-        .card-body { padding: 20px; }
-        .card-body h3 { font-size: 18px; margin-bottom: 10px; color: #1a252f; font-family: 'Montserrat', sans-serif; }
-        .card-body p { font-size: 13px; color: #666; margin-bottom: 15px; height: 40px; overflow: hidden; }
-        .price { font-weight: 700; color: #f39c12; display: block; margin-bottom: 15px; border-top: 1px solid #f4f4f4; padding-top: 10px; }
-        .btn { display: block; background: #1a252f; color: white; text-align: center; padding: 10px; text-decoration: none; border-radius: 5px; font-size: 14px; font-weight: 600; }
+        /* Images for Packages */
+        .card-img { height: 210px; background-size: cover; background-position: center; }
+        .card-content { padding: 25px; }
+        .card-content h3 { font-size: 20px; margin-bottom: 10px; color: #1a252f; font-family: 'Montserrat'; }
+        .card-content p { font-size: 14px; color: #666; margin-bottom: 20px; line-height: 1.6; height: 45px; overflow: hidden; }
+        
+        .footer-card { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 15px; }
+        .price { color: #f39c12; font-weight: 700; }
+        .btn { background: #1a252f; color: white; padding: 10px 18px; text-decoration: none; border-radius: 5px; font-size: 14px; font-weight: 600; transition: 0.3s; }
         .btn:hover { background: #f39c12; }
 
-        footer { background: #111; color: white; padding: 40px; text-align: center; margin-top: 40px; }
+        /* Footer */
+        footer { background: #111; color: white; padding: 50px 10%; text-align: center; }
+        .footer-logo { height: 60px; border-radius: 50%; background: white; margin-bottom: 20px; border: 2px solid #f39c12; }
     </style>
 </head>
 <body>
 
 <nav>
-    <a href="index.html" class="logo">4D <span>TRAVELS</span></a>
-    <div><a href="index.html">HOME</a><a href="contact.html">CONTACT</a></div>
+    <a href="index.html" class="logo-box">
+        <img src="1000047264.png" class="logo-img" alt="4D Logo">
+        <div class="logo-text">4D <span>TRAVELS</span></div>
+    </a>
+    <div>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+    </div>
 </nav>
 
 <div class="header">
-    <h1>Humari Best Selling Yatra Packages</h1>
-    <p>Safe, Luxury aur Affordable Tours poore Bharat ke liye</p>
+    <h1>Our Luxury Tour Packages</h1>
+    <p>Discover India with 4D Tour and Travel</p>
 </div>
 
 <div class="container">
     <div class="card">
-        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=500&q=80')"></div>
-        <div class="card-body">
-            <h3>Chardham Yatra (10 Nights)</h3>
-            <p>Yamunotri, Gangotri, Kedarnath aur Badrinath ka complete package.</p>
-            <span class="price">Premium Service & Stay</span>
-            <a href="tel:9045066598" class="btn">Abhi Book Karein</a>
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=600&q=80')"></div>
+        <div class="card-content">
+            <h3>Pavitra Chardham Yatra</h3>
+            <p>10-12 Days complete spiritual journey of Uttarakhand.</p>
+            <div class="footer-card"><span class="price">Luxury Tour</span><a href="tel:9045066598" class="btn">Book Now</a></div>
         </div>
     </div>
 
     <div class="card">
-        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1548013146-72479768bbaa?w=500&q=80')"></div>
-        <div class="card-body">
-            <h3>Mussoorie - Dhanaulti</h3>
-            <p>Kempty Falls, Surkanda Devi aur Mall Road local sightseeing.</p>
-            <span class="price">Weekend Special Plan</span>
-            <a href="tel:9045066598" class="btn">Enquiry Karein</a>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1524443169398-9aa1ceab6784?w=500&q=80')"></div>
-        <div class="card-body">
-            <h3>Nainital - Jim Corbett</h3>
-            <p>Lake Tour, Naini Peak aur Corbett National Park Jungle Safari.</p>
-            <span class="price">Family Adventure Tour</span>
-            <a href="tel:9045066598" class="btn">Details Mangayein</a>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1621508650036-7170140c1f30?w=500&q=80')"></div>
-        <div class="card-body">
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1621508650036-7170140c1f30?w=600&q=80')"></div>
+        <div class="card-content">
             <h3>Do Dham (Kedarnath-Badrinath)</h3>
-            <p>Spiritual journey Kedarnath aur Badrinath ke liye (5-6 Days).</p>
-            <span class="price">Customized Itinerary</span>
-            <a href="tel:9045066598" class="btn">Abhi Call Karein</a>
+            <p>Special 6 days tour for Kedarnath and Badrinath darshan.</p>
+            <div class="footer-card"><span class="price">Most Booked</span><a href="tel:9045066598" class="btn">Enquire</a></div>
         </div>
     </div>
 
     <div class="card">
-        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1589136142558-9ca63a9f0c2e?w=500&q=80')"></div>
-        <div class="card-body">
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1548013146-72479768bbaa?w=600&q=80')"></div>
+        <div class="card-content">
+            <h3>Mussoorie & Dhanaulti</h3>
+            <p>Explore Mall Road, Kempty Falls, and Surkanda Devi.</p>
+            <div class="footer-card"><span class="price">Weekend Deal</span><a href="tel:9045066598" class="btn">Call Now</a></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1524443169398-9aa1ceab6784?w=600&q=80')"></div>
+        <div class="card-content">
+            <h3>Nainital - Jim Corbett</h3>
+            <p>Beautiful Lake Tour and thrilling Jungle Safari.</p>
+            <div class="footer-card"><span class="price">Family Special</span><a href="tel:9045066598" class="btn">Book</a></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1590050752117-23a923f0c391?w=600&q=80')"></div>
+        <div class="card-content">
+            <h3>Auli Skiing Adventure</h3>
+            <p>Snow adventure and Asia's longest ropeway experience.</p>
+            <div class="footer-card"><span class="price">Winter Tour</span><a href="tel:9045066598" class="btn">Details</a></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1593181629936-11c609b8db9b?w=600&q=80')"></div>
+        <div class="card-content">
+            <h3>Royal Rajasthan Tour</h3>
+            <p>Jaipur, Jodhpur, and Udaipur heritage experience.</p>
+            <div class="footer-card"><span class="price">Pan India</span><a href="tel:9045066598" class="btn">Rates</a></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1589136142558-9ca63a9f0c2e?w=600&q=80')"></div>
+        <div class="card-content">
             <h3>Chopta - Tungnath Trek</h3>
-            <p>World's highest Shiva temple aur Chandrashila trek experience.</p>
-            <span class="price">Nature & Adventure</span>
-            <a href="tel:9045066598" class="btn">Plan My Trip</a>
+            <p>Peaceful stay in the 'Mini Switzerland' of India.</p>
+            <div class="footer-card"><span class="price">Nature Trip</span><a href="tel:9045066598" class="btn">Book</a></div>
         </div>
     </div>
 
     <div class="card">
-        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1590050752117-23a923f0c391?w=500&q=80')"></div>
-        <div class="card-body">
-            <h3>Auli Skiing Tour</h3>
-            <p>Joshimath to Auli ropeway aur snow adventure activities.</p>
-            <span class="price">Winter Special</span>
-            <a href="tel:9045066598" class="btn">Book Now</a>
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1605649440419-44fbc966df30?w=600&q=80')"></div>
+        <div class="card-content">
+            <h3>Shimla - Manali Tour</h3>
+            <p>Kullu, Manali, and Rohtang Pass luxury tour.</p>
+            <div class="footer-card"><span class="price">Honeymoon Spl.</span><a href="tel:9045066598" class="btn">Enquire</a></div>
         </div>
     </div>
 
     <div class="card">
-        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1593181629936-11c609b8db9b?w=500&q=80')"></div>
-        <div class="card-body">
-            <h3>Rajasthan Royal Tour</h3>
-            <p>Jaipur, Jodhpur aur Jaisalmer ka royal desert experience.</p>
-            <span class="price">All India Taxi Support</span>
-            <a href="tel:9045066598" class="btn">Rates Jaaniye</a>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1605649440419-44fbc966df30?w=500&q=80')"></div>
-        <div class="card-body">
-            <h3>Shimla - Manali Combo</h3>
-            <p>Rohtang Pass, Solang Valley aur Mall Road tour (6 Nights).</p>
-            <span class="price">Honeymoon Special</span>
-            <a href="tel:9045066598" class="btn">Price Check Karein</a>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1524492707947-2f85a6e4194a?w=500&q=80')"></div>
-        <div class="card-body">
-            <h3>Golden Triangle Tour</h3>
-            <p>Delhi, Agra (Taj Mahal) aur Jaipur ka complete historical tour.</p>
-            <span class="price">Luxury Sedan/SUV</span>
-            <a href="tel:9045066598" class="btn">Book Cab</a>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1610482299451-93108c903a58?w=500&q=80')"></div>
-        <div class="card-body">
-            <h3>Valley of Flowers Trek</h3>
-            <p>UNESCO World Heritage site ka mesmerizing floral experience.</p>
-            <span class="price">July to Sept Special</span>
-            <a href="tel:9045066598" class="btn">Enquire Now</a>
-        </div>
-    </div>
-</div>
-
-<footer>
-    <p>Contact: 9045066598 | 9643586598</p>
-    <p>&copy; 2026 4D Tour and Travel - India's Trusted Travel Partner</p>
-</footer>
-
-</body>
-</html>
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1564507592333-c60657eaa0ae?w=600&q=80')"></div>
+        <div class="card-content">
+            <h3>Golden Triangle (Delhi-Agra)</h3>
+            <p>Taj Mahal and historical sites of Delhi & Jaipur
+                
