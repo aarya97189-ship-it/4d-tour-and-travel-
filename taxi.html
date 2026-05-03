@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Fleet | 4D Tour and Travel | Premium Taxi Services</title>
+    
+    <meta name="description" content="Choose from our wide range of luxury cars - Innova Crysta, Dzire, Urbania, and more. Best taxi fleet in Dehradun and Uttarakhand.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background: #f9f9f9; color: #333; }
+
+        /* Navigation */
+        nav { background: #000; padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; border-bottom: 2px solid #f39c12; }
+        .logo-box { display: flex; align-items: center; text-decoration: none; }
+        .logo-img { height: 50px; width: 50px; border-radius: 50%; background: white; border: 2px solid #f39c12; margin-right: 12px; }
+        .logo-text { color: white; font-size: 18px; font-weight: 700; font-family: 'Montserrat'; }
+        .logo-text span { color: #f39c12; }
+        nav .links a { color: white; text-decoration: none; margin-left: 15px; font-size: 12px; font-weight: 600; text-transform: uppercase; }
+
+        /* Header Area */
+        .fleet-banner { background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1500&q=80'); padding: 60px 20px; text-align: center; color: white; }
+        .fleet-banner h1 { font-size: 32px; font-family: 'Montserrat'; margin-bottom: 10px; }
+
+        /* Fleet Grid */
+        .container { padding: 40px 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .taxi-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border: 1px solid #eee; transition: 0.3s; }
+        .taxi-card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.1); }
+        
+        .taxi-img { height: 180px; background-size: cover; background-position: center; border-bottom: 2px solid #f39c12; }
+        .taxi-info { padding: 20px; }
+        .taxi-info h3 { font-size: 19px; margin-bottom: 12px; color: #1a252f; font-family: 'Montserrat'; border-bottom: 1px solid #f4f4f4; padding-bottom: 8px; }
+        
+        .specs { list-style: none; margin-bottom: 15px; }
+        .specs li { font-size: 13px; color: #555; margin-bottom: 6px; display: flex; align-items: center; }
+        .specs li::before { content: '•'; color: #f39c12; margin-right: 8px; font-weight: bold; font-size: 20px; }
+
+        .btn-call { display: block; background: #1a252f; color: white; text-align: center; padding: 10px; text-decoration: none; border-radius: 5px; font-size: 14px; font-weight: 600; transition: 0.3s; }
+        .btn-call:hover { background: #f39c12; }
+
+        footer { background: #111; color: #888; padding: 40px; text-align: center; font-size: 13px; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo-box">
+        <img src="1000047264.png" class="logo-img" alt="4D Travels Logo">
+        <div class="logo-text">4D <span>TRAVELS</span></div>
+    </a>
+    <div class="links">
+        <a href="index.html">Home</a>
+        <a href="package.html">Packages</a>
+        <a href="tel:9045066598">Call</a>
+    </div>
+</nav>
+
+<div class="fleet-banner">
+    <h1>Our Fleet & Vehicles</h1>
+    <p>Premium Cabs for Every Group Size & Budget</p>
+</div>
+
+<div class="container">
+    <div class="taxi-card">
+        <div class="taxi-img" style="background-image: url('https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=500')"></div>
+        <div class="taxi-info">
+            <h3>Maruti Suzuki Dzire</h3>
+            <ul class="specs"><li>4+1 Seater</li><li>AC & Power Windows</li><li>Best for Small Families</li></ul>
+            <a href="tel:9045066598" class="btn-call">Book Dzire</a>
+        </div>
+    </div>
+
+    <div class="taxi-card">
+        <div class="taxi-img" style="background-image: url('https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=500')"></div>
+        <div class="taxi-info">
+            <h3>Hyundai Aura</h3>
+            <ul class="specs"><li>4+1 Seater</li><li>Smooth Ride & Comfort</li><li>Ideal for City & Outstation</li></ul>
+            <a href="tel:9045066598" class="btn-call">Book Aura</a>
+        </div>
+    </div>
+
+    <div class="taxi-card">
+        <div class="taxi-img" style="background-image: url('https://images.unsplash.com/photo-1590362891991-f776e747a588?w=500')"></div>
+        <div class="taxi-info">
+            <h3>Maruti Fronx (SUV Style)</h3>
+            <ul class="specs"><li>4+1 Seater</li><li>Compact SUV Experience</li><li>Stylish & Reliable</li></ul>
+            <a href="tel:9045066598" class="btn-call">Book Fronx</a>
+        </div>
+    </div>
+
+    <div class="taxi-card">
+        <div class="taxi-img" style="background-image: url('https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=500')"></div>
+        <div class="taxi-info">
+            <h3>Honda Amaze</h3>
+            <ul class="specs"><li>4+1 Seater</li><li>Premium Sedan Comfort</li><li>Ample Boot Space</li></ul>
+            <a href="tel:9045066598" class="btn-call">Book Amaze</a>
+        </div>
+    </div>
+
+    <div class="taxi-card">
+        <div class="taxi-img" style="background-image: url('
+          
