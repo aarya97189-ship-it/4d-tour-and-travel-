@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4D Tour and Travel | Premium All India Tour Packages</title>
+    <title>4D Tour and Travel | All India Premium Tour Packages</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -78,12 +78,13 @@
             align-items: center;
             justify-content: center;
         }
-        .slide.active { opacity: 1; }
+        .slide.active { opacity: 1; z-index: 2; }
         .slide::before {
             content: '';
             position: absolute;
             width: 100%; height: 100%;
             background: rgba(0, 0, 0, 0.6);
+            top: 0; left: 0;
         }
         .hero-content {
             position: relative;
@@ -93,7 +94,7 @@
             padding: 0 20px;
             z-index: 10;
         }
-        .hero-content h2 { font-size: 42px; margin-bottom: 15px; }
+        .hero-content h2 { font-size: 42px; margin-bottom: 15px; line-height: 1.2; }
         .hero-content h2 span { color: #FFD700; }
         .hero-content p { font-size: 18px; margin-bottom: 25px; }
         .btn-gold {
@@ -104,40 +105,90 @@
 
         /* SECTION HEADERS */
         .section-title {
-            text-align: center; margin: 60px 0 30px 0;
+            text-align: center; margin: 60px 0 40px 0;
         }
         .section-title h2 { font-size: 32px; color: #0A192F; margin-bottom: 10px; }
         .section-title p { color: #777; }
 
-        /* PACKAGES GRID LAYOUT */
-        .package-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            margin-bottom: 50px;
+        /* ALL 11 PACKAGES BLOCK DISPLAY */
+        .packages-list-container {
+            display: block;
+            width: 100%;
+            margin-bottom: 60px;
         }
-        .package-card {
-            background: white; border-radius: 10px; overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08); display: flex; flex-direction: column;
+        .package-row-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            border: 1px solid #eef2f5;
         }
-        .card-img { height: 220px; position: relative; }
-        .card-img img { width: 100%; height: 100%; object-fit: cover; }
-        .badge {
-            position: absolute; top: 15px; left: 15px;
-            background: #0A192F; color: #FFD700; padding: 5px 12px;
-            font-size: 12px; font-weight: bold; border-radius: 20px;
+        .item-img-side {
+            flex: 1 1 350px;
+            height: 250px;
+            position: relative;
         }
-        .card-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
-        .card-body h3 { font-size: 20px; color: #0A192F; margin-bottom: 10px; }
-        .card-body p { font-size: 14px; color: #555; line-height: 1.5; margin-bottom: 15px; flex-grow: 1; }
-        .card-footer {
-            display: flex; justify-content: space-between; align-items: center;
-            border-top: 1px solid #eee; padding-top: 15px;
+        .item-img-side img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
-        .price { color: #27AE60; font-weight: bold; font-size: 18px; }
-        .book-btn {
-            background: #0A192F; color: white; padding: 8px 15px;
-            text-decoration: none; font-size: 14px; border-radius: 4px;
+        .item-badge {
+            position: absolute;
+            top: 15px; left: 15px;
+            background: #0A192F;
+            color: #FFD700;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 20px;
+        }
+        .item-details-side {
+            flex: 2 1 500px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .item-details-side h3 {
+            font-size: 22px;
+            color: #0A192F;
+            margin-bottom: 12px;
+        }
+        .item-details-side p {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .item-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+        }
+        .item-price {
+            font-size: 18px;
+            color: #27AE60;
+            font-weight: bold;
+        }
+        .item-btn {
+            background: #0A192F;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .item-btn:hover {
+            background: #FFD700;
+            color: #0A192F;
         }
 
         /* FLEET GRID SYSTEM */
@@ -147,13 +198,14 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 25px;
+            margin-top: 20px;
         }
         .fleet-card {
             background: rgba(255,255,255,0.05); padding: 25px;
             border-radius: 8px; text-align: center; border: 1px solid rgba(255,255,255,0.1);
         }
         .fleet-card i { font-size: 40px; color: #FFD700; margin-bottom: 15px; }
-        .fleet-card h3 { margin-bottom: 10px; }
+        .fleet-card h3 { margin-bottom: 10px; font-size: 18px; }
         .fleet-card p { color: #ccc; font-size: 14px; }
 
         /* INQUIRY FORM & LOCATION INFO */
@@ -163,19 +215,21 @@
         }
         .info-side { background: #0A192F; color: white; padding: 40px; border-radius: 12px; }
         .info-side h3 { color: #FFD700; font-size: 24px; margin-bottom: 20px; }
-        .info-item { display: flex; align-items: center; margin-bottom: 20px; }
+        .info-item { display: flex; align-items: center; margin-bottom: 25px; }
         .info-item i { font-size: 20px; color: #FFD700; margin-right: 15px; }
         
         .form-side { padding: 20px; }
         .form-group { margin-bottom: 15px; }
         .form-group label { display: block; margin-bottom: 5px; font-weight: bold; font-size: 14px; }
         .form-group input, .form-group select {
-            width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;
+            width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; outline: none;
         }
         .submit-btn {
             width: 100%; background: #FFD700; color: #0A192F; border: none;
-            padding: 12px; font-weight: bold; font-size: 16px; border-radius: 4px; cursor: pointer;
+            padding: 14px; font-weight: bold; font-size: 16px; border-radius: 6px; cursor: pointer;
+            transition: 0.3s;
         }
+        .submit-btn:hover { background: #0A192F; color: white; }
 
         /* FLOATING WHATSAPP BUTTON */
         .whatsapp-float {
@@ -188,12 +242,13 @@
         }
 
         /* Footer */
-        footer { background: #050C16; color: #888; text-align: center; padding: 20px 0; font-size: 14px; }
+        footer { background: #050C16; color: #888; text-align: center; padding: 25px 0; font-size: 14px; }
 
         @media(max-width: 768px) {
             .contact-box { grid-template-columns: 1fr; }
             .hero-content h2 { font-size: 28px; }
             header .container { flex-direction: column; gap: 10px; }
+            .item-details-side { padding: 20px; }
         }
     </style>
 </head>
@@ -202,7 +257,7 @@
     <div class="top-bar">
         <div class="container">
             <div>
-                <span><i class="fa fa-phone"></i> Call: <strong>+91 9045066598</strong></span>
+                <span><i class="fa fa-phone"></i> Call Support: <strong>+91 9045066598</strong></span>
             </div>
             <div>
                 <span><i class="fa fa-envelope"></i> info@4dtaxiservice.in</span>
@@ -217,7 +272,7 @@
             </div>
             <nav>
                 <a href="#home">Home</a>
-                <a href="#packages">Packages</a>
+                <a href="#packages">Tour Packages</a>
                 <a href="#fleet">Our Fleet</a>
                 <a href="#contact">Get Quote</a>
             </nav>
@@ -229,13 +284,13 @@
             <div class="hero-content">
                 <h2>Premium All India <span>Tour Packages</span></h2>
                 <p>Explore beautiful destinations across India with top-tier comfort and experienced drivers.</p>
-                <a href="#contact" class="btn-gold">Plan Journey</a>
+                <a href="#contact" class="btn-gold">Plan Journey Now</a>
             </div>
         </div>
         <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1600&q=80');">
             <div class="hero-content">
-                <h2>Explore Scenic <span>Uttarakhand</span></h2>
-                <p>Specialized Chardham Yatra, Mussoorie, and Nainital tour packages with safe hill driving.</p>
+                <h2>Explore Beautiful <span>Uttarakhand</span></h2>
+                <p>Specialized Chardham Yatra, Mussoorie, and Nainital tour packages with safe hill driving support.</p>
                 <a href="https://wa.me/919045066598" class="btn-gold" target="_blank">Chat On WhatsApp</a>
             </div>
         </div>
@@ -244,108 +299,143 @@
     <section id="packages" class="container">
         <div class="section-title">
             <h2>Our Custom Holiday Packages</h2>
-            <p>Select from our highly demanding all-inclusive luxury travel itineraries</p>
+            <p>Explore our highly demanding all-inclusive luxury travel itineraries listed below</p>
         </div>
 
-        <div class="package-grid">
-            <div class="package-card">
-                <div class="card-img"><img src="https://images.unsplash.com/photo-1540206395-68808572332f?w=500" alt="Goa"><span class="badge">Goa</span></div>
-                <div class="card-body">
-                    <h3>Goa Tour Package</h3>
-                    <p>Enjoy pristine beaches, night-life, historical Portuguese churches, and cruise rides with dedicated local cabs.</p>
-                    <div class="card-footer"><span class="price">Best Price</span><a href="#contact" class="book-btn">Inquire</a></div>
+        <div class="packages-list-container">
+            
+            <div class="package-row-item">
+                <div class="item-img-side">
+                    <img src="https://images.unsplash.com/photo-1540206395-68808572332f?w=600" alt="Goa">
+                    <span class="item-badge">Beach Holiday</span>
+                </div>
+                <div class="item-details-side">
+                    <h3>Premium Goa Tour Package</h3>
+                    <p>Relax at premium beach resorts, explore historical Portuguese forts, enjoy night life, sunset cruises, and experience smooth local sightseeing with a dedicated luxury outstation taxi cab.</p>
+                    <div class="item-footer"><span class="item-price">Best Price Guaranteed</span><a href="#contact" class="item-btn">Book Now</a></div>
                 </div>
             </div>
 
-            <div class="package-card">
-                <div class="card-img"><img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=500" alt="Manali"><span class="badge">Himachal</span></div>
-                <div class="card-body">
-                    <h3>Manali Tour Package</h3>
-                    <p>Explore Hadimba Temple, Solang Valley adventures, and breathtaking snow viewpoints near Rohtang Pass.</p>
-                    <div class="card-footer"><span class="price">Best Price</span><a href="#contact" class="book-btn">Inquire</a></div>
+            <div class="package-row-item">
+                <div class="item-img-side">
+                    <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=600" alt="Manali">
+                    <span class="item-badge">Himachal Hills</span>
+                </div>
+                <div class="item-details-side">
+                    <h3>Luxury Manali Tour Package</h3>
+                    <p>Witness the snow-capped mountains of Solang Valley, Rohtang Pass, Hadimba Temple, and enjoy absolute comfort on local mall road sightseeing trips with highly trained hill station drivers.</p>
+                    <div class="item-footer"><span class="item-price">Best Price Guaranteed</span><a href="#contact" class="item-btn">Book Now</a></div>
                 </div>
             </div>
 
-            <div class="package-card">
-                <div class="card-img"><img src="https://images.unsplash.com/photo-1589308078059-be1415eab4c3?w=500" alt="Spiti"><span class="badge">Adventure</span></div>
-                <div class="card-body">
-                    <h3>Spiti Valley Tour Package</h3>
-                    <p>A thrilling road trip to the cold desert of Spiti, visiting ancient monasteries and Chandratal lake.</p>
-                    <div class="card-footer"><span class="price">Best Price</span><a href="#contact" class="book-btn">Inquire</a></div>
+            <div class="package-row-item">
+                <div class="item-img-side">
+                    <img src="https://images.unsplash.com/photo-1589308078059-be1415eab4c3?w=600" alt="Spiti">
+                    <span class="item-badge">Adventure Drive</span>
+                </div>
+                <div class="item-details-side">
+                    <h3>Epic Spiti Valley Tour Package</h3>
+                    <p>An unforgettable rugged mountain drive covering Kaza, Key Monastery, Hikkim, and the mesmerizing Chandratal Lake using heavy high-ground clearance commercial SUVs.</p>
+                    <div class="item-footer"><span class="item-price">Best Price Guaranteed</span><a href="#contact" class="item-btn">Book Now</a></div>
                 </div>
             </div>
 
-            <div class="package-card">
-                <div class="card-img"><img src="https://images.unsplash.com/photo-1531572753322-ad063cecc140?w=500" alt="Uttarakhand"><span class="badge">Devbhoomi</span></div>
-                <div class="card-body">
-                    <h3>Uttarakhand Tour Package</h3>
-                    <p>Immerse yourself into a complete natural escape covering mountains, lakes, and spiritual valleys.</p>
-                    <div class="card-footer"><span class="price">Best Price</span><a href="#contact" class="book-btn">Inquire</a></div>
+            <div class="package-row-item">
+                <div class="item-img-side">
+                    <img src="https://images.unsplash.com/photo-1531572753322-ad063cecc140?w=600" alt="Uttarakhand">
+                    <span class="item-badge">Devbhoomi Special</span>
+                </div>
+                <div class="item-details-side">
+                    <h3>Classic Uttarakhand Tour Package</h3>
+                    <p>A beautiful wholesome state package encompassing pristine green valleys, mountain view ridges, old heritage temples, and cascading waterfalls across the region.</p>
+                    <div class="item-footer"><span class="item-price">Best Price Guaranteed</span><a href="#contact" class="item-btn">Book Now</a></div>
                 </div>
             </div>
 
-            <div class="package-card">
-                <div class="card-img"><img src="https://images.unsplash.com/photo-1597074866923-dc0589150358?w=500" alt="Mussoorie"><span class="badge">Hill Station</span></div>
-                <div class="card-body">
-                    <h3>Mussoorie Tour Package</h3>
-                    <p>Beautiful trip to Kempty falls, Mall road shopping lanes, and panoramic viewpoints of Dhanaulti hills.</p>
-                    <div class="card-footer"><span class="price">Best Price</span><a href="#contact" class="book-btn">Inquire</a></div>
+            <div class="package-row-item">
+                <div class="item-img-side">
+                    <img src="https://images.unsplash.com/photo-1597074866923-dc0589150358?w=600" alt="Mussoorie">
+                    <span class="item-badge">Queen of Hills</span>
+                </div>
+                <div class="item-details-side">
+                    <h3>Refreshing Mussoorie Tour Package</h3>
+                    <p>Visit the famous Kempty Falls, Gun Hill point, Lal Tibba, Company Garden, and enjoy your evening walks on the beautiful mist-filled Mall Road with premium family transport comfort.</p>
+                    <div class="item-footer"><span class="item-price">Best Price Guaranteed</span><a href="#contact" class="item-btn">Book Now</a></div>
                 </div>
             </div>
 
-            <div class="package-card">
-                <div class="card-img"><img src="https://images.unsplash.com/photo-1477587458883-471a5ed94245?w=500" alt="Rajasthan"><span class="badge">Heritage</span></div>
-                <div class="card-body">
-                    <h3>Royal Rajasthan Tour</h3>
-                    <p>Witness majestic palaces, desert camel safaris, and rich heritage sites across Jaipur, Udaipur, and Jodhpur.</p>
-                    <div class="card-footer"><span class="price">Best Price</span><a href="#contact" class="book-btn">Inquire</a></div>
+            <div class="package-row-item">
+                <div class="item-img-side">
+                    <img src="https://images.unsplash.com/photo-1477587458883-471a5ed94245?w=600" alt="Rajasthan">
+                    <span class="item-badge">Royal Heritage</span>
+                </div>
+                <div class="item-details-side">
+                    <h3>Royal Rajasthan Tour Package</h3>
+                    <p>Explore majestic forts, royal palaces, desert camel safaris, and colorful historic local markets across the cultural hubs of Jaipur, Udaipur, and Jodhpur.</p>
+                    <div class="item-footer"><span class="item-price">Best Price Guaranteed</span><a href="#contact" class="item-btn">Book Now</a></div>
                 </div>
             </div>
 
-            <div class="package-card">
-                <div class="card-img"><img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=500" alt="Chardham"><span class="badge">Spiritual</span></div>
-                <div class="card-body">
-                    <h3>Char Dham Tour Package</h3>
-                    <p>Complete sacred pilgrimage to Yamunotri, Gangotri, holy Kedarnath, and Badrinath temples with bio-biometrics support.</p>
-                    <div class="card-footer"><span class="price">Best Price</span><a href="#contact" class="book-btn">Inquire</a></div>
+            <div class="package-row-item">
+                <div class="item-img-side">
+                    <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=600" alt="Chardham">
+                    <span class="item-badge">Spiritual Pilgrimage</span>
+                </div>
+                <div class="item-details-side">
+                    <h3>Char Dham Yatra Tour Package</h3>
+                    <p>A sacred and safe pilgrimage journey covering Yamunotri, Gangotri, holy Kedarnath, and Badrinath temples with full biometric slip coordination and premium vehicle arrangements.</p>
+                    <div class="item-footer"><span class="item-price">Best Price Guaranteed</span><a href="#contact" class="item-btn">Book Now</a></div>
                 </div>
             </div>
 
-            <div class="package-card">
-                <div class="card-img"><img src="https://images.unsplash.com/photo-1622308644420-b30694086422?w=500" alt="Delhi to Mussoorie"><span class="badge">Weekend Route</span></div>
-                <div class="card-body">
-                    <h3>Delhi to Mussoorie Tour</h3>
-                    <p>Hassle-free outstation cab pickups from Delhi NCR straight to Mussoorie hill hotels with zero transit delays.</p>
-                    <div class="card-footer"><span class="price">Best Price</span><a href="#contact" class="book-btn">Inquire</a></div>
+            <div class="package-row-item">
+                <div class="item-img-side">
+                    <img src="https://images.unsplash.com/photo-1622308644420-b30694086422?w=600" alt="Delhi to Mussoorie">
+                    <span class="item-badge">Inter-State Route</span>
+                </div>
+                <div class="item-details-side">
+                    <h3>Delhi to Mussoorie Tour Package</h3>
+                    <p>Hassle-free outstation commercial cab picking you up from Delhi Airport, railway station, or your doorstep straight to the hill resorts of Mussoorie with zero transit delays.</p>
+                    <div class="item-footer"><span class="item-price">Best Price Guaranteed</span><a href="#contact" class="item-btn">Book Now</a></div>
                 </div>
             </div>
 
-            <div class="package-card">
-                <div class="card-img"><img src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=500" alt="Adi Kailash"><span class="badge">Expedition</span></div>
-                <div class="card-body">
-                    <h3>Adi Kailash Yatra Package</h3>
-                    <p>High altitude spiritual trek and commercial 4x4 SUV setups to explore inner Himalayan spiritual lines.</p>
-                    <div class="card-footer"><span class="price">Best Price</span><a href="#contact" class="book-btn">Inquire</a></div>
+            <div class="package-row-item">
+                <div class="item-img-side">
+                    <img src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=600" alt="Adi Kailash">
+                    <span class="item-badge">Sacred Expedition</span>
+                </div>
+                <div class="item-details-side">
+                    <h3>Adi Kailash Yatra Tour Package</h3>
+                    <p>A high-altitude spiritual expedition and rugged mountain trek across the Pithoragarh border to view the majestic Adi Kailash peak using professional 4x4 commercial SUVs.</p>
+                    <div class="item-footer"><span class="item-price">Best Price Guaranteed</span><a href="#contact" class="item-btn">Book Now</a></div>
                 </div>
             </div>
 
-            <div class="package-card">
-                <div class="card-img"><img src="https://images.unsplash.com/photo-1610224169550-6a9bc2eb8152?w=500" alt="Nainital"><span class="badge">Lakes Side</span></div>
-                <div class="card-body">
-                    <h3>Scenic Nainital Package</h3>
-                    <p>Memorable boat rows inside Naini Lake, zoo walks, and beautiful mountain viewpoints of Bhimtal region.</p>
-                    <div class="card-footer"><span class="price">Best Price</span><a href="#contact" class="book-btn">Inquire</a></div>
+            <div class="package-row-item">
+                <div class="item-img-side">
+                    <img src="https://images.unsplash.com/photo-1610224169550-6a9bc2eb8152?w=600" alt="Nainital">
+                    <span class="item-badge">Lakes Paradise</span>
+                </div>
+                <div class="item-details-side">
+                    <h3>Scenic Nainital Tour Package</h3>
+                    <p>Enjoy peaceful boat rides in the mango-shaped Naini Lake, explore high-altitude zoos, view Himalayan ranges from Snow View point, and tour Bhimtal and Sattal lakes.</p>
+                    <div class="item-footer"><span class="item-price">Best Price Guaranteed</span><a href="#contact" class="item-btn">Book Now</a></div>
                 </div>
             </div>
 
-            <div class="package-card">
-                <div class="card-img"><img src="https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?w=500" alt="Kumaon"><span class="badge">Nature</span></div>
-                <div class="card-body">
-                    <h3>Complete Kumaon Tour</h3>
-                    <p>Experience peace across Ranikhet meadows, Kausani sunset views, and wildlife exploration in Jim Corbett.</p>
-                    <div class="card-footer"><span class="price">Best Price</span><a href="#contact" class="book-btn">Inquire</a></div>
+            <div class="package-row-item">
+                <div class="item-img-side">
+                    <img src="https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?w=600" alt="Kumaon">
+                    <span class="item-badge">Nature Retreat</span>
+                </div>
+                <div class="item-details-side">
+                    <h3>Complete Kumaon Tour Package</h3>
+                    <p>Experience total serenity across Ranikhet golf meadows, beautiful Kausani valley sunsets, Almora markets, and wildlife safari trails inside Jim Corbett National Park.</p>
+                    <div class="item-footer"><span class="item-price">Best Price Guaranteed</span><a href="#contact" class="item-btn">Book Now</a></div>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -359,17 +449,20 @@
                 <div class="fleet-card">
                     <i class="fa fa-car"></i>
                     <h3>Premium Sedans</h3>
-                    <p>Dzire, Etios, Aura (4+1 Seater)</p>
+                    <p>Swift Dzire, Hyundai Aura, Honda Amaze</p>
+                    <p style="color:#FFD700; margin-top:5px; font-weight:bold;">Capacity: 4+1 Passengers</p>
                 </div>
                 <div class="fleet-card">
                     <i class="fa fa-truck-pickup"></i>
-                    <h3>Luxury SUVs</h3>
-                    <p>Ertiga, Innova Crysta (6+1 Seater)</p>
+                    <h3>Luxury SUVs & Crossovers</h3>
+                    <p>Toyota Innova Crysta, Maruti Ertiga, Fronx</p>
+                    <p style="color:#FFD700; margin-top:5px; font-weight:bold;">Capacity: 6+1 / 7+1 Seater</p>
                 </div>
                 <div class="fleet-card">
                     <i class="fa fa-bus"></i>
                     <h3>Tempo Travellers</h3>
-                    <p>Luxury Force 12, 17, 26 Seater & Urbania</p>
+                    <p>Luxury Force 12, 17, 26 Seater & Force Urbania</p>
+                    <p style="color:#FFD700; margin-top:5px; font-weight:bold;">Capacity: 12 to 26 Seats</p>
                 </div>
             </div>
         </div>
@@ -422,6 +515,8 @@
                             <option value="manali">Luxury Manali Tour Package</option>
                             <option value="mussoorie">Refreshing Mussoorie Tour</option>
                             <option value="nainital">Scenic Nainital Package</option>
+                            <option value="kumaon">Complete Kumaon Tour</option>
+                            <option value="spiti">Epic Spiti Valley Tour</option>
                         </select>
                     </div>
                     <button type="submit" class="submit-btn">Submit Booking Quote</button>
@@ -431,4 +526,26 @@
     </section>
 
     <footer>
-        <p>&copy; 2026 4D Tour and Travel. All Rights Reserved. | Premium Outstation Taxi & Travel Netwo
+        <p>&copy; 2026 4D Tour and Travel. All Rights Reserved. | Premium Outstation Taxi & Travel Network.</p>
+    </footer>
+
+    <a href="https://wa.me/919045066598?text=Hello%204D%20Tour%20and%20Travel,%20I%20am%20interested%20in%20your%20services." class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function startSlider() {
+            slides.forEach(slide => slide.classList.remove('active'));
+            currentSlide++;
+            if (currentSlide > slides.length) { currentSlide = 1 }
+            slides[currentSlide - 1].classList.add('active');
+            setTimeout(startSlider, 4000); // Slider image clean transformation every 4 seconds
+        }
+        startSlider();
+    </script>
+
+</body>
+</html>
