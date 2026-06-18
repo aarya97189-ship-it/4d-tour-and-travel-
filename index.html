@@ -1,100 +1,164 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uttarakhand Tour Package</title>
-    <!-- Font Awesome for WhatsApp Icon -->
+    <title>4D Tour and Travel - Uttarakhand</title>
+    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* Base Reset & Typography */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
-            background-color: #f4f7f6;
-            color: #333;
-            padding-bottom: 60px;
+            background-color: #0b0f19;
+            color: #ffffff;
+            overflow-x: hidden;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Package Card Styling */
-        .package-card {
-            background: #fff;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-        }
-
-        .package-header {
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: white;
-            padding: 30px;
-            text-align: center;
-        }
-
-        .package-header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        /* Itinerary Grid */
-        .itinerary-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            padding: 30px;
-        }
-
-        .day-box {
-            background: #fff;
-            border: 1px solid #e0e0e0;
-            border-radius: 12px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .day-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-        }
-
-        .day-image {
+        /* Luxury Header & Navigation */
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: 200px;
-            object-fit: cover;
+            padding: 20px 50px;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to bottom, rgba(11,15,25,0.9), rgba(11,15,25,0));
         }
 
-        .day-content {
-            padding: 20px;
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #d4af37; /* Gold Theme */
+            text-decoration: none;
+            letter-spacing: 2px;
         }
 
-        .day-title {
-            color: #2c5364;
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            font-weight: bold;
-            border-bottom: 2px solid #f0f0f0;
-            padding-bottom: 5px;
+        .nav-links {
+            display: flex;
+            list-style: none;
         }
 
-        .day-desc {
-            font-size: 0.95rem;
-            line-height: 1.6;
-            color: #555;
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #d4af37;
+        }
+
+        /* Hero Slider Section */
+        .hero-slider {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            animation: sliderAnimation 18s infinite;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Automatic Slider Images (Fixed Missing Photos with Premium Travel Images) */
+        .slide:nth-child(1) {
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1920&q=80');
+            animation-delay: 0s;
+        }
+        .slide:nth-child(2) {
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=1920&q=80');
+            animation-delay: 6s;
+        }
+        .slide:nth-child(3) {
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1626621341515-bbf8a5f60fc0?auto=format&fit=crop&w=1920&q=80');
+            animation-delay: 12s;
+        }
+
+        @keyframes sliderAnimation {
+            0% { opacity: 0; transform: scale(1); }
+            5% { opacity: 1; }
+            33% { opacity: 1; }
+            38% { opacity: 0; transform: scale(1.05); }
+            100% { opacity: 0; }
+        }
+
+        /* Hero Content overlay */
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 10;
+            width: 80%;
+        }
+
+        .hero-content h1 {
+            font-size: 55px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .hero-content h1 span {
+            color: #d4af37;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            color: #e0e0e0;
+        }
+
+        .btn-luxury {
+            display: inline-block;
+            padding: 12px 35px;
+            border: 2px solid #d4af37;
+            color: #d4af37;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 2px;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.4s ease;
+        }
+
+        .btn-luxury:hover {
+            background-color: #d4af37;
+            color: #0b0f19;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
         }
 
         /* Floating WhatsApp Button */
-        .whatsapp-btn {
+        .whatsapp-float {
             position: fixed;
             bottom: 30px;
             right: 30px;
@@ -102,110 +166,63 @@
             color: white;
             width: 60px;
             height: 60px;
-            border-radius: 50px;
+            border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 35px;
-            box-shadow: 2px 5px 15px rgba(0,0,0,0.3);
-            z-index: 1000;
-            transition: transform 0.3s ease;
+            font-size: 32px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            z-index: 9999;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-decoration: none;
         }
 
-        .whatsapp-btn:hover {
+        .whatsapp-float:hover {
             transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
             color: white;
         }
 
-        /* Responsive Design */
+        /* Responsive Mobile Menu */
         @media (max-width: 768px) {
-            .package-header h1 {
-                font-size: 1.8rem;
-            }
-            .whatsapp-btn {
-                bottom: 20px;
-                right: 20px;
-                width: 50px;
-                height: 50px;
-                font-size: 28px;
-            }
+            header { padding: 20px; }
+            .nav-links { display: none; } /* Can be toggled with JS later */
+            .hero-content h1 { font-size: 34px; }
+            .hero-content p { font-size: 14px; }
+            .whatsapp-float { width: 50px; height: 50px; font-size: 26px; bottom: 20px; right: 20px; }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="package-card">
-            <!-- Header Section -->
-            <div class="package-header">
-                <h1>उत्तराखंड देवभूमि टूर पैकेज</h1>
-                <p>एक यादगार और आरामदायक सफर हमारे साथ</p>
-            </div>
+    <!-- Luxury Header Section -->
+    <header>
+        <a href="#" class="logo">4D TOUR & TRAVEL</a>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Packages</a></li>
+            <li><a href="#">Fleet</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
 
-            <!-- Itinerary Days Section -->
-            <div class="itinerary-grid">
-                
-                <!-- Day 1 -->
-                <div class="day-box">
-                    <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80" alt="Dehradun" class="day-image">
-                    <div class="day-content">
-                        <div class="day-title">दिन 1: देहरादून आगमन</div>
-                        <p class="day-desc">देहरादून पहुँचने पर हमारी टीम आपका स्वागत करेगी। होटल में चेक-इन करने के बाद आप स्थानीय बाज़ारों और प्रसिद्ध स्थलों का आनंद ले सकते हैं।</p>
-                    </div>
-                </div>
-
-                <!-- Day 2 -->
-                <div class="day-box">
-                    <img src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=600&q=80" alt="Mussoorie" class="day-image">
-                    <div class="day-content">
-                        <div class="day-title">दिन 2: मसूरी की सैर</div>
-                        <p class="day-desc">पहाड़ों की रानी मसूरी के लिए प्रस्थान। यहाँ आप केंप्टी फॉल, माल रोड और गन हिल जैसी खूबसूरत जगहों का दीदार करेंगे।</p>
-                    </div>
-                </div>
-
-                <!-- Day 3 -->
-                <div class="day-box">
-                    <img src="https://images.unsplash.com/photo-1626621341515-bbf8a5f60fc0?auto=format&fit=crop&w=600&q=80" alt="Rishikesh" class="day-image">
-                    <div class="day-content">
-                        <div class="day-title">दिन 3: ऋषिकेश और हरिद्वार</div>
-                        <p class="day-desc">योग नगरी ऋषिकेश में राम झूला, लक्ष्मण झूला के दर्शन और शाम को हरिद्वार में हर की पौड़ी पर होने वाली विश्व प्रसिद्ध गंगा आरती का दिव्य अनुभव।</p>
-                    </div>
-                </div>
-
-                <!-- Day 4 -->
-                <div class="day-box">
-                    <img src="https://images.unsplash.com/photo-1610016302534-6f67f1c968d8?auto=format&fit=crop&w=600&q=80" alt="Nainital" class="day-image">
-                    <div class="day-content">
-                        <div class="day-title">दिन 4: नैनीताल प्रस्थान</div>
-                        <p class="day-desc">झीलों की नगरी नैनीताल की ओर खूबसूरत सफर। शाम को नैनी झील में बोटिंग का आनंद और मॉल रोड पर टहलने का एक अलग ही मज़ा है।</p>
-                    </div>
-                </div>
-
-                <!-- Day 5 -->
-                <div class="day-box">
-                    <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=600&q=80" alt="Local Sightseeing" class="day-image">
-                    <div class="day-content">
-                        <div class="day-title">दिन 5: लोकल साइटसीइंग</div>
-                        <p class="day-desc">नैनीताल के आसपास की अन्य प्रमुख झीलें जैसे भीमताल, सातताल और नौकुचियाताल का भ्रमण। इसके बाद सुंदर नज़ारों के साथ लोकल एडवेंचर।</p>
-                    </div>
-                </div>
-
-                <!-- Day 6 -->
-                <div class="day-box">
-                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80" alt="Departure" class="day-image">
-                    <div class="day-content">
-                        <div class="day-title">दिन 6: वापसी का सफर</div>
-                        <p class="day-desc">यादों का खूबसूरत सफरनामा समेटकर नाश्ते के बाद अपने गंतव्य (रेलवे स्टेशन/एयरपोर्ट) की ओर प्रस्थान।</p>
-                    </div>
-                </div>
-
-            </div>
+    <!-- Hero Background Slider Section -->
+    <div class="hero-slider">
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        
+        <!-- Hero Static Content Overlay -->
+        <div class="hero-content">
+            <h1>Experience Uttarakhand <br>In <span>Pure Luxury</span></h1>
+            <p>Premium Taxi Services & Bespoke Tours Across Devbhoomi</p>
+            <a href="https://wa.me/919045066598?text=Hello!%20I%20want%20to%20book%20a%20tour%20with%204D%20Travels." target="_blank" class="btn-luxury">Book Your Journey</a>
         </div>
     </div>
 
-    <!-- Floating WhatsApp Button (Linked to 9045066598) -->
-    <a href="https://wa.me/919045066598?text=Hello!%20I%20am%20interested%20in%20Uttarakhand%20Tour%20Package." class="whatsapp-btn" target="_blank" title="Chat on WhatsApp">
+    <!-- Floating WhatsApp Action Button (Linked to 9045066598) -->
+    <a href="https://wa.me/919045066598?text=Hello%204D%20Tour%20and%20Travel,%20I%20am%20interested%20in%20your%20services." class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
