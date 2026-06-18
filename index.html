@@ -1,100 +1,279 @@
-<?php
-$page_title = "4D Taxi Service | Outstation Taxi, Tour Packages & One Way Cab";
-include 'includes/header.php';
-?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ======= ADVANCED SEO META TAGS (FOR TOP RANKING) ======= -->
+    <title>Uttarakhand Taxi Service & All India Tour Packages | 4D Tour and Travel</title>
+    <meta name="description" content="Book premium taxi services in Uttarakhand & customized All India tour packages. Luxury fleet including Dzire, Ertiga, Innova Crysta, Tempo Traveller, Urbania, and Luxury Buses. 24/7 reliable service at best rates.">
+    <meta name="keywords" content="Taxi service in Uttarakhand, Chardham Yatra car rental, Dehradun taxi service, Luxury Tempo Traveller Uttarakhand, Delhi to Manali tour package, Innova Crysta rental Dehradun, All India tour packages, 4D Tour and Travel">
+    <meta name="author" content="4D Tour and Travel">
+    
+    <!-- Open Graph Meta Tags (For Social Media Sharing) -->
+    <meta property="og:title" content="Uttarakhand Taxi Service & All India Tour Packages | 4D Tour and Travel">
+    <meta property="og:description" content="Premium car rentals and city-wise holiday packages across India. Best rates for Sedan, SUV, Tempo Traveller, and Luxury Buses.">
+    <meta property="og:url" content="https://4dtaxiservice.in">
+    <meta property="og:type" content="website">
 
-<!-- Hero Section -->
-<section class="hero">
-    <div class="container">
+    <!-- Font Awesome Icons & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ======= HEADER & NAVIGATION ======= -->
+    <header class="main-header">
+        <div class="logo">
+            <h1>4D Tour & Travel</h1>
+        </div>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#packages">Tour Packages</a>
+            <a href="#fleet">Our Fleet</a>
+            <a href="#inquiry">Book Taxi</a>
+            <a href="tel:9045066598" class="nav-call"><i class="fas fa-phone-alt"></i> Call Now</a>
+        </nav>
+    </header>
+
+    <!-- ======= HERO SECTION ======= -->
+    <section id="home" class="hero-section">
         <div class="hero-content">
-            <h1>Book Trusted Taxi Service Across North India</h1>
-            <p>One Way Taxi • Round Trip • Airport Transfer • Tempo Traveller • Tour Packages</p>
-
-            <a href="booking.php" class="btn btn-primary">Book Now</a>
-            <a href="tel:+919999999999" class="btn btn-secondary">Call Now</a>
+            <h2>Premium Taxi Services & Tour Packages Across India</h2>
+            <p>Explore Uttarakhand and major tourist destinations across India in ultimate comfort and luxury.</p>
+            <div class="hero-buttons">
+                <a href="#inquiry" class="btn-primary">Get a Free Quote</a>
+                <a href="https://wa.me/919045066598" class="btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Booking Form -->
-<section class="booking-section">
-    <div class="container">
-        <h2>Quick Taxi Booking</h2>
-
-        <form action="booking.php" method="POST">
-
-            <input type="text" name="name" placeholder="Your Name" required>
-
-            <input type="tel" name="mobile" placeholder="Mobile Number" required>
-
-            <input type="text" name="pickup" placeholder="Pickup Location" required>
-
-            <input type="text" name="drop_location" placeholder="Drop Location" required>
-
-            <input type="date" name="journey_date" required>
-
-            <select name="vehicle">
-                <option>Swift Dzire</option>
-                <option>Ertiga</option>
-                <option>Innova</option>
-                <option>Innova Crysta</option>
-                <option>Tempo Traveller</option>
-            </select>
-
-            <button type="submit">Book Taxi</button>
-
-        </form>
-    </div>
-</section>
-
-<!-- Services -->
-<section class="services">
-    <div class="container">
-
-        <h2>Our Taxi Services</h2>
-
-        <div class="service-box">
-
+    <!-- ======= CITY-WISE TOUR PACKAGES SECTION ======= -->
+    <section id="packages" class="section-container">
+        <h2 class="section-title">Popular All India Tour Packages</h2>
+        <p class="section-subtitle">Explore India with our customized, city-wise premium tour plans</p>
+        
+        <div class="grid-container">
+            <!-- Package 1 -->
             <div class="card">
-                <h3>Outstation Taxi</h3>
-                <p>Affordable taxi service across North India.</p>
+                <div class="card-img-box">
+                    <img src="images/chardham-tour.jpg" alt="Chardham Yatra Tour Package from Dehradun Haridwar" class="card-img">
+                    <span class="badge red">Top Selling</span>
+                </div>
+                <div class="card-body">
+                    <div class="meta-info">
+                        <span><i class="fas fa-clock"></i> 5N / 6D</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Uttarakhand</span>
+                    </div>
+                    <h3>Complete Chardham Yatra</h3>
+                    <p>Sacred pilgrimage tour covering Yamunotri, Gangotri, Kedarnath, and Badrinath with professional hill drivers.</p>
+                    <div class="card-footer">
+                        <span><i class="fas fa-car"></i> Sedan / SUV / Traveller</span>
+                        <a href="#inquiry" class="book-btn">Inquire Now</a>
+                    </div>
+                </div>
             </div>
 
+            <!-- Package 2 -->
             <div class="card">
-                <h3>Airport Transfer</h3>
-                <p>24×7 Airport Pickup & Drop Service.</p>
+                <div class="card-img-box">
+                    <img src="images/himachal-tour.jpg" alt="Himachal Pradesh Tour Package Shimla Manali" class="card-img">
+                    <span class="badge blue">Trending</span>
+                </div>
+                <div class="card-body">
+                    <div class="meta-info">
+                        <span><i class="fas fa-clock"></i> 6N / 7D</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Himachal Tour</span>
+                    </div>
+                    <h3>Shimla & Manali Hill Tour</h3>
+                    <p>Beautiful sightseeing of Solang Valley, Rohtang Pass, and Mall Road. Pickup available from Delhi/Dehradun.</p>
+                    <div class="card-footer">
+                        <span><i class="fas fa-car"></i> Sedan / SUV / Traveller</span>
+                        <a href="#inquiry" class="book-btn">Inquire Now</a>
+                    </div>
+                </div>
             </div>
 
+            <!-- Package 3 -->
             <div class="card">
-                <h3>Tempo Traveller</h3>
-                <p>Luxury Tempo Traveller for Group Tours.</p>
+                <div class="card-img-box">
+                    <img src="images/golden-triangle.jpg" alt="Golden Triangle Tour Package Delhi Agra Jaipur" class="card-img">
+                    <span class="badge gold">Heritage</span>
+                </div>
+                <div class="card-body">
+                    <div class="meta-info">
+                        <span><i class="fas fa-clock"></i> 4N / 5D</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Golden Triangle</span>
+                    </div>
+                    <h3>Delhi - Agra - Jaipur Tour</h3>
+                    <p>Explore India's rich culture and heritage by visiting Taj Mahal, Red Fort, and historic palaces of Jaipur.</p>
+                    <div class="card-footer">
+                        <span><i class="fas fa-car"></i> Sedan / SUV / Bus</span>
+                        <a href="#inquiry" class="book-btn">Inquire Now</a>
+                    </div>
+                </div>
             </div>
-
-            <div class="card">
-                <h3>Tour Packages</h3>
-                <p>Shimla, Manali, Spiti, Kashmir & Uttarakhand Tours.</p>
-            </div>
-
         </div>
+    </section>
 
-    </div>
-</section>
+    <!-- ======= VEHICLE FLEET SECTION (SEDAN TO BUS) ======= -->
+    <section id="fleet" class="section-container bg-light">
+        <h2 class="section-title">Our Premium Fleet & Taxi Services</h2>
+        <p class="section-subtitle">Choose from our wide variety of luxury and well-maintained commercial vehicles</p>
 
-<!-- Popular Routes -->
-<section class="routes">
-    <div class="container">
+        <div class="grid-container">
+            <!-- Fleet 1: Sedan -->
+            <div class="card">
+                <div class="card-img-box">
+                    <img src="images/fleet-sedan.jpg" alt="Sedan Taxi Service Uttarakhand - Dzire, Aura, Amaze" class="card-img">
+                    <span class="badge black">Sedan</span>
+                </div>
+                <div class="card-body">
+                    <h3>Dzire / Aura / Amaze</h3>
+                    <p>Highly economical and ideal for small families, corporate local trips, and long outstation travel.</p>
+                    <ul class="features-list">
+                        <li><i class="fas fa-user"></i> 4+1 Seater</li>
+                        <li><i class="fas fa-snowflake"></i> Fully AC</li>
+                        <li><i class="fas fa-suitcase"></i> Luggage Space</li>
+                    </ul>
+                    <a href="#inquiry" class="fleet-btn">Book Sedan</a>
+                </div>
+            </div>
 
-        <h2>Popular Taxi Routes</h2>
+            <!-- Fleet 2: SUV -->
+            <div class="card">
+                <div class="card-img-box">
+                    <img src="images/fleet-suv.jpg" alt="SUV Car Rental Uttarakhand - Innova Crysta, Ertiga, Fronx" class="card-img">
+                    <span class="badge black">SUV</span>
+                </div>
+                <div class="card-body">
+                    <h3>Innova Crysta / Ertiga / Fronx</h3>
+                    <p>Maximum comfort for long mountain journeys, family holidays, and rugged terrain travel.</p>
+                    <ul class="features-list">
+                        <li><i class="fas fa-user"></i> 6+1 / 7+1 Seater</li>
+                        <li><i class="fas fa-snowflake"></i> Dual AC Controls</li>
+                        <li><i class="fas fa-mountain"></i> Hill Specialist Crew</li>
+                    </ul>
+                    <a href="#inquiry" class="fleet-btn">Book SUV</a>
+                </div>
+            </div>
 
-        <ul>
-            <li>Delhi → Manali Taxi</li>
-            <li>Delhi → Shimla Taxi</li>
-            <li>Chandigarh → Manali Taxi</li>
-            <li>Chandigarh → Spiti Taxi</li>
-            <li>Haridwar → Kedarnath Taxi</li>
-        </ul>
+            <!-- Fleet 3: Tempo Traveller -->
+            <div class="card">
+                <div class="card-img-box">
+                    <img src="images/fleet-traveller.jpg" alt="Tempo Traveller & Urbania Rental Uttarakhand" class="card-img">
+                    <span class="badge black">Tempo Traveller</span>
+                </div>
+                <div class="card-body">
+                    <h3>Tempo Traveller & Urbania</h3>
+                    <p>Best for group tours, corporate travels, family functions, and comfortable long-distance packages.</p>
+                    <ul class="features-list">
+                        <li><i class="fas fa-user"></i> 12 to 26 Seater</li>
+                        <li><i class="fas fa-couch"></i> Luxury Pushback Seats</li>
+                        <li><i class="fas fa-tv"></i> Music & LED Display</li>
+                    </ul>
+                    <a href="#inquiry" class="fleet-btn">Book Traveller</a>
+                </div>
+            </div>
 
-    </div>
-</section>
+            <!-- Fleet 4: Luxury Buses -->
+            <div class="card">
+                <div class="card-img-box">
+                    <img src="images/fleet-bus.jpg" alt="Luxury Coach and Bus Booking India" class="card-img">
+                    <span class="badge black">Luxury Bus</span>
+                </div>
+                <div class="card-body">
+                    <h3>Mini & Large Luxury Buses</h3>
+                    <p>Premium large coaches designed for grand group expeditions, weddings, school trips, and pilgrimage tours.</p>
+                    <ul class="features-list">
+                        <li><i class="fas fa-user"></i> 27 to 52 Seater</li>
+                        <li><i class="fas fa-snowflake"></i> Fully AC Coaches</li>
+                        <li><i class="fas fa-shield-alt"></i> Experienced Drivers</li>
+                    </ul>
+                    <a href="#inquiry" class="fleet-btn">Book Luxury Bus</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<?php include 'includes/footer.php'; ?>
+    <!-- ======= HIGH-CONVERTING INQUIRY FORM ======= -->
+    <section id="inquiry" class="form-section">
+        <div class="form-wrapper">
+            <div class="form-info">
+                <h2>Get a Free Travel Quote</h2>
+                <p>Fill out this form and our team will get back to you with a customized, cost-effective tour plan within 15 minutes.</p>
+                <div class="contact-details">
+                    <p><i class="fas fa-phone"></i> +91 9045066598</p>
+                    <p><i class="fas fa-phone"></i> +91 9643586598</p>
+                    <p><i class="fas fa-envelope"></i> info@4dtaxiservice.in</p>
+                </div>
+            </div>
+
+            <div class="form-container">
+                <form action="#" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Your Name *</label>
+                            <input type="text" placeholder="Enter Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number *</label>
+                            <input type="tel" placeholder="Enter Contact Number" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Pickup Location *</label>
+                            <input type="text" placeholder="e.g. Dehradun, Delhi, Haridwar" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Drop/Tour Destination *</label>
+                            <input type="text" placeholder="e.g. Kedarnath, Shimla, Rajasthan" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Travel Date *</label>
+                            <input type="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Vehicle Type Required *</label>
+                            <select required>
+                                <option value="" disabled selected>-- Select Vehicle --</option>
+                                <option value="sedan">Sedan (Dzire, Aura, Amaze)</option>
+                                <option value="suv">SUV (Innova Crysta, Ertiga, Fronx)</option>
+                                <option value="traveller">Tempo Traveller / Urbania</option>
+                                <option value="bus">Luxury Mini / Large Bus</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Select Tour Theme</label>
+                        <select>
+                            <option value="custom">Custom Taxi Service Only</option>
+                            <option value="chardham">Uttarakhand Chardham Yatra</option>
+                            <option value="himachal">Himachal Pradesh Tour</option>
+                            <option value="rajasthan">Royal Rajasthan Tour</option>
+                            <option value="goldentriangle">Golden Triangle (Delhi-Agra-Jaipur)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= FOOTER ======= -->
+    <footer class="main-footer">
+        <p>&copy; 2026 4D Tour and Travel. All Rights Reserved. | Designed for Luxury & Comfort.</p>
+    </footer>
+
+</body>
+</html>
