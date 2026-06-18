@@ -6,7 +6,7 @@
     <title>4D Tour and Travel | Premium All India Taxi & Tour Packages</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         /* CSS Reset & Variable Setup */
@@ -35,7 +35,6 @@
             overflow-x: hidden;
         }
 
-        /* Utility Components */
         .container {
             width: 90%;
             max-width: 1200px;
@@ -54,7 +53,6 @@
             display: inline-block;
             padding-bottom: 15px;
             font-weight: 700;
-            font-family: 'Montserrat', sans-serif;
         }
 
         .section-header h2::after {
@@ -75,7 +73,7 @@
             font-size: 1.1rem;
         }
 
-        /* Top Info Bar */
+        /* Top Bar & Header Nav */
         .top-bar {
             background-color: var(--primary);
             color: var(--text-light);
@@ -95,12 +93,6 @@
             margin-right: 20px;
         }
 
-        .top-bar-info i {
-            color: var(--accent);
-            margin-right: 5px;
-        }
-
-        /* Header Navigation */
         header {
             background-color: white;
             box-shadow: 0 4px 20px rgba(0,0,0,0.05);
@@ -120,7 +112,6 @@
             font-size: 1.8rem;
             color: var(--primary);
             font-weight: 800;
-            font-family: 'Montserrat', sans-serif;
         }
 
         .logo h1 span {
@@ -137,7 +128,7 @@
         }
 
         nav a:hover {
-            color: var(--accent-hover);
+            color: var(--accent);
         }
 
         .cta-btn {
@@ -149,7 +140,6 @@
             transition: 0.3s;
             border: 2px solid var(--primary);
             text-decoration: none;
-            margin-left: 25px;
         }
 
         .cta-btn:hover {
@@ -157,7 +147,7 @@
             color: var(--primary);
         }
 
-        /* Modern Hero Slider Section */
+        /* Hero Slider (Fully JavaScript Supported Smooth Transitions) */
         .hero-slider-container {
             position: relative;
             height: 75vh;
@@ -178,7 +168,6 @@
             transition: opacity 1s ease-in-out;
             display: flex;
             align-items: center;
-            justify-content: center;
         }
 
         .hero-slide.active {
@@ -192,16 +181,17 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(rgba(10, 25, 47, 0.7), rgba(10, 25, 47, 0.8));
+            background: linear-gradient(rgba(10, 25, 47, 0.75), rgba(10, 25, 47, 0.85));
         }
 
         .hero-content {
             position: relative;
             z-index: 5;
             max-width: 850px;
+            margin: 0 auto;
+            padding: 0 20px;
             text-align: center;
             color: white;
-            padding: 0 20px;
         }
 
         .hero-content h2 {
@@ -209,7 +199,6 @@
             font-weight: 800;
             margin-bottom: 25px;
             line-height: 1.2;
-            font-family: 'Montserrat', sans-serif;
         }
 
         .hero-content h2 span {
@@ -253,32 +242,7 @@
             transform: translateY(-2px);
         }
 
-        /* Slider Controls */
-        .slider-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(255,255,255,0.2);
-            color: white;
-            border: none;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            font-size: 1.5rem;
-            cursor: pointer;
-            z-index: 10;
-            transition: 0.3s;
-        }
-
-        .slider-arrow:hover {
-            background: var(--accent);
-            color: var(--primary);
-        }
-
-        .arrow-left { left: 20px; }
-        .arrow-right { right: 20px; }
-
-        /* Grid Layout System For Packages */
+        /* Grid Layout System for Packages */
         .package-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -304,18 +268,12 @@
         .card-img-holder {
             position: relative;
             height: 240px;
-            overflow: hidden;
         }
 
         .card-img-holder img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: 0.5s ease;
-        }
-
-        .package-card:hover .card-img-holder img {
-            transform: scale(1.1);
         }
 
         .card-badge {
@@ -330,7 +288,6 @@
             font-weight: 700;
             text-transform: uppercase;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-            z-index: 2;
         }
 
         .card-details {
@@ -355,7 +312,7 @@
         }
 
         .card-details h3 {
-            font-size: 1.35rem;
+            font-size: 1.4rem;
             color: var(--primary);
             margin-bottom: 12px;
             font-weight: 700;
@@ -383,7 +340,7 @@
         }
 
         .card-price strong {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             color: #27AE60;
             display: block;
         }
@@ -417,7 +374,7 @@
 
         .fleet-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 25px;
         }
 
@@ -425,7 +382,7 @@
             background-color: rgba(255,255,255,0.05);
             border: 1px solid rgba(255,255,255,0.1);
             border-radius: 10px;
-            padding: 25px;
+            padding: 20px;
             text-align: center;
             transition: 0.3s;
         }
@@ -458,7 +415,7 @@
             font-size: 0.95rem;
         }
 
-        /* Inquiry Form Section */
+        /* Booking Form */
         .booking-section {
             padding: 90px 0;
             background: #ffffff;
@@ -501,7 +458,7 @@
         .contact-feature {
             display: flex;
             align-items: center;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .contact-feature i {
@@ -511,17 +468,15 @@
         }
 
         .contact-feature div h4 {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             color: #8A99AD;
             text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
         .contact-feature div p {
             margin-bottom: 0;
             font-weight: 600;
             color: white;
-            font-size: 1.1rem;
         }
 
         .form-inputs-side {
@@ -581,7 +536,7 @@
             box-shadow: none;
         }
 
-        /* Floating WhatsApp Button */
+        /* Floating WhatsApp Icon CSS */
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
@@ -607,7 +562,7 @@
             color: white;
         }
 
-        /* Footer Element */
+        /* Footer */
         footer {
             background-color: #050C16;
             color: #7F8C8D;
@@ -617,7 +572,7 @@
             font-size: 0.95rem;
         }
 
-        /* Responsive Design */
+        /* Responsive styling */
         @media (max-width: 992px) {
             .form-split { grid-template-columns: 1fr; }
             .hero-content h2 { font-size: 2.5rem; }
@@ -665,8 +620,8 @@
     <section id="home" class="hero-slider-container">
         <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1600');">
             <div class="hero-content">
-                <h2>Experience Premium All India <span>Tour Packages</span></h2>
-                <p>From luxury family tours to reliable corporate rentals, explore top destinations in comfort.</p>
+                <h2>Experience Premium All India <span>Tour Packages</span> & Taxi Services</h2>
+                <p>From luxury family tours to reliable corporate rentals, explore India's top destinations with our premium fleet.</p>
                 <div class="hero-btns">
                     <a href="#inquiry" class="btn btn-gold">Instant Tour Inquiry</a>
                     <a href="https://wa.me/919045066598" class="btn btn-outline" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
@@ -675,31 +630,52 @@
         </div>
         <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1600');">
             <div class="hero-content">
-                <h2>Explore Devbhoomi <span>Uttarakhand</span></h2>
-                <p>Reliable taxi rentals and customized Chardham Yatra packages with expert hill drivers.</p>
+                <h2>Explore Scenic Hill Stations & <span>Spiritual Yatra</span></h2>
+                <p>Custom packages tailored for Uttarakhand Char Dham, Himachal Pradesh, and beautiful valley tours.</p>
                 <div class="hero-btns">
-                    <a href="#inquiry" class="btn btn-gold">Plan Your Journey</a>
+                    <a href="#inquiry" class="btn btn-gold">Get Packages</a>
                     <a href="https://wa.me/919045066598" class="btn btn-outline" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
                 </div>
             </div>
         </div>
-        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1477587458883-471a5ed94245?q=80&w=1600');">
-            <div class="hero-content">
-                <h2>Discover Royal <span>Heritage Tours</span></h2>
-                <p>Travel across Rajasthan, Goa, and Himachal Pradesh with premium commercial coaches.</p>
-                <div class="hero-btns">
-                    <a href="#inquiry" class="btn btn-gold">Get Best Quotes</a>
-                    <a href="https://wa.me/919045066598" class="btn btn-outline" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
-                </div>
-            </div>
-        </div>
-
-        <button class="slider-arrow arrow-left" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></button>
-        <button class="slider-arrow arrow-right" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
     </section>
 
     <section id="packages" style="padding: 90px 0;">
         <div class="container">
             <div class="section-header">
                 <h2>Our Premium Tour Packages</h2>
-                <p>Highly customized city-wise holiday packa
+                <p>Highly customized city-wise holiday packages designed for comfort, luxury, and smooth traveling.</p>
+            </div>
+
+            <div class="package-grid">
+                <div class="package-card">
+                    <div class="card-img-holder">
+                        <img src="https://images.unsplash.com/photo-1540206395-68808572332f?q=80&w=600" alt="Goa Tour Package">
+                        <span class="card-badge">Beach Holiday</span>
+                    </div>
+                    <div class="card-details">
+                        <div class="card-meta">
+                            <span><i class="fas fa-calendar-alt"></i> 4 Nights / 5 Days</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Goa Coastal</span>
+                        </div>
+                        <h3>Premium Goa Tour Package</h3>
+                        <p>Relax at premium beach resorts, explore historical forts, and enjoy water sports with private luxury vehicle sightseeing tours.</p>
+                        <div class="card-bottom">
+                            <div class="card-price">Starts From <strong>Best Price</strong></div>
+                            <a href="#inquiry" class="book-now-btn">Book Package</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="card-img-holder">
+                        <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600" alt="Manali Tour Package">
+                        <span class="card-badge">Hill Station</span>
+                    </div>
+                    <div class="card-details">
+                        <div class="card-meta">
+                            <span><i class="fas fa-calendar-alt"></i> 5 Nights / 6 Days</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Himachal Pradesh</span>
+                        </div>
+                        <h3>Luxury Manali Tour Package</h3>
+                        <p>Witness the snow-capped mountains of Solang Valley, Rohtang Pass, and absolute comfort on local mall road sightseein
