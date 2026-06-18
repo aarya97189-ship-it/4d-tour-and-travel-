@@ -3,163 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4D Tour and Travel | Premium All India Taxi & Tour Packages</title>
+    <title>4D Tour and Travel | Premium All India Tour Packages</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    
     <style>
-        /* CSS Reset & Variable Setup */
+        /* Base Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
+            font-family: Arial, sans-serif;
         }
-
-        :root {
-            --primary: #0A192F;
-            --secondary: #172A45;
-            --accent: #FFD700;
-            --accent-hover: #F1C40F;
-            --text-light: #F8F9FA;
-            --text-dark: #2C3E50;
-            --bg-light: #F4F6F9;
-            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-        }
-
         body {
-            background-color: var(--bg-light);
-            color: var(--text-dark);
+            background-color: #f4f6f9;
+            color: #333;
             overflow-x: hidden;
         }
-
         .container {
             width: 90%;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-header h2 {
-            font-size: 2.5rem;
-            color: var(--primary);
-            position: relative;
-            display: inline-block;
-            padding-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .section-header h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background-color: var(--accent);
-            border-radius: 2px;
-        }
-
-        .section-header p {
-            color: #7F8C8D;
-            margin-top: 15px;
-            font-size: 1.1rem;
-        }
-
-        /* Top Bar & Header Nav */
+        /* Top Bar */
         .top-bar {
-            background-color: var(--primary);
-            color: var(--text-light);
+            background-color: #0A192F;
+            color: #fff;
             padding: 10px 0;
-            font-size: 0.9rem;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
         }
-
         .top-bar .container {
             display: flex;
             justify-content: space-between;
-            align-items: center;
             flex-wrap: wrap;
         }
+        .top-bar i { color: #FFD700; margin-right: 5px; }
 
-        .top-bar-info span {
-            margin-right: 20px;
-        }
-
+        /* Navigation Header */
         header {
-            background-color: white;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            background-color: #ffffff;
+            padding: 20px 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
-            padding: 15px 0;
         }
-
         header .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+        .logo h1 { font-size: 24px; color: #0A192F; font-weight: bold; }
+        .logo h1 span { color: #FFD700; }
+        nav a { text-decoration: none; color: #333; font-weight: 600; margin-left: 20px; }
+        nav a:hover { color: #FFD700; }
 
-        .logo h1 {
-            font-size: 1.8rem;
-            color: var(--primary);
-            font-weight: 800;
-        }
-
-        .logo h1 span {
-            color: var(--accent);
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 600;
-            margin-left: 25px;
-            transition: 0.3s;
-            font-size: 1rem;
-        }
-
-        nav a:hover {
-            color: var(--accent);
-        }
-
-        .cta-btn {
-            background-color: var(--primary);
-            color: white;
-            padding: 10px 22px;
-            border-radius: 30px;
-            font-weight: 600;
-            transition: 0.3s;
-            border: 2px solid var(--primary);
-            text-decoration: none;
-        }
-
-        .cta-btn:hover {
-            background-color: transparent;
-            color: var(--primary);
-        }
-
-        /* Hero Slider (Fully JavaScript Supported Smooth Transitions) */
-        .hero-slider-container {
+        /* LIVE HERO SLIDER SECTION */
+        .hero-slider {
             position: relative;
-            height: 75vh;
-            min-height: 500px;
-            width: 100%;
+            height: 65vh;
+            background-color: #0A192F;
             overflow: hidden;
         }
-
-        .hero-slide {
+        .slide {
             position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
             background-size: cover;
@@ -168,423 +76,124 @@
             transition: opacity 1s ease-in-out;
             display: flex;
             align-items: center;
+            justify-content: center;
         }
-
-        .hero-slide.active {
-            opacity: 1;
-        }
-
-        .hero-slide::before {
+        .slide.active { opacity: 1; }
+        .slide::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(10, 25, 47, 0.75), rgba(10, 25, 47, 0.85));
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.6);
         }
-
         .hero-content {
             position: relative;
-            z-index: 5;
-            max-width: 850px;
-            margin: 0 auto;
-            padding: 0 20px;
+            color: white;
             text-align: center;
-            color: white;
+            max-width: 800px;
+            padding: 0 20px;
+            z-index: 10;
         }
-
-        .hero-content h2 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 25px;
-            line-height: 1.2;
-        }
-
-        .hero-content h2 span {
-            color: var(--accent);
-        }
-
-        .hero-content p {
-            font-size: 1.3rem;
-            margin-bottom: 35px;
-            color: #E2E8F0;
-        }
-
-        .hero-btns .btn {
-            display: inline-block;
-            padding: 14px 35px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 700;
-            margin: 0 10px 15px 10px;
-            transition: 0.3s;
-        }
-
+        .hero-content h2 { font-size: 42px; margin-bottom: 15px; }
+        .hero-content h2 span { color: #FFD700; }
+        .hero-content p { font-size: 18px; margin-bottom: 25px; }
         .btn-gold {
-            background-color: var(--accent);
-            color: var(--primary);
+            background-color: #FFD700; color: #0A192F;
+            padding: 12px 30px; text-decoration: none;
+            font-weight: bold; border-radius: 25px; display: inline-block;
         }
 
-        .btn-gold:hover {
-            background-color: white;
-            transform: translateY(-2px);
+        /* SECTION HEADERS */
+        .section-title {
+            text-align: center; margin: 60px 0 30px 0;
         }
+        .section-title h2 { font-size: 32px; color: #0A192F; margin-bottom: 10px; }
+        .section-title p { color: #777; }
 
-        .btn-outline {
-            border: 2px solid white;
-            color: white;
-        }
-
-        .btn-outline:hover {
-            background-color: white;
-            color: var(--primary);
-            transform: translateY(-2px);
-        }
-
-        /* Grid Layout System for Packages */
+        /* PACKAGES GRID LAYOUT */
         .package-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
-
         .package-card {
-            background-color: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: var(--card-shadow);
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            display: flex;
-            flex-direction: column;
-            position: relative;
+            background: white; border-radius: 10px; overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08); display: flex; flex-direction: column;
+        }
+        .card-img { height: 220px; position: relative; }
+        .card-img img { width: 100%; height: 100%; object-fit: cover; }
+        .badge {
+            position: absolute; top: 15px; left: 15px;
+            background: #0A192F; color: #FFD700; padding: 5px 12px;
+            font-size: 12px; font-weight: bold; border-radius: 20px;
+        }
+        .card-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+        .card-body h3 { font-size: 20px; color: #0A192F; margin-bottom: 10px; }
+        .card-body p { font-size: 14px; color: #555; line-height: 1.5; margin-bottom: 15px; flex-grow: 1; }
+        .card-footer {
+            display: flex; justify-content: space-between; align-items: center;
+            border-top: 1px solid #eee; padding-top: 15px;
+        }
+        .price { color: #27AE60; font-weight: bold; font-size: 18px; }
+        .book-btn {
+            background: #0A192F; color: white; padding: 8px 15px;
+            text-decoration: none; font-size: 14px; border-radius: 4px;
         }
 
-        .package-card:hover {
-            transform: translateY(-8px);
-        }
-
-        .card-img-holder {
-            position: relative;
-            height: 240px;
-        }
-
-        .card-img-holder img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .card-badge {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background-color: var(--primary);
-            color: var(--accent);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-        }
-
-        .card-details {
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .card-meta {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.85rem;
-            color: #7F8C8D;
-            margin-bottom: 12px;
-            font-weight: 500;
-        }
-
-        .card-meta span i {
-            color: var(--accent);
-            margin-right: 5px;
-        }
-
-        .card-details h3 {
-            font-size: 1.4rem;
-            color: var(--primary);
-            margin-bottom: 12px;
-            font-weight: 700;
-        }
-
-        .card-details p {
-            font-size: 0.95rem;
-            color: #5A6B7C;
-            line-height: 1.5;
-            margin-bottom: 20px;
-            flex-grow: 1;
-        }
-
-        .card-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top: 1px solid #ECEFF1;
-            padding-top: 15px;
-        }
-
-        .card-price {
-            font-size: 0.85rem;
-            color: #7F8C8D;
-        }
-
-        .card-price strong {
-            font-size: 1.25rem;
-            color: #27AE60;
-            display: block;
-        }
-
-        .book-now-btn {
-            background-color: var(--primary);
-            color: white;
-            padding: 8px 18px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: 0.3s;
-        }
-
-        .book-now-btn:hover {
-            background-color: var(--accent);
-            color: var(--primary);
-        }
-
-        /* Fleet Grid Styling */
-        .fleet-section {
-            background-color: var(--secondary);
-            padding: 80px 0;
-            color: white;
-        }
-
-        .fleet-section .section-header h2 {
-            color: white;
-        }
-
+        /* FLEET GRID SYSTEM */
+        .fleet-bg { background-color: #172A45; padding: 60px 0; color: white; }
+        .fleet-bg h2 { color: white !important; }
         .fleet-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 25px;
         }
-
         .fleet-card {
-            background-color: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            transition: 0.3s;
+            background: rgba(255,255,255,0.05); padding: 25px;
+            border-radius: 8px; text-align: center; border: 1px solid rgba(255,255,255,0.1);
+        }
+        .fleet-card i { font-size: 40px; color: #FFD700; margin-bottom: 15px; }
+        .fleet-card h3 { margin-bottom: 10px; }
+        .fleet-card p { color: #ccc; font-size: 14px; }
+
+        /* INQUIRY FORM & LOCATION INFO */
+        .contact-section { padding: 60px 0; background: #fff; }
+        .contact-box {
+            display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px;
+        }
+        .info-side { background: #0A192F; color: white; padding: 40px; border-radius: 12px; }
+        .info-side h3 { color: #FFD700; font-size: 24px; margin-bottom: 20px; }
+        .info-item { display: flex; align-items: center; margin-bottom: 20px; }
+        .info-item i { font-size: 20px; color: #FFD700; margin-right: 15px; }
+        
+        .form-side { padding: 20px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; font-size: 14px; }
+        .form-group input, .form-group select {
+            width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;
+        }
+        .submit-btn {
+            width: 100%; background: #FFD700; color: #0A192F; border: none;
+            padding: 12px; font-weight: bold; font-size: 16px; border-radius: 4px; cursor: pointer;
         }
 
-        .fleet-card:hover {
-            background-color: rgba(255,255,255,0.1);
-            transform: translateY(-5px);
-        }
-
-        .fleet-icon {
-            font-size: 2.5rem;
-            color: var(--accent);
-            margin-bottom: 15px;
-        }
-
-        .fleet-card h3 {
-            margin-bottom: 10px;
-            font-size: 1.3rem;
-        }
-
-        .fleet-card p {
-            color: #B4C6E7;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-        }
-
-        .fleet-capacity {
-            font-weight: bold;
-            color: var(--accent);
-            font-size: 0.95rem;
-        }
-
-        /* Booking Form */
-        .booking-section {
-            padding: 90px 0;
-            background: #ffffff;
-        }
-
-        .form-split {
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 50px;
-            background: white;
-            box-shadow: 0 15px 50px rgba(0,0,0,0.05);
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid #ECEFF1;
-        }
-
-        .form-info-side {
-            background-color: var(--primary);
-            color: white;
-            padding: 50px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .form-info-side h3 {
-            font-size: 2.2rem;
-            color: var(--accent);
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .form-info-side p {
-            color: #B4C6E7;
-            margin-bottom: 35px;
-            font-size: 1.05rem;
-            line-height: 1.6;
-        }
-
-        .contact-feature {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .contact-feature i {
-            font-size: 1.5rem;
-            color: var(--accent);
-            margin-right: 15px;
-        }
-
-        .contact-feature div h4 {
-            font-size: 0.9rem;
-            color: #8A99AD;
-            text-transform: uppercase;
-        }
-
-        .contact-feature div p {
-            margin-bottom: 0;
-            font-weight: 600;
-            color: white;
-        }
-
-        .form-inputs-side {
-            padding: 50px;
-        }
-
-        .form-row-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .input-group {
-            margin-bottom: 22px;
-        }
-
-        .input-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            color: var(--primary);
-        }
-
-        .input-group input, .input-group select {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #CFD8DC;
-            border-radius: 6px;
-            outline: none;
-            font-size: 0.95rem;
-            transition: 0.3s;
-        }
-
-        .input-group input:focus, .input-group select:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(10, 25, 47, 0.1);
-        }
-
-        .submit-form-btn {
-            width: 100%;
-            background-color: var(--accent);
-            color: var(--primary);
-            border: none;
-            padding: 15px;
-            border-radius: 6px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: 0.3s;
-            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
-        }
-
-        .submit-form-btn:hover {
-            background-color: var(--primary);
-            color: white;
-            box-shadow: none;
-        }
-
-        /* Floating WhatsApp Icon CSS */
+        /* FLOATING WHATSAPP BUTTON */
         .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: #25D366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 32px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            z-index: 9999;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-decoration: none;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
-            color: white;
+            position: fixed; bottom: 30px; right: 30px;
+            background-color: #25D366; color: white;
+            width: 60px; height: 60px; border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            font-size: 32px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 9999; text-decoration: none;
         }
 
         /* Footer */
-        footer {
-            background-color: #050C16;
-            color: #7F8C8D;
-            padding: 30px 0;
-            text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            font-size: 0.95rem;
-        }
+        footer { background: #050C16; color: #888; text-align: center; padding: 20px 0; font-size: 14px; }
 
-        /* Responsive styling */
-        @media (max-width: 992px) {
-            .form-split { grid-template-columns: 1fr; }
-            .hero-content h2 { font-size: 2.5rem; }
-        }
-
-        @media (max-width: 768px) {
-            header .container { flex-direction: column; gap: 15px; }
-            nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-            nav a { margin: 0 10px; }
-            .form-row-2 { grid-template-columns: 1fr; gap: 0; }
-            .form-info-side, .form-inputs-side { padding: 30px; }
-            .whatsapp-float { width: 50px; height: 50px; font-size: 26px; bottom: 20px; right: 20px; }
+        @media(max-width: 768px) {
+            .contact-box { grid-template-columns: 1fr; }
+            .hero-content h2 { font-size: 28px; }
+            header .container { flex-direction: column; gap: 10px; }
         }
     </style>
 </head>
@@ -592,12 +201,11 @@
 
     <div class="top-bar">
         <div class="container">
-            <div class="top-bar-info">
-                <span><i class="fas fa-phone-alt"></i> Call Us: <strong>+91 9045066598</strong></span>
-                <span><i class="fas fa-envelope"></i> info@4dtaxiservice.in</span>
+            <div>
+                <span><i class="fa fa-phone"></i> Call: <strong>+91 9045066598</strong></span>
             </div>
             <div>
-                <span>All India Approved Tour Operators</span>
+                <span><i class="fa fa-envelope"></i> info@4dtaxiservice.in</span>
             </div>
         </div>
     </div>
@@ -609,73 +217,218 @@
             </div>
             <nav>
                 <a href="#home">Home</a>
-                <a href="#packages">Tour Packages</a>
+                <a href="#packages">Packages</a>
                 <a href="#fleet">Our Fleet</a>
-                <a href="#inquiry">Get Quote</a>
-                <a href="tel:+919045066598" class="cta-btn">Call Now</a>
+                <a href="#contact">Get Quote</a>
             </nav>
         </div>
     </header>
 
-    <section id="home" class="hero-slider-container">
-        <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1600');">
+    <section id="home" class="hero-slider">
+        <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1600&q=80');">
             <div class="hero-content">
-                <h2>Experience Premium All India <span>Tour Packages</span> & Taxi Services</h2>
-                <p>From luxury family tours to reliable corporate rentals, explore India's top destinations with our premium fleet.</p>
-                <div class="hero-btns">
-                    <a href="#inquiry" class="btn btn-gold">Instant Tour Inquiry</a>
-                    <a href="https://wa.me/919045066598" class="btn btn-outline" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
-                </div>
+                <h2>Premium All India <span>Tour Packages</span></h2>
+                <p>Explore beautiful destinations across India with top-tier comfort and experienced drivers.</p>
+                <a href="#contact" class="btn-gold">Plan Journey</a>
             </div>
         </div>
-        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1600');">
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1600&q=80');">
             <div class="hero-content">
-                <h2>Explore Scenic Hill Stations & <span>Spiritual Yatra</span></h2>
-                <p>Custom packages tailored for Uttarakhand Char Dham, Himachal Pradesh, and beautiful valley tours.</p>
-                <div class="hero-btns">
-                    <a href="#inquiry" class="btn btn-gold">Get Packages</a>
-                    <a href="https://wa.me/919045066598" class="btn btn-outline" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+                <h2>Explore Scenic <span>Uttarakhand</span></h2>
+                <p>Specialized Chardham Yatra, Mussoorie, and Nainital tour packages with safe hill driving.</p>
+                <a href="https://wa.me/919045066598" class="btn-gold" target="_blank">Chat On WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="packages" class="container">
+        <div class="section-title">
+            <h2>Our Custom Holiday Packages</h2>
+            <p>Select from our highly demanding all-inclusive luxury travel itineraries</p>
+        </div>
+
+        <div class="package-grid">
+            <div class="package-card">
+                <div class="card-img"><img src="https://images.unsplash.com/photo-1540206395-68808572332f?w=500" alt="Goa"><span class="badge">Goa</span></div>
+                <div class="card-body">
+                    <h3>Goa Tour Package</h3>
+                    <p>Enjoy pristine beaches, night-life, historical Portuguese churches, and cruise rides with dedicated local cabs.</p>
+                    <div class="card-footer"><span class="price">Best Price</span><a href="#contact" class="book-btn">Inquire</a></div>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="card-img"><img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=500" alt="Manali"><span class="badge">Himachal</span></div>
+                <div class="card-body">
+                    <h3>Manali Tour Package</h3>
+                    <p>Explore Hadimba Temple, Solang Valley adventures, and breathtaking snow viewpoints near Rohtang Pass.</p>
+                    <div class="card-footer"><span class="price">Best Price</span><a href="#contact" class="book-btn">Inquire</a></div>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="card-img"><img src="https://images.unsplash.com/photo-1589308078059-be1415eab4c3?w=500" alt="Spiti"><span class="badge">Adventure</span></div>
+                <div class="card-body">
+                    <h3>Spiti Valley Tour Package</h3>
+                    <p>A thrilling road trip to the cold desert of Spiti, visiting ancient monasteries and Chandratal lake.</p>
+                    <div class="card-footer"><span class="price">Best Price</span><a href="#contact" class="book-btn">Inquire</a></div>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="card-img"><img src="https://images.unsplash.com/photo-1531572753322-ad063cecc140?w=500" alt="Uttarakhand"><span class="badge">Devbhoomi</span></div>
+                <div class="card-body">
+                    <h3>Uttarakhand Tour Package</h3>
+                    <p>Immerse yourself into a complete natural escape covering mountains, lakes, and spiritual valleys.</p>
+                    <div class="card-footer"><span class="price">Best Price</span><a href="#contact" class="book-btn">Inquire</a></div>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="card-img"><img src="https://images.unsplash.com/photo-1597074866923-dc0589150358?w=500" alt="Mussoorie"><span class="badge">Hill Station</span></div>
+                <div class="card-body">
+                    <h3>Mussoorie Tour Package</h3>
+                    <p>Beautiful trip to Kempty falls, Mall road shopping lanes, and panoramic viewpoints of Dhanaulti hills.</p>
+                    <div class="card-footer"><span class="price">Best Price</span><a href="#contact" class="book-btn">Inquire</a></div>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="card-img"><img src="https://images.unsplash.com/photo-1477587458883-471a5ed94245?w=500" alt="Rajasthan"><span class="badge">Heritage</span></div>
+                <div class="card-body">
+                    <h3>Royal Rajasthan Tour</h3>
+                    <p>Witness majestic palaces, desert camel safaris, and rich heritage sites across Jaipur, Udaipur, and Jodhpur.</p>
+                    <div class="card-footer"><span class="price">Best Price</span><a href="#contact" class="book-btn">Inquire</a></div>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="card-img"><img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=500" alt="Chardham"><span class="badge">Spiritual</span></div>
+                <div class="card-body">
+                    <h3>Char Dham Tour Package</h3>
+                    <p>Complete sacred pilgrimage to Yamunotri, Gangotri, holy Kedarnath, and Badrinath temples with bio-biometrics support.</p>
+                    <div class="card-footer"><span class="price">Best Price</span><a href="#contact" class="book-btn">Inquire</a></div>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="card-img"><img src="https://images.unsplash.com/photo-1622308644420-b30694086422?w=500" alt="Delhi to Mussoorie"><span class="badge">Weekend Route</span></div>
+                <div class="card-body">
+                    <h3>Delhi to Mussoorie Tour</h3>
+                    <p>Hassle-free outstation cab pickups from Delhi NCR straight to Mussoorie hill hotels with zero transit delays.</p>
+                    <div class="card-footer"><span class="price">Best Price</span><a href="#contact" class="book-btn">Inquire</a></div>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="card-img"><img src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=500" alt="Adi Kailash"><span class="badge">Expedition</span></div>
+                <div class="card-body">
+                    <h3>Adi Kailash Yatra Package</h3>
+                    <p>High altitude spiritual trek and commercial 4x4 SUV setups to explore inner Himalayan spiritual lines.</p>
+                    <div class="card-footer"><span class="price">Best Price</span><a href="#contact" class="book-btn">Inquire</a></div>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="card-img"><img src="https://images.unsplash.com/photo-1610224169550-6a9bc2eb8152?w=500" alt="Nainital"><span class="badge">Lakes Side</span></div>
+                <div class="card-body">
+                    <h3>Scenic Nainital Package</h3>
+                    <p>Memorable boat rows inside Naini Lake, zoo walks, and beautiful mountain viewpoints of Bhimtal region.</p>
+                    <div class="card-footer"><span class="price">Best Price</span><a href="#contact" class="book-btn">Inquire</a></div>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="card-img"><img src="https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?w=500" alt="Kumaon"><span class="badge">Nature</span></div>
+                <div class="card-body">
+                    <h3>Complete Kumaon Tour</h3>
+                    <p>Experience peace across Ranikhet meadows, Kausani sunset views, and wildlife exploration in Jim Corbett.</p>
+                    <div class="card-footer"><span class="price">Best Price</span><a href="#contact" class="book-btn">Inquire</a></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="packages" style="padding: 90px 0;">
+    <section id="fleet" class="fleet-bg">
         <div class="container">
-            <div class="section-header">
-                <h2>Our Premium Tour Packages</h2>
-                <p>Highly customized city-wise holiday packages designed for comfort, luxury, and smooth traveling.</p>
+            <div class="section-title">
+                <h2>Our Commercial Luxury Fleet</h2>
+                <p style="color: #eee;">Pick the perfect vehicle choice for your upcoming itinerary routes</p>
             </div>
+            <div class="fleet-grid">
+                <div class="fleet-card">
+                    <i class="fa fa-car"></i>
+                    <h3>Premium Sedans</h3>
+                    <p>Dzire, Etios, Aura (4+1 Seater)</p>
+                </div>
+                <div class="fleet-card">
+                    <i class="fa fa-truck-pickup"></i>
+                    <h3>Luxury SUVs</h3>
+                    <p>Ertiga, Innova Crysta (6+1 Seater)</p>
+                </div>
+                <div class="fleet-card">
+                    <i class="fa fa-bus"></i>
+                    <h3>Tempo Travellers</h3>
+                    <p>Luxury Force 12, 17, 26 Seater & Urbania</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <div class="package-grid">
-                <div class="package-card">
-                    <div class="card-img-holder">
-                        <img src="https://images.unsplash.com/photo-1540206395-68808572332f?q=80&w=600" alt="Goa Tour Package">
-                        <span class="card-badge">Beach Holiday</span>
-                    </div>
-                    <div class="card-details">
-                        <div class="card-meta">
-                            <span><i class="fas fa-calendar-alt"></i> 4 Nights / 5 Days</span>
-                            <span><i class="fas fa-map-marker-alt"></i> Goa Coastal</span>
-                        </div>
-                        <h3>Premium Goa Tour Package</h3>
-                        <p>Relax at premium beach resorts, explore historical forts, and enjoy water sports with private luxury vehicle sightseeing tours.</p>
-                        <div class="card-bottom">
-                            <div class="card-price">Starts From <strong>Best Price</strong></div>
-                            <a href="#inquiry" class="book-now-btn">Book Package</a>
-                        </div>
+    <section id="contact" class="contact-section container">
+        <div class="contact-box">
+            <div class="info-side">
+                <h3>Contact & Location Info</h3>
+                <p style="margin-bottom: 25px; color: #ccc;">Reach out to our customer service managers for swift booking clearances.</p>
+                
+                <div class="info-item">
+                    <i class="fa fa-phone"></i>
+                    <div>
+                        <p><strong>Phone Number</strong></p>
+                        <p>+91 9045066598</p>
                     </div>
                 </div>
-
-                <div class="package-card">
-                    <div class="card-img-holder">
-                        <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600" alt="Manali Tour Package">
-                        <span class="card-badge">Hill Station</span>
+                <div class="info-item">
+                    <i class="fa fa-envelope"></i>
+                    <div>
+                        <p><strong>Email Address</strong></p>
+                        <p>info@4dtaxiservice.in</p>
                     </div>
-                    <div class="card-details">
-                        <div class="card-meta">
-                            <span><i class="fas fa-calendar-alt"></i> 5 Nights / 6 Days</span>
-                            <span><i class="fas fa-map-marker-alt"></i> Himachal Pradesh</span>
-                        </div>
-                        <h3>Luxury Manali Tour Package</h3>
-                        <p>Witness the snow-capped mountains of Solang Valley, Rohtang Pass, and absolute comfort on local mall road sightseein
+                </div>
+                <div class="info-item">
+                    <i class="fa fa-map-marker-alt"></i>
+                    <div>
+                        <p><strong>Main Head Office</strong></p>
+                        <p>Dehradun, Uttarakhand, India</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-side">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" placeholder="Enter mobile number" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Select Your Tour Theme</label>
+                        <select required>
+                            <option value="chardham">Char Dham Yatra Tour</option>
+                            <option value="goa">Premium Goa Tour Package</option>
+                            <option value="manali">Luxury Manali Tour Package</option>
+                            <option value="mussoorie">Refreshing Mussoorie Tour</option>
+                            <option value="nainital">Scenic Nainital Package</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit Booking Quote</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 4D Tour and Travel. All Rights Reserved. | Premium Outstation Taxi & Travel Netwo
