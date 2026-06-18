@@ -3,158 +3,582 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4D Tour and Travel - Uttarakhand</title>
-    <!-- Font Awesome for Icons -->
+    <title>4D Tour and Travel | Premium All India Taxi & Tour Packages</title>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
-        /* Base Reset & Typography */
+        /* CSS Reset & Variable Setup */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --primary: #0A192F;
+            --secondary: #172A45;
+            --accent: #FFD700;
+            --accent-hover: #F1C40F;
+            --text-light: #F8F9FA;
+            --text-dark: #2C3E50;
+            --bg-light: #F4F6F9;
+            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
         }
 
         body {
-            background-color: #0b0f19;
-            color: #ffffff;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
             overflow-x: hidden;
         }
 
-        /* Luxury Header & Navigation */
-        header {
+        /* Utility Components */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .section-header h2::after {
+            content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 20px 50px;
-            z-index: 100;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent);
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: #7F8C8D;
+            margin-top: 15px;
+            font-size: 1.1rem;
+        }
+
+        /* Top Info Bar */
+        .top-bar {
+            background-color: var(--primary);
+            color: var(--text-light);
+            padding: 10px 0;
+            font-size: 0.9rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .top-bar .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: linear-gradient(to bottom, rgba(11,15,25,0.9), rgba(11,15,25,0));
+            flex-wrap: wrap;
         }
 
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: #d4af37; /* Gold Theme */
-            text-decoration: none;
-            letter-spacing: 2px;
+        .top-bar-info span {
+            margin-right: 20px;
         }
 
-        .nav-links {
+        .top-bar-info i {
+            color: var(--accent);
+            margin-right: 5px;
+        }
+
+        /* Header Navigation */
+        header {
+            background-color: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        header .container {
             display: flex;
-            list-style: none;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .nav-links li {
-            margin-left: 30px;
+        .logo h1 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            font-weight: 800;
+            font-family: 'Montserrat', sans-serif;
         }
 
-        .nav-links a {
-            color: #ffffff;
+        .logo h1 span {
+            color: var(--accent);
+        }
+
+        nav a {
             text-decoration: none;
-            font-size: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: color 0.3s ease;
+            color: var(--text-dark);
+            font-weight: 600;
+            margin-left: 25px;
+            transition: 0.3s;
+            font-size: 1rem;
         }
 
-        .nav-links a:hover {
-            color: #d4af37;
+        nav a:hover {
+            color: var(--accent-hover);
         }
 
-        /* Hero Slider Section */
-        .hero-slider {
+        .cta-btn {
+            background-color: var(--primary);
+            color: white;
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: 0.3s;
+            border: 2px solid var(--primary);
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        .cta-btn:hover {
+            background-color: transparent;
+            color: var(--primary);
+        }
+
+        /* Modern Hero Slider Section */
+        .hero-slider-container {
             position: relative;
+            height: 75vh;
+            min-height: 500px;
             width: 100%;
-            height: 100vh;
             overflow: hidden;
         }
 
-        .slide {
+        .hero-slide {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            opacity: 0;
-            animation: sliderAnimation 18s infinite;
             background-size: cover;
             background-position: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        /* Automatic Slider Images (Fixed Missing Photos with Premium Travel Images) */
-        .slide:nth-child(1) {
-            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1920&q=80');
-            animation-delay: 0s;
-        }
-        .slide:nth-child(2) {
-            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=1920&q=80');
-            animation-delay: 6s;
-        }
-        .slide:nth-child(3) {
-            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1626621341515-bbf8a5f60fc0?auto=format&fit=crop&w=1920&q=80');
-            animation-delay: 12s;
+        .hero-slide.active {
+            opacity: 1;
         }
 
-        @keyframes sliderAnimation {
-            0% { opacity: 0; transform: scale(1); }
-            5% { opacity: 1; }
-            33% { opacity: 1; }
-            38% { opacity: 0; transform: scale(1.05); }
-            100% { opacity: 0; }
-        }
-
-        /* Hero Content overlay */
-        .hero-content {
+        .hero-slide::before {
+            content: '';
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(10, 25, 47, 0.7), rgba(10, 25, 47, 0.8));
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 5;
+            max-width: 850px;
             text-align: center;
-            z-index: 10;
-            width: 80%;
+            color: white;
+            padding: 0 20px;
         }
 
-        .hero-content h1 {
-            font-size: 55px;
-            font-weight: 600;
-            letter-spacing: 3px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
+        .hero-content h2 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            line-height: 1.2;
+            font-family: 'Montserrat', sans-serif;
         }
 
-        .hero-content h1 span {
-            color: #d4af37;
+        .hero-content h2 span {
+            color: var(--accent);
         }
 
         .hero-content p {
-            font-size: 18px;
-            letter-spacing: 1px;
-            margin-bottom: 30px;
-            color: #e0e0e0;
+            font-size: 1.3rem;
+            margin-bottom: 35px;
+            color: #E2E8F0;
         }
 
-        .btn-luxury {
+        .hero-btns .btn {
             display: inline-block;
-            padding: 12px 35px;
-            border: 2px solid #d4af37;
-            color: #d4af37;
+            padding: 14px 35px;
+            border-radius: 30px;
             text-decoration: none;
-            text-transform: uppercase;
-            font-size: 14px;
-            letter-spacing: 2px;
-            font-weight: 600;
-            border-radius: 50px;
-            transition: all 0.4s ease;
+            font-weight: 700;
+            margin: 0 10px 15px 10px;
+            transition: 0.3s;
         }
 
-        .btn-luxury:hover {
-            background-color: #d4af37;
-            color: #0b0f19;
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+        .btn-gold {
+            background-color: var(--accent);
+            color: var(--primary);
+        }
+
+        .btn-gold:hover {
+            background-color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* Slider Controls */
+        .slider-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 10;
+            transition: 0.3s;
+        }
+
+        .slider-arrow:hover {
+            background: var(--accent);
+            color: var(--primary);
+        }
+
+        .arrow-left { left: 20px; }
+        .arrow-right { right: 20px; }
+
+        /* Grid Layout System For Packages */
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .package-card {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .package-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card-img-holder {
+            position: relative;
+            height: 240px;
+            overflow: hidden;
+        }
+
+        .card-img-holder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s ease;
+        }
+
+        .package-card:hover .card-img-holder img {
+            transform: scale(1.1);
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: var(--primary);
+            color: var(--accent);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            z-index: 2;
+        }
+
+        .card-details {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #7F8C8D;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .card-meta span i {
+            color: var(--accent);
+            margin-right: 5px;
+        }
+
+        .card-details h3 {
+            font-size: 1.35rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .card-details p {
+            font-size: 0.95rem;
+            color: #5A6B7C;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .card-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #ECEFF1;
+            padding-top: 15px;
+        }
+
+        .card-price {
+            font-size: 0.85rem;
+            color: #7F8C8D;
+        }
+
+        .card-price strong {
+            font-size: 1.2rem;
+            color: #27AE60;
+            display: block;
+        }
+
+        .book-now-btn {
+            background-color: var(--primary);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .book-now-btn:hover {
+            background-color: var(--accent);
+            color: var(--primary);
+        }
+
+        /* Fleet Grid Styling */
+        .fleet-section {
+            background-color: var(--secondary);
+            padding: 80px 0;
+            color: white;
+        }
+
+        .fleet-section .section-header h2 {
+            color: white;
+        }
+
+        .fleet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .fleet-card {
+            background-color: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .fleet-card:hover {
+            background-color: rgba(255,255,255,0.1);
+            transform: translateY(-5px);
+        }
+
+        .fleet-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .fleet-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .fleet-card p {
+            color: #B4C6E7;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .fleet-capacity {
+            font-weight: bold;
+            color: var(--accent);
+            font-size: 0.95rem;
+        }
+
+        /* Inquiry Form Section */
+        .booking-section {
+            padding: 90px 0;
+            background: #ffffff;
+        }
+
+        .form-split {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 50px;
+            background: white;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.05);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #ECEFF1;
+        }
+
+        .form-info-side {
+            background-color: var(--primary);
+            color: white;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .form-info-side h3 {
+            font-size: 2.2rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .form-info-side p {
+            color: #B4C6E7;
+            margin-bottom: 35px;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .contact-feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .contact-feature i {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-right: 15px;
+        }
+
+        .contact-feature div h4 {
+            font-size: 0.85rem;
+            color: #8A99AD;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-feature div p {
+            margin-bottom: 0;
+            font-weight: 600;
+            color: white;
+            font-size: 1.1rem;
+        }
+
+        .form-inputs-side {
+            padding: 50px;
+        }
+
+        .form-row-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 22px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--primary);
+        }
+
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #CFD8DC;
+            border-radius: 6px;
+            outline: none;
+            font-size: 0.95rem;
+            transition: 0.3s;
+        }
+
+        .input-group input:focus, .input-group select:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(10, 25, 47, 0.1);
+        }
+
+        .submit-form-btn {
+            width: 100%;
+            background-color: var(--accent);
+            color: var(--primary);
+            border: none;
+            padding: 15px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+        }
+
+        .submit-form-btn:hover {
+            background-color: var(--primary);
+            color: white;
+            box-shadow: none;
         }
 
         /* Floating WhatsApp Button */
@@ -171,7 +595,7 @@
             justify-content: center;
             align-items: center;
             font-size: 32px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             z-index: 9999;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-decoration: none;
@@ -183,48 +607,99 @@
             color: white;
         }
 
-        /* Responsive Mobile Menu */
+        /* Footer Element */
+        footer {
+            background-color: #050C16;
+            color: #7F8C8D;
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.95rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .form-split { grid-template-columns: 1fr; }
+            .hero-content h2 { font-size: 2.5rem; }
+        }
+
         @media (max-width: 768px) {
-            header { padding: 20px; }
-            .nav-links { display: none; } /* Can be toggled with JS later */
-            .hero-content h1 { font-size: 34px; }
-            .hero-content p { font-size: 14px; }
+            header .container { flex-direction: column; gap: 15px; }
+            nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+            nav a { margin: 0 10px; }
+            .form-row-2 { grid-template-columns: 1fr; gap: 0; }
+            .form-info-side, .form-inputs-side { padding: 30px; }
             .whatsapp-float { width: 50px; height: 50px; font-size: 26px; bottom: 20px; right: 20px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Luxury Header Section -->
-    <header>
-        <a href="#" class="logo">4D TOUR & TRAVEL</a>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Packages</a></li>
-            <li><a href="#">Fleet</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </header>
-
-    <!-- Hero Background Slider Section -->
-    <div class="hero-slider">
-        <div class="slide"></div>
-        <div class="slide"></div>
-        <div class="slide"></div>
-        
-        <!-- Hero Static Content Overlay -->
-        <div class="hero-content">
-            <h1>Experience Uttarakhand <br>In <span>Pure Luxury</span></h1>
-            <p>Premium Taxi Services & Bespoke Tours Across Devbhoomi</p>
-            <a href="https://wa.me/919045066598?text=Hello!%20I%20want%20to%20book%20a%20tour%20with%204D%20Travels." target="_blank" class="btn-luxury">Book Your Journey</a>
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-info">
+                <span><i class="fas fa-phone-alt"></i> Call Us: <strong>+91 9045066598</strong></span>
+                <span><i class="fas fa-envelope"></i> info@4dtaxiservice.in</span>
+            </div>
+            <div>
+                <span>All India Approved Tour Operators</span>
+            </div>
         </div>
     </div>
 
-    <!-- Floating WhatsApp Action Button (Linked to 9045066598) -->
-    <a href="https://wa.me/919045066598?text=Hello%204D%20Tour%20and%20Travel,%20I%20am%20interested%20in%20your%20services." class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>4D Tour & <span>Travel</span></h1>
+            </div>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#packages">Tour Packages</a>
+                <a href="#fleet">Our Fleet</a>
+                <a href="#inquiry">Get Quote</a>
+                <a href="tel:+919045066598" class="cta-btn">Call Now</a>
+            </nav>
+        </div>
+    </header>
 
-</body>
-</html>
+    <section id="home" class="hero-slider-container">
+        <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1600');">
+            <div class="hero-content">
+                <h2>Experience Premium All India <span>Tour Packages</span></h2>
+                <p>From luxury family tours to reliable corporate rentals, explore top destinations in comfort.</p>
+                <div class="hero-btns">
+                    <a href="#inquiry" class="btn btn-gold">Instant Tour Inquiry</a>
+                    <a href="https://wa.me/919045066598" class="btn btn-outline" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1600');">
+            <div class="hero-content">
+                <h2>Explore Devbhoomi <span>Uttarakhand</span></h2>
+                <p>Reliable taxi rentals and customized Chardham Yatra packages with expert hill drivers.</p>
+                <div class="hero-btns">
+                    <a href="#inquiry" class="btn btn-gold">Plan Your Journey</a>
+                    <a href="https://wa.me/919045066598" class="btn btn-outline" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1477587458883-471a5ed94245?q=80&w=1600');">
+            <div class="hero-content">
+                <h2>Discover Royal <span>Heritage Tours</span></h2>
+                <p>Travel across Rajasthan, Goa, and Himachal Pradesh with premium commercial coaches.</p>
+                <div class="hero-btns">
+                    <a href="#inquiry" class="btn btn-gold">Get Best Quotes</a>
+                    <a href="https://wa.me/919045066598" class="btn btn-outline" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <button class="slider-arrow arrow-left" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-arrow arrow-right" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
+    </section>
+
+    <section id="packages" style="padding: 90px 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Premium Tour Packages</h2>
+                <p>Highly customized city-wise holiday packa
