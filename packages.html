@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Tour Directory - 4D Tour & Travel</title>
+    <style>
+        body { margin: 0; padding: 0; background-color: #0b0b0b; color: #ffffff; font-family: 'Arial', sans-serif; }
+        .luxury-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Category Tabs Styling */
+        .tab-navigation { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-bottom: 50px; }
+        .tab-btn { background: #121212; border: 1px solid #222; color: #888; padding: 12px 25px; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; transition: all 0.3s; border-radius: 2px; }
+        .tab-btn:hover, .tab-btn.active { border-color: #cc9933; color: #cc9933; background: #161616; }
+        
+        /* Grid Layout */
+        .packages-mega-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; }
+        
+        /* Premium Card Layout */
+        .pkg-card { background: #121212; border: 1px solid #1c1c1c; border-radius: 4px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); }
+        .pkg-card:hover { border-color: #cc9933 !important; transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.6); }
+        .pkg-card:hover .img-zoom { transform: scale(1.06); }
+        
+        /* Button Style */
+        .btn-reserve { display: block; text-align: center; background: #cc9933; color: #ffffff; padding: 12px; text-decoration: none; font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; transition: all 0.3s; border-radius: 2px; }
+        .btn-reserve:hover { background: #ffffff !important; color: #111111 !important; }
+        
+        @media (max-width: 768px) { .packages-mega-grid { grid-template-columns: 1fr !important; } }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header style="padding: 25px 0; border-bottom: 1px solid #1c1c1c; background: #0f0f0f;">
+        <div class="luxury-container" style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="index.html" style="color: #cc9933; text-decoration: none; font-size: 12px; text-transform: uppercase; letter-spacing: 2px; font-weight: bold;">&larr; Back to Home</a>
+            <span style="font-weight: 800; letter-spacing: 3px; font-size: 18px;">4D <span style="color: #cc9933;">ARCHIVE</span></span>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main style="padding: 80px 0;">
+        <div class="luxury-container">
+            
+            <!-- Header Text -->
+            <div style="text-align: center; margin-bottom: 50px;">
+                <span style="color: #cc9933; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 5px; display: block; margin-bottom: 10px;">The Master Collection</span>
+                <h1 style="font-size: 2.2rem; font-weight: 800; text-transform: uppercase; margin: 0; letter-spacing: 1px;">24 Bespoke Uttarakhand Itineraries</h1>
+                <div style="width: 40px; height: 1px; background: #cc9933; margin: 15px auto 0 auto;"></div>
+            </div>
+
+            <!-- Category Filter Tabs -->
+            <div class="tab-navigation">
+                <button class="tab-btn active" onclick="filterCatalog('all')">All Expeditions</button>
+                <button class="tab-btn" onclick="filterCatalog('spiritual')">Spiritual & Yatra</button>
+                <button class="tab-btn" onclick="filterCatalog('leisure')">Leisure & Luxury</button>
+                <button class="tab-btn" onclick="filterCatalog('adventure')">Adventure & Wildlife</button>
+                <button class="tab-btn" onclick="filterCatalog('transfers')">Weekend & Corridors</button>
+            </div>
+
+            <!-- Mega Grid (24 Cards) -->
+            <div class="packages-mega-grid" id="mega-grid">
+                
+                <!-- === CATEGORY 1: SPIRITUAL & YATRA === -->
+                <div class="pkg-card spiritual">
+                    <div style="height: 200px; overflow: hidden; position: relative;"><div class="img-zoom" style="width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1626621422709-ee892d39fb6f?auto=format&fit=crop&w=500&q=80') center/cover; transition: 0.5s;"></div></div>
+                    <div style="padding: 22px; flex-grow: 1;">
+                        <div style="display: flex; justify-content: space-between; font-size: 11px; text-transform: uppercase; margin-bottom: 10px;"><span style="color:#cc9933; font-weight:bold;">Maha Circuit</span><span style="color:#aaa;">9N / 10D</span></div>
+                        <h4 style="margin: 0 0 10px 0; font-size: 16px; text-transform: uppercase;">Complete Maha Char Dham Yatra</h4>
+                        <p style="color: #666; font-size: 13px; line-height: 1.5; margin: 0;">Yamunotri, Gangotri, Kedarnath, and Badrinath via customized luxury SUVs with VIP tracking.</p>
+                    </div>
+                    <div style="padding: 0 22px 22px 22px;"><a href="https://wa.me/9643586598?text=Book%20Maha%20Char%20Dham" target="_blank" class="btn-reserve">Book Now</a></div>
+                </div>
+
+                <div class="pkg-card spiritual">
+                    <div style="height: 200px; overflow: hidden; position: relative;"><div class="img-zoom" style="width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1561361513-2d000a50f0db?auto=format&fit=crop&w=500&q=80') center/cover; transition: 0.5s;"></div></div>
+                    <div style="padding: 22px; flex-grow: 1;">
+                        <div style="display: flex; justify-content: space-between; font-size: 11px; text-transform: uppercase; margin-bottom: 10px;"><span style="color:#cc9933; font-weight:bold;">Do Dham</span><span style="color:#aaa;">5N / 6D</span></div>
+                        <h4 style="margin: 0 0 10px 0; font-size: 16px; text-transform: uppercase;">Sacred Do Dham Expedition</h4>
+                        <p style="color: #666; font-size: 13px; line-height: 1.5; margin: 0;">Streamlined private journey focusing directly on Kedarnath and Badrinath holy shrines.</p>
+                    </div>
+                    <div style="padding: 0 22px 22px 22px;"><a href="https://wa.me/9643586598?text=Book%20Do%20Dham" target="_blank" class="btn-reserve">Book Now</a></div>
+                </div>
+
+                <div class="pkg-card spiritual">
+                    <div style="height: 200px; overflow: hidden; position: relative;"><div class="img-zoom" style="width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=500&q=80') center/cover; transition: 0.5s;"></div></div>
+                    <div style="padding: 22px; flex-grow: 1;">
+                        <div style="display: flex; justify-content: space-between; font-size: 11px; text-transform: uppercase; margin-bottom: 10px;"><span style="color:#cc9933; font-weight:bold;">Kedarnath Solo</span><span style="color:#aaa;">3N / 4D</span></div>
+                        <h4 style="margin: 0 0 10px 0; font-size: 16px; text-transform: uppercase;">Kedarnath Premium Darshan</h4>
+                        <p style="color: #666; font-size: 13px; line-height: 1.5; margin: 0;">Dedicated luxury route from Dehradun/Haridwar straight to Sonprayag/Gaurikund nodes.</p>
+                    </div>
+                    <div style="padding: 0 22px 22px 22px;"><a href="https://wa.me/9643586598?text=Book%20Kedarnath%20Darshan" target="_blank" class="btn-reserve">Book Now</a></div>
+                </div>
+
+                <div class="pkg-card spiritual">
+                    <div style="height: 200px; overflow: hidden; position: relative;"><div class="img-zoom" style="width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1626621422709-ee892d39fb6f?auto=format&fit=crop&w=500&q=80') center/cover; transition: 0.5s;"></div></div>
+                    <div style="padding: 22px; flex-grow: 1;">
+                        <div style="display: flex; justify-content: space-between; font-size: 11px; text-transform: uppercase; margin-bottom: 10px;"><span style="color:#cc9933; font-weight:bold;">Badrinath Solo</span><span style="color:#aaa;">3N / 4D</span></div>
+                        <h4 style="margin: 0 0 10px 0; font-size: 16px; text-transform: uppercase;">Badrinath Mana Village Retreat</h4>
+                        <p style="color: #666; font-size: 13px; line-height: 1.5; margin: 0;">Comfortable executive transit to Badrinath temple with stopovers at Joshimath and Devprayag.</p>
+                    </div>
+                    <div style="padding: 0 22px 22px 22px;"><a href="https://wa.me/9643586598?text=Book%20Badrinath%20Retreat" target="_blank" class="btn-reserve">Book Now</a></div>
+                </div>
+
+                <div class="pkg-card spiritual">
+                    <div style="height: 200px; overflow: hidden; position: relative;"><div class="img-zoom" style="width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1542224566-6e85f2e6772f?auto=format&fit=crop&w=500&q=80') center/cover; transition: 0.5s;"></div></div>
+                    <div style="padding: 22px; flex-grow: 1;">
+                        <div style="display: flex; justify-content: space-between; font-size: 11px; text-transform: uppercase; margin-bottom: 10px;"><span style="color:#cc9933; font-weight:bold;">Teen Dham</span><span style="color:#aaa;">7N / 8D</span></div>
+                        <h4 style="margin: 0 0 10px 0; font-size: 16px; text-transform: uppercase;">Custom Teen Dham Package</h4>
+                        <p style="color: #666; font-size: 13px; line-height: 1.5; margin: 0;">Choose any 3 shrines (Gangotri-Kedar-Badri) with fully personalized driving break structures.</p>
+                    </div>
+                    <div style="padding: 0 22px 22px 22px;"><a href="https://wa.me/9643586598?text=Book%20Teen%20Dham" target="_blank" class="btn-reserve">Book Now</a></div>
+                </div>
+
+                <div class="pkg-card spiritual">
+                    <div style="height: 200px; overflow: hidden; position: relative;"><div class="img-zoom" style="width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=500&q=80') center/cover; transition: 0.5s;"></div></div>
+                    <div style="padding: 22px; flex-grow: 1;">
+                        <div style="display: flex; justify-content: space-between; font-size: 11px; text-transform: uppercase; margin-bottom: 10px;"><span style="color:#cc9933; font-weight:bold;">Panch Kedar</span><span style="color:#aaa;">11N / 12D</span></div>
+                        <h4 style="margin: 0 0 10px 0; font-size: 16px; text-transform: uppercase;">Panch Kedar Sacred Trek Transit</h4>
+                        <p style="color: #666; font-size: 13px; line-height: 1.5; margin: 0;">Premium logistics support for all five sacred Shiva temples across high hill nodes.</p>
+                    </div>
+                    <div style="padding: 0 22px 22px 22px;"><a href="https://wa.me/9643586598?text=Book%20Panch%20Kedar" target="_blank" class="btn-reserve">Book Now</a></div>
+                </div>
+
+                <!-- === CATEGORY 2: LEISURE & LUXURY === -->
+                <div class="pkg-card leisure">
+                    <div style="height: 200px; overflow: hidden; position: relative;"><div class="img-zoom" style="width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=500&q=80') center/cover; transition: 0.5s;"></div></div>
+                    <div style="padding: 22px; flex-grow: 1;">
+                        <div style="display: flex; justify-content: space-between; font-size: 11px; text-transform: uppercase; margin-bottom: 10px;"><span style="color:#cc9933; font-weight:bold;">Signature</span><span style="color:#aaa;">5N / 6D</span></div>
+                        <h4 style="margin: 0 0 10px 0; font-size: 16px; text-transform: uppercase;">The Grand Uttarakhand Escape</h4>
+                        <p style="color: #666; font-size: 13px; line-height: 1.5; margin: 0;">Covers Mussoorie heights, Dhanaulti, Rishikesh rafting points, and scenic Tehri Lake resorts.</p>
+                    </div>
+                    <div style="padding: 0 22px 22px 22px;"><a href="https://wa.me/9643586598?text=Book%20Grand%20Escape" target="_blank" class="btn-reserve">Book Now</a></div>
+                </div>
+
+                <div class="pkg-card leisure">
+                    <div style="height: 200px; overflow: hidden; position: relative;"><div class="img-zoom" style="width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=500&q=80') center/cover; transition: 0.5s;"></div></div>
+                    <div style="padding: 22px; flex-grow: 1;">
+                        <div style="display: flex; justify-content: space-between; font-size: 11px; text-transform: uppercase; margin-bottom: 10px;"><span style="color:#cc9933; font-weight:bold;">Kumaon Premium</span><span style="color:#aaa;">6N / 7D</span></div>
+                        <h4 style="margin: 0 0 10px 0; font-size: 16px; text-transform: uppercase;">Nainital, Almora & Kausani Majestic</h4>
+                        <p style="color: #666; font-size: 13px; line-height: 1.5; margin: 0;">Fascinating lake districts combined with panoramic views of Trishul and Nanda Devi peaks.</p>
+                    </div>
+                    <div style="padding: 0 22px 22px 22px;"><a href="https://wa.me/9643586598?text=Book%20Kumaon%20Majestic" target="_blank" class="btn-reserve">Book Now</a></div>
+                </div>
+
+                <div class="pkg-card leisure">
+                    <div style="height: 200px; overflow: hidden; position: relative;"><div class="img-zoom" style="width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1598091451000-f1d24c08e5c1?auto=format&fit=crop&w=500&q=80') center/cover; transition: 0.5s;"></div></div>
+                    <div style="padding: 22px; flex-grow: 1;">
+                        <div style="display: flex; justify-content: space-between; font-size: 11px; text-transform: uppercase; margin-bottom: 10px;"><span style="color:#cc9933; font-weight:bold;">Honeymoon Elite</span><span style="color:#aaa;">4N / 5D</span></div>
+                        <h4 style="margin: 0 0 10px 0; font-size: 16px; text-transform: uppercase;">Auli Ski Resort & Joshimath Luxury</h4>
+                        <p style="color: #666; font-size: 13px; line-height: 1.5; margin: 0;">Private executive sedan trips to India's premier snow slopes with mesmerizing cable-way links.</p>
+                    </div>
+                    <div style="padding: 0 22px 22px 22px;"><a href="https://wa.me/9643586598?text=Book%20Auli%20Luxury" target="_blank" class="btn-reserve">Book Now</a></div>
+                </div>
+
+                <div class="pkg-card leisure">
+                    <div style="height: 200px; overflow: hidden; position: relative;"><div class="img-zoom" style="width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1611003228941-98852ba61887?auto=format&fit=crop&w=500&q=80') center/cover; transition: 0.5s;"></div></div>
+                    <div style="padding: 22px; flex-grow: 1;">
+                        <div style="display: flex; justify-content: space-between; font-size: 11px; text-transform: uppercase; margin-bottom: 10px;"><span style="color:#cc9933; font-weight:bold;">High Hills</span><span style="color:#aaa;">3N / 4D</span></div>
+                        <h4 style="margin: 0 0 10px 0; font-size: 16px; text-transform: uppercase;">Chopta & Mukteshwar Eco Retreat</h4>
+                        <p style="color: #666; font-size: 13px; line-height: 1.5; margin: 0;">Breathe the crisp alpine air in the Swiss-like valleys of Chopta and fruit orchards of Mukteshwar.</p>
+                    </div>
+                    <div style="padding: 0 22px 22px 22px;"><a href="https://wa.me/9643586598?text=Book%20Chopta%20Eco" target="_blank" class="btn-reserve">Book Now</a></div>
+                </div>
+
+                <div class="pkg-card leisure">
+                    <div style="height: 200px; overflow: hidden; position: relative;"><div class="img-zoom" style="width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=500&q=80') center/cover; transition: 0.5s;"></div></div>
+                    <div style="padding: 22px; flex-grow: 1;">
+                        <div style="display: flex; justify-content: space-between; font-size: 11px; text-transform: uppercase; margin-bottom: 10px;"><span style="color:#cc9933; font-weight:bold;">Heritage</span><span style="color:#aaa;">5N / 6D</span></div>
+                        <h4 style="margin: 0 0 10px 0; font-size: 16px; text-transform: uppercase;">Ranikhet Binsar & Jageshwar Valley</h4>
+                        <p style="color: #666; font-size: 13px; line-height: 1.5; margin: 0;">Explore ancient cedar woods, old golf meadows, and centuries-old architectural stone temple clusters.</p>
+                    </div>
+                    <div style="padding: 0 22px 22px 22px;"><a href="https://wa.me/9643586598?text=Book%20Ranikhet%20Heritage" target="_blank" class="btn-reserve">Book Now</a></div>
+                </div>
+
+                <div class="pkg-card leisure">
+                    <div style="height: 200px; overflow: hidden; position: relative;"><div class="img-zoom" style="width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=500&q=80') center/cover; transition: 0.5s;"></div></div>
+                    <div style="padding: 22px; flex-grow: 1;">
+                        <div style="display: flex; justify-content: space-between; font-size: 11px; text-transform: uppercase; margin-bottom: 10px;"><span style="color:#cc9933; font-weight:bold;">Corporate</span><span style="color:#aaa;">4N / 5D</span></div>
+                        <h4 style="margin: 0 0 10px 0; font-size: 16px; text-transform: uppercase;">Lansdowne & Khirsu Serenity</h4>
+                        <p style="color: #666; font-size: 13px; line-height: 1.5; margin: 0;">Quiet, pristine oak forests and old military colonial cantonments, best for peaceful corporate unwinding.</p>
+                    </div>
+                    <div style="padding: 0 22px 22px 22px;"><a href="https://wa.me/9643586598?text=Book%20Lansdowne%20Serenity" target="_blank" class="btn-reserve">Book Now</a></div>
+                </div>
+
+                <!-- === CATEGORY 3: ADVENTURE & WILDLIFE === -->
+                <div class="pkg-card adventure">
+                    <div style="height: 200px; overflow: hidden; position: relative;"><div class="img-zoom" style="width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1581888227599-779811939961?auto=format&fit=crop&w=500&q=80') center/cover; transition: 0.5s;"></div></div>
+                    <div style="padding: 22px; flex-grow: 1;">
+                        <div style="display: flex; justify-content: space-between; font-size: 11px; text-transform: uppercase; margin-bottom: 10px;"><span style="color:#cc9933; font-weight:bold;">Wildlife</span><span style="color:#aaa;">3N / 4D</span></div>
+                        <h4 style="margin: 0 0 10px 0; font-size: 16px; text-transform: uppercase;">Jim Corbett & Nainital Premium</h4>
+                        <p style="color: #666; font-size: 13px; line-height: 1.5; margin: 0;">A rich combination of deep forest jeep safaris and high mountain la
