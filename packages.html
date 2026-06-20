@@ -3,205 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complete India Tour Directory - 4D Tour & Travel</title>
+    <title>4D Tour & Travel - Premium Packages</title>
     <style>
         body { margin: 0; padding: 0; background-color: #0b0b0b; color: #ffffff; font-family: 'Arial', sans-serif; }
-        .luxury-container { max-width: 1300px; margin: 0 auto; padding: 0 20px; }
-        
-        /* Section Dividers */
-        .section-header { text-align: center; margin-bottom: 60px; padding-top: 50px; }
-        .section-title { font-size: 2.2rem; font-weight: 800; text-transform: uppercase; margin: 0; letter-spacing: 3px; color: #ffffff; }
-        .accent-line { width: 60px; height: 2px; background: #cc9933; margin: 20px auto 0 auto; }
-        
-        /* Large Grid Layout */
-        .packages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 40px; margin-bottom: 80px; }
-        
-        /* Premium Large Card Layout */
-        .pkg-card { background: #121212; border: 1px solid #1c1c1c; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); }
-        .pkg-card:hover { border-color: #cc9933 !important; transform: translateY(-8px); box-shadow: 0 25px 50px rgba(0,0,0,0.7); }
-        .pkg-card:hover .img-zoom { transform: scale(1.08); }
-        
-        /* Large Button Style */
-        .btn-reserve { display: block; text-align: center; background: #cc9933; color: #ffffff; padding: 15px; text-decoration: none; font-weight: bold; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; transition: all 0.3s; border-radius: 3px; }
-        .btn-reserve:hover { background: #ffffff !important; color: #111111 !important; }
-        
-        @media (max-width: 768px) { .packages-grid { grid-template-columns: 1fr !important; } .section-title { font-size: 1.8rem; } }
+        .luxury-container { max-width: 1300px; margin: 0 auto; padding: 40px 20px; }
+        .category-title { color: #cc9933; font-size: 24px; text-transform: uppercase; letter-spacing: 4px; margin: 50px 0 30px 0; border-left: 4px solid #cc9933; padding-left: 20px; }
+        .packages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 40px; margin-bottom: 60px; }
+        .pkg-card { background: #121212; border: 1px solid #1c1c1c; border-radius: 6px; overflow: hidden; transition: 0.4s; }
+        .pkg-card:hover { border-color: #cc9933; transform: translateY(-8px); }
+        .img-container { height: 250px; overflow: hidden; }
+        .img-container img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .pkg-card:hover img { transform: scale(1.08); }
+        .btn-reserve { display: block; text-align: center; background: #cc9933; color: #ffffff; padding: 15px; text-decoration: none; font-weight: bold; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; }
+        .btn-reserve:hover { background: #ffffff; color: #111111; }
     </style>
 </head>
 <body>
 
-    <!-- Header Navigation -->
-    <header style="padding: 30px 0; border-bottom: 1px solid #1c1c1c; background: #0f0f0f;">
-        <div class="luxury-container" style="display: flex; justify-content: space-between; align-items: center;">
-            <a href="index.html" style="color: #cc9933; text-decoration: none; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; font-weight: bold;">&larr; Back to Home</a>
-            <span style="font-weight: 800; letter-spacing: 4px; font-size: 22px;">4D <span style="color: #cc9933;">TRAVELS</span></span>
-        </div>
-    </header>
+<div class="luxury-container">
 
-    <!-- Main Content Wrapper -->
-    <main style="padding: 60px 0;">
-        <div class="luxury-container">
+    <!-- UTTARAKHAND SECTION -->
+    <h2 class="category-title">Uttarakhand Divine Tours</h2>
+    <div class="packages-grid">
+        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1596767634377-50531cc217d8?q=80&w=600" alt="Rishikesh"></div><div style="padding:20px;"><h3>Haridwar Rishikesh Tour</h3><a href="https://wa.me/9643586598?text=Book%20Haridwar%20Rishikesh" class="btn-reserve">Book Now</a></div></div>
+        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1622308644420-b003666ca6ee?q=80&w=600" alt="Mussoorie"></div><div style="padding:20px;"><h3>Haridwar Rishikesh Mussoorie</h3><a href="https://wa.me/9643586598?text=Book%20Haridwar%20Rishikesh%20Mussoorie" class="btn-reserve">Book Now</a></div></div>
+        <div class="pkg-card"><div class="img-container"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Sahastradhara_Dehradun.jpg" alt="Dehradun"></div><div style="padding:20px;"><h3>Dehradun Mussoorie Tour</h3><a href="https://wa.me/9643586598?text=Book%20Dehradun%20Mussoorie" class="btn-reserve">Book Now</a></div></div>
+        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1610123598147-f632519942ef?q=80&w=600" alt="Nainital"></div><div style="padding:20px;"><h3>Nainital Tour</h3><a href="https://wa.me/9643586598?text=Book%20Nainital" class="btn-reserve">Book Now</a></div></div>
+        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1581888227599-779811939961?q=80&w=600" alt="Corbett"></div><div style="padding:20px;"><h3>Nainital Jim Corbett Tour</h3><a href="https://wa.me/9643586598?text=Book%20Nainital%20Jim%20Corbett" class="btn-reserve">Book Now</a></div></div>
+        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=600" alt="Kedarnath"></div><div style="padding:20px;"><h3>Kedarnath Tour</h3><a href="https://wa.me/9643586598?text=Book%20Kedarnath" class="btn-reserve">Book Now</a></div></div>
+        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1621688001602-ecfe2290cae4?q=80&w=600" alt="Badrinath"></div><div style="padding:20px;"><h3>Badrinath Tour</h3><a href="https://wa.me/9643586598?text=Book%20Badrinath" class="btn-reserve">Book Now</a></div></div>
+        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600" alt="Do Dham"></div><div style="padding:20px;"><h3>Do Dham (Kedarnath–Badrinath)</h3><a href="https://wa.me/9643586598?text=Book%20Do%20Dham" class="btn-reserve">Book Now</a></div></div>
+        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1562231648-52b3149c4a75?q=80&w=600" alt="Tungnath"></div><div style="padding:20px;"><h3>Kedarnath Tungnath Badrinath</h3><a href="https://wa.me/9643586598?text=Book%20K-T-B" class="btn-reserve">Book Now</a></div></div>
+        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1399814402685-eb9b25149c4a?q=80&w=600" alt="Char Dham"></div><div style="padding:20px;"><h3>Char Dham Yatra</h3><a href="https://wa.me/9643586598?text=Book%20Char%20Dham" class="btn-reserve">Book Now</a></div></div>
+        <div class="pkg-card"><div class="img-container"><img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Adi_Kailash_view.jpg" alt="Adi Kailash"></div><div style="padding:20px;"><h3>Adi Kailash Om Parvat Yatra</h3><a href="https://wa.me/9643586598?text=Book%20Adi%20Kailash" class="btn-reserve">Book Now</a></div></div>
+    </div>
 
-            <!-- ========================================== -->
-            <!-- PART 1: UTTARAKHAND LEISURE & WEEKEND -->
-            <!-- ========================================== -->
-            <div class="section-header">
-                <span style="color: #cc9933; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 5px; display: block; margin-bottom: 12px;">Collection 01 // Regional Getaways</span>
-                <h2 class="section-title">Uttarakhand Leisure Tours</h2>
-                <div class="accent-line"></div>
-            </div>
+    <!-- HIMACHAL SECTION -->
+    <h2 class="category-title">Himachal Adventure Tours</h2>
+    <div class="packages-grid">
+        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1605538032432-a9f0c8d9baac?q=80&w=600" alt="Shimla"></div><div style="padding:20px;"><h3>Shimla Manali Tour</h3><a href="https://wa.me/9643586598?text=Book%20Shimla%20Manali" class="btn-reserve">Book Now</a></div></div>
+        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?q=80&w=600" alt="Spiti"></div><div style="padding:20px;"><h3>Spiti Valley Tour</h3><a href="https://wa.me/9643586598?text=Book%20Spiti%20Valley" class="btn-reserve">Book Now</a></div></div>
+        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1514222134-b57cbb8ce073?q=80&w=600" alt="Dalhousie"></div><div style="padding:20px;"><h3>Amritsar Dalhousie Dharamshala</h3><a href="https://wa.me/9643586598?text=Book%20Amritsar%20Dalhousie%20Dharamshala" class="btn-reserve">Book Now</a></div></div>
+    </div>
 
-            <div class="packages-grid">
-                <!-- Card 1: Haridwar Rishikesh -->
-                <div class="pkg-card">
-                    <div style="height: 250px; overflow: hidden;"><div class="img-zoom" style="width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1542384557-0824d90731ee?auto=format&fit=crop&w=600&q=80') center/cover; transition: 0.5s;"></div></div>
-                    <div style="padding: 30px; flex-grow: 1;">
-                        <div style="display: flex; justify-content: space-between; font-size: 12px; text-transform: uppercase; margin-bottom: 12px;"><span style="color:#cc9933; font-weight:bold;">Spiritual Bliss</span><span style="color:#aaa;">2N / 3D</span></div>
-                        <h3 style="margin: 0 0 15px 0; font-size: 20px; text-transform: uppercase; letter-spacing: 1px;">Haridwar Rishikesh Tour</h3>
-                        <p style="color: #999; font-size: 14px; line-height: 1.6; margin: 0;">Experience Ganga Aarti at Har Ki Pauri, Laxman Jhula exploration, and serene ashram stays with private executive sedan comfort.</p>
-                    </div>
-                    <div style="padding: 0 30px 30px 30px;"><a href="https://wa.me/9643586598?text=Book%20Haridwar%20Rishikesh%20Tour" target="_blank" class="btn-reserve">Book Now</a></div>
-                </div>
+    <!-- OTHER STATES SECTION -->
+    <h2 class="category-title">Heritage & Coastal Escapes</h2>
+    <div class="packages-grid">
+        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1566837430428-70154fe13c72?q=80&w=600" alt="Kashmir"></div><div style="padding:20px;"><h3>Kashmir Tour Package</h3><a href="https://wa.me/9643586598?text=Book%20Kashmir" class="btn-reserve">Book Now</a></div></div>
+        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=600" alt="Golden Triangle"></div><div style="padding:20px;"><h3>Golden Triangle Tour</h3><a href="https://wa.me/9643586598?text=Book%20Golden%20Triangle" class="btn-reserve">Book Now</a></div></div>
+        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?q=80&w=600" alt="Goa"></div><div style="padding:20px;"><h3>Goa Tour Package</h3><a href="https://wa.me/9643586598?text=Book%20Goa" class="btn-reserve">Book Now</a></div></div>
+        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=600" alt="Kerala"></div><div style="padding:20px;"><h3>Kerala Tour Package</h3><a href="https://wa.me/9643586598?text=Book%20Kerala" class="btn-reserve">Book Now</a></div></div>
+        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?q=80&w=600" alt="Jaisalmer"></div><div style="padding:20px;"><h3>Jaisalmer Rajasthan Package</h3><a href="https://wa.me/9643586598?text=Book%20Jaisalmer" class="btn-reserve">Book Now</a></div></div>
+        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?q=80&w=600" alt="Rajasthan"></div><div style="padding:20px;"><h3>Rajasthan Heritage Tour</h3><a href="https://wa.me/9643586598?text=Book%20Rajasthan" class="btn-reserve">Book Now</a></div></div>
+    </div>
 
-                <!-- Card 2: Haridwar Rishikesh Mussoorie -->
-                <div class="pkg-card">
-                    <div style="height: 250px; overflow: hidden;"><div class="img-zoom" style="width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1622308644420-b003666ca6ee?auto=format&fit=crop&w=600&q=80') center/cover; transition: 0.5s;"></div></div>
-                    <div style="padding: 30px; flex-grow: 1;">
-                        <div style="display: flex; justify-content: space-between; font-size: 12px; text-transform: uppercase; margin-bottom: 12px;"><span style="color:#cc9933; font-weight:bold;">Hills & Spirituality</span><span style="color:#aaa;">4N / 5D</span></div>
-                        <h3 style="margin: 0 0 15px 0; font-size: 20px; text-transform: uppercase; letter-spacing: 1px;">Haridwar Rishikesh Mussoorie</h3>
-                        <p style="color: #999; font-size: 14px; line-height: 1.6; margin: 0;">A blend of holy rituals on the plains and refreshing mountain air at Kempty Falls and Mall Road in the Queen of Hills.</p>
-                    </div>
-                    <div style="padding: 0 30px 30px 30px;"><a href="https://wa.me/9643586598?text=Book%20Haridwar%20Rishikesh%20Mussoorie%20Tour" target="_blank" class="btn-reserve">Book Now</a></div>
-                </div>
+</div>
 
-                <!-- Card 3: Dehradun Mussoorie -->
-                <div class="pkg-card">
-                    <div style="height: 250px; overflow: hidden;"><div class="img-zoom" style="width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1599930113854-d6d7fd521f10?auto=format&fit=crop&w=600&q=80') center/cover; transition: 0.5s;"></div></div>
-                    <div style="padding: 30px; flex-grow: 1;">
-                        <div style="display: flex; justify-content: space-between; font-size: 12px; text-transform: uppercase; margin-bottom: 12px;"><span style="color:#cc9933; font-weight:bold;">Valley Escape</span><span style="color:#aaa;">3N / 4D</span></div>
-                        <h3 style="margin: 0 0 15px 0; font-size: 20px; text-transform: uppercase; letter-spacing: 1px;">Dehradun Mussoorie Tour</h3>
-                        <p style="color: #999; font-size: 14px; line-height: 1.6; margin: 0;">Explore Robber's Cave, Sahastradhara, and premium high-altitude stays in Mussoorie with dedicated luxury fleet transits.</p>
-                    </div>
-                    <div style="padding: 0 30px 30px 30px;"><a href="https://wa.me/9643586598?text=Book%20Dehradun%20Mussoorie%20Tour" target="_blank" class="btn-reserve">Book Now</a></div>
-                </div>
-
-                <!-- Card 4: Nainital Tour -->
-                <div class="pkg-card">
-                    <div style="height: 250px; overflow: hidden;"><div class="img-zoom" style="width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1610123598147-f632519942ef?auto=format&fit=crop&w=600&q=80') center/cover; transition: 0.5s;"></div></div>
-                    <div style="padding: 30px; flex-grow: 1;">
-                        <div style="display: flex; justify-content: space-between; font-size: 12px; text-transform: uppercase; margin-bottom: 12px;"><span style="color:#cc9933; font-weight:bold;">Lake District</span><span style="color:#aaa;">2N / 3D</span></div>
-                        <h3 style="margin: 0 0 15px 0; font-size: 20px; text-transform: uppercase; letter-spacing: 1px;">Nainital Lake Tour</h3>
-                        <p style="color: #999; font-size: 14px; line-height: 1.6; margin: 0;">Boating on the emerald Naini Lake, panoramic views from Snow View Point, and pleasant evening strolls along Mall Road.</p>
-                    </div>
-                    <div style="padding: 0 30px 30px 30px;"><a href="https://wa.me/9643586598?text=Book%20Nainital%20Tour" target="_blank" class="btn-reserve">Book Now</a></div>
-                </div>
-
-                <!-- Card 5: Nainital Jim Corbett -->
-                <div class="pkg-card">
-                    <div style="height: 250px; overflow: hidden;"><div class="img-zoom" style="width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1581888227599-779811939961?auto=format&fit=crop&w=600&q=80') center/cover; transition: 0.5s;"></div></div>
-                    <div style="padding: 30px; flex-grow: 1;">
-                        <div style="display: flex; justify-content: space-between; font-size: 12px; text-transform: uppercase; margin-bottom: 12px;"><span style="color:#cc9933; font-weight:bold;">Lakes & Wilderness</span><span style="color:#aaa;">4N / 5D</span></div>
-                        <h3 style="margin: 0 0 15px 0; font-size: 20px; text-transform: uppercase; letter-spacing: 1px;">Nainital Jim Corbett Tour</h3>
-                        <p style="color: #999; font-size: 14px; line-height: 1.6; margin: 0;">Combine the peaceful lakes of Nainital with thrilling tiger tracking open-jeep safaris in India's oldest national park.</p>
-                    </div>
-                    <div style="padding: 0 30px 30px 30px;"><a href="https://wa.me/9643586598?text=Book%20Nainital%20Jim%20Corbett%20Tour" target="_blank" class="btn-reserve">Book Now</a></div>
-                </div>
-            </div>
-
-            <hr style="border: 0; height: 1px; background: #222; margin: 80px 0;">
-
-            <!-- ========================================== -->
-            <!-- PART 2: SACRED HIMALAYAS & PILGRIMAGE -->
-            <!-- ========================================== -->
-            <div class="section-header">
-                <span style="color: #cc9933; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 5px; display: block; margin-bottom: 12px;">Collection 02 // Pure Devotion & Peaks</span>
-                <h2 class="section-title">Sacred Himalayan Pilgrimages</h2>
-                <div class="accent-line"></div>
-            </div>
-
-            <div class="packages-grid">
-                <!-- Card 6: Kedarnath Tour -->
-                <div class="pkg-card">
-                    <div style="height: 250px; overflow: hidden;"><div class="img-zoom" style="width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=600&q=80') center/cover; transition: 0.5s;"></div></div>
-                    <div style="padding: 30px; flex-grow: 1;">
-                        <div style="display: flex; justify-content: space-between; font-size: 12px; text-transform: uppercase; margin-bottom: 12px;"><span style="color:#cc9933; font-weight:bold;">Shiva Realm</span><span style="color:#aaa;">3N / 4D</span></div>
-                        <h3 style="margin: 0 0 15px 0; font-size: 20px; text-transform: uppercase; letter-spacing: 1px;">Kedarnath Dham Yatra</h3>
-                        <p style="color: #999; font-size: 14px; line-height: 1.6; margin: 0;">A powerful journey to the holy shrine of Lord Shiva. Includes smooth transfers to Sonprayag and high-end logistical arrangements.</p>
-                    </div>
-                    <div style="padding: 0 30px 30px 30px;"><a href="https://wa.me/9643586598?text=Book%20Kedarnath%20Tour" target="_blank" class="btn-reserve">Book Now</a></div>
-                </div>
-
-                <!-- Card 7: Badrinath Tour -->
-                <div class="pkg-card">
-                    <div style="height: 250px; overflow: hidden;"><div class="img-zoom" style="width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1621688001602-ecfe2290cae4?auto=format&fit=crop&w=600&q=80') center/cover; transition: 0.5s;"></div></div>
-                    <div style="padding: 30px; flex-grow: 1;">
-                        <div style="display: flex; justify-content: space-between; font-size: 12px; text-transform: uppercase; margin-bottom: 12px;"><span style="color:#cc9933; font-weight:bold;">Vishnu Realm</span><span style="color:#aaa;">3N / 4D</span></div>
-                        <h3 style="margin: 0 0 15px 0; font-size: 20px; text-transform: uppercase; letter-spacing: 1px;">Badrinath Dham Yatra</h3>
-                        <p style="color: #999; font-size: 14px; line-height: 1.6; margin: 0;">Travel to the majestic Nar-Narayan mountains. Pay homage at Lord Vishnu's premium seat and explore the historic Mana Village.</p>
-                    </div>
-                    <div style="padding: 0 30px 30px 30px;"><a href="https://wa.me/9643586598?text=Book%20Badrinath%20Tour" target="_blank" class="btn-reserve">Book Now</a></div>
-                </div>
-
-                <!-- Card 8: Do Dham -->
-                <div class="pkg-card">
-                    <div style="height: 250px; overflow: hidden;"><div class="img-zoom" style="width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=600&q=80') center/cover; transition: 0.5s;"></div></div>
-                    <div style="padding: 30px; flex-grow: 1;">
-                        <div style="display: flex; justify-content: space-between; font-size: 12px; text-transform: uppercase; margin-bottom: 12px;"><span style="color:#cc9933; font-weight:bold;">Double Blessings</span><span style="color:#aaa;">5N / 6D</span></div>
-                        <h3 style="margin: 0 0 15px 0; font-size: 20px; text-transform: uppercase; letter-spacing: 1px;">Do Dham (Kedarnath–Badrinath)</h3>
-                        <p style="color: #999; font-size: 14px; line-height: 1.6; margin: 0;">The complete spiritual duo. Full coverage of both sacred domains via premium SUVs and managed hotel configurations.</p>
-                    </div>
-                    <div style="padding: 0 30px 30px 30px;"><a href="https://wa.me/9643586598?text=Book%20Do%20Dham%20Yatra" target="_blank" class="btn-reserve">Book Now</a></div>
-                </div>
-
-                <!-- Card 9: Kedarnath Tungnath Badrinath -->
-                <div class="pkg-card">
-                    <div style="height: 250px; overflow: hidden;"><div class="img-zoom" style="width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1562231648-52b3149c4a75?auto=format&fit=crop&w=600&q=80') center/cover; transition: 0.5s;"></div></div>
-                    <div style="padding: 30px; flex-grow: 1;">
-                        <div style="display: flex; justify-content: space-between; font-size: 12px; text-transform: uppercase; margin-bottom: 12px;"><span style="color:#cc9933; font-weight:bold;">Highest Shiva Temple</span><span style="color:#aaa;">6N / 7D</span></div>
-                        <h3 style="margin: 0 0 15px 0; font-size: 20px; text-transform: uppercase; letter-spacing: 1px;">Kedarnath Tungnath Badrinath</h3>
-                        <p style="color: #999; font-size: 14px; line-height: 1.6; margin: 0;">An elite circuit that takes you to the highest shrine of Tungnath, combined with the major divine energetic nodes of Do Dham.</p>
-                    </div>
-                    <div style="padding: 0 30px 30px 30px;"><a href="https://wa.me/9643586598?text=Book%20Kedarnath%20Tungnath%20Badrinath%20Tour" target="_blank" class="btn-reserve">Book Now</a></div>
-                </div>
-
-                <!-- Card 10: Char Dham Yatra -->
-                <div class="pkg-card">
-                    <div style="height: 250px; overflow: hidden;"><div class="img-zoom" style="width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1399814402685-eb9b25149c4a?auto=format&fit=crop&w=600&q=80') center/cover; transition: 0.5s;"></div></div>
-                    <div style="padding: 30px; flex-grow: 1;">
-                        <div style="display: flex; justify-content: space-between; font-size: 12px; text-transform: uppercase; margin-bottom: 12px;"><span style="color:#cc9933; font-weight:bold;">Ultimate Pilgrimage</span><span style="color:#aaa;">9N / 10D</span></div>
-                        <h3 style="margin: 0 0 15px 0; font-size: 20px; text-transform: uppercase; letter-spacing: 1px;">Complete Char Dham Yatra</h3>
-                        <p style="color: #999; font-size: 14px; line-height: 1.6; margin: 0;">The absolute cosmic loop: Yamunotri, Gangotri, Kedarnath, and Badrinath. Handled exclusively by our top fleet drivers.</p>
-                    </div>
-                    <div style="padding: 0 30px 30px 30px;"><a href="https://wa.me/9643586598?text=Book%20Char%20Dham%20Yatra" target="_blank" class="btn-reserve">Book Now</a></div>
-                </div>
-
-                <!-- Card 11: Adi Kailash Om Parvat -->
-                <div class="pkg-card">
-                    <div style="height: 250px; overflow: hidden;"><div class="img-zoom" style="width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80') center/cover; transition: 0.5s;"></div></div>
-                    <div style="padding: 30px; flex-grow: 1;">
-                        <div style="display: flex; justify-content: space-between; font-size: 12px; text-transform: uppercase; margin-bottom: 12px;"><span style="color:#cc9933; font-weight:bold;">Inner Himalayan Secret</span><span style="color:#aaa;">7N / 8D</span></div>
-                        <h3 style="margin: 0 0 15px 0; font-size: 20px; text-transform: uppercase; letter-spacing: 1px;">Adi Kailash & Om Parvat Yatra</h3>
-                        <p style="color: #999; font-size: 14px; line-height: 1.6; margin: 0;">Journey to the pristine Vyas Valley. Fully managed with inner-line permits and rugged, premium 4x4 offroad mountain vehicles.</p>
-                    </div>
-                    <div style="padding: 0 30px 30px 30px;"><a href="https://wa.me/9643586598?text=Book%20Adi%20Kailash%20Om%20Parvat%20Yatra" target="_blank" class="btn-reserve">Book Now</a></div>
-                </div>
-            </div>
-
-            <hr style="border: 0; height: 1px; background: #222; margin: 80px 0;">
-
-            <!-- ========================================== -->
-            <!-- PART 3: PAN-INDIA ALPINE & HILL EXPEDITIONS -->
-            <!-- ========================================== -->
-            <div class="section-header">
-                <span style="color: #cc9933; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 5px; display: block; margin-bottom: 12px;">Collection 03 // Majestic Valleys & Loops</span>
-                <h2 class="section-title">Northern Frontiers & Valleys</h2>
-                <div class="accent-line"></div>
-            </div>
-
-            <div class="packages-grid">
-                <!-- Card 12: Shimla Manali Tour -->
-                <div class="pkg-card">
-                    <div style="height: 250px; overflow: hidden;"><div class="img-zoom" style="width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1605538032432-a9f0c8d9baac?auto=format&fit=crop&w=600&q=80') center/cover; transition: 0.5s;"></div></div>
-                    <div style="padding: 30px; flex-grow: 1;">
-                        <div style="display: flex; justify-content: space-between; font-size: 12px; text-transform: uppercase; margin-bottom: 12px;"><span style="color:#cc9933; font-weight:bold;">Himachal Grandeur</span><span style="color:#aaa;">5N / 6D</span></div>
-                        <h3 style="margin: 0 0 15px 0; font-size: 20px; text-transfor
+</body>
+</html>
