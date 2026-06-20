@@ -1,297 +1,865 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4D Tour and Travel | Premium All India Taxi & Tour Packages</title>
-    
-    <link rel="stylesheet" href="[cdnjs.cloudflare.com](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)">
-    
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-        body { background-color: #f4f6f9; color: #333; }
-        .container { width: 90%; max-width: 1100px; margin: 0 auto; }
-        
-        .top-bar { background-color: #0A192F; color: white; padding: 12px 0; font-size: 14px; }
-        .top-bar .container { display: flex; justify-content: space-between; flex-wrap: wrap; }
-        .top-bar a { color: #FFD700; text-decoration: none; font-weight: bold; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        header { background: white; padding: 10px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 999; }
-        header .container { display: flex; justify-content: space-between; align-items: center; }
-        
-        .logo-box { display: flex; align-items: center; text-decoration: none; }
-        .logo-box img { height: 65px; width: auto; object-fit: contain; margin-right: 12px; border-radius: 50%; }
-        .logo-box h1 { font-size: 22px; color: #0A192F; font-weight: bold; }
-        .logo-box h1 span { color: #FFD700; }
+<title>4D Tour and Travel | Haridwar, Rishikesh, Shimla Manali Tour Packages & Taxi Service</title>
 
-        nav a { text-decoration: none; color: #333; font-weight: bold; margin-left: 20px; }
-        nav a:hover { color: #FFD700; }
+<meta name="description" content="Book affordable Haridwar, Rishikesh, Mussoorie, Nainital, Shimla, Manali, Char Dham Tour Packages and Taxi Services with 4D Tour and Travel.">
 
-        .slider-box { position: relative; height: 60vh; background-color: #0A192F; overflow: hidden; }
-        .slide { position: absolute; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0; transition: opacity 1s ease-in-out; display: flex; align-items: center; justify-content: center; }
-        .slide.active { opacity: 1; }
-        .slide::before { content: ''; position: absolute; width: 100%; height: 100%; background: rgba(0,0,0,0.6); }
-        .hero-text { position: relative; color: white; text-align: center; padding: 0 20px; z-index: 10; }
-        .hero-text h2 { font-size: 38px; margin-bottom: 15px; }
-        .hero-text h2 span { color: #FFD700; }
-        .hero-text p { font-size: 18px; margin-bottom: 20px; }
+<meta name="keywords" content="Haridwar Tour Package,Rishikesh Tour Package,Shimla Manali Tour,Taxi Service,Tempo Traveller,Innova Crysta,Char Dham Yatra">
 
-        .main-title { text-align: center; margin: 50px 0 30px 0; }
-        .main-title h2 { font-size: 32px; color: #0A192F; }
+<meta name="author" content="4D Tour and Travel">
 
-        .package-block { background: white; margin-bottom: 35px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e0e0e0; }
-        .package-image-holder { width: 100%; height: 300px; }
-        .package-image-holder img { width: 100%; height: 100%; object-fit: cover; }
-        .package-desc-holder { padding: 25px; }
-        .package-desc-holder h3 { font-size: 24px; color: #0A192F; margin-bottom: 10px; }
-        .package-desc-holder p { font-size: 15px; color: #555; line-height: 1.6; margin-bottom: 15px; }
-        .package-meta { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 15px; }
-        .price-tag { color: #27AE60; font-weight: bold; font-size: 20px; }
-        .quote-btn { background: #0A192F; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+<meta property="og:title" content="4D Tour and Travel">
+<meta property="og:description" content="Best Tour Packages & Taxi Services in Uttarakhand and Himachal Pradesh">
+<meta property="og:type" content="website">
 
-        .fleet-bg { background-color: #172A45; padding: 50px 0; color: white; text-align: center; margin-top: 40px; }
-        .fleet-container { display: flex; flex-direction: column; gap: 20px; margin-top: 25px; }
-        .fleet-row { background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); }
-        .fleet-row i { font-size: 30px; color: #FFD700; margin-bottom: 10px; }
+<link rel="icon" href="images/logo.png">
 
-        .contact-box { background: white; padding: 40px 20px; margin-top: 40px; }
-        .info-panel { background: #0A192F; color: white; padding: 30px; border-radius: 8px; margin-bottom: 30px; }
-        .info-panel h3 { color: #FFD700; margin-bottom: 15px; }
-        .info-panel .info-line { margin-bottom: 15px; font-size: 16px; }
-        .info-panel .info-line i { color: #FFD700; margin-right: 10px; }
-        
-        .form-panel input, .form-panel select { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; }
-        .submit-action { width: 100%; background: #FFD700; color: #0A192F; border: none; padding: 15px; font-weight: bold; font-size: 16px; border-radius: 5px; cursor: pointer; }
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background-color: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 35px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 99999; text-decoration: none; }
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 
-        footer { background: #050C16; color: #777; text-align: center; padding: 20px; font-size: 14px; margin-top: 30px; }
+<style>
 
-        @media(max-width: 768px) {
-            header .container { flex-direction: column; gap: 15px; }
-            .logo-box img { height: 55px; }
-        }
-    </style>
+body{
+font-family:Arial,sans-serif;
+background:#fff;
+}
+
+.navbar{
+background:#0d6efd;
+}
+
+.navbar-brand{
+color:#fff;
+font-weight:bold;
+font-size:28px;
+}
+
+.nav-link{
+color:#fff!important;
+font-weight:600;
+margin-left:15px;
+}
+
+.hero{
+background:url('images/hero.jpg') center center/cover;
+height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.55);
+}
+
+.hero-content{
+position:relative;
+color:#fff;
+z-index:2;
+}
+
+.hero h1{
+font-size:55px;
+font-weight:bold;
+}
+
+.hero p{
+font-size:22px;
+margin-top:20px;
+}
+
+.btn-book{
+background:#ff6600;
+color:#fff;
+padding:14px 35px;
+border-radius:50px;
+font-weight:bold;
+text-decoration:none;
+}
+
+.btn-book:hover{
+background:#ff4500;
+color:#fff;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+color:#fff;
+z-index:999;
+text-decoration:none;
+}
+
+.callbtn{
+position:fixed;
+bottom:95px;
+right:20px;
+background:#0d6efd;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+color:#fff;
+z-index:999;
+text-decoration:none;
+}
+
+</style>
+
 </head>
+
 <body>
 
-    <div class="top-bar">
-        <div class="container">
-            <div><i class="fa fa-phone"></i> Support: <a href="tel:+919045066598">+91 9045066598</a></div>
-            <div><i class="fa fa-envelope"></i> info@4dtaxiservice.in</div>
-        </div>
-    </div>
+<nav class="navbar navbar-expand-lg">
 
-    <header>
-        <div class="container">
-            <a href="#" class="logo-box">
-                <img src="images/logo.jpg" alt="4D Tour & Travel Logo">
-                <h1>4D Tour & <span>Travel</span></h1>
-            </a>
-            <nav>
-                <a href="#packages">Packages</a>
-                <a href="#fleet">Our Fleet</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
-    </header>
+<div class="container">
 
-    <section class="slider-box">
-        <div class="slide active" style="background-image: url('images/goa.jpg');">
-            <div class="hero-text">
-                <h2>Premium All India <span>Tour Packages</span></h2>
-                <p>Explore beautiful destinations across India with absolute comfort and custom luxury fleets.</p>
-            </div>
-        </div>
-        <div class="slide" style="background-image: url('images/uttarakhand.jpg');">
-            <div class="hero-text">
-                <h2>Explore Beautiful <span>Uttarakhand</span></h2>
-                <p>Specialized Chardham Yatra, Mussoorie, and Nainital tours with professional mountain drivers.</p>
-            </div>
-        </div>
-    </section>
+<a class="navbar-brand" href="#">
 
-    <section id="packages" class="container">
-        
-        <div class="main-title">
-            <h2>Our Custom Holiday Tour Packages</h2>
-        </div>
+<img src="images/logo.png" width="55">
 
-        <div class="package-block">
-            <div class="package-image-holder"><img src="images/goa.jpg" alt="Goa"></div>
-            <div class="package-desc-holder">
-                <h3>1. Premium Goa Tour Package</h3>
-                <p>Relax at premium beach resorts, explore historic forts, enjoy active night life, sunset cruises, and experience smooth local sightseeing tours with a dedicated luxury outstation taxi cab.</p>
-                <div class="package-meta"><span class="price-tag">Best Price Offer</span><a href="#contact" class="quote-btn">Get Free Quote</a></div>
-            </div>
-        </div>
+4D Tour and Travel
 
-        <div class="package-block">
-            <div class="package-image-holder"><img src="images/manali.jpg" alt="Manali"></div>
-            <div class="package-desc-holder">
-                <h3>2. Luxury Manali Tour Package</h3>
-                <p>Witness the beautiful snow-capped mountains of Solang Valley, Rohtang Pass, Hadimba Temple, and enjoy absolute comfort on local mall road sightseeing trips with highly trained hill station drivers.</p>
-                <div class="package-meta"><span class="price-tag">Best Price Offer</span><a href="#contact" class="quote-btn">Get Free Quote</a></div>
-            </div>
-        </div>
+</a>
 
-        <div class="package-block">
-            <div class="package-image-holder"><img src="images/spiti.jpg" alt="Spiti Valley"></div>
-            <div class="package-desc-holder">
-                <h3>3. Epic Spiti Valley Tour Package</h3>
-                <p>An unforgettable rugged mountain drive covering Kaza, Key Monastery, Hikkim, and the mesmerizing Chandratal Lake using heavy high-ground clearance commercial SUVs.</p>
-                <div class="package-meta"><span class="price-tag">Best Price Offer</span><a href="#contact" class="quote-btn">Get Free Quote</a></div>
-            </div>
-        </div>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
 
-        <div class="package-block">
-            <div class="package-image-holder"><img src="images/uttarakhand.jpg" alt="Uttarakhand"></div>
-            <div class="package-desc-holder">
-                <h3>4. Classic Uttarakhand Tour Package</h3>
-                <p>A beautiful wholesome state package encompassing pristine green valleys, mountain view ridges, old heritage temples, and cascading waterfalls across the region.</p>
-                <div class="package-meta"><span class="price-tag">Best Price Offer</span><a href="#contact" class="quote-btn">Get Free Quote</a></div>
-            </div>
-        </div>
+<span class="navbar-toggler-icon"></span>
 
-        <div class="package-block">
-            <div class="package-image-holder"><img src="images/mussoorie.jpg" alt="Mussoorie"></div>
-            <div class="package-desc-holder">
-                <h3>5. Refreshing Mussoorie Tour Package</h3>
-                <p>Visit the famous Kempty Falls, Gun Hill point, Lal Tibba, Company Garden, and enjoy your evening walks on the beautiful mist-filled Mall Road with premium family transport comfort.</p>
-                <div class="package-meta"><span class="price-tag">Best Price Offer</span><a href="#contact" class="quote-btn">Get Free Quote</a></div>
-            </div>
-        </div>
+</button>
 
-        <div class="package-block">
-            <div class="package-image-holder"><img src="images/rajasthan.jpg" alt="Rajasthan"></div>
-            <div class="package-desc-holder">
-                <h3>6. Royal Rajasthan Tour Package</h3>
-                <p>Explore majestic forts, royal palaces, desert camel safaris, and colorful historic local markets across the cultural hubs of Jaipur, Udaipur, and Jodhpur.</p>
-                <div class="package-meta"><span class="price-tag">Best Price Offer</span><a href="#contact" class="quote-btn">Get Free Quote</a></div>
-            </div>
-        </div>
+<div class="collapse navbar-collapse" id="menu">
 
-        <div class="package-block">
-            <div class="package-image-holder"><img src="images/chardham.jpg" alt="Char Dham"></div>
-            <div class="package-desc-holder">
-                <h3>7. Char Dham Yatra Tour Package</h3>
-                <p>A sacred and safe pilgrimage journey covering Yamunotri, Gangotri, holy Kedarnath, and Badrinath temples with full biometric slip coordination and premium vehicle arrangements.</p>
-                <div class="package-meta"><span class="price-tag">Best Price Offer</span><a href="#contact" class="quote-btn">Get Free Quote</a></div>
-            </div>
-        </div>
+<ul class="navbar-nav ms-auto">
 
-        <div class="package-block">
-            <div class="package-image-holder"><img src="images/delhi-mussoorie.jpg" alt="Delhi to Mussoorie"></div>
-            <div class="package-desc-holder">
-                <h3>8. Delhi to Mussoorie Tour Package</h3>
-                <p>Hassle-free outstation commercial cab picking you up from Delhi Airport, railway station, or your doorstep straight to the hill resorts of Mussoorie with zero transit delays.</p>
-                <div class="package-meta"><span class="price-tag">Best Price Offer</span><a href="#contact" class="quote-btn">Get Free Quote</a></div>
-            </div>
-        </div>
+<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
 
-        <div class="package-block">
-            <div class="package-image-holder"><img src="images/adi-kailash.jpg" alt="Adi Kailash"></div>
-            <div class="package-desc-holder">
-                <h3>9. Adi Kailash Yatra Tour Package</h3>
-                <p>A high-altitude spiritual expedition and rugged mountain trek across the Pithoragarh border to view the majestic Adi Kailash peak using professional 4x4 commercial SUVs.</p>
-                <div class="package-meta"><span class="price-tag">Best Price Offer</span><a href="#contact" class="quote-btn">Get Free Quote</a></div>
-            </div>
-        </div>
+<li class="nav-item"><a class="nav-link" href="#">Tour Packages</a></li>
 
-        <div class="package-block">
-            <div class="package-image-holder"><img src="images/nainital.jpg" alt="Nainital"></div>
-            <div class="package-desc-holder">
-                <h3>10. Scenic Nainital Tour Package</h3>
-                <p>Enjoy peaceful boat rides in the mango-shaped Naini Lake, explore high-altitude zoos, view Himalayan ranges from Snow View point, and tour Bhimtal and Sattal lakes.</p>
-                <div class="package-meta"><span class="price-tag">Best Price Offer</span><a href="#contact" class="quote-btn">Get Free Quote</a></div>
-            </div>
-        </div>
+<li class="nav-item"><a class="nav-link" href="#">Taxi Service</a></li>
 
-        <div class="package-block">
-            <div class="package-image-holder"><img src="images/kumaon.jpg" alt="Kumaon"></div>
-            <div class="package-desc-holder">
-                <h3>11. Complete Kumaon Tour Package</h3>
-                <p>Experience total serenity across Ranikhet golf meadows, beautiful Kausani valley sunsets, Almora markets, and wildlife safari trails inside Jim Corbett National Park.</p>
-                <div class="package-meta"><span class="price-tag">Best Price Offer</span><a href="#contact" class="quote-btn">Get Free Quote</a></div>
-            </div>
-        </div>
+<li class="nav-item"><a class="nav-link" href="#">Fleet</a></li>
 
-    </section>
+<li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
 
-    <section id="fleet" class="fleet-bg">
-        <div class="container">
-            <h2>Our Commercial Luxury Fleet</h2>
-            <div class="fleet-container">
-                <div class="fleet-row">
-                    <i class="fa fa-car"></i>
-                    <h3>Premium Sedans</h3>
-                    <p>Swift Dzire, Hyundai Aura, Honda Amaze (Capacity: 4+1 Passengers)</p>
-                </div>
-                <div class="fleet-row">
-                    <i class="fa fa-truck-pickup"></i>
-                    <h3>Luxury SUVs & Crossovers</h3>
-                    <p>Toyota Innova Crysta, Maruti Ertiga, Fronx (Capacity: 6+1 / 7+1 Seater)</p>
-                </div>
-                <div class="fleet-row">
-                    <i class="fa fa-bus"></i>
-                    <h3>Tempo Travellers & Urbania</h3>
-                    <p>Luxury Force 12, 17, 26 Seater & Force Urbania Model Fleet</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
 
-    <section id="contact" class="container contact-box">
-        <div class="info-panel">
-            <h3>Contact & Location Details</h3>
-            <div class="info-line"><i class="fa fa-phone"></i> +91 9045066598</div>
-            <div class="info-line"><i class="fa fa-envelope"></i> info@4dtaxiservice.in</div>
-            <div class="info-line"><i class="fa fa-map-marker-alt"></i> Dehradun, Uttarakhand, India</div>
-        </div>
+</ul>
 
-        <div class="form-panel">
-            <form action="#" method="POST">
-                <input type="text" placeholder="Your Name" required>
-                <input type="tel" placeholder="Mobile Number" required>
-                <select required>
-                    <option value="">-- Choose Plan Theme --</option>
-                    <option value="chardham">Char Dham Yatra Tour</option>
-                    <option value="goa">Premium Goa Tour</option>
-                    <option value="manali">Luxury Manali Tour</option>
-                    <option value="mussoorie">Refreshing Mussoorie Tour</option>
-                    <option value="nainital">Scenic Nainital Package</option>
-                </select>
-                <button type="submit" class="submit-action">Submit Booking Route Inquiry</button>
-            </form>
-        </div>
-    </section>
+</div>
 
-    <footer>
-        <p>&copy; 2026 4D Tour and Travel. All Rights Reserved. | Premium Outstation Travel Network.</p>
-    </footer>
+</div>
 
-    <a href="[wa.me](https://wa.me/919045066598?text=Hello%204D%20Tour%20and%20Travel,%20I%20am%20interested%20in%20your%20packages)" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+</nav>
 
-    <script>
-        let slideIndex = 0;
-        const slides = document.querySelectorAll('.slide');
+<section class="hero">
 
-        function runSlider() {
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].classList.remove('active');
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
-            }
-            slides[slideIndex - 1].classList.add('active');
-            setTimeout(runSlider, 4000);
-        }
+<div class="hero-content">
 
-        runSlider();
-    </script>
+<h1>Explore Incredible India With 4D Tour and Travel</h1>
+
+<p>Haridwar • Rishikesh • Mussoorie • Nainital • Shimla • Manali • Char Dham • Spiti Valley</p>
+
+<br>
+
+<a href="tel:9045066598" class="btn-book">
+
+Book Now
+
+</a>
+
+</div>
+
+</section>
+
+<a href="tel:9045066598" class="callbtn">
+
+<i class="fa-solid fa-phone"></i>
+
+</a>
+
+<a href="https://wa.me/919643586598" class="whatsapp">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+<div class="container py-5">
+
+<div class="row">
+
+<div class="col-md-12 text-center"><!-- ================= TOUR PACKAGES START ================= -->
+
+<section class="container py-5">
+
+<div class="text-center mb-5">
+<h2 class="fw-bold">Popular Tour Packages</h2>
+<p>Affordable Holiday Packages with Comfortable Stay & Private Cab</p>
+</div>
+
+<div class="row g-4">
+
+<div class="col-lg-4 col-md-6">
+<div class="card shadow border-0 rounded-4 h-100">
+<img src="images/haridwar.jpg" class="card-img-top" alt="Haridwar Tour Package">
+<div class="card-body">
+<h4>Haridwar & Rishikesh Tour</h4>
+<p>2 Nights / 3 Days</p>
+<p>Ganga Aarti • Mansa Devi • Ram Jhula • Laxman Jhula</p>
+<a href="https://wa.me/919643586598?text=I%20want%20Haridwar%20Tour%20Package" class="btn btn-primary w-100">Book Now</a>
+</div>
+</div>
+</div>
+
+<div class="col-lg-4 col-md-6">
+<div class="card shadow border-0 rounded-4 h-100">
+<img src="images/nainital.jpg" class="card-img-top" alt="Nainital Tour">
+<div class="card-body">
+<h4>Nainital Tour Package</h4>
+<p>3 Nights / 4 Days</p>
+<p>Naini Lake • Snow View • Mall Road • Bhimtal</p>
+<a href="https://wa.me/919643586598?text=I%20want%20Nainital%20Package" class="btn btn-primary w-100">Book Now</a>
+</div>
+</div>
+</div>
+
+<div class="col-lg-4 col-md-6">
+<div class="card shadow border-0 rounded-4 h-100">
+<img src="images/shimla.jpg" class="card-img-top" alt="Shimla Tour">
+<div class="card-body">
+<h4>Shimla Manali Package</h4>
+<p>5 Nights / 6 Days</p>
+<p>Kufri • Solang Valley • Atal Tunnel • Mall Road</p>
+<a href="https://wa.me/919643586598?text=I%20want%20Shimla%20Manali%20Package" class="btn btn-primary w-100">Book Now</a>
+</div>
+</div>
+</div>
+
+<div class="col-lg-4 col-md-6">
+<div class="card shadow border-0 rounded-4 h-100">
+<img src="images/mussoorie.jpg" class="card-img-top" alt="Mussoorie Tour">
+<div class="card-body">
+<h4>Mussoorie Tour</h4>
+<p>2 Nights / 3 Days</p>
+<p>Kempty Falls • Gun Hill • Company Garden</p>
+<a href="https://wa.me/919643586598?text=I%20want%20Mussoorie%20Package" class="btn btn-primary w-100">Book Now</a>
+</div>
+</div>
+</div>
+
+<div class="col-lg-4 col-md-6">
+<div class="card shadow border-0 rounded-4 h-100">
+<img src="images/chardham.jpg" class="card-img-top" alt="Char Dham">
+<div class="card-body">
+<h4>Char Dham Yatra</h4>
+<p>10 Nights / 11 Days</p>
+<p>Yamunotri • Gangotri • Kedarnath • Badrinath</p>
+<a href="https://wa.me/919643586598?text=I%20want%20Char%20Dham%20Package" class="btn btn-primary w-100">Book Now</a>
+</div>
+</div>
+</div>
+
+<div class="col-lg-4 col-md-6">
+<div class="card shadow border-0 rounded-4 h-100">
+<img src="images/spiti.jpg" class="card-img-top" alt="Spiti Valley">
+<div class="card-body">
+<h4>Spiti Valley Expedition</h4>
+<p>8 Nights / 9 Days</p>
+<p>Chandratal • Kaza • Key Monastery • Langza</p>
+<a href="https://wa.me/919643586598?text=I%20want%20Spiti%20Package" class="btn btn-primary w-100">Book Now</a>
+</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= TOUR PACKAGES END ================= -->
+
+<!-- ================= FLEET START ================= -->
+
+<section class="container py-5">
+
+<div class="text-center mb-5">
+<h2 class="fw-bold">Our Fleet</h2>
+<p>Clean, Comfortable & Well Maintained Vehicles</p>
+</div>
+
+<div class="row g-4">
+
+<div class="col-lg-3 col-md-6">
+<div class="card border-0 shadow rounded-4">
+<img src="images/dzire.jpg" class="card-img-top" alt="Dzire">
+<div class="card-body text-center">
+<h5>Swift Dzire</h5>
+<p>4+1 Seater</p>
+</div>
+</div>
+</div>
+
+<div class="col-lg-3 col-md-6">
+<div class="card border-0 shadow rounded-4">
+<img src="images/ertiga.jpg" class="card-img-top" alt="Ertiga">
+<div class="card-body text-center">
+<h5>Maruti Ertiga</h5>
+<p>6+1 Seater</p>
+</div>
+</div>
+</div>
+
+<div class="col-lg-3 col-md-6">
+<div class="card border-0 shadow rounded-4">
+<img src="images/innova.jpg" class="card-img-top" alt="Innova Crysta">
+<div class="card-body text-center">
+<h5>Innova Crysta</h5>
+<p>7 Seater</p>
+</div>
+</div>
+</div>
+
+<div class="col-lg-3 col-md-6">
+<div class="card border-0 shadow rounded-4">
+<img src="images/tempo.jpg" class="card-img-top" alt="Tempo Traveller">
+<div class="card-body text-center">
+<h5>Tempo Traveller</h5>
+<p>12 / 17 / 20 / 26 Seater</p>
+</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FLEET END ================= --><!-- ================= WHY CHOOSE US START ================= -->
+
+<section class="py-5 bg-light">
+
+<div class="container">
+
+<div class="text-center mb-5">
+
+<h2 class="fw-bold">Why Choose 4D Tour and Travel?</h2>
+
+<p>Your Trusted Travel Partner Across North India</p>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-lg-3 col-md-6">
+
+<div class="text-center p-4 shadow rounded-4 bg-white h-100">
+
+<i class="fas fa-car fa-3x text-primary mb-3"></i>
+
+<h5>Premium Fleet</h5>
+
+<p>Well Maintained Sedan, SUV, Tempo Traveller & Luxury Vehicles.</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6">
+
+<div class="text-center p-4 shadow rounded-4 bg-white h-100">
+
+<i class="fas fa-user-tie fa-3x text-success mb-3"></i>
+
+<h5>Experienced Drivers</h5>
+
+<p>Professional, Polite and Verified Drivers for Safe Journey.</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6">
+
+<div class="text-center p-4 shadow rounded-4 bg-white h-100">
+
+<i class="fas fa-headset fa-3x text-danger mb-3"></i>
+
+<h5>24×7 Support</h5>
+
+<p>Round the Clock Customer Assistance for Every Trip.</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6">
+
+<div class="text-center p-4 shadow rounded-4 bg-white h-100">
+
+<i class="fas fa-tags fa-3x text-warning mb-3"></i>
+
+<h5>Best Price Guarantee</h5>
+
+<p>Affordable Packages with No Hidden Charges.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= WHY CHOOSE US END ================= -->
+
+
+<!-- ================= COUNTER SECTION START ================= -->
+
+<section class="py-5 text-white" style="background:#0d6efd;">
+
+<div class="container">
+
+<div class="row text-center">
+
+<div class="col-md-3">
+
+<h2>10,000+</h2>
+
+<p>Happy Customers</p>
+
+</div>
+
+<div class="col-md-3">
+
+<h2>5000+</h2>
+
+<p>Successful Trips</p>
+
+</div>
+
+<div class="col-md-3">
+
+<h2>100+</h2>
+
+<p>Tour Packages</p>
+
+</div>
+
+<div class="col-md-3">
+
+<h2>24×7</h2>
+
+<p>Customer Support</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= COUNTER SECTION END ================= -->
+
+
+<!-- ================= GALLERY START ================= -->
+
+<section class="container py-5">
+
+<div class="text-center mb-5">
+
+<h2 class="fw-bold">Travel Gallery</h2>
+
+<p>Some Beautiful Moments From Our Tours</p>
+
+</div>
+
+<div class="row g-3">
+
+<div class="col-lg-4">
+
+<img src="images/gallery1.jpg" class="img-fluid rounded shadow" alt="Haridwar">
+
+</div>
+
+<div class="col-lg-4">
+
+<img src="images/gallery2.jpg" class="img-fluid rounded shadow" alt="Manali">
+
+</div>
+
+<div class="col-lg-4">
+
+<img src="images/gallery3.jpg" class="img-fluid rounded shadow" alt="Shimla">
+
+</div>
+
+<div class="col-lg-4">
+
+<img src="images/gallery4.jpg" class="img-fluid rounded shadow" alt="Rishikesh">
+
+</div>
+
+<div class="col-lg-4">
+
+<img src="images/gallery5.jpg" class="img-fluid rounded shadow" alt="Char Dham">
+
+</div>
+
+<div class="col-lg-4">
+
+<img src="images/gallery6.jpg" class="img-fluid rounded shadow" alt="Spiti Valley">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= GALLERY END ================= -->
+
+
+<!-- ================= REVIEWS START ================= -->
+
+<section class="py-5 bg-light">
+
+<div class="container">
+
+<div class="text-center mb-5">
+
+<h2 class="fw-bold">What Our Customers Say</h2>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+
+<div class="card border-0 shadow rounded-4">
+
+<div class="card-body">
+
+⭐⭐⭐⭐⭐
+
+<p class="mt-3">
+
+Excellent service. Vehicle was clean and driver was very professional. Highly recommended.
+
+</p>
+
+<h6>- Rahul Sharma</h6>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card border-0 shadow rounded-4">
+
+<div class="card-body">
+
+⭐⭐⭐⭐⭐
+
+<p class="mt-3">
+
+Booked Shimla Manali package with 4D Tour and Travel. Amazing experience.
+
+</p>
+
+<h6>- Priya Verma</h6>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card border-0 shadow rounded-4">
+
+<div class="card-body">
+
+⭐⭐⭐⭐⭐
+
+<p class="mt-3">
+
+Best taxi service for Char Dham Yatra. Affordable and safe journey.
+
+</p>
+
+<h6>- Amit Kumar</h6>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= REVIEWS END ================= --><!-- ================= CONTACT START ================= -->
+
+<section class="container py-5" id="contact">
+
+<div class="text-center mb-5">
+<h2 class="fw-bold">Contact Us</h2>
+<p>Book Your Dream Trip Today</p>
+</div>
+
+<div class="row">
+
+<div class="col-lg-6">
+
+<form action="https://formsubmit.co/4dtravelles@gmail.com" method="POST">
+
+<div class="mb-3">
+<input type="text" class="form-control" name="Name" placeholder="Your Name" required>
+</div>
+
+<div class="mb-3">
+<input type="tel" class="form-control" name="Mobile" placeholder="Mobile Number" required>
+</div>
+
+<div class="mb-3">
+<input type="email" class="form-control" name="Email" placeholder="Email Address">
+</div>
+
+<div class="mb-3">
+<input type="text" class="form-control" name="Destination" placeholder="Destination">
+</div>
+
+<div class="mb-3">
+<textarea class="form-control" rows="5" name="Message" placeholder="Your Travel Requirements"></textarea>
+</div>
+
+<button class="btn btn-primary w-100">Send Enquiry</button>
+
+</form>
+
+</div>
+
+<div class="col-lg-6">
+
+<h4>4D Tour and Travel</h4>
+
+<p><i class="fas fa-map-marker-alt text-danger"></i>
+Aamwala, Tarla, Nalapani, Dehradun - 248001
+</p>
+
+<p><i class="fas fa-phone text-success"></i>
+<a href="tel:9045066598">9045066598</a>
+</p>
+
+<p><i class="fab fa-whatsapp text-success"></i>
+<a href="https://wa.me/919643586598">9643586598</a>
+</p>
+
+<p><i class="fas fa-envelope text-primary"></i>
+4dtravelles@gmail.com
+</p>
+
+<iframe
+src="https://www.google.com/maps?q=Aamwala%20Tarla%20Nalapani%20Dehradun&output=embed"
+width="100%"
+height="320"
+style="border:0;border-radius:15px;"
+loading="lazy">
+</iframe>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FAQ ================= -->
+
+<section class="container py-5">
+
+<h2 class="text-center fw-bold mb-4">Frequently Asked Questions</h2>
+
+<div class="accordion" id="faq">
+
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#f1">
+How can I book a tour?
+</button>
+</h2>
+<div id="f1" class="accordion-collapse collapse show">
+<div class="accordion-body">
+Call us, WhatsApp us or submit the enquiry form.
+</div>
+</div>
+</div>
+
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f2">
+Do you provide Tempo Traveller?
+</button>
+</h2>
+<div id="f2" class="accordion-collapse collapse">
+<div class="accordion-body">
+Yes, we provide Tempo Traveller, Urbania, Ertiga, Innova Crysta and Sedan Cars.
+</div>
+</div>
+</div>
+
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f3">
+Do you offer customized tour packages?
+</button>
+</h2>
+<div id="f3" class="accordion-collapse collapse">
+<div class="accordion-body">
+Yes, we create customized family, honeymoon and group tour packages.
+</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer style="background:#0d6efd;color:#fff;padding:40px 0;">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-lg-4">
+
+<h4>4D Tour and Travel</h4>
+
+<p>
+Trusted Tour Operator & Taxi Service Provider in Uttarakhand and Himachal Pradesh.
+</p>
+
+</div>
+
+<div class="col-lg-4">
+
+<h5>Popular Tours</h5>
+
+<ul class="list-unstyled">
+
+<li>Haridwar Tour Package</li>
+<li>Rishikesh Tour</li>
+<li>Mussoorie Tour</li>
+<li>Nainital Tour</li>
+<li>Shimla Manali Package</li>
+<li>Char Dham Yatra</li>
+
+</ul>
+
+</div>
+
+<div class="col-lg-4">
+
+<h5>Follow Us</h5>
+
+<a href="#" class="text-white me-3"><i class="fab fa-facebook fa-2x"></i></a>
+
+<a href="#" class="text-white me-3"><i class="fab fa-instagram fa-2x"></i></a>
+
+<a href="#" class="text-white me-3"><i class="fab fa-youtube fa-2x"></i></a>
+
+<a href="https://wa.me/919643586598" class="text-white">
+<i class="fab fa-whatsapp fa-2x"></i>
+</a>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="text-center">
+
+© 2026 4D Tour and Travel | All Rights Reserved
+
+</div>
+
+</div>
+
+</footer>
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Local Business Schema -->
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"TravelAgency",
+"name":"4D Tour and Travel",
+"url":"https://4dtaxiservice.in",
+"telephone":"+91-9045066598",
+"email":"4dtravelles@gmail.com",
+"address":{
+"@type":"PostalAddress",
+"streetAddress":"Aamwala Tarla Nalapani",
+"addressLocality":"Dehradun",
+"postalCode":"248001",
+"addressCountry":"IN"
+}
+}
+</script>
 
 </body>
 </html>
+
+<h2>Welcome to 4D Tour and Travel</h2>
+
+<p>
+
+We provide affordable Tour Packages, Taxi Services, Tempo Traveller,
+Innova Crysta, Ertiga, Dzire and Luxury Vehicles across Uttarakhand,
+Himachal Pradesh, Delhi and Chandigarh.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
