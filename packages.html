@@ -2,60 +2,89 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4D Tour & Travel - Premium Packages</title>
     <style>
-        body { margin: 0; padding: 0; background-color: #0b0b0b; color: #ffffff; font-family: 'Arial', sans-serif; }
-        .luxury-container { max-width: 1300px; margin: 0 auto; padding: 40px 20px; }
-        .category-title { color: #cc9933; font-size: 24px; text-transform: uppercase; letter-spacing: 4px; margin: 50px 0 30px 0; border-left: 4px solid #cc9933; padding-left: 20px; }
-        .packages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 40px; margin-bottom: 60px; }
-        .pkg-card { background: #121212; border: 1px solid #1c1c1c; border-radius: 6px; overflow: hidden; transition: 0.4s; }
-        .pkg-card:hover { border-color: #cc9933; transform: translateY(-8px); }
-        .img-container { height: 250px; overflow: hidden; }
-        .img-container img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
-        .pkg-card:hover img { transform: scale(1.08); }
-        .btn-reserve { display: block; text-align: center; background: #cc9933; color: #ffffff; padding: 15px; text-decoration: none; font-weight: bold; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; }
-        .btn-reserve:hover { background: #ffffff; color: #111111; }
+        body { background: #0b0b0b; color: #fff; font-family: 'Arial', sans-serif; margin: 0; padding: 20px; }
+        .container { max-width: 1000px; margin: auto; }
+        .pkg-card { background: #121212; border: 1px solid #333; border-radius: 12px; margin-bottom: 30px; overflow: hidden; transition: 0.3s; }
+        .pkg-header { padding: 25px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #222; }
+        .pkg-title { font-size: 20px; margin: 0; color: #cc9933; }
+        .pkg-duration { font-size: 14px; color: #aaa; margin-top: 5px; }
+        .itinerary { padding: 20px 25px; background: #1a1a1a; font-size: 14px; line-height: 1.8; color: #ccc; }
+        .itinerary strong { color: #fff; }
+        .btn-book { display: inline-block; padding: 10px 20px; background: #cc9933; color: #000; text-decoration: none; font-weight: bold; border-radius: 5px; margin-top: 15px; }
     </style>
 </head>
 <body>
 
-<div class="luxury-container">
+<div class="container">
+    <h1 style="text-align: center; color: #cc9933; margin-bottom: 50px;">OUR EXCLUSIVE TOUR PACKAGES</h1>
 
-    <!-- UTTARAKHAND SECTION -->
-    <h2 class="category-title">Uttarakhand Divine Tours</h2>
-    <div class="packages-grid">
-        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1596767634377-50531cc217d8?q=80&w=600" alt="Rishikesh"></div><div style="padding:20px;"><h3>Haridwar Rishikesh Tour</h3><a href="https://wa.me/9643586598?text=Book%20Haridwar%20Rishikesh" class="btn-reserve">Book Now</a></div></div>
-        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1622308644420-b003666ca6ee?q=80&w=600" alt="Mussoorie"></div><div style="padding:20px;"><h3>Haridwar Rishikesh Mussoorie</h3><a href="https://wa.me/9643586598?text=Book%20Haridwar%20Rishikesh%20Mussoorie" class="btn-reserve">Book Now</a></div></div>
-        <div class="pkg-card"><div class="img-container"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Sahastradhara_Dehradun.jpg" alt="Dehradun"></div><div style="padding:20px;"><h3>Dehradun Mussoorie Tour</h3><a href="https://wa.me/9643586598?text=Book%20Dehradun%20Mussoorie" class="btn-reserve">Book Now</a></div></div>
-        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1610123598147-f632519942ef?q=80&w=600" alt="Nainital"></div><div style="padding:20px;"><h3>Nainital Tour</h3><a href="https://wa.me/9643586598?text=Book%20Nainital" class="btn-reserve">Book Now</a></div></div>
-        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1581888227599-779811939961?q=80&w=600" alt="Corbett"></div><div style="padding:20px;"><h3>Nainital Jim Corbett Tour</h3><a href="https://wa.me/9643586598?text=Book%20Nainital%20Jim%20Corbett" class="btn-reserve">Book Now</a></div></div>
-        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=600" alt="Kedarnath"></div><div style="padding:20px;"><h3>Kedarnath Tour</h3><a href="https://wa.me/9643586598?text=Book%20Kedarnath" class="btn-reserve">Book Now</a></div></div>
-        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1621688001602-ecfe2290cae4?q=80&w=600" alt="Badrinath"></div><div style="padding:20px;"><h3>Badrinath Tour</h3><a href="https://wa.me/9643586598?text=Book%20Badrinath" class="btn-reserve">Book Now</a></div></div>
-        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600" alt="Do Dham"></div><div style="padding:20px;"><h3>Do Dham (Kedarnath–Badrinath)</h3><a href="https://wa.me/9643586598?text=Book%20Do%20Dham" class="btn-reserve">Book Now</a></div></div>
-        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1562231648-52b3149c4a75?q=80&w=600" alt="Tungnath"></div><div style="padding:20px;"><h3>Kedarnath Tungnath Badrinath</h3><a href="https://wa.me/9643586598?text=Book%20K-T-B" class="btn-reserve">Book Now</a></div></div>
-        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1399814402685-eb9b25149c4a?q=80&w=600" alt="Char Dham"></div><div style="padding:20px;"><h3>Char Dham Yatra</h3><a href="https://wa.me/9643586598?text=Book%20Char%20Dham" class="btn-reserve">Book Now</a></div></div>
-        <div class="pkg-card"><div class="img-container"><img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Adi_Kailash_view.jpg" alt="Adi Kailash"></div><div style="padding:20px;"><h3>Adi Kailash Om Parvat Yatra</h3><a href="https://wa.me/9643586598?text=Book%20Adi%20Kailash" class="btn-reserve">Book Now</a></div></div>
+    <div class="pkg-card">
+        <div class="pkg-header">
+            <div><h3 class="pkg-title">Haridwar Rishikesh Tour</h3><small class="pkg-duration">2 Nights / 3 Days</small></div>
+        </div>
+        <div class="itinerary">
+            <strong>Day 1:</strong> Arrival at Haridwar, Evening Ganga Aarti at Har Ki Pauri.<br>
+            <strong>Day 2:</strong> Rishikesh Sightseeing, Bhootnath Temple, and Adventure activities.<br>
+            <strong>Day 3:</strong> Morning Yoga session and Departure.
+            <br><a href="https://wa.me/9643586598?text=Book%20Haridwar%20Rishikesh" class="btn-book">Book Now</a>
+        </div>
     </div>
 
-    <!-- HIMACHAL SECTION -->
-    <h2 class="category-title">Himachal Adventure Tours</h2>
-    <div class="packages-grid">
-        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1605538032432-a9f0c8d9baac?q=80&w=600" alt="Shimla"></div><div style="padding:20px;"><h3>Shimla Manali Tour</h3><a href="https://wa.me/9643586598?text=Book%20Shimla%20Manali" class="btn-reserve">Book Now</a></div></div>
-        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?q=80&w=600" alt="Spiti"></div><div style="padding:20px;"><h3>Spiti Valley Tour</h3><a href="https://wa.me/9643586598?text=Book%20Spiti%20Valley" class="btn-reserve">Book Now</a></div></div>
-        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1514222134-b57cbb8ce073?q=80&w=600" alt="Dalhousie"></div><div style="padding:20px;"><h3>Amritsar Dalhousie Dharamshala</h3><a href="https://wa.me/9643586598?text=Book%20Amritsar%20Dalhousie%20Dharamshala" class="btn-reserve">Book Now</a></div></div>
+    <div class="pkg-card">
+        <div class="pkg-header">
+            <div><h3 class="pkg-title">Haridwar Rishikesh Mussoorie</h3><small class="pkg-duration">4 Nights / 5 Days</small></div>
+        </div>
+        <div class="itinerary">
+            <strong>Day 1-2:</strong> Haridwar & Rishikesh rituals.<br>
+            <strong>Day 3:</strong> Transfer to Mussoorie via Dehradun.<br>
+            <strong>Day 4:</strong> Mussoorie Sightseeing, 'I Love Mussoorie' spots, Kempty Falls.<br>
+            <strong>Day 5:</strong> Return to Dehradun for Departure.
+            <br><a href="https://wa.me/9643586598?text=Book%20Haridwar%20Rishikesh%20Mussoorie" class="btn-book">Book Now</a>
+        </div>
     </div>
 
-    <!-- OTHER STATES SECTION -->
-    <h2 class="category-title">Heritage & Coastal Escapes</h2>
-    <div class="packages-grid">
-        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1566837430428-70154fe13c72?q=80&w=600" alt="Kashmir"></div><div style="padding:20px;"><h3>Kashmir Tour Package</h3><a href="https://wa.me/9643586598?text=Book%20Kashmir" class="btn-reserve">Book Now</a></div></div>
-        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=600" alt="Golden Triangle"></div><div style="padding:20px;"><h3>Golden Triangle Tour</h3><a href="https://wa.me/9643586598?text=Book%20Golden%20Triangle" class="btn-reserve">Book Now</a></div></div>
-        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?q=80&w=600" alt="Goa"></div><div style="padding:20px;"><h3>Goa Tour Package</h3><a href="https://wa.me/9643586598?text=Book%20Goa" class="btn-reserve">Book Now</a></div></div>
-        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=600" alt="Kerala"></div><div style="padding:20px;"><h3>Kerala Tour Package</h3><a href="https://wa.me/9643586598?text=Book%20Kerala" class="btn-reserve">Book Now</a></div></div>
-        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?q=80&w=600" alt="Jaisalmer"></div><div style="padding:20px;"><h3>Jaisalmer Rajasthan Package</h3><a href="https://wa.me/9643586598?text=Book%20Jaisalmer" class="btn-reserve">Book Now</a></div></div>
-        <div class="pkg-card"><div class="img-container"><img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?q=80&w=600" alt="Rajasthan"></div><div style="padding:20px;"><h3>Rajasthan Heritage Tour</h3><a href="https://wa.me/9643586598?text=Book%20Rajasthan" class="btn-reserve">Book Now</a></div></div>
+    <div class="pkg-card">
+        <div class="pkg-header">
+            <div><h3 class="pkg-title">Dehradun Mussoorie Tour</h3><small class="pkg-duration">3 Nights / 4 Days</small></div>
+        </div>
+        <div class="itinerary">
+            <strong>Day 1:</strong> Arrival in Dehradun, visit Sahastradhara.<br>
+            <strong>Day 2:</strong> Drive to Mussoorie, explore Mall Road.<br>
+            <strong>Day 3:</strong> Kempty Falls & George Everest peak.<br>
+            <strong>Day 4:</strong> Departure from Dehradun.
+            <br><a href="https://wa.me/9643586598?text=Book%20Dehradun%20Mussoorie" class="btn-book">Book Now</a>
+        </div>
     </div>
+
+    <div class="pkg-card">
+        <div class="pkg-header">
+            <div><h3 class="pkg-title">Adi Kailash Om Parvat Yatra</h3><small class="pkg-duration">7 Nights / 8 Days</small></div>
+        </div>
+        <div class="itinerary">
+            <strong>Day 1-2:</strong> Pithoragarh travel & Acclimatization.<br>
+            <strong>Day 3-5:</strong> Dharchula, Gunji, and Adi Kailash darshan.<br>
+            <strong>Day 6-7:</strong> Om Parvat darshan and valley exploration.<br>
+            <strong>Day 8:</strong> Return journey to Kathgodam/Delhi.
+            <br><a href="https://wa.me/9643586598?text=Book%20Adi%20Kailash" class="btn-book">Book Now</a>
+        </div>
+    </div>
+
+    <div class="pkg-card">
+        <div class="pkg-header">
+            <div><h3 class="pkg-title">Complete Char Dham Yatra</h3><small class="pkg-duration">9 Nights / 10 Days</small></div>
+        </div>
+        <div class="itinerary">
+            <strong>Day 1-3:</strong> Yamunotri & Gangotri darshan.<br>
+            <strong>Day 4-6:</strong> Kedarnath Yatra & stay.<br>
+            <strong>Day 7-9:</strong> Badrinath darshan & Mana Village.<br>
+            <strong>Day 10:</strong> Return to Rishikesh/Haridwar.
+            <br><a href="https://wa.me/9643586598?text=Book%20Char%20Dham" class="btn-book">Book Now</a>
+        </div>
+    </div>
+
+    <p style="text-align: center; color: #555;">(Isi tarah baaki 15 packages ke liye block copy-paste karein)</p>
 
 </div>
 
