@@ -1,271 +1,806 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Sacred Pilgrimage Packages - Part 1</title>
-    <style>
-        body { background-color: #0b0b0b; color: #ffffff; font-family: 'Arial', sans-serif; margin: 0; padding: 20px; }
-        .container { max-width: 1000px; margin: auto; }
-        .pkg-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .pkg-box { background: #121212; border: 1px solid #333; border-radius: 12px; overflow: hidden; transition: 0.3s; }
-        .pkg-box img { width: 100%; height: 200px; object-fit: cover; }
-        .pkg-content { padding: 20px; }
-        .pkg-box h3 { color: #cc9933; margin: 0 0 5px 0; }
-        .duration { color: #aaa; font-size: 0.85rem; margin-bottom: 15px; display: block; }
-        .itinerary { font-size: 0.85rem; color: #ccc; margin: 15px 0; border-top: 1px solid #333; padding-top: 15px; line-height: 1.6; }
-        .btn-book { display: block; background: #cc9933; color: #000; text-align: center; padding: 12px; text-decoration: none; font-weight: bold; border-radius: 6px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tour Packages | 4D Tour and Travel</title>
+
+<meta name="description" content="Best Tour Packages from 4D Tour and Travel">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 </head>
+
 <body>
 
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
 <div class="container">
-    <div class="pkg-grid">
-        
-        <!-- 1. Char Dham -->
-        <div class="pkg-box">
-            <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=600" alt="Char Dham">
-            <div class="pkg-content">
-                <h3>Char Dham Yatra</h3>
-                <span class="duration">9 Nights / 10 Days</span>
-                <div class="itinerary">
-                    D1-3: Yamunotri & Gangotri Darshan.<br>
-                    D4-6: Kedarnath Yatra & Stay.<br>
-                    D7-9: Badrinath Darshan & Mana.<br>
-                    D10: Return to Haridwar.
-                </div>
-                <a href="https://wa.me/9643586598?text=Book Char Dham" class="btn-book">Book Now</a>
-            </div>
-        </div>
 
-        <!-- 2. Kedarnath -->
-        <div class="pkg-box">
-            <img src="https://images.unsplash.com/photo-1621688001602-ecfe2290cae4?q=80&w=600" alt="Kedarnath">
-            <div class="pkg-content">
-                <h3>Kedarnath Darshan</h3>
-                <span class="duration">3 Nights / 4 Days</span>
-                <div class="itinerary">
-                    D1: Arrival at Guptkashi.<br>
-                    D2: Kedarnath Trek/Helicopter.<br>
-                    D3: Darshan & Return to Guptkashi.<br>
-                    D4: Departure to Haridwar.
-                </div>
-                <a href="https://wa.me/9643586598?text=Book Kedarnath" class="btn-book">Book Now</a>
-            </div>
-        </div>
+<a class="navbar-brand fw-bold" href="index.html">
 
-        <!-- 3. Kedarnath Badrinath -->
-        <div class="pkg-box">
-            <img src="https://images.unsplash.com/photo-1562231648-52b3149c4a75?q=80&w=600" alt="Badrinath">
-            <div class="pkg-content">
-                <h3>Kedarnath Badrinath</h3>
-                <span class="duration">5 Nights / 6 Days</span>
-                <div class="itinerary">
-                    D1-2: Kedarnath Yatra.<br>
-                    D3: Transfer to Badrinath.<br>
-                    D4-5: Badrinath Darshan & Mana.<br>
-                    D6: Return to Haridwar.
-                </div>
-                <a href="https://wa.me/9643586598?text=Book Kedarnath Badrinath" class="btn-book">Book Now</a>
-            </div>
-        </div>
+<img src="images/logo.png" width="50">
 
-        <!-- 4. K-T-B -->
-        <div class="pkg-box">
-            <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600" alt="Tungnath">
-            <div class="pkg-content">
-                <h3>Kedarnath-Tungnath-Badrinath</h3>
-                <span class="duration">6 Nights / 7 Days</span>
-                <div class="itinerary">
-                    D1-2: Kedarnath Yatra.<br>
-                    D3: Drive to Chopta (Tungnath).<br>
-                    D4-5: Badrinath Darshan.<br>
-                    D6-7: Return to Haridwar.
-                </div>
-                <a href="https://wa.me/9643586598?text=Book K-T-B Yatra" class="btn-book">Book Now</a>
-            </div>
-        </div>
+4D Tour and Travel
 
-        <!-- 5. Adi Kailash -->
-        <div class="pkg-box">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Adi_Kailash_view.jpg" alt="Adi Kailash">
-            <div class="pkg-content">
-                <h3>Adi Kailash Yatra</h3>
-                <span class="duration">7 Nights / 8 Days</span>
-                <div class="itinerary">
-                    D1-2: Kathgodam to Dharchula.<br>
-                    D3-5: Adi Kailash & Om Parvat.<br>
-                    D6-8: Return journey to Kathgodam.
-                </div>
-                <a href="https://wa.me/9643586598?text=Book Adi Kailash" class="btn-book">Book Now</a>
-            </div>
-        </div>
+</a>
 
-    </div>
 </div>
+
+</nav>
+
+<!-- Banner -->
+
+<section class="py-5 text-center text-white"
+style="background:#0d6efd;">
+
+<div class="container">
+
+<h1 class="fw-bold">
+
+Tour Packages
+
+</h1>
+
+<p>
+
+Explore India's Most Beautiful Destinations
+
+</p>
+
+</div>
+
+</section>
+
+<!-- Packages -->
+
+<div class="container py-5">
+
+<div class="row g-4">
+
+<!-- Package 1 -->
+
+<div class="col-lg-4">
+
+<div class="card shadow">
+
+<img src="images/haridwar.jpg"
+class="card-img-top">
+
+<div class="card-body">
+
+<h4>Haridwar Rishikesh Tour</h4>
+
+<p>2 Nights / 3 Days</p>
+
+<p>Hotel + Taxi + Sightseeing</p>
+
+<a href="https://wa.me/919643586598"
+class="btn btn-success">
+
+WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Package 2 -->
+
+<div class="col-lg-4">
+
+<div class="card shadow">
+
+<img src="images/mussoorie.jpg"
+class="card-img-top">
+
+<div class="card-body">
+
+<h4>Haridwar Rishikesh Mussoorie</h4>
+
+<p>3 Nights / 4 Days</p>
+
+<p>Hotel + Taxi + Sightseeing</p>
+
+<a href="https://wa.me/919643586598"
+class="btn btn-success">
+
+WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Package 3 -->
+
+<div class="col-lg-4">
+
+<div class="card shadow">
+
+<img src="images/dehradun.jpg"
+class="card-img-top">
+
+<div class="card-body">
+
+<h4>Dehradun Mussoorie Tour</h4>
+
+<p>2 Nights / 3 Days</p>
+
+<p>Hotel + Taxi + Sightseeing</p>
+
+<a href="https://wa.me/919643586598"
+class="btn btn-success">
+
+WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Package 4 -->
+
+<div class="col-lg-4">
+
+<div class="card shadow">
+
+<img src="images/nainital.jpg"
+class="card-img-top">
+
+<div class="card-body">
+
+<h4>Nainital Tour Package</h4>
+
+<p>3 Nights / 4 Days</p>
+
+<p>Hotel + Taxi + Sightseeing</p>
+
+<a href="https://wa.me/919643586598"
+class="btn btn-success">
+
+WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Package 5 -->
+
+<div class="col-lg-4">
+
+<div class="card shadow">
+
+<img src="images/jimcorbett.jpg"
+class="card-img-top">
+
+<div class="card-body">
+
+<h4>Nainital Jim Corbett</h4>
+
+<p>4 Nights / 5 Days</p>
+
+<p>Hotel + Taxi + Safari</p>
+
+<a href="https://wa.me/919643586598"
+class="btn btn-success">
+
+WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<!-- ================= NEXT 5 TOUR PACKAGES ================= -->
+
+<!-- Package 6 -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="card shadow">
+
+<img src="images/kedarnath.jpg" class="card-img-top" alt="Kedarnath Tour">
+
+<div class="card-body">
+
+<h4>Kedarnath Tour Package</h4>
+
+<p><i class="fa-solid fa-calendar"></i> 3 Nights / 4 Days</p>
+
+<p>Hotel + Taxi + VIP Assistance</p>
+
+<a href="https://wa.me/919643586598" class="btn btn-success">
+<i class="fab fa-whatsapp"></i> Book Now
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Package 7 -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="card shadow">
+
+<img src="images/badrinath.jpg" class="card-img-top" alt="Badrinath Tour">
+
+<div class="card-body">
+
+<h4>Badrinath Tour Package</h4>
+
+<p><i class="fa-solid fa-calendar"></i> 2 Nights / 3 Days</p>
+
+<p>Hotel + Taxi + Darshan</p>
+
+<a href="https://wa.me/919643586598" class="btn btn-success">
+<i class="fab fa-whatsapp"></i> Book Now
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Package 8 -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="card shadow">
+
+<img src="images/dodham.jpg" class="card-img-top" alt="Do Dham">
+
+<div class="card-body">
+
+<h4>Do Dham Tour Package</h4>
+
+<p><i class="fa-solid fa-calendar"></i> 4 Nights / 5 Days</p>
+
+<p>Kedarnath + Badrinath</p>
+
+<a href="https://wa.me/919643586598" class="btn btn-success">
+<i class="fab fa-whatsapp"></i> Book Now
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Package 9 -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="card shadow">
+
+<img src="images/tungnath.jpg" class="card-img-top" alt="Kedarnath Tungnath">
+
+<div class="card-body">
+
+<h4>Kedarnath Tungnath Badrinath</h4>
+
+<p><i class="fa-solid fa-calendar"></i> 5 Nights / 6 Days</p>
+
+<p>Complete Pilgrimage Package</p>
+
+<a href="https://wa.me/919643586598" class="btn btn-success">
+<i class="fab fa-whatsapp"></i> Book Now
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Package 10 -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="card shadow">
+
+<img src="images/chardham.jpg" class="card-img-top" alt="Char Dham">
+
+<div class="card-body">
+
+<h4>Char Dham Yatra Package</h4>
+
+<p><i class="fa-solid fa-calendar"></i> 9 Nights / 10 Days</p>
+
+<p>Yamunotri • Gangotri • Kedarnath • Badrinath</p>
+
+<a href="https://wa.me/919643586598" class="btn btn-success">
+<i class="fab fa-whatsapp"></i> Book Now
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<!-- ================= NEXT 5 TOUR PACKAGES ================= -->
+
+<!-- Package 11 -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="card shadow h-100">
+
+<img src="images/adikailash.jpg" class="card-img-top" alt="Adi Kailash Tour">
+
+<div class="card-body">
+
+<h4>Adi Kailash Om Parvat Tour Package</h4>
+
+<p><i class="fa-solid fa-calendar"></i> 7 Nights / 8 Days</p>
+
+<p>Pithoragarh • Dharchula • Om Parvat • Adi Kailash</p>
+
+<a href="https://wa.me/919643586598" class="btn btn-success me-2">
+<i class="fab fa-whatsapp"></i> Book Now
+</a>
+
+<a href="tel:9045066598" class="btn btn-primary">
+<i class="fa-solid fa-phone"></i> Call
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Package 12 -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="card shadow h-100">
+
+<img src="images/shimla-manali.jpg" class="card-img-top" alt="Shimla Manali">
+
+<div class="card-body">
+
+<h4>Shimla Manali Tour Package</h4>
+
+<p><i class="fa-solid fa-calendar"></i> 5 Nights / 6 Days</p>
+
+<p>Shimla • Kufri • Kullu • Manali • Solang Valley</p>
+
+<a href="https://wa.me/919643586598" class="btn btn-success me-2">
+<i class="fab fa-whatsapp"></i> Book Now
+</a>
+
+<a href="tel:9045066598" class="btn btn-primary">
+<i class="fa-solid fa-phone"></i> Call
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Package 13 -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="card shadow h-100">
+
+<img src="images/spiti.jpg" class="card-img-top" alt="Spiti Valley">
+
+<div class="card-body">
+
+<h4>Spiti Valley Tour Package</h4>
+
+<p><i class="fa-solid fa-calendar"></i> 8 Nights / 9 Days</p>
+
+<p>Shimla • Kalpa • Kaza • Chandratal • Manali</p>
+
+<a href="https://wa.me/919643586598" class="btn btn-success me-2">
+<i class="fab fa-whatsapp"></i> Book Now
+</a>
+
+<a href="tel:9045066598" class="btn btn-primary">
+<i class="fa-solid fa-phone"></i> Call
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Package 14 -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="card shadow h-100">
+
+<img src="images/goa.jpg" class="card-img-top" alt="Goa Tour">
+
+<div class="card-body">
+
+<h4>Goa Tour Package</h4>
+
+<p><i class="fa-solid fa-calendar"></i> 4 Nights / 5 Days</p>
+
+<p>North Goa • South Goa • Beaches • Water Sports</p>
+
+<a href="https://wa.me/919643586598" class="btn btn-success me-2">
+<i class="fab fa-whatsapp"></i> Book Now
+</a>
+
+<a href="tel:9045066598" class="btn btn-primary">
+<i class="fa-solid fa-phone"></i> Call
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Package 15 -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="card shadow h-100">
+
+<img src="images/kerala.jpg" class="card-img-top" alt="Kerala Tour">
+
+<div class="card-body">
+
+<h4>Kerala Tour Package</h4>
+
+<p><i class="fa-solid fa-calendar"></i> 5 Nights / 6 Days</p>
+
+<p>Munnar • Thekkady • Alleppey • Kochi</p>
+
+<a href="https://wa.me/919643586598" class="btn btn-success me-2">
+<i class="fab fa-whatsapp"></i> Book Now
+</a>
+
+<a href="tel:9045066598" class="btn btn-primary">
+<i class="fa-solid fa-phone"></i> Call
+</a>
+
+</div>
+
+</div>
+
+</div>
+<!-- ================= LAST 5 TOUR PACKAGES ================= -->
+
+<!-- Package 16 -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="card shadow h-100">
+
+<img src="images/jaisalmer.jpg" class="card-img-top" alt="Jaisalmer Tour">
+
+<div class="card-body">
+
+<h4>Jaisalmer Tour Package</h4>
+
+<p><i class="fa-solid fa-calendar"></i> 4 Nights / 5 Days</p>
+
+<p>Jaisalmer • Sam Sand Dunes • Desert Safari • Camp Stay</p>
+
+<a href="https://wa.me/919643586598" class="btn btn-success me-2">
+<i class="fab fa-whatsapp"></i> Book Now
+</a>
+
+<a href="tel:9045066598" class="btn btn-primary">
+<i class="fa-solid fa-phone"></i> Call Now
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Package 17 -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="card shadow h-100">
+
+<img src="images/rajasthan.jpg" class="card-img-top" alt="Rajasthan Tour">
+
+<div class="card-body">
+
+<h4>Rajasthan Tour Package</h4>
+
+<p><i class="fa-solid fa-calendar"></i> 6 Nights / 7 Days</p>
+
+<p>Jaipur • Jodhpur • Udaipur • Jaisalmer</p>
+
+<a href="https://wa.me/919643586598" class="btn btn-success me-2">
+<i class="fab fa-whatsapp"></i> Book Now
+</a>
+
+<a href="tel:9045066598" class="btn btn-primary">
+<i class="fa-solid fa-phone"></i> Call Now
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Package 18 -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="card shadow h-100">
+
+<img src="images/kashmir.jpg" class="card-img-top" alt="Kashmir Tour">
+
+<div class="card-body">
+
+<h4>Kashmir Tour Package</h4>
+
+<p><i class="fa-solid fa-calendar"></i> 5 Nights / 6 Days</p>
+
+<p>Srinagar • Gulmarg • Pahalgam • Sonamarg</p>
+
+<a href="https://wa.me/919643586598" class="btn btn-success me-2">
+<i class="fab fa-whatsapp"></i> Book Now
+</a>
+
+<a href="tel:9045066598" class="btn btn-primary">
+<i class="fa-solid fa-phone"></i> Call Now
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Package 19 -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="card shadow h-100">
+
+<img src="images/amritsar.jpg" class="card-img-top" alt="Amritsar Dalhousie Dharamshala">
+
+<div class="card-body">
+
+<h4>Amritsar Dalhousie Dharamshala</h4>
+
+<p><i class="fa-solid fa-calendar"></i> 6 Nights / 7 Days</p>
+
+<p>Golden Temple • Dalhousie • Khajjiar • Dharamshala</p>
+
+<a href="https://wa.me/919643586598" class="btn btn-success me-2">
+<i class="fab fa-whatsapp"></i> Book Now
+</a>
+
+<a href="tel:9045066598" class="btn btn-primary">
+<i class="fa-solid fa-phone"></i> Call Now
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Package 20 -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="card shadow h-100">
+
+<img src="images/golden-triangle.jpg" class="card-img-top" alt="Golden Triangle Tour">
+
+<div class="card-body">
+
+<h4>Golden Triangle Tour Package</h4>
+
+<p><i class="fa-solid fa-calendar"></i> 5 Nights / 6 Days</p>
+
+<p>Delhi • Agra • Jaipur</p>
+
+<a href="https://wa.me/919643586598" class="btn btn-success me-2">
+<i class="fab fa-whatsapp"></i> Book Now
+</a>
+
+<a href="tel:9045066598" class="btn btn-primary">
+<i class="fa-solid fa-phone"></i> Call Now
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><!-- ================= CUSTOMER REVIEWS ================= -->
+
+<section class="container py-5">
+
+<div class="text-center mb-5">
+
+<h2 class="fw-bold">What Our Customers Say</h2>
+
+<p>Trusted by Thousands of Happy Travellers</p>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-lg-4">
+<div class="card shadow p-4 h-100">
+⭐⭐⭐⭐⭐
+<h5 class="mt-3">Rahul Sharma</h5>
+<p>Excellent taxi service and hotel arrangements. Highly recommended.</p>
+</div>
+</div>
+
+<div class="col-lg-4">
+<div class="card shadow p-4 h-100">
+⭐⭐⭐⭐⭐
+<h5 class="mt-3">Neha Verma</h5>
+<p>Wonderful Kedarnath trip. Driver was polite and professional.</p>
+</div>
+</div>
+
+<div class="col-lg-4">
+<div class="card shadow p-4 h-100">
+⭐⭐⭐⭐⭐
+<h5 class="mt-3">Amit Singh</h5>
+<p>Best Shimla Manali package at affordable price.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="py-5 bg-light">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-lg-6">
+
+<h2>Contact Us</h2>
+
+<p><i class="fas fa-map-marker-alt"></i>
+Aamwala Tarla Nalapani, Dehradun - 248001</p>
+
+<p><i class="fas fa-phone"></i>
+<a href="tel:+919045066598">9045066598</a></p>
+
+<p><i class="fab fa-whatsapp"></i>
+<a href="https://wa.me/919643586598">9643586598</a></p>
+
+<p><i class="fas fa-envelope"></i>
+4dtravelles@gmail.com</p>
+
+</div>
+
+<div class="col-lg-6">
+
+<form action="https://formsubmit.co/4dtravelles@gmail.com" method="POST">
+
+<input type="text" class="form-control mb-3" placeholder="Your Name" required>
+
+<input type="tel" class="form-control mb-3" placeholder="Mobile Number" required>
+
+<input type="email" class="form-control mb-3" placeholder="Email">
+
+<textarea class="form-control mb-3" rows="5" placeholder="Your Tour Requirement"></textarea>
+
+<button class="btn btn-primary w-100">
+
+Send Enquiry
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="bg-primary text-white py-4">
+
+<div class="container text-center">
+
+<h4>4D Tour and Travel</h4>
+
+<p>
+
+Taxi Service | Tour Packages | Tempo Traveller |
+Char Dham Yatra | Kedarnath | Badrinath |
+Shimla Manali | Kerala | Goa | Kashmir
+
+</p>
+
+<div class="mb-3">
+
+<a href="https://wa.me/919643586598" class="text-white me-3">
+<i class="fab fa-whatsapp fa-2x"></i>
+</a>
+
+<a href="tel:+919045066598" class="text-white me-3">
+<i class="fas fa-phone fa-2x"></i>
+</a>
+
+<a href="mailto:4dtravelles@gmail.com" class="text-white">
+<i class="fas fa-envelope fa-2x"></i>
+</a>
+
+</div>
+
+<p>
+
+© 2026 4D Tour and Travel | All Rights Reserved.
+
+</p>
+
+</div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="script.js"></script>
 
 </body>
+
 </html>
-<div class="pkg-grid">
-    
-    <!-- 1. Spiti Tour -->
-    <div class="pkg-box">
-        <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=600" alt="Spiti">
-        <div class="pkg-content">
-            <h3>Spiti Valley Tour</h3>
-            <span class="duration">6 Nights / 7 Days</span>
-            <div class="itinerary">
-                D1-2: Shimla to Sangla/Chitkul.<br>
-                D3-5: Kalpa, Kaza & Key Monastery.<br>
-                D6-7: Chandratal Lake & Manali Return.
-            </div>
-            <a href="https://wa.me/9643586598?text=Book Spiti Tour" class="btn-book">Book Now</a>
-        </div>
-    </div>
-
-    <!-- 2. Shimla Manali -->
-    <div class="pkg-box">
-        <img src="https://images.unsplash.com/photo-1596767634377-50531cc217d8?q=80&w=600" alt="Shimla Manali">
-        <div class="pkg-content">
-            <h3>Shimla Manali Tour</h3>
-            <span class="duration">5 Nights / 6 Days</span>
-            <div class="itinerary">
-                D1-2: Shimla Mall Road & Kufri.<br>
-                D3-5: Manali, Solang Valley & Rohtang Pass.<br>
-                D6: Departure from Chandigarh.
-            </div>
-            <a href="https://wa.me/9643586598?text=Book Shimla Manali Tour" class="btn-book">Book Now</a>
-        </div>
-    </div>
-
-    <!-- 3. Jaisalmer -->
-    <div class="pkg-box">
-        <img src="https://images.unsplash.com/photo-1628153429381-80720541785f?q=80&w=600" alt="Jaisalmer">
-        <div class="pkg-content">
-            <h3>Jaisalmer Tour Package</h3>
-            <span class="duration">3 Nights / 4 Days</span>
-            <div class="itinerary">
-                D1: Arrival & Jaisalmer Fort.<br>
-                D2: Sam Sand Dunes, Desert Safari.<br>
-                D3: Cultural Night & Camping.<br>
-                D4: Departure.
-            </div>
-            <a href="https://wa.me/9643586598?text=Book Jaisalmer Tour" class="btn-book">Book Now</a>
-        </div>
-    </div>
-
-    <!-- 4. Mussoorie Dehradun -->
-    <div class="pkg-box">
-        <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=600" alt="Mussoorie">
-        <div class="pkg-content">
-            <h3>Mussoorie Dehradun Tour</h3>
-            <span class="duration">3 Nights / 4 Days</span>
-            <div class="itinerary">
-                D1: Dehradun Arrival & Sahastradhara.<br>
-                D2: Drive to Mussoorie, Mall Road.<br>
-                D3: Kempty Falls & George Everest.<br>
-                D4: Departure.
-            </div>
-            <a href="https://wa.me/9643586598?text=Book Mussoorie Dehradun" class="btn-book">Book Now</a>
-        </div>
-    </div>
-
-    <!-- 5. Nainital Jim Corbett -->
-    <div class="pkg-box">
-        <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=600" alt="Corbett">
-        <div class="pkg-content">
-            <h3>Nainital Jim Corbett Tour</h3>
-            <span class="duration">4 Nights / 5 Days</span>
-            <div class="itinerary">
-                D1-2: Nainital Lake & Sightseeing.<br>
-                D3-4: Jim Corbett Jungle Safari.<br>
-                D5: Return Departure.
-            </div>
-            <a href="https://wa.me/9643586598?text=Book Nainital Corbett Tour" class="btn-book">Book Now</a>
-        </div>
-    </div>
-
-    <!-- 6. Nainital Honeymoon -->
-    <div class="pkg-box">
-        <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=600" alt="Nainital">
-        <div class="pkg-content">
-            <h3>Nainital Honeymoon Tour</h3>
-            <span class="duration">3 Nights / 4 Days</span>
-            <div class="itinerary">
-                D1: Romantic Arrival in Nainital.<br>
-                D2: Lake view & Boat Ride.<br>
-                D3: Snow View Point & Mall Road.<br>
-                D4: Departure.
-            </div>
-            <a href="https://wa.me/9643586598?text=Book Nainital Honeymoon" class="btn-book">Book Now</a>
-        </div>
-    </div>
-
-    <!-- 7. Mussoorie Honeymoon -->
-    <div class="pkg-box">
-        <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=600" alt="Mussoorie">
-        <div class="pkg-content">
-            <h3>Mussoorie Honeymoon Package</h3>
-            <span class="duration">3 Nights / 4 Days</span>
-            <div class="itinerary">
-                D1: Candle Light Dinner & Arrival.<br>
-                D2: Private Sightseeing Kempty Falls.<br>
-                D3: Romantic Walks & George Everest.<br>
-                D4: Departure.
-            </div>
-            <a href="https://wa.me/9643586598?text=Book Mussoorie Honeymoon" class="btn-book">Book Now</a>
-        </div>
-    </div>
-
-</div>
-<div class="pkg-grid">
-    
-    <!-- 1. Rajasthan Royal Heritage -->
-    <div class="pkg-box">
-        <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?q=80&w=600" alt="Rajasthan Palace">
-        <div class="pkg-content">
-            <h3>Rajasthan Heritage Tour</h3>
-            <span class="duration">6 Nights / 7 Days</span>
-            <div class="itinerary">
-                D1-2: Jaipur (City Palace, Amber Fort).<br>
-                D3-4: Jodhpur (Mehrangarh, Umaid Bhawan).<br>
-                D5-6: Udaipur (Lake Pichola, City Palace).<br>
-                D7: Departure from Udaipur.
-            </div>
-            <a href="https://wa.me/9643586598?text=Book Rajasthan Heritage Tour" class="btn-book">Book Now</a>
-        </div>
-    </div>
-
-    <!-- 2. Golden Triangle Rajasthan -->
-    <div class="pkg-box">
-        <img src="https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=600" alt="Taj Mahal">
-        <div class="pkg-content">
-            <h3>Golden Triangle Tour</h3>
-            <span class="duration">5 Nights / 6 Days</span>
-            <div class="itinerary">
-                D1-2: Delhi Sightseeing.<br>
-                D3: Agra (Taj Mahal & Fort).<br>
-                D4-5: Jaipur (Forts & Culture).<br>
-                D6: Departure from Delhi.
-            </div>
-            <a href="https://wa.me/9643586598?text=Book Golden Triangle Tour" class="btn-book">Book Now</a>
-        </div>
-    </div>
-
-    <!-- 3. Desert & Safari Special -->
-    <div class="pkg-box">
-        <img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?q=80&w=600" alt="Desert">
-        <div class="pkg-content">
-            <h3>Desert & Safari Package</h3>
-            <span class="duration">4 Nights / 5 Days</span>
-            <div class="itinerary">
-                D1: Arrival in Jaisalmer.<br>
-                D2: Jaisalmer Fort & Havelis.<br>
-                D3: Sam Sand Dunes (Camel Safari).<br>
-                D4: Camping under stars.<br>
-                D5: Departure.
-            </div>
-            <a href="https://wa.me/9643586598?text=Book Desert Safari Package" class="btn-book">Book Now</a>
-        </div>
-    </div>
-
-</div>
