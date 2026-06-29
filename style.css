@@ -1,4 +1,174 @@
-/* ==========================
+/* FLEET */
+
+.fleet{
+
+padding:100px 0;
+
+background:#fff;
+
+}
+
+.fleet-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+}
+
+.fleet-card{
+
+background:#fff;
+
+border-radius:20px;
+
+overflow:hidden;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+text-align:center;
+
+transition:.4s;
+
+}
+
+.fleet-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.fleet-card img{
+
+width:100%;
+
+height:230px;
+
+object-fit:cover;
+
+}
+
+.fleet-card h3{
+
+margin-top:20px;
+
+}
+
+.fleet-card a{
+
+display:inline-block;
+
+margin:20px;
+
+padding:12px 28px;
+
+background:#0d6efd;
+
+color:#fff;
+
+border-radius:30px;
+
+text-decoration:none;
+
+}
+
+/* TESTIMONIAL */
+
+.testimonial{
+
+padding:100px 0;
+
+background:#f8f9fa;
+
+}
+
+.testimonial-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:25px;
+
+}
+
+.review-card{
+
+background:#fff;
+
+padding:30px;
+
+border-radius:20px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.review-card h4{
+
+margin-top:20px;
+
+color:#0d6efd;
+
+}
+
+/* GALLERY */
+
+.gallery{
+
+padding:100px 0;
+
+}
+
+.gallery-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:20px;
+
+}
+
+.gallery-grid img{
+
+width:100%;
+
+height:260px;
+
+object-fit:cover;
+
+border-radius:15px;
+
+transition:.4s;
+
+cursor:pointer;
+
+}
+
+.gallery-grid img:hover{
+
+transform:scale(1.05);
+
+}
+
+/* Responsive */
+
+@media(max-width:991px){
+
+.fleet-grid,
+
+.testimonial-grid,
+
+.gallery-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}/* ==========================
    GLOBAL
 ========================== */
 
