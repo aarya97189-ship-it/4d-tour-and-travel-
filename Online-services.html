@@ -1,589 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taxi & Online Services | 4D Tour and Travel</title>
-
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Online RTO & Documentation Services | 4D Tour and Travel</title>
+    <meta name="description" content="Online Commercial Vehicle State Tax Payment, MV Tax, All India Permit, GST Registration, UDYAM, Vehicle NOC & e-Challan Assistance.">
     
-    <!-- FontAwesome 6 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
     <style>
-        :root {
-            --primary-color: #0d6efd;
-            --whatsapp-color: #25d366;
-            --bg-light: #f8f9fa;
-            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            --card-hover-shadow: 0 15px 35px rgba(37, 211, 102, 0.15);
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f4f7fa;
-            color: #333;
-        }
-
-        /* Navbar */
-        .navbar-brand {
-            font-weight: 700;
-            letter-spacing: 0.5px;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, rgba(13, 110, 253, 0.85), rgba(10, 40, 95, 0.9)), 
-                        url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
-            padding: 100px 0 140px;
-            color: #fff;
-        }
-
-        .hero h1 {
-            font-size: 2.8rem;
-            font-weight: 700;
-        }
-
-        /* Search Section */
-        .search-wrapper {
-            margin-top: -50px;
-            position: relative;
-            z-index: 10;
-        }
-
-        .search-box {
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 16px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Service Cards */
-        .service-card {
-            background: #ffffff;
-            border: 1px solid rgba(0, 0, 0, 0.03);
-            border-radius: 16px;
-            padding: 30px 24px;
-            height: 100%;
-            transition: all 0.3s ease;
-            box-shadow: var(--card-shadow);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--card-hover-shadow);
-            border-color: rgba(37, 211, 102, 0.3);
-        }
-
-        .icon-box {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            background: rgba(13, 110, 253, 0.08);
-            color: var(--primary-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            margin: 0 auto 20px;
-            transition: all 0.3s ease;
-        }
-
-        .service-card:hover .icon-box {
-            background: var(--whatsapp-color);
-            color: #fff;
-        }
-
-        .service-card h4 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-
-        .service-card p {
-            color: #6c757d;
-            font-size: 0.92rem;
-        }
-
-        /* WhatsApp Custom Button */
-        .btn-whatsapp {
-            background-color: var(--whatsapp-color);
-            color: #ffffff;
-            font-weight: 600;
-            border: none;
-            transition: all 0.3s ease;
-        }
-
-        .btn-whatsapp:hover {
-            background-color: #1eb954;
-            color: #ffffff;
-            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
-        }
-
-        /* Testimonials */
-        .rating-stars {
-            color: #ffc107;
-            font-size: 1.1rem;
-        }
-
-        /* FAQ Styling */
-        .accordion-button:not(.collapsed) {
-            background-color: rgba(13, 110, 253, 0.08);
-            color: var(--primary-color);
-            font-weight: 600;
-        }
-
-        .accordion-button:focus {
-            box-shadow: none;
-        }
-
-        /* Section Titles */
-        .section-title {
-            font-weight: 700;
-            position: relative;
-            display: inline-block;
-            margin-bottom: 10px;
-        }
-
-        /* Footer */
-        footer {
-            background: #0f172a;
-            color: #94a3b8;
-        }
-
-        footer a {
-            color: #94a3b8;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            color: #fff;
-        }
+        :root { --gold: #cc9933; --dark: #0b0b0b; --card-bg: #141414; }
+        body { background-color: var(--dark); color: #ffffff; font-family: 'Arial', sans-serif; }
+        .navbar { background-color: #000000; border-bottom: 1px solid rgba(204, 153, 51, 0.3); }
+        .nav-link { color: #cccccc !important; font-size: 14px; text-transform: uppercase; }
+        .nav-link.active, .nav-link:hover { color: var(--gold) !important; }
+        .service-box { background: var(--card-bg); border: 1px solid #222; border-radius: 8px; padding: 25px; transition: 0.3s; text-align: center; }
+        .service-box:hover { border-color: #25d366; transform: translateY(-5px); }
+        .icon-circle { width: 60px; height: 60px; background: rgba(204,153,51,0.1); border-radius: 50%; color: var(--gold); display: flex; align-items: center; justify-content: center; font-size: 24px; margin: 0 auto 15px; }
+        .btn-wa { background: #25d366; color: #fff; font-weight: bold; border-radius: 20px; text-decoration: none; padding: 8px 20px; display: inline-block; font-size: 13px; }
+        .btn-wa:hover { background: #1eb954; color: #fff; }
     </style>
 </head>
-
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm py-3">
+    <nav class="navbar navbar-expand-lg sticky-top py-3">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-                <i class="fa-solid fa-taxi text-primary fs-3"></i>
-                <span>4D Tour & Travel</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto gap-2">
-                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#why-us">Why Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#faq">FAQs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            <a class="navbar-brand text-white fw-bold fs-4" href="index.html"><span style="color: var(--gold);">4D</span> TOUR & TRAVEL</a>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto gap-3">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="packages.html">Tour Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fleet.html">Our Fleet</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="online-service.html">Online Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
                 </ul>
-                <a href="https://wa.me/919045066598" target="_blank" class="btn btn-success rounded-pill px-4 ms-lg-3">
-                    <i class="fab fa-whatsapp me-2"></i> WhatsApp Us
-                </a>
             </div>
         </div>
     </nav>
 
-    <!-- HERO -->
-    <section class="hero text-center text-lg-start">
+    <section class="py-5 text-center bg-dark border-bottom border-secondary">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <span class="badge bg-primary px-3 py-2 rounded-pill mb-3">Fast & Reliable Assistance</span>
-                    <h1>Taxi & Online Documentation Services</h1>
-                    <p class="lead opacity-90 my-3">
-                        State Tax • MV Tax • Permits • Registration • Legal & Documentation Support
-                    </p>
-                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start mt-4">
-                        <a href="https://wa.me/919045066598" target="_blank" class="btn btn-success btn-lg rounded-pill px-4">
-                            <i class="fab fa-whatsapp me-2"></i> WhatsApp Now
-                        </a>
-                        <a href="tel:919045066598" class="btn btn-outline-light btn-lg rounded-pill px-4">
-                            <i class="fa-solid fa-phone me-2"></i> Call Us
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <h1 class="fw-bold">Taxi & Documentation Online Services</h1>
+            <p class="text-warning">Instant Online Processing for State Tax, MV Tax, Permits & Legal Certifications</p>
         </div>
     </section>
 
-    <!-- SEARCH BAR -->
-    <div class="container search-wrapper">
-        <div class="search-box">
-            <div class="row g-3">
-                <div class="col-lg-10 col-md-9">
-                    <div class="input-group input-group-lg">
-                        <span class="input-group-text bg-transparent border-end-0">
-                            <i class="fa-solid fa-magnifying-glass text-muted"></i>
-                        </span>
-                        <input type="text" class="form-control border-start-0 ps-0" placeholder="Search service (e.g., State Tax, GST, Permit)...">
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-3">
-                    <button class="btn btn-primary btn-lg w-100 rounded-3 fw-bold">Search</button>
+    <div class="container py-5">
+        <div class="row g-4">
+            
+            <div class="col-md-3">
+                <div class="service-box">
+                    <div class="icon-circle"><i class="fa-solid fa-road"></i></div>
+                    <h5 class="text-white">State Tax</h5>
+                    <p class="text-secondary small">Online Commercial Vehicle State Tax Payment.</p>
+                    <a href="https://wa.me/919045066598?text=Apply%20for%20State%20Tax" class="btn-wa"><i class="fab fa-whatsapp me-1"></i> Apply Now</a>
                 </div>
             </div>
+
+            <div class="col-md-3">
+                <div class="service-box">
+                    <div class="icon-circle"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                    <h5 class="text-white">MV Tax</h5>
+                    <p class="text-secondary small">Motor Vehicle Tax Payment & Renewal.</p>
+                    <a href="https://wa.me/919045066598?text=Apply%20for%20MV%20Tax" class="btn-wa"><i class="fab fa-whatsapp me-1"></i> Apply Now</a>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="service-box">
+                    <div class="icon-circle"><i class="fa-solid fa-globe"></i></div>
+                    <h5 class="text-white">All India Permit</h5>
+                    <p class="text-secondary small">National Permit Renewal & Fresh Applications.</p>
+                    <a href="https://wa.me/919045066598?text=Apply%20for%20All%20India%20Permit" class="btn-wa"><i class="fab fa-whatsapp me-1"></i> Apply Now</a>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="service-box">
+                    <div class="icon-circle"><i class="fa-solid fa-file-invoice"></i></div>
+                    <h5 class="text-white">GST Services</h5>
+                    <p class="text-secondary small">New GST Registration & Return Assistance.</p>
+                    <a href="https://wa.me/919045066598?text=Apply%20for%20GST%20Services" class="btn-wa"><i class="fab fa-whatsapp me-1"></i> Apply Now</a>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="service-box">
+                    <div class="icon-circle"><i class="fa-solid fa-building"></i></div>
+                    <h5 class="text-white">UDYAM MSME</h5>
+                    <p class="text-secondary small">Business MSME / UDYAM Registration.</p>
+                    <a href="https://wa.me/919045066598?text=Apply%20for%20UDYAM" class="btn-wa"><i class="fab fa-whatsapp me-1"></i> Apply Now</a>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="service-box">
+                    <div class="icon-circle"><i class="fa-solid fa-file-circle-check"></i></div>
+                    <h5 class="text-white">Vehicle NOC</h5>
+                    <p class="text-secondary small">Interstate Vehicle NOC & Transfers.</p>
+                    <a href="https://wa.me/919045066598?text=Apply%20for%20Vehicle%20NOC" class="btn-wa"><i class="fab fa-whatsapp me-1"></i> Apply Now</a>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="service-box">
+                    <div class="icon-circle"><i class="fa-solid fa-receipt"></i></div>
+                    <h5 class="text-white">e-Challan</h5>
+                    <p class="text-secondary small">Online Traffic Challan Payment Support.</p>
+                    <a href="https://wa.me/919045066598?text=Pay%20e-Challan" class="btn-wa"><i class="fab fa-whatsapp me-1"></i> Apply Now</a>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="service-box">
+                    <div class="icon-circle"><i class="fa-solid fa-bowl-food"></i></div>
+                    <h5 class="text-white">FSSAI License</h5>
+                    <p class="text-secondary small">Food Business License Registration.</p>
+                    <a href="https://wa.me/919045066598?text=Apply%20for%20FSSAI" class="btn-wa"><i class="fab fa-whatsapp me-1"></i> Apply Now</a>
+                </div>
+            </div>
+
         </div>
     </div>
 
-    <!-- SERVICES -->
-    <section id="services" class="container py-5 mt-4">
-        <div class="text-center mb-5">
-            <h2 class="section-title fs-1">Our Featured Services</h2>
-            <p class="text-muted fs-5">Fast • Secure • Professional Online Support</p>
-        </div>
-
-        <div class="row g-4">
-            <!-- State Tax -->
-            <div class="col-lg-3 col-md-6">
-                <div class="service-card text-center">
-                    <div>
-                        <div class="icon-box"><i class="fa-solid fa-road"></i></div>
-                        <h4>State Tax</h4>
-                        <p>Online Commercial Vehicle State Tax Payment & Processing.</p>
-                    </div>
-                    <a href="https://wa.me/919045066598?text=Hi,%20I%20want%20to%20apply%20for%20State%20Tax%20Service" target="_blank" class="btn btn-whatsapp w-100 rounded-pill mt-3">
-                        <i class="fab fa-whatsapp me-2"></i>Apply on WhatsApp
-                    </a>
-                </div>
-            </div>
-
-            <!-- MV Tax -->
-            <div class="col-lg-3 col-md-6">
-                <div class="service-card text-center">
-                    <div>
-                        <div class="icon-box"><i class="fa-solid fa-file-invoice-dollar"></i></div>
-                        <h4>MV Tax</h4>
-                        <p>Motor Vehicle Tax Payment, Renewal & Status Check.</p>
-                    </div>
-                    <a href="https://wa.me/919045066598?text=Hi,%20I%20want%20to%20apply%20for%20MV%20Tax%20Service" target="_blank" class="btn btn-whatsapp w-100 rounded-pill mt-3">
-                        <i class="fab fa-whatsapp me-2"></i>Apply on WhatsApp
-                    </a>
-                </div>
-            </div>
-
-            <!-- Authorization -->
-            <div class="col-lg-3 col-md-6">
-                <div class="service-card text-center">
-                    <div>
-                        <div class="icon-box"><i class="fa-solid fa-certificate"></i></div>
-                        <h4>Authorization</h4>
-                        <p>National & Commercial Vehicle Authorization Services.</p>
-                    </div>
-                    <a href="https://wa.me/919045066598?text=Hi,%20I%20want%20to%20apply%20for%20Vehicle%20Authorization" target="_blank" class="btn btn-whatsapp w-100 rounded-pill mt-3">
-                        <i class="fab fa-whatsapp me-2"></i>Apply on WhatsApp
-                    </a>
-                </div>
-            </div>
-
-            <!-- All India Permit -->
-            <div class="col-lg-3 col-md-6">
-                <div class="service-card text-center">
-                    <div>
-                        <div class="icon-box"><i class="fa-solid fa-globe"></i></div>
-                        <h4>All India Permit</h4>
-                        <p>All India Tourist & Commercial Permit Application/Renewal.</p>
-                    </div>
-                    <a href="https://wa.me/919045066598?text=Hi,%20I%20want%20to%20apply%20for%20All%20India%20Permit" target="_blank" class="btn btn-whatsapp w-100 rounded-pill mt-3">
-                        <i class="fab fa-whatsapp me-2"></i>Apply on WhatsApp
-                    </a>
-                </div>
-            </div>
-
-            <!-- GST Registration -->
-            <div class="col-lg-3 col-md-6">
-                <div class="service-card text-center">
-                    <div>
-                        <div class="icon-box"><i class="fa-solid fa-file-invoice"></i></div>
-                        <h4>GST Services</h4>
-                        <p>New GST Registration, Amendments & Return Assistance.</p>
-                    </div>
-                    <a href="https://wa.me/919045066598?text=Hi,%20I%20want%20to%20apply%20for%20GST%20Services" target="_blank" class="btn btn-whatsapp w-100 rounded-pill mt-3">
-                        <i class="fab fa-whatsapp me-2"></i>Apply on WhatsApp
-                    </a>
-                </div>
-            </div>
-
-            <!-- UDYAM Registration -->
-            <div class="col-lg-3 col-md-6">
-                <div class="service-card text-center">
-                    <div>
-                        <div class="icon-box"><i class="fa-solid fa-building"></i></div>
-                        <h4>UDYAM MSME</h4>
-                        <p>Fast MSME / UDYAM Registration for Small & Medium Businesses.</p>
-                    </div>
-                    <a href="https://wa.me/919045066598?text=Hi,%20I%20want%20to%20apply%20for%20UDYAM%20MSME%20Registration" target="_blank" class="btn btn-whatsapp w-100 rounded-pill mt-3">
-                        <i class="fab fa-whatsapp me-2"></i>Apply on WhatsApp
-                    </a>
-                </div>
-            </div>
-
-            <!-- Vehicle NOC -->
-            <div class="col-lg-3 col-md-6">
-                <div class="service-card text-center">
-                    <div>
-                        <div class="icon-box"><i class="fa-solid fa-file-circle-check"></i></div>
-                        <h4>Vehicle NOC</h4>
-                        <p>No Objection Certificate (NOC) & Interstate Transfer.</p>
-                    </div>
-                    <a href="https://wa.me/919045066598?text=Hi,%20I%20want%20to%20apply%20for%20Vehicle%20NOC" target="_blank" class="btn btn-whatsapp w-100 rounded-pill mt-3">
-                        <i class="fab fa-whatsapp me-2"></i>Apply on WhatsApp
-                    </a>
-                </div>
-            </div>
-
-            <!-- e-Challan Payment -->
-            <div class="col-lg-3 col-md-6">
-                <div class="service-card text-center">
-                    <div>
-                        <div class="icon-box"><i class="fa-solid fa-receipt"></i></div>
-                        <h4>e-Challan</h4>
-                        <p>Online Traffic Challan Payment & Status Tracking.</p>
-                    </div>
-                    <a href="https://wa.me/919045066598?text=Hi,%20I%20want%20to%20pay%20e-Challan" target="_blank" class="btn btn-whatsapp w-100 rounded-pill mt-3">
-                        <i class="fab fa-whatsapp me-2"></i>Apply on WhatsApp
-                    </a>
-                </div>
-            </div>
-
-            <!-- FSSAI Registration -->
-            <div class="col-lg-3 col-md-6">
-                <div class="service-card text-center">
-                    <div>
-                        <div class="icon-box"><i class="fa-solid fa-bowl-food"></i></div>
-                        <h4>FSSAI Food License</h4>
-                        <p>Food Business Registration, License & Renewals.</p>
-                    </div>
-                    <a href="https://wa.me/919045066598?text=Hi,%20I%20want%20to%20apply%20for%20FSSAI%20Food%20License" target="_blank" class="btn btn-whatsapp w-100 rounded-pill mt-3">
-                        <i class="fab fa-whatsapp me-2"></i>Apply on WhatsApp
-                    </a>
-                </div>
-            </div>
-
-            <!-- Shop Act License -->
-            <div class="col-lg-3 col-md-6">
-                <div class="service-card text-center">
-                    <div>
-                        <div class="icon-box"><i class="fa-solid fa-store"></i></div>
-                        <h4>Shop License</h4>
-                        <p>Shop & Establishment Registration Services.</p>
-                    </div>
-                    <a href="https://wa.me/919045066598?text=Hi,%20I%20want%20to%20apply%20for%20Shop%20License" target="_blank" class="btn btn-whatsapp w-100 rounded-pill mt-3">
-                        <i class="fab fa-whatsapp me-2"></i>Apply on WhatsApp
-                    </a>
-                </div>
-            </div>
-
-            <!-- Trade License -->
-            <div class="col-lg-3 col-md-6">
-                <div class="service-card text-center">
-                    <div>
-                        <div class="icon-box"><i class="fa-solid fa-briefcase"></i></div>
-                        <h4>Trade License</h4>
-                        <p>New Commercial Trade License Application & Assistance.</p>
-                    </div>
-                    <a href="https://wa.me/919045066598?text=Hi,%20I%20want%20to%20apply%20for%20Trade%20License" target="_blank" class="btn btn-whatsapp w-100 rounded-pill mt-3">
-                        <i class="fab fa-whatsapp me-2"></i>Apply on WhatsApp
-                    </a>
-                </div>
-            </div>
-
-            <!-- Print & Document Services -->
-            <div class="col-lg-3 col-md-6">
-                <div class="service-card text-center">
-                    <div>
-                        <div class="icon-box"><i class="fa-solid fa-print"></i></div>
-                        <h4>Print & Scan</h4>
-                        <p>Printouts, Lamination, Scanning & Passport Photos.</p>
-                    </div>
-                    <a href="https://wa.me/919045066598?text=Hi,%20I%20need%20Print%20and%20Document%20Services" target="_blank" class="btn btn-whatsapp w-100 rounded-pill mt-3">
-                        <i class="fab fa-whatsapp me-2"></i>Apply on WhatsApp
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- WHY CHOOSE US -->
-    <section id="why-us" class="py-5 bg-white border-top border-bottom">
-        <div class="container py-4">
-            <div class="text-center mb-5">
-                <h2 class="section-title fs-1">Why Choose 4D Tour & Travel?</h2>
-                <p class="text-muted">Fast • Trusted • Professional • Secure</p>
-            </div>
-
-            <div class="row g-4 text-center">
-                <div class="col-lg-3 col-md-6">
-                    <div class="p-4 rounded-4 bg-light h-100">
-                        <i class="fa-solid fa-clock text-primary fs-1 mb-3"></i>
-                        <h5>Fast Processing</h5>
-                        <p class="text-muted small mb-0">Quick execution with minimum paperwork requirements.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="p-4 rounded-4 bg-light h-100">
-                        <i class="fa-solid fa-shield-halved text-success fs-1 mb-3"></i>
-                        <h5>100% Safe & Secure</h5>
-                        <p class="text-muted small mb-0">Your documents and personal information are strictly safe with us.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="p-4 rounded-4 bg-light h-100">
-                        <i class="fa-solid fa-headset text-danger fs-1 mb-3"></i>
-                        <h5>24×7 Active Support</h5>
-                        <p class="text-muted small mb-0">Instant help via Phone call and WhatsApp assistance.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="p-4 rounded-4 bg-light h-100">
-                        <i class="fa-solid fa-user-check text-warning fs-1 mb-3"></i>
-                        <h5>Expert Team</h5>
-                        <p class="text-muted small mb-0">Professional guidance for every RTO & business compliance.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- REVIEWS -->
-    <section class="py-5">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title fs-1">What Our Clients Say</h2>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <div class="rating-stars mb-2">★★★★★</div>
-                        <p class="mb-3 text-muted">"Very fast State Tax & Permit payment service. Saved a lot of my time on the highway."</p>
-                        <h6 class="fw-bold mb-0">— Rahul Sharma</h6>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <div class="rating-stars mb-2">★★★★★</div>
-                        <p class="mb-3 text-muted">"Got my GST Registration done within 2 days without any hassle. Highly professional team."</p>
-                        <h6 class="fw-bold mb-0">— Amit Verma</h6>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <div class="rating-stars mb-2">★★★★★</div>
-                        <p class="mb-3 text-muted">"Excellent support for vehicle NOC and tax renewals. Smooth experience overall."</p>
-                        <h6 class="fw-bold mb-0">— Deepak Singh</h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- QUICK ENQUIRY -->
-    <section id="contact" class="py-5 bg-primary text-white">
-        <div class="container py-3">
-            <div class="row align-items-center g-4">
-                <div class="col-lg-6">
-                    <h2 class="fw-bold fs-1">Need Quick Assistance?</h2>
-                    <p class="lead mb-0 opacity-90">Fill out the form or chat with us on WhatsApp for instant support.</p>
-                </div>
-                <div class="col-lg-6">
-                    <form class="bg-white p-4 rounded-4 text-dark shadow">
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Your Name" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="tel" class="form-control" placeholder="Mobile Number" required>
-                        </div>
-                        <div class="mb-3">
-                            <select class="form-select">
-                                <option selected>Select Required Service</option>
-                                <option>State Tax / MV Tax</option>
-                                <option>Permit / Authorization</option>
-                                <option>GST / UDYAM Registration</option>
-                                <option>Other Online Services</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-dark w-100 rounded-pill fw-bold">Submit Enquiry</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ SECTION -->
-    <section id="faq" class="py-5 bg-white">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title fs-1">Frequently Asked Questions</h2>
-                <p class="text-muted">Clear answers to your common questions</p>
-            </div>
-
-            <div class="accordion accordion-flush max-w-700 mx-auto" id="faqAccordion">
-                <div class="accordion-item border rounded-3 mb-3">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                            How can I pay State Tax & Permits online?
-                        </button>
-                    </h2>
-                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body text-muted">
-                            Simply share your vehicle details with our team on WhatsApp or phone, and we will process your official receipt online instantly.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item border rounded-3 mb-3">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                            How long does GST / UDYAM Registration take?
-                        </button>
-                    </h2>
-                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body text-muted">
-                            UDYAM registration is generated same-day, while GST registration usually takes 3 to 7 working days subject to government approval.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item border rounded-3 mb-3">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                            What documents are required for PAN & RC Services?
-                        </button>
-                    </h2>
-                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body text-muted">
-                            Basic identity proof, passport photos, and vehicle registration papers are required.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="py-4 text-center">
-        <div class="container">
-            <p class="mb-1">&copy; 2026 4D Tour and Travel. All Rights Reserved.</p>
-            <small class="text-muted">Fast & Trustworthy Online Government & RTO Helper Services.</small>
-        </div>
+    <footer class="py-4 border-top border-secondary text-center text-secondary small">
+        &copy; 2026 4D Tour and Travel. All Rights Reserved.
     </footer>
-
-    <!-- Bootstrap 5 JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
