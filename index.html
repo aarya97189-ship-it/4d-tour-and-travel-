@@ -1,10 +1,14 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en-IN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <theme-color content="#0b0b0b">
+    <meta name="theme-color" content="#0b0b0b">
+
+    <!-- Web Manifest & Browser Config -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-config" content="browserconfig.xml">
 
     <!-- Performance & Preconnect Speed Hints -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
@@ -59,9 +63,10 @@
     <meta name="twitter:description" content="Affordable & luxury cab service for Uttarakhand & Outstation tours. Watch our travel vlogs on YouTube!">
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&h=630&q=80">
 
-    <!-- CSS Dependencies -->
+    <!-- CSS Dependencies & External Stylesheet -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     
     <style>
         :root { --gold: #cc9933; --dark: #0b0b0b; --card-bg: #141414; }
@@ -87,9 +92,11 @@
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
         footer { background: #050505; border-top: 1px solid #1a1a1a; padding: 60px 0 20px; }
+        footer a { color: #888888; text-decoration: none; }
+        footer a:hover { color: var(--gold); }
     </style>
 
-    <!-- ADVANCED NESTED JSON-LD GRAPH SCHEMA (AI, Local SEO, Services & Rich Results) -->
+    <!-- JSON-LD Structured Data Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -101,11 +108,6 @@
           "name": "4D Tour & Travel",
           "description": "Premium Taxi Service and Tour Operator in Dehradun, Uttarakhand",
           "publisher": { "@id": "https://4dtaxiservice.in/#organization" },
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://4dtaxiservice.in/?s={search_term_string}",
-            "query-input": "required name=search_term_string"
-          },
           "inLanguage": "en-IN"
         },
         {
@@ -131,125 +133,19 @@
             "latitude": 30.3165,
             "longitude": 78.0322
           },
-          "areaServed": [
-            { "@type": "City", "name": "Dehradun" },
-            { "@type": "City", "name": "Mussoorie" },
-            { "@type": "City", "name": "Haridwar" },
-            { "@type": "City", "name": "Rishikesh" },
-            { "@type": "City", "name": "Kedarnath" },
-            { "@type": "City", "name": "Badrinath" },
-            { "@type": "City", "name": "Delhi" }
-          ],
           "openingHoursSpecification": {
             "@type": "OpeningHoursSpecification",
             "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
             "opens": "00:00",
             "closes": "23:59"
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "148"
-          },
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Taxi & Fleet Rental Services",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Innova Crysta Rental Dehradun",
-                  "description": "Luxury Innova Crysta rental for Char Dham Yatra and outstation tours."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Char Dham Yatra Taxi Package 2026",
-                  "description": "Complete pilgrimage cab packages for Kedarnath, Badrinath, Gangotri, and Yamunotri."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Jolly Grant Airport Dehradun Taxi Service",
-                  "description": "24/7 dedicated pickup and drop cab service from Dehradun Airport."
-                }
-              }
-            ]
-          },
-          "sameAs": [
-            "https://www.youtube.com/@4DTourTravel",
-            "https://wa.me/919643586598"]
-        },
-        {
-          "@type": "BreadcrumbList",
-          "@id": "https://4dtaxiservice.in/#breadcrumb",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://4dtaxiservice.in/"
-            }
-          ]
-        },
-        {
-          "@type": "VideoObject",
-          "@id": "https://4dtaxiservice.in/#video",
-          "name": "Dehradun to Char Dham Yatra Taxi & Luxury Fleet Tour - 4D Tour & Travel",
-          "description": "Explore Uttarakhand with 4D Tour & Travel. Innova Crysta, Force Urbania & Tempo Traveller for Char Dham Yatra, Mussoorie, Rishikesh, and Kedarnath tours.",
-          "thumbnailUrl": [
-            "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&h=630&q=80"
-          ],
-          "uploadDate": "2026-01-01T08:00:00+05:30",
-          "embedUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "https://4dtaxiservice.in/#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Dehradun se Mussoorie taxi ka kitna kiraya hai?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "4D Tour & Travel par Dehradun se Mussoorie cab booking affordable aur fixed rates par available hai. Instant booking ke liye contact karein +919643586598."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Kya Char Dham Yatra ke liye taxi package available hai?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Haan, 4D Tour & Travel Kedarnath, Badrinath aur Sampoorna Char Dham Yatra ke liye experienced mountain drivers ke sath Innova Crysta, Dzire aur Force Urbania provide karta hai."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How to book Jolly Grant Airport Dehradun Taxi instantly?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "You can book Jolly Grant Dehradun Airport Cab 24/7 via WhatsApp or direct phone call at +919643586598 with instant booking confirmation."
-              }
-            }
-          ]
-        },
-        {
-          "@type": "SpeakableSpecification",
-          "@id": "https://4dtaxiservice.in/#speakable",
-          "cssSelector": ["h1", ".hero-speakable", ".faq-answer"]
+          }
         }
       ]
     }
     </script>
 </head>
 <body>
-
-    <!-- Header / Semantic Navbar -->
+!-- Header / Semantic Navbar -->
     <header>
         <nav class="navbar navbar-expand-lg sticky-top py-3" role="navigation" aria-label="Main Navigation">
             <div class="container">
@@ -264,10 +160,11 @@
                         <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="packages.html">Tour Packages</a></li>
                         <li class="nav-item"><a class="nav-link" href="fleet.html">Our Fleet</a></li>
+                        <li class="nav-item"><a class="nav-link" href="vehicle-services.html">Vehicle Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="online-service.html">Online Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
                         <li class="nav-item">
-                            <a class="nav-link text-danger" href="https://www.youtube.com" target="_blank" rel="noopener" title="Watch 4D Travel Channel on YouTube" aria-label="YouTube Channel">
+                            <a class="nav-link text-danger" href="https://www.youtube.com/@4DTourTravel" target="_blank" rel="noopener" title="Watch 4D Travel Channel on YouTube" aria-label="YouTube Channel">
                                 <i class="fab fa-youtube fs-5 align-middle" aria-hidden="true"></i>
                             </a>
                         </li>
@@ -277,8 +174,9 @@
             </div>
         </nav>
     </header>
-!-- Main Content Area -->
-    <main idrole="main">
+
+    <!-- Main Content Area -->
+    <main id="main">
         
         <!-- Hero Carousel Slider -->
         <section id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" aria-label="Featured Travel Packages Slider">
@@ -314,7 +212,7 @@
             </button>
         </section>
 
-        <!-- Quick Inquiry Search Box (Accessible Form) -->
+        <!-- Quick Inquiry Search Box -->
         <section class="container my-5" id="quickInquiry" aria-label="Quick Cab Inquiry Search Form">
             <div style="background: rgba(20,20,20,0.95); border: 1px solid var(--gold); padding: 30px; border-radius: 8px;">
                 <div class="d-flex justify-content-between align-items-center mb-3">
@@ -346,7 +244,7 @@
             </div>
         </section>
 
-        <!-- Value Proposition / Features Section -->
+        <!-- Features Section -->
         <section class="container py-5">
             <div class="text-center mb-5">
                 <span style="color: var(--gold);" class="text-uppercase fw-bold small">Why Choose 4D Tour & Travel</span>
@@ -384,7 +282,7 @@
                     <span class="text-warning text-uppercase fw-bold small"><i class="fab fa-youtube text-danger me-1" aria-hidden="true"></i> Watch On YouTube</span>
                     <h2 class="fw-bold text-uppercase my-2">Explore Uttarakhand Tours & Fleet Preview</h2>
                     <p class="text-secondary">Watch our detailed travel vlogs, Char Dham Yatra driver guides, and luxury fleet reviews on our YouTube channel. Subscribe to get real-time weather updates and route guidance for your Kedarnath & Mussoorie trips.</p>
-                    <a href="https://www.youtube.com" target="_blank" rel="noopener" class="btn btn-outline-warning fw-bold text-uppercase mt-2"><i class="fab fa-youtube me-2 text-danger" aria-hidden="true"></i> Visit YouTube Channel</a>
+                    <a href="https://www.youtube.com/@4DTourTravel" target="_blank" rel="noopener" class="btn btn-outline-warning fw-bold text-uppercase mt-2"><i class="fab fa-youtube me-2 text-danger" aria-hidden="true"></i> Visit YouTube Channel</a>
                 </div>
                 <div class="col-lg-6">
                     <div class="video-container">
@@ -395,23 +293,36 @@
         </section>
 
     </main>
-
-    <!-- Semantic Footer -->
+!-- Semantic Footer with Internal Links -->
     <footer role="contentinfo">
         <div class="container text-center">
             <h3 class="fw-bold mb-3 fs-4"><span style="color: var(--gold);">4D</span> TOUR & TRAVEL</h3>
+            
+            <nav aria-label="Footer Navigation" class="mb-4">
+                <div class="d-flex justify-content-center flex-wrap gap-3 small">
+                    <a href="index.html">Home</a> | 
+                    <a href="packages.html">Tour Packages</a> | 
+                    <a href="fleet.html">Our Fleet</a> | 
+                    <a href="vehicle-services.html">Vehicle Services</a> | 
+                    <a href="online-service.html">Online Services</a> | 
+                    <a href="faq.html">FAQ</a> | 
+                    <a href="sitemap.xml">Sitemap</a> | 
+                    <a href="robots.txt">Robots.txt</a>
+                </div>
+            </nav>
+
             <address class="text-secondary small max-w-600 mx-auto fst-normal">
                 Aamwala Tarla Nalapani, Dehradun, Uttarakhand | Hotline: <a href="tel:+919643586598" class="text-secondary">+91 9643586598</a> / <a href="tel:+919045066598" class="text-secondary">+91 9045066598</a>
             </address>
             
             <!-- YouTube & Social Links -->
             <div class="my-3 fs-5">
-                <a href="https://www.youtube.com" target="_blank" rel="noopener" class="text-danger me-3" title="YouTube Channel" aria-label="YouTube Channel"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/@4DTourTravel" target="_blank" rel="noopener" class="text-danger me-3" title="YouTube Channel" aria-label="YouTube Channel"><i class="fab fa-youtube" aria-hidden="true"></i></a>
                 <a href="https://wa.me/919643586598" target="_blank" rel="noopener" class="text-success me-3" title="WhatsApp Booking" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
                 <a href="tel:+919643586598" class="text-warning" title="Call Us" aria-label="Phone Call"><i class="fa fa-phone" aria-hidden="true"></i></a>
             </div>
 
-            <p class="text-muted small mt-3">&copy; 2026 4D Tour and Travel. All Rights Reserved. Optimized for Search & AI Engines.</p>
+            <p class="text-muted small mt-3">&copy; 2026 4D Tour and Travel. All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -421,7 +332,7 @@
         <a href="https://wa.me/919643586598?text=Hello%204D%20Tour%20%26%20Travel,%20I%20want%20to%20book%20a%20taxi/tour%20package." class="btn btn-success w-45 fw-bold"><i class="fab fa-whatsapp me-1" aria-hidden="true"></i> WhatsApp</a>
     </aside>
 
-    <!-- JavaScript Dependencies & Interactivity Scripts -->
+    <!-- JavaScript Dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
     <script>
     function handleQuickInquiry() {
@@ -433,7 +344,6 @@
         return false;
     }
 
-    // Keyboard Shortcuts (Ctrl + K / '/') with Esc to Blur UX
     document.addEventListener('keydown', function(event) {
         var activeTag = document.activeElement.tagName;
         if ((event.ctrlKey && event.key === 'k') || (event.key === '/' && activeTag !== 'INPUT' && activeTag !== 'TEXTAREA')) {
