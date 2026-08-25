@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Bharat Taxi & Tours - Uttarakhand</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+            padding-bottom: 75px;
+        }
+        /* Header */
+        .mobile-header {
+            background: #0f172a;
+            color: white;
+            padding: 12px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        .brand h1 {
+            font-size: 18px;
+            font-weight: 800;
+            color: #fbbf24;
+            letter-spacing: 0.5px;
+        }
+        .brand p {
+            font-size: 9px;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .header-call {
+            background: #22c55e;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            box-shadow: 0 2px 5px rgba(34,197,94,0.3);
+        }
+
+        /* Banner Slider */
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+            background: #0f172a;
+        }
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            background-size: cover;
+            background-position: center;
+        }
+        .slide.active {
+            opacity: 1;
+        }
+        .slide-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(15,23,42,0.9), transparent);
+            padding: 15px;
+            color: white;
+        }
+        .slide-overlay h3 {
+            font-size: 16px;
+            font-weight: 800;
+            color: #fbbf24;
+            margin-bottom: 2px;
+        }
+        .slide-overlay p {
+            font-size: 11px;
+            color: #e2e8f0;
+        }
+
+        /* Booking Form Card */
+        .booking-card {
+            background: white;
+            margin: -15px 12px 15px 12px;
+            border-radius: 14px;
+            padding: 16px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            position: relative;
+            z-index: 10;
+            border: 1px solid #e2e8f0;
+        }
+        .booking-title {
+            font-size: 14px;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 10px;
+            text-transform: uppercase;
+            color: #64748b;
+            font-weight: 700;
+            margin-bottom: 3px;
+        }
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #0f172a;
+            background: #f8fafc;
+            outline: none;
+        }
+        .form-control:focus {
+            border-color: #3b82f6;
+            background: white;
+        }
+        .btn-whatsapp-book {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 800;
+            text-transform: uppercase;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 10px;
+            box-shadow: 0 4px 12px rgba(34,197,94,0.3);
+        }
+
+        .container {
+            padding: 0 12px;
+        }
+
+        /* Section Header */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0 10px 0;
+        }
+        .section-header h2 {
+            font-size: 15px;
+            font-weight: 800;
+            color: #0f172a;
+        }
+
+        /* Fleet Horizontal Scroll */
+        .fleet-scroll {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+            scrollbar-width: none;
+        }
+        .fleet-scroll::-webkit-scrollbar {
+            display: none;
+        }
+        .fleet-card {
+            background: white;
+            min-width: 130px;
+            max-width: 130px;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            border: 1px solid #e2e8f0;
+            flex-shrink: 0;
+        }
+        .fleet-card img {
+            width: 100%;
+            height: 75px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 6px;
+        }
+        .fleet-card h4 {
+            font-size: 12px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 2px;
+        }
+        .fleet-card p {
+            font-size: 10px;
+            color: #64748b;
+        }
+
+        /* Packages Grid (10 Packages) */
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        @media(min-width: 450px) {
+            .packages-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        .package-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .pkg-top {
+            display: flex;
+            padding: 10px;
+            gap: 10px;
+            align-items: center;
+        }
+        .pkg-top img {
+            width: 75px;
+            height: 75px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .pkg-info h3 {
+            font-size: 13px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 2px;
+        }
+        .pkg-info p {
+            font-size: 11px;
+            color: #64748b;
+            margin-bottom: 4px;
+        }
+        .pkg-badge {
+            display: inline-block;
+            background: #f1f5f9;
+            color: #334155;
+            font-size: 9px;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        .pkg-bottom {
+            background: #f8fafc;
+            padding: 8px 10px;
+            border-top: 1px solid #f1f5f9;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .pkg-price {
+            font-size: 12px;
+            font-weight: 800;
+            color: #ea580c;
+        }
+        .btn-pkg-wa {
+            background: #22c55e;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+
+        /* Why Choose Us Banner */
+        .features-box {
+            background: #0f172a;
+            color: white;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .features-box h3 {
+            font-size: 14px;
+            color: #fbbf24;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            font-size: 11px;
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #cbd5e1;
+        }
+
+        /* Footer Sticky Bar */
+        .sticky-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 -4px 15px rgba(0,0,0,0.1);
+            display: flex;
+            padding: 10px 12px;
+            gap: 10px;
+            z-index: 1000;
+            border-top: 1px solid #e2e8f0;
+        }
+        .ft-btn {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 800;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+        .ft-wa {
+            background: #22c55e;
+            color: white;
+        }
+        .ft-call {
+            background: #2563eb;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="mobile-header">
+        <div class="brand">
+            <h1>🚖 BHARAT TAXI & TOURS</h1>
+            <p>Uttarakhand & All India Specialist</p>
+        </div>
+        <a href="tel:7500757572" class="header-call">📞 Call Now</a>
+    </div>
+
+    <!-- Image Slider Banner -->
+    <div class="slider-container" id="slider">
+        <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=600&q=80')">
+            <div class="slide-overlay">
+                <h3>Char Dham Yatra 2026</h3>
+                <p>Yamunotri, Gangotri, Kedarnath & Badrinath</p>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1605648916361-9bc12ad6a566?auto=format&fit=crop&w=600&q=80')">
+            <div class="slide-overlay">
+                <h3>Luxury Tempo Traveller & Urbania</h3>
+                <p>Comfortable group tours across North India</p>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80')">
+            <div class="slide-overlay">
+                <h3>Mussoorie & Auli Hills Tour</h3>
+                <p>Experience snow, valleys & hill stations</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Instant WhatsApp Booking Form -->
+    <div class="booking-card">
+        <div class="booking-title">
+            <span>⚡ Instant Cab / Tour Booking Form</span>
+        </div>
+        <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" id="custName" class="form-control" placeholder="Enter your full name">
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+            <div class="form-group">
+                <label>Pickup Location</label>
+                <input type="text" id="pickupLoc" class="form-control" value="Dehradun">
+            </div>
+            <div class="form-group">
+                <label>Drop / Package</label>
+                <input type="text" id="dropLoc" class="form-control" placeholder="e.g. Mussoorie">
+            </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+            <div class="form-group">
+                <label>Select Vehicle</label>
+                <select id="vehicleType" class="form-control">
+                    <option>Innova Crysta</option>
+                    <option>Force Urbania</option>
+                    <option>Tempo Traveller</option>
+                    <option>Sedan (Dzire/Etios)</option>
+                    <option>Hatchback</option>
+                    <option>Luxury Bus</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Travel Date</label>
+                <input type="date" id="travelDate" class="form-control">
+            </div>
+        </div>
+        <button class="btn-whatsapp-book" onclick="bookOnWhatsApp()">
+            💬 Send Booking on WhatsApp
+        </button>
+    </div>
+
+    <div class="container">
+
+        <!-- Fleet Section -->
+        <div class="section-header">
+            <h2>🚗 Our Premium Fleet</h2>
+            <span style="font-size: 11px; color: #2563eb; font-weight: 700;">Swipe &rarr;</span>
+        </div>
+        <div class="fleet-scroll">
+            <div class="fleet-card">
+                <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=250&q=80" alt="Urbania">
+                <h4>Force Urbania</h4>
+                <p>Luxury 13/17 Str</p>
+            </div>
+            <div class="fleet-card">
+                <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=250&q=80" alt="Crysta">
+                <h4>Innova Crysta</h4>
+                <p>Most Comfortable</p>
+            </div>
+            <div class="fleet-card">
+                <img src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=250&q=80" alt="Traveller">
+                <h4>Tempo Traveller</h4>
+                <p>12 to 26 Seater</p>
+            </div>
+            <div class="fleet-card">
+                <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=250&q=80" alt="Sedan">
+                <h4>Sedan (Dzire)</h4>
+                <p>Budget Outstation</p>
+            </div>
+            <div class="fleet-card">
+                <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=250&q=80" alt="Bus">
+                <h4>Luxury Bus</h4>
+                <p>Group & Corporate</p>
+            </div>
+        </div>
+
+        <!-- 10 Tour Packages Section -->
+        <div class="section-header">
+            <h2>🏔️ Top 10 Tour & Taxi Packages</h2>
+        </div>
+
+        <div class="packages-grid">
+            <!-- 1 -->
+            <div class="package-card">
+                <div class="pkg-top">
+                    <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=200&q=80" alt="Char Dham">
+                    <div class="pkg-info">
+                        <h3>1. Char Dham Yatra</h3>
+                        <p>Yamunotri, Gangotri, Kedarnath, Badrinath</p>
+                        <span class="pkg-badge">10 Days / 9 Nights</span>
+                    </div>
+                </div>
+                <div class="pkg-bottom">
+                    <span class="pkg-price">Best Quote</span>
+                    <a href="https://wa.me/917500757572?text=Hi,%20I%20want%20to%20enquire%20about%20Char%20Dham%20Yatra%20Package." class="btn-pkg-wa">💬 Enquire</a>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="package-card">
+                <div class="pkg-top">
+                    <img src="https://images.unsplash.com/photo-1605648916361-9bc12ad6a566?auto=format&fit=crop&w=200&q=80" alt="Do Dham">
+                    <div class="pkg-info">
+                        <h3>2. Do Dham Yatra</h3>
+                        <p>Kedarnath & Badrinath Darshan Special</p>
+                        <span class="pkg-badge">5 Days / 4 Nights</span>
+                    </div>
+                </div>
+                <div class="pkg-bottom">
+                    <span class="pkg-price">Popular</span>
+                    <a href="https://wa.me/917500757572?text=Hi,%20I%20want%20to%20enquire%20about%20Do%20Dham%20Yatra%20Package." class="btn-pkg-wa">💬 Enquire</a>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="package-card">
+                <div class="pkg-top">
+                    <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=200&q=80" alt="Uttarakhand">
+                    <div class="pkg-info">
+                        <h3>3. Complete Uttarakhand</h3>
+                        <p>Hill stations, temples & scenic valleys</p>
+                        <span class="pkg-badge">7 Days Tour</span>
+                    </div>
+                </div>
+                <div class="pkg-bottom">
+                    <span class="pkg-price">All Inclusive</span>
+                    <a href="https://wa.me/917500757572?text=Hi,%20I%20want%20to%20enquire%20about%20Complete%20Uttarakhand%20Taxi%20Package." class="btn-pkg-wa">💬 Enquire</a>
+                </div>
+            </div>
+<!-- 4 -->
+            <div class="package-card">
+                <div class="pkg-top">
+                    <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=200&q=80" alt="Mussoorie">
+                    <div class="pkg-info">
+                        <h3>4. Mussoorie & Dhanaulti</h3>
+                        <p>Dehradun to Mussoorie sightseeing & drop</p>
+                        <span class="pkg-badge">1 - 2 Days</span>
+                    </div>
+                </div>
+                <div class="pkg-bottom">
+                    <span class="pkg-price">₹1,500+ Onwards</span>
+                    <a href="https://wa.me/917500757572?text=Hi,%20I%20want%20to%20book%20Mussoorie%20Dhanaulti%20Taxi." class="btn-pkg-wa">💬 Book</a>
+                </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="package-card">
+                <div class="pkg-top">
+                    <img src="https://images.unsplash.com/photo-1605648916361-9bc12ad6a566?auto=format&fit=crop&w=200&q=80" alt="Rishikesh">
+                    <div class="pkg-info">
+                        <h3>5. Haridwar & Rishikesh Tour</h3>
+                        <p>Ganga Aarti, temples & adventure spots</p>
+                        <span class="pkg-badge">1 Day Trip</span>
+                    </div>
+                </div>
+                <div class="pkg-bottom">
+                    <span class="pkg-price">₹1,800+ Onwards</span>
+                    <a href="https://wa.me/917500757572?text=Hi,%20I%20want%20to%20book%20Haridwar%20Rishikesh%20Taxi." class="btn-pkg-wa">💬 Book</a>
+                </div>
+            </div>
+
+            <!-- 6 -->
+            <div class="package-card">
+                <div class="pkg-top">
+                    <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=200&q=80" alt="Kedarnath">
+                    <div class="pkg-info">
+                        <h3>6. Kedarnath Yatra Special</h3>
+                        <p>Sonprayag / Gaurikund direct cab drop</p>
+                        <span class="pkg-badge">3 Days / 2 Nights</span>
+                    </div>
+                </div>
+                <div class="pkg-bottom">
+                    <span class="pkg-price">Custom Quote</span>
+                    <a href="https://wa.me/917500757572?text=Hi,%20I%20want%20to%20enquire%20about%20Kedarnath%20Yatra%20Taxi." class="btn-pkg-wa">💬 Enquire</a>
+                </div>
+            </div>
+
+            <!-- 7 -->
+            <div class="package-card">
+                <div class="pkg-top">
+                    <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=200&q=80" alt="Auli">
+                    <div class="pkg-info">
+                        <h3>7. Badrinath & Auli Snow Tour</h3>
+                        <p>Skiing destination & holy shrine</p>
+                        <span class="pkg-badge">4 Days / 3 Nights</span>
+                    </div>
+                </div>
+                <div class="pkg-bottom">
+                    <span class="pkg-price">Custom Quote</span>
+                    <a href="https://wa.me/917500757572?text=Hi,%20I%20want%20to%20enquire%20about%20Badrinath%20Auli%20Package." class="btn-pkg-wa">💬 Enquire</a>
+                </div>
+            </div>
+
+            <!-- 8 -->
+            <div class="package-card">
+                <div class="pkg-top">
+                    <img src="https://images.unsplash.com/photo-1605648916361-9bc12ad6a566?auto=format&fit=crop&w=200&q=80" alt="Nainital">
+                    <div class="pkg-info">
+                        <h3>8. Nainital & Ranikhet Tour</h3>
+                        <p>Lake city tour from Dehradun / Delhi</p>
+                        <span class="pkg-badge">3 Days / 2 Nights</span>
+                    </div>
+                </div>
+                <div class="pkg-bottom">
+                    <span class="pkg-price">Custom Quote</span>
+                    <a href="https://wa.me/917500757572?text=Hi,%20I%20want%20to%20enquire%20about%20Nainital%20Ranikhet%20Package." class="btn-pkg-wa">💬 Enquire</a>
+                </div>
+            </div>
+
+            <!-- 9 -->
+            <div class="package-card">
+                <div class="pkg-top">
+                    <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=200&q=80" alt="Valley of Flowers">
+                    <div class="pkg-info">
+                        <h3>9. Valley of Flowers Trek</h3>
+                        <p>Govindghat drop & Hemkund Sahib</p>
+                        <span class="pkg-badge">4 Days Tour</span>
+                    </div>
+                </div>
+                <div class="pkg-bottom">
+                    <span class="pkg-price">Custom Quote</span>
+                    <a href="https://wa.me/917500757572?text=Hi,%20I%20want%20to%20enquire%20about%20Valley%20of%20Flowers%20Package." class="btn-pkg-wa">💬 Enquire</a>
+                </div>
+            </div>
+
+            <!-- 10 -->
+            <div class="package-card">
+                <div class="pkg-top">
+                    <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=200&q=80" alt="All India">
+                    <div class="pkg-info">
+                        <h3>10. All India Outstation Tour</h3>
+                        <p>Interstate taxi services from Uttarakhand</p>
+                        <span class="pkg-badge">As Per KM</span>
+                    </div>
+                </div>
+                <div class="pkg-bottom">
+                    <span class="pkg-price">Best Per KM Rate</span>
+                    <a href="https://wa.me/917500757572?text=Hi,%20I%20want%20to%20enquire%20about%20All%20India%20Outstation%20Taxi." class="btn-pkg-wa">💬 Enquire</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Box -->
+        <div class="features-box">
+            <h3>Why Book With Bharat Taxi?</h3>
+            <div class="features-grid">
+                <div class="feature-item">✅ <span>Experienced Hill Drivers</span></div>
+                <div class="feature-item">✅ <span>Sanitized & Clean Cabs</span></div>
+                <div class="feature-item">✅ <span>24/7 Customer Support</span></div>
+                <div class="feature-item">✅ <span>Transparent Pricing</span></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Sticky Footer Bar -->
+    <div class="sticky-footer">
+        <a href="https://wa.me/917500757572?text=Hi,%20I%20need%20a%20taxi%20service." class="ft-btn ft-wa">
+            💬 WhatsApp
+        </a>
+        <a href="tel:7500757572" class="ft-btn ft-call">
+            📞 Call 7500757572
+        </a>
+    </div>
+
+    <!-- JavaScript for Slider & WhatsApp Booking -->
+    <script>
+        // Banner Slider Logic
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+        setInterval(nextSlide, 3500);
+
+        // Dynamic WhatsApp Booking Generator
+        function bookOnWhatsApp() {
+            const name = document.getElementById('custName').value.trim() || 'Customer';
+            const pickup = document.getElementById('pickupLoc').value.trim() || 'Dehradun';
+            const drop = document.getElementById('dropLoc').value.trim() || 'Outstation';
+            const vehicle = document.getElementById('vehicleType').value;
+            const date = document.getElementById('travelDate').value || 'Anytime';
+
+            const message = `Hello Bharat Taxi, I want to book a cab:%0A%0A*Name:* ${name}%0A*Pickup:* ${pickup}%0A*Drop/Package:* ${drop}%0A*Vehicle:* ${vehicle}%0A*Date:* ${date}%0A%0APlease share best rates and availability.`;
+            
+            const whatsappUrl = `https://wa.me/917500757572?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
