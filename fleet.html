@@ -1,288 +1,1097 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Complete Fleet - Taxis, Luxury Cars, Tempo Travellers & Buses | 4D Tour & Travel</title>
-    <meta name="description" content="Book Dzire, Aura, Ertiga, Innova Crysta, Audi, Mercedes, 12+1, 17+1, 25+1 Tempo Travellers & 30 to 55 Seater Luxury Buses with 4D Tour and Travel Dehradun.">
-    
-    <!-- Bootstrap 5 CSS & FontAwesome -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    
-    <style>
-        :root { --gold: #cc9933; --dark: #0b0b0b; --card-bg: #141414; }
-        body { background-color: var(--dark); color: #ffffff; font-family: 'Arial', sans-serif; }
-        .navbar { background-color: #000000; border-bottom: 1px solid rgba(204, 153, 51, 0.3); }
-        .nav-link { color: #cccccc !important; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
-        .nav-link.active, .nav-link:hover { color: var(--gold) !important; }
-        
-        .section-title { border-bottom: 2px solid var(--gold); display: inline-block; padding-bottom: 5px; margin-bottom: 25px; color: var(--gold); font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
-        
-        .fleet-card { background: var(--card-bg); border: 1px solid #222; border-radius: 8px; overflow: hidden; height: 100%; display: flex; flex-direction: column; justify-content: space-between; transition: 0.3s; }
-        .fleet-card:hover { border-color: var(--gold); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(204,153,51,0.15); }
-        .fleet-img { height: 200px; object-fit: cover; width: 100%; }
-        
-        .luxury-btn { background: var(--gold); color: #fff; border: none; padding: 10px 20px; font-weight: bold; text-transform: uppercase; text-decoration: none; display: inline-block; text-align: center; border-radius: 4px; transition: 0.3s; }
-        .luxury-btn:hover { background: #fff; color: #111; }
-        
-        .badge-cap { background: rgba(204, 153, 51, 0.2); color: var(--gold); border: 1px solid var(--gold); font-size: 11px; padding: 4px 8px; border-radius: 4px; }
-    </style>
-</head>
-<body>
+<!-- =====================================================
+     4D TOUR & TRAVEL
+     COMPLETE RESPONSIVE FLEET SECTION
+     Call: 9643586598
+     WhatsApp: 9045066598
+     ===================================================== -->
 
-    <!-- Header / Navbar -->
-    <nav class="navbar navbar-expand-lg sticky-top py-3">
-        <div class="container">
-            <a class="navbar-brand text-white fw-bold fs-4" href="index.html">
-                <span style="color: var(--gold);">4D</span> TOUR & TRAVEL
+<section class="four-d-fleet" id="our-fleet">
+
+  <div class="fleet-container">
+
+    <!-- ================= SECTION HEADER ================= -->
+
+    <div class="fleet-heading">
+
+      <span class="fleet-small-title">4D TOUR & TRAVEL</span>
+
+      <h2>
+        Our <span>Fleet</span>
+      </h2>
+
+      <p>
+        Choose from our comfortable and well-maintained fleet for
+        Uttarakhand tours, Char Dham Yatra, airport transfers,
+        sightseeing and outstation taxi services.
+      </p>
+
+    </div>
+
+
+    <!-- ================= FLEET GRID ================= -->
+
+    <div class="fleet-grid">
+
+
+      <!-- =================================================
+           1. SEDAN
+           ================================================= -->
+
+      <article class="fleet-card">
+
+        <div class="fleet-image">
+
+          <img
+            src="images/sedan-car.webp"
+            alt="Sedan taxi service in Uttarakhand - 4D Tour and Travel"
+            loading="lazy"
+          >
+
+          <span class="fleet-badge">
+            POPULAR
+          </span>
+
+        </div>
+
+
+        <div class="fleet-content">
+
+          <div class="fleet-title-row">
+
+            <h3>Sedan</h3>
+
+            <span class="fleet-seater">
+              4+1 Seater
+            </span>
+
+          </div>
+
+
+          <p class="fleet-description">
+            Comfortable AC sedan taxi for couples, small families,
+            airport transfers, local sightseeing and outstation travel.
+          </p>
+
+
+          <div class="fleet-features">
+
+            <span>✓ AC</span>
+            <span>✓ Comfortable</span>
+            <span>✓ Spacious Boot</span>
+
+          </div>
+
+
+          <div class="fleet-price">
+
+            <small>
+              Starting From
+            </small>
+
+            <strong>
+              ₹ <span>GET QUOTE</span>
+            </strong>
+
+          </div>
+
+
+          <div class="fleet-buttons">
+
+            <a
+              href="tel:+919643586598"
+              class="fleet-call"
+            >
+              📞 Call Now
             </a>
-            <button class="navbar-toggler text-white border-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navMenu">
-                <ul class="navbar-nav ms-auto gap-3">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="packages.html">Tour Packages</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="fleet.html">Our Fleet</a></li>
-                    <li class="nav-item"><a class="nav-link" href="online-service.html">Online Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
-                </ul>
-                <a href="https://wa.me/919643586598" class="luxury-btn ms-lg-3 btn-sm"><i class="fab fa-whatsapp me-1"></i> Quick Booking</a>
-            </div>
+
+
+            <a
+              href="https://wa.me/919045066598?text=Hello%204D%20Tour%20and%20Travel,%20I%20want%20to%20book%20a%20Sedan."
+              class="fleet-whatsapp"
+              target="_blank"
+              rel="noopener"
+            >
+              🟢 WhatsApp
+            </a>
+
+          </div>
+
         </div>
-    </nav>
 
-    <!-- Page Title Header -->
-    <section class="py-5 text-center" style="background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85))url('images/pkg-02.jpg');photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1200&q=80') center/cover;">
-        <div class="container py-3">
-            <h1 class="fw-bold text-uppercase">Our Complete Vehicle Fleet</h1>
-            <p class="text-warning mb-0">Sedans, SUVs, VIP Luxury Cars, Tempo Travellers & Luxury Buses</p>
-        </div>
-    </section>
+      </article>
 
-    <!-- Main Fleet Container -->
-    <div class="container py-5">
-        
-        <!-- SECTION 1: SEDANS & SUVS -->
-        <div class="mb-5">
-            <h3 class="section-title"><i class="fa-solid fa-car me-2"></i> Executive Cabs & MUVs</h3>
-            <div class="row g-4">
-                
-                <!-- Maruti Swift Dzire -->
-                <div class="col-md-4">
-                    <div class="fleet-card">
-                        <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=600&q=80" class="fleet-img" alt="Maruti Swift Dzire">
-                        <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
-                            <div>
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <span class="badge-cap"><i class="fa-solid fa-user-group me-1"></i> 4 + 1 Seater</span>
-                                    <small class="text-warning"><i class="fa-solid fa-snowflake me-1"></i> AC Sedan</small>
-                                </div>
-                                <h4 class="text-white h5">Maruti Swift Dzire</h4>
-                                <p class="text-secondary small">Comfortable sedan for local sightseeing, airport transfers, and outstation trips.</p>
-                            </div>
-                            <a href="https://wa.me/919643586598?text=Hello%204D%20Tour%20%26%20Travel,%20I%20want%20to%20book%20Maruti%20Swift%20Dzire." class="luxury-btn w-100 mt-3"><i class="fab fa-whatsapp me-1"></i> Book Dzire</a>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Hyundai Aura -->
-                <div class="col-md-4">
-                    <div class="fleet-card">
-                        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=600&q=80" class="fleet-img" alt="Hyundai Aura">
-                        <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
-                            <div>
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <span class="badge-cap"><i class="fa-solid fa-user-group me-1"></i> 4 + 1 Seater</span>
-                                    <small class="text-warning"><i class="fa-solid fa-snowflake me-1"></i> AC Sedan</small>
-                                </div>
-                                <h4 class="text-white h5">Hyundai Aura</h4>
-                                <p class="text-secondary small">Smooth and modern sedan ideal for small family tours and long-distance travel.</p>
-                            </div>
-                            <a href="https://wa.me/919643586598?text=Hello%204D%20Tour%20%26%20Travel,%20I%20want%20to%20book%20Hyundai%20Aura." class="luxury-btn w-100 mt-3"><i class="fab fa-whatsapp me-1"></i> Book Aura</a>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Maruti Ertiga -->
-                <div class="col-md-4">
-                    <div class="fleet-card">
-                        <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=600&q=80" class="fleet-img" alt="Maruti Ertiga">
-                        <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
-                            <div>
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <span class="badge-cap"><i class="fa-solid fa-user-group me-1"></i> 6 + 1 Seater</span>
-                                    <small class="text-warning"><i class="fa-solid fa-car me-1"></i> Family MUV</small>
-                                </div>
-                                <h4 class="text-white h5">Maruti Ertiga</h4>
-                                <p class="text-secondary small">Spacious 6-seater MUV budget-friendly choice for Char Dham and mountain tours.</p>
-                            </div>
-                            <a href="https://wa.me/919643586598?text=Hello%204D%20Tour%20%26%20Travel,%20I%20want%20to%20book%20Maruti%20Ertiga." class="luxury-btn w-100 mt-3"><i class="fab fa-whatsapp me-1"></i> Book Ertiga</a>
-                        </div>
-                    </div>
-                </div>
+      <!-- =================================================
+           2. ERTIGA
+           ================================================= -->
 
-                <!-- Toyota Innova Crysta -->
-                <div class="col-md-4">
-                    <div class="fleet-card">
-                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" class="fleet-img" alt="Toyota Innova Crysta">
-                        <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
-                            <div>
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <span class="badge-cap"><i class="fa-solid fa-user-group me-1"></i> 6+1 / 7+1 Seater</span>
-                                    <small class="text-warning"><i class="fa-solid fa-crown me-1"></i> Luxury SUV</small>
-                                </div>
-                                <h4 class="text-white h5">Toyota Innova Crysta</h4>
-                                <p class="text-secondary small">Premium luxury SUV with extra legroom and maximum safety on hill routes.</p>
-                            </div>
-                            <a href="https://wa.me/919643586598?text=Hello%204D%20Tour%20%26%20Travel,%20I%20want%20to%20book%20Toyota%20Innova%20Crysta." class="luxury-btn w-100 mt-3"><i class="fab fa-whatsapp me-1"></i> Book Innova Crysta</a>
-                        </div>
-                    </div>
-                </div>
+      <article class="fleet-card">
 
-            </div>
+        <div class="fleet-image">
+
+          <img
+            src="images/ertiga.webp"
+            alt="Maruti Ertiga taxi rental in Uttarakhand - 4D Tour and Travel"
+            loading="lazy"
+          >
+
+          <span class="fleet-badge">
+            FAMILY
+          </span>
+
         </div>
 
 
-        <!-- SECTION 2: VIP LUXURY CARS -->
-        <div class="mb-5">
-            <h3 class="section-title"><i class="fa-solid fa-gem me-2"></i> VIP & Luxury Cars</h3>
-            <div class="row g-4">
-                
-                <!-- Audi -->
-                <div class="col-md-6">
-                    <div class="fleet-card">
-                        <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=600&q=80" class="fleet-img" alt="Audi Luxury Sedan">
-                        <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
-                            <div>
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <span class="badge-cap"><i class="fa-solid fa-user-group me-1"></i> 4 + 1 Seater</span>
-                                    <small class="text-warning"><i class="fa-solid fa-star me-1"></i> VIP Super Luxury</small>
-                                </div>
-                                <h4 class="text-white h5">Audi Luxury Class</h4>
-                                <p class="text-secondary small">High-end luxury sedan for VIP delegation, corporate events, weddings, and special events.</p>
-                            </div>
-                            <a href="https://wa.me/919643586598?text=Hello%204D%20Tour%20%26%20Travel,%20I%20want%20to%20book%20Audi%20Luxury%20Car." class="luxury-btn w-100 mt-3"><i class="fab fa-whatsapp me-1"></i> Book Audi</a>
-                        </div>
-                    </div>
-                </div>
+        <div class="fleet-content">
 
-                <!-- Mercedes Benz -->
-                <div class="col-md-6">
-                    <div class="fleet-card">
-                        <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=600&q=80" class="fleet-img" alt="Mercedes Benz">
-                        <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
-                            <div>
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <span class="badge-cap"><i class="fa-solid fa-user-group me-1"></i> 4 + 1 Seater</span>
-                                    <small class="text-warning"><i class="fa-solid fa-crown me-1"></i> Ultra VIP Luxury</small>
-                                </div>
-                                <h4 class="text-white h5">Mercedes-Benz</h4>
-                                <p class="text-secondary small">Ultimate royal comfort and premium status for executive guests, weddings, and VIP drives.</p>
-                            </div>
-                            <a href="https://wa.me/919643586598?text=Hello%204D%20Tour%20%26%20Travel,%20I%20want%20to%20book%20Mercedes-Benz." class="luxury-btn w-100 mt-3"><i class="fab fa-whatsapp me-1"></i> Book Mercedes</a>
-                        </div>
-                    </div>
-                </div>
+          <div class="fleet-title-row">
 
-            </div>
+            <h3>Maruti Ertiga</h3>
+
+            <span class="fleet-seater">
+              6+1 Seater
+            </span>
+
+          </div>
+
+
+          <p class="fleet-description">
+            Spacious family taxi with comfortable seating and luggage
+            space, ideal for sightseeing, hill travel and outstation trips.
+          </p>
+
+
+          <div class="fleet-features">
+
+            <span>✓ AC</span>
+            <span>✓ Family Friendly</span>
+            <span>✓ Large Luggage</span>
+
+          </div>
+
+
+          <div class="fleet-price">
+
+            <small>
+              Starting From
+            </small>
+
+            <strong>
+              ₹ <span>GET QUOTE</span>
+            </strong>
+
+          </div>
+
+
+          <div class="fleet-buttons">
+
+            <a
+              href="tel:+919643586598"
+              class="fleet-call"
+            >
+              📞 Call Now
+            </a>
+
+
+            <a
+              href="https://wa.me/919045066598?text=Hello%204D%20Tour%20and%20Travel,%20I%20want%20to%20book%20an%20Ertiga."
+              class="fleet-whatsapp"
+              target="_blank"
+              rel="noopener"
+            >
+              🟢 WhatsApp
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- =================================================
+           3. INNOVA
+           ================================================= -->
+
+      <article class="fleet-card">
+
+        <div class="fleet-image">
+
+          <img
+            src="images/innova.webp"
+            alt="Toyota Innova taxi service for Uttarakhand tours"
+            loading="lazy"
+          >
+
+          <span class="fleet-badge">
+            COMFORT
+          </span>
+
         </div>
 
 
-        <!-- SECTION 3: TEMPO TRAVELLERS -->
-        <div class="mb-5">
-            <h3 class="section-title"><i class="fa-solid fa-van-shuttle me-2"></i> Force Tempo Travellers</h3>
-            <div class="row g-4">
-                
-                <!-- 12+1 Tempo Traveller -->
-                <div class="col-md-4">
-                    <div class="fleet-card">
-                        <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80" class="fleet-img" alt="12+1 Tempo Traveller">
-                        <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
-                            <div>
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <span class="badge-cap"><i class="fa-solid fa-user-group me-1"></i> 12 + 1 Seater</span>
-                                    <small class="text-warning"><i class="fa-solid fa-couch me-1"></i> Pushback Seats</small>
-                                </div>
-                                <h4 class="text-white h5">12+1 Tempo Traveller</h4>
-                                <p class="text-secondary small">Ideal for medium group tours, family Char Dham Yatra, and mountain hill treks.</p>
-                            </div>
-                            <a href="https://wa.me/919643586598?text=Hello%204D%20Tour%20%26%20Travel,%20I%20want%20to%20book%2012%2B1%20Tempo%20Traveller." class="luxury-btn w-100 mt-3"><i class="fab fa-whatsapp me-1"></i> Book 12+1 TT</a>
-                        </div>
-                    </div>
-                </div>
+        <div class="fleet-content">
 
-                <!-- 17+1 Tempo Traveller -->
-                <div class="col-md-4">
-                    <div class="fleet-card">
-                        <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80" class="fleet-img" alt="17+1 Tempo Traveller">
-                        <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
-                            <div>
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <span class="badge-cap"><i class="fa-solid fa-user-group me-1"></i> 17 + 1 Seater</span>
-                                    <small class="text-warning"><i class="fa-solid fa-snowflake me-1"></i> AC Executive</small>
-                                </div>
-                                <h4 class="text-white h5">17+1 Tempo Traveller</h4>
-                                <p class="text-secondary small">Spacious seating with wide luggage carrier for large groups and pilgrimage tours.</p>
-                            </div>
-                            <a href="https://wa.me/919643586598?text=Hello%204D%20Tour%20%26%20Travel,%20I%20want%20to%20book%2017%2B1%20Tempo%20Traveller." class="luxury-btn w-100 mt-3"><i class="fab fa-whatsapp me-1"></i> Book 17+1 TT</a>
-                        </div>
-                    </div>
-                </div>
+          <div class="fleet-title-row">
 
-                <!-- 25+1 Tempo Traveller -->
-                <div class="col-md-4">
-                    <div class="fleet-card">
-                        <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80" class="fleet-img" alt="25+1 Tempo Traveller">
-                        <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
-                            <div>
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <span class="badge-cap"><i class="fa-solid fa-user-group me-1"></i> 25 + 1 Seater</span>
-                                    <small class="text-warning"><i class="fa-solid fa-bus me-1"></i> Large Capacity</small>
-                                </div>
-                                <h4 class="text-white h5">25+1 Executive Tempo Traveller</h4>
-                                <p class="text-secondary small">2x1 / 2x2 luxury seating layout designed for big corporate or group trips.</p>
-                            </div>
-                            <a href="https://wa.me/919643586598?text=Hello%204D%20Tour%20%26%20Travel,%20I%20want%20to%20book%2025%2B1%20Tempo%20Traveller." class="luxury-btn w-100 mt-3"><i class="fab fa-whatsapp me-1"></i> Book 25+1 TT</a>
-                        </div>
-                    </div>
-                </div>
+            <h3>Toyota Innova</h3>
 
-            </div>
+            <span class="fleet-seater">
+              6+1 / 7+1
+            </span>
+
+          </div>
+
+
+          <p class="fleet-description">
+            Reliable and spacious Innova taxi for family tours,
+            long-distance travel, Char Dham Yatra and Uttarakhand sightseeing.
+          </p>
+
+
+          <div class="fleet-features">
+
+            <span>✓ AC</span>
+            <span>✓ Premium Comfort</span>
+            <span>✓ Extra Luggage</span>
+
+          </div>
+
+
+          <div class="fleet-price">
+
+            <small>
+              Starting From
+            </small>
+
+            <strong>
+              ₹ <span>GET QUOTE</span>
+            </strong>
+
+          </div>
+
+
+          <div class="fleet-buttons">
+
+            <a
+              href="tel:+919643586598"
+              class="fleet-call"
+            >
+              📞 Call Now
+            </a>
+
+
+            <a
+              href="https://wa.me/919045066598?text=Hello%204D%20Tour%20and%20Travel,%20I%20want%20to%20book%20a%20Toyota%20Innova."
+              class="fleet-whatsapp"
+              target="_blank"
+              rel="noopener"
+            >
+              🟢 WhatsApp
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- =================================================
+           4. INNOVA CRYSTA
+           ================================================= -->
+
+      <article class="fleet-card featured-fleet">
+
+        <div class="fleet-image">
+
+          <img
+            src="images/innova-crysta.webp"
+            alt="Toyota Innova Crysta premium taxi rental in Uttarakhand"
+            loading="lazy"
+          >
+
+          <span class="fleet-badge premium-badge">
+            PREMIUM
+          </span>
+
         </div>
 
 
-        <!-- SECTION 4: LUXURY BUSES & COACHES -->
-        <div>
-            <h3 class="section-title"><i class="fa-solid fa-bus-simple me-2"></i> Luxury Buses & Tourist Coaches</h3>
-            <div class="row g-4">
-                
-                <!-- 30 Seater Bus -->
-                <div class="col-md-4">
-                    <div class="fleet-card">
-                        <img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=600&q=80" class="fleet-img" alt="30 Seater Bus">
-                        <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
-                            <div>
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <span class="badge-cap"><i class="fa-solid fa-user-group me-1"></i> 30 Seater</span>
-                                    <small class="text-warning">Mini Coach</small>
-                                </div>
-                                <h4 class="text-white h5">30 Seater AC Mini Bus</h4>
-                                <p class="text-secondary small">Ideal mini coach for hill mountain routes, marriage functions, and school/college trips.</p>
-                            </div>
-                            <a href="https://wa.me/919643586598?text=Hello%204D%20Tour%20%26%20Travel,%20I%20want%20to%20book%2030%20Seater%20Bus." class="luxury-btn w-100 mt-3"><i class="fab fa-whatsapp me-1"></i> Book 30 Seater Bus</a>
-                        </div>
-                    </div>
-                </div>
+        <div class="fleet-content">
 
-                <!-- 35 Seater Bus -->
-                <div class="col-md-4">
-                    <div class="fleet-card">
-                        <img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=600&q=80" class="fleet-img" alt="35 Seater Bus">
-                        <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
-                            <div>
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <span class="badge-cap"><i class="fa-solid fa-user-group me-1"></i> 35 Seater</span>
-                                    <small class="text-warning">Luxury Coach</small>
-                 
+          <div class="fleet-title-row">
+
+            <h3>Innova Crysta</h3>
+
+            <span class="fleet-seater">
+              6+1 Seater
+            </span>
+
+          </div>
+
+
+          <p class="fleet-description">
+            Premium SUV with superior comfort for Char Dham Yatra,
+            corporate travel, family tours and long-distance journeys.
+          </p>
+
+
+          <div class="fleet-features">
+
+            <span>✓ AC</span>
+            <span>✓ Premium Interior</span>
+            <span>✓ Comfortable</span>
+
+          </div>
+
+
+          <div class="fleet-price">
+
+            <small>
+              Starting From
+            </small>
+
+            <strong>
+              ₹ <span>GET QUOTE</span>
+            </strong>
+
+          </div>
+
+
+          <div class="fleet-buttons">
+
+            <a
+              href="tel:+919643586598"
+              class="fleet-call"
+            >
+              📞 Call Now
+            </a>
+
+
+            <a
+              href="https://wa.me/919045066598?text=Hello%204D%20Tour%20and%20Travel,%20I%20want%20to%20book%20an%20Innova%20Crysta."
+              class="fleet-whatsapp"
+              target="_blank"
+              rel="noopener"
+            >
+              🟢 WhatsApp
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- =================================================
+           5. TEMPO TRAVELLER
+           ================================================= -->
+
+      <article class="fleet-card">
+
+        <div class="fleet-image">
+
+          <img
+            src="images/tempo-traveller.webp"
+            alt="Tempo Traveller rental for Char Dham Yatra and Uttarakhand tours"
+            loading="lazy"
+          >
+
+          <span class="fleet-badge">
+            GROUP TOUR
+          </span>
+
+        </div>
+
+
+        <div class="fleet-content">
+
+          <div class="fleet-title-row">
+
+            <h3>Tempo Traveller</h3>
+
+            <span class="fleet-seater">
+              9 / 12 / 17 / 20+1
+            </span>
+
+          </div>
+
+
+          <p class="fleet-description">
+            Spacious AC Tempo Traveller for groups, Char Dham Yatra,
+            family tours, corporate trips and Uttarakhand sightseeing.
+          </p>
+
+
+          <div class="fleet-features">
+
+            <span>✓ AC</span>
+            <span>✓ Pushback Seats</span>
+            <span>✓ Group Travel</span>
+
+          </div>
+
+
+          <div class="fleet-price">
+
+            <small>
+              Starting From
+            </small>
+
+            <strong>
+              ₹ <span>GET QUOTE</span>
+            </strong>
+
+          </div>
+
+
+          <div class="fleet-buttons">
+
+            <a
+              href="tel:+919643586598"
+              class="fleet-call"
+            >
+              📞 Call Now
+            </a>
+
+
+            <a
+              href="https://wa.me/919045066598?text=Hello%204D%20Tour%20and%20Travel,%20I%20want%20to%20book%20a%20Tempo%20Traveller."
+              class="fleet-whatsapp"
+              target="_blank"
+              rel="noopener"
+            >
+              🟢 WhatsApp
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- =================================================
+           6. LUXURY TRAVELLER
+           ================================================= -->
+
+      <article class="fleet-card">
+
+        <div class="fleet-image">
+
+          <img
+            src="images/luxury-traveller.webp"
+            alt="Luxury Traveller rental for group tours in Uttarakhand"
+            loading="lazy"
+          >
+
+          <span class="fleet-badge">
+            GROUP
+          </span>
+
+        </div>
+
+
+        <div class="fleet-content">
+
+          <div class="fleet-title-row">
+
+            <h3>Luxury Traveller</h3>
+
+            <span class="fleet-seater">
+              17 / 20+1
+            </span>
+
+          </div>
+
+
+          <p class="fleet-description">
+            Spacious luxury traveller for large families, corporate
+            groups, weddings, Char Dham Yatra and Uttarakhand tours.
+          </p>
+
+
+          <div class="fleet-features">
+
+            <span>✓ AC</span>
+            <span>✓ Pushback Seats</span>
+            <span>✓ Large Groups</span>
+
+          </div>
+
+
+          <div class="fleet-price">
+
+            <small>
+              Starting From
+            </small>
+
+            <strong>
+              ₹ <span>GET QUOTE</span>
+            </strong>
+
+          </div>
+
+
+          <div class="fleet-buttons">
+
+            <a
+              href="tel:+919643586598"
+              class="fleet-call"
+            >
+              📞 Call Now
+            </a>
+
+
+            <a
+              href="https://wa.me/919045066598?text=Hello%204D%20Tour%20and%20Travel,%20I%20need%20a%20Luxury%20Traveller."
+              class="fleet-whatsapp"
+              target="_blank"
+              rel="noopener"
+            >
+              🟢 WhatsApp
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+
+
+    <!-- ================= BOTTOM CTA ================= -->
+
+    <div class="fleet-bottom-cta">
+
+      <div class="fleet-cta-content">
+
+        <h3>
+          Not sure which vehicle is right for you?
+        </h3>
+
+        <p>
+          Tell us your route and number of passengers.
+          Our team will suggest the best vehicle for your journey.
+        </p>
+
+      </div>
+
+
+      <a
+        href="https://wa.me/919045066598?text=Hello%204D%20Tour%20and%20Travel,%20please%20suggest%20the%20best%20vehicle%20for%20my%20trip."
+        target="_blank"
+        rel="noopener"
+        class="fleet-main-cta"
+      >
+        Get Vehicle Recommendation →
+      </a>
+
+    </div>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <div class="fleet-contact">
+
+      <p>
+        Need help choosing a vehicle?
+      </p>
+
+      <a href="tel:+919643586598">
+        📞 9643586598
+      </a>
+
+      <span>|</span>
+
+      <a
+        href="https://wa.me/919045066598"
+        target="_blank"
+        rel="noopener"
+      >
+        🟢 WhatsApp 9045066598
+      </a>
+
+    </div>
+
+
+    <!-- ================= DISCLAIMER ================= -->
+
+    <p class="fleet-note">
+      *Vehicle availability and rates may vary depending on route,
+      season, trip duration, vehicle type, toll, parking and applicable taxes.
+      Please contact 4D Tour & Travel for the latest quotation.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CSS
+     ===================================================== -->
+
+<style>
+
+/* ============================
+   MAIN SECTION
+   ============================ */
+
+.four-d-fleet {
+  width: 100%;
+  padding: 80px 20px;
+  background: #f7f8fa;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.four-d-fleet *,
+.four-d-fleet *::before,
+.four-d-fleet *::after {
+  box-sizing: border-box;
+}
+
+
+/* ============================
+   CONTAINER
+   ============================ */
+
+.fleet-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* ============================
+   HEADING
+   ============================ */
+
+.fleet-heading {
+  max-width: 760px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.fleet-small-title {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #f0a000;
+}
+
+.fleet-heading h2 {
+  margin: 0;
+  color: #161616;
+  font-size: 44px;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.fleet-heading h2 span {
+  color: #f5a800;
+}
+
+.fleet-heading p {
+  max-width: 700px;
+  margin: 18px auto 0;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* ============================
+   GRID
+   ============================ */
+
+.fleet-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+
+/* ============================
+   CARD
+   ============================ */
+
+.fleet-card {
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.07);
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+.fleet-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 45px rgba(0,0,0,.14);
+}
+
+.featured-fleet {
+  border: 2px solid #f5a800;
+}
+
+
+/* ============================
+   IMAGE
+   ============================ */
+
+.fleet-image {
+  position: relative;
+  width: 100%;
+  height: 225px;
+  overflow: hidden;
+  background: #eee;
+}
+
+.fleet-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+
+.fleet-card:hover .fleet-image img {
+  transform: scale(1.07);
+}
+
+
+/* ============================
+   BADGE
+   ============================ */
+
+.fleet-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 7px 12px;
+  border-radius: 30px;
+  background: #f5a800;
+  color: #111;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .5px;
+}
+
+.premium-badge {
+  background: #111;
+  color: #fff;
+}
+
+
+/* ============================
+   CONTENT
+   ============================ */
+
+.fleet-content {
+  padding: 23px;
+}
+
+.fleet-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.fleet-title-row h3 {
+  margin: 0;
+  color: #171717;
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+.fleet-seater {
+  flex-shrink: 0;
+  padding: 6px 9px;
+  border-radius: 7px;
+  background: #f3f3f3;
+  color: #555;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+
+/* ============================
+   DESCRIPTION
+   ============================ */
+
+.fleet-description {
+  min-height: 76px;
+  margin: 14px 0;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* ============================
+   FEATURES
+   ============================ */
+
+.fleet-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 18px;
+}
+
+.fleet-features span {
+  padding: 7px 9px;
+  border-radius: 6px;
+  background: #f7f7f7;
+  color: #555;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+
+/* ============================
+   PRICE
+   ============================ */
+
+.fleet-price {
+  padding: 14px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.fleet-price small {
+  display: block;
+  margin-bottom: 4px;
+  color: #777;
+  font-size: 11px;
+}
+
+.fleet-price strong {
+  color: #171717;
+  font-size: 20px;
+}
+
+.fleet-price strong span {
+  font-size: 15px;
+}
+
+
+/* ============================
+   BUTTONS
+   ============================ */
+
+.fleet-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+  margin-top: 17px;
+}
+
+.fleet-buttons a {
+  display: block;
+  padding: 12px 8px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 800;
+  transition: .25s ease;
+}
+
+.fleet-call {
+  background: #111;
+  color: #fff;
+}
+
+.fleet-call:hover {
+  background: #333;
+}
+
+.fleet-whatsapp {
+  background: #25d366;
+  color: #fff;
+}
+
+.fleet-whatsapp:hover {
+  filter: brightness(.92);
+  transform: translateY(-1px);
+}
+
+
+/* ============================
+   BOTTOM CTA
+   ============================ */
+
+.fleet-bottom-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+
+  margin-top: 45px;
+  padding: 30px 32px;
+
+  border-radius: 16px;
+  background: #111;
+  color: #fff;
+}
+
+.fleet-cta-content h3 {
+  margin: 0 0 7px;
+  font-size: 21px;
+}
+
+.fleet-cta-content p {
+  max-width: 650px;
+  margin: 0;
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.fleet-main-cta {
+  flex-shrink: 0;
+  display: inline-block;
+  padding: 14px 20px;
+  border-radius: 9px;
+  background: #f5a800;
+  color: #111;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 800;
+  transition: .25s ease;
+}
+
+.fleet-main-cta:hover {
+  transform: translateY(-2px);
+}
+
+
+/* ============================
+   CONTACT
+   ============================ */
+
+.fleet-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  margin-top: 25px;
+
+  font-size: 14px;
+  text-align: center;
+}
+
+.fleet-contact p {
+  margin: 0;
+  color: #666;
+}
+
+.fleet-contact a {
+  color: #111;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.fleet-contact a:hover {
+  text-decoration: underline;
+}
+
+
+/* ============================
+   NOTE
+   ============================ */
+
+.fleet-note {
+  margin: 20px auto 0;
+  max-width: 900px;
+
+  color: #777;
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+
+/* ============================
+   TABLET
+   ============================ */
+
+@media (max-width: 1000px) {
+
+  .fleet-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fleet-heading h2 {
+    font-size: 38px;
+  }
+
+}
+
+
+/* ============================
+   MOBILE
+   ============================ */
+
+@media (max-width: 650px) {
+
+  .four-d-fleet {
+    padding: 55px 14px;
+  }
+
+  .fleet-heading {
+    margin-bottom: 30px;
+  }
+
+  .fleet-heading h2 {
+    font-size: 31px;
+  }
+
+  .fleet-heading p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+
+  .fleet-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+
+  .fleet-image {
+    height: 205px;
+  }
+
+
+  .fleet-content {
+    padding: 18px;
+  }
+
+
+  .fleet-title-row h3 {
+    font-size: 21px;
+  }
+
+
+  .fleet-description {
+    min-height: auto;
+    font-size: 
