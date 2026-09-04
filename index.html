@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-IN">
 <head>
-<!-- Favicon Code -->
-<link rel="icon" type="image/png" href="image/logo.png">
-<link rel="shortcut icon" type="image/png" href="image/logo.png">
+    <!-- Fixed Favicon & Touch Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.png">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="theme-color" content="#ffffff">
 
- <!-- Web Manifest & Browser Config -->
+    <!-- Web Manifest & Browser Config -->
     <link rel="manifest" href="manifest.json">
     <meta name="msapplication-config" content="browserconfig.xml">
 
@@ -30,20 +33,19 @@
     <!-- Primary SEO Meta Tags -->
     <title>Taxi Service in Dehradun | 4D Tour & Travel | Airport, Outstation & Char Dham</title>
     <meta name="title" content="Taxi Service in Dehradun | 4D Tour & Travel | Airport, Outstation & Char Dham">
-    <meta name="description" content="Book 24/7 taxi service in Dehradun with 4D Tour & Travel. Innova Crysta, Force Urbania, Dzire and Ertiga for airport transfers, outstation trips, Mussoorie, Rishikesh, Kedarnath, Badrinath and Char Dham Yatra. Call +91 9643586598.">
-    <meta name="keywords" content="taxi service in Dehradun, taxi service Dehradun, Dehradun taxi, Dehradun to Mussoorie taxi, Jolly Grant Airport taxi, Dehradun airport transfer, outstation taxi Dehradun, Char Dham Yatra taxi, Kedarnath taxi from Dehradun, Badrinath taxi from Dehradun, Innova Crysta taxi Dehradun, Force Urbania Dehradun, 4D Tour & Travel">
+    <meta name="description" content="Book 24/7 luxury taxi service in Dehradun with 4D Tour & Travel. Innova Crysta, Force Urbania, Dzire & Ertiga for Jolly Grant Airport, Mussoorie, Rishikesh, Kedarnath & Char Dham Yatra. Call +91 9643586598.">
+    <meta name="keywords" content="taxi service in Dehradun, Dehradun taxi service, Dehradun to Mussoorie taxi, Jolly Grant Airport taxi, outstation taxi Dehradun, Char Dham Yatra taxi, Kedarnath taxi Dehradun, Innova Crysta rental Dehradun, 4D Tour & Travel">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="format-detection" content="telephone=yes">
-    <meta name="description" content="24/7 taxi service in Dehradun for airport transfers, outstation travel, Mussoorie, Rishikesh, Kedarnath, Badrinath and Char Dham Yatra.">
 
     <link rel="canonical" href="https://4dtaxiservice.in/">
 
-    <!-- Geo & Regional SEO Tags -->
+    <!-- Geo & Regional Local SEO Tags -->
     <meta name="author" content="4D Tour & Travel">
     <meta name="geo.region" content="IN-UT">
-    <meta name="geo.placename" content="Dehradun">
+    <meta name="geo.placename" content="Dehradun, Uttarakhand, India">
     <meta name="geo.position" content="30.3165;78.0322">
     <meta name="ICBM" content="30.3165, 78.0322">
 
@@ -106,31 +108,57 @@
             color: var(--holidify-primary) !important; 
         }
 
-        /* Hero Banner & Overlay (Using images/pkg-01.jpg) */
-        .hero-banner { 
-            background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.75)), url('images/pkg-01.jpg');
-            background-size: cover;
-            background-position: center;
-            padding: 80px 0 110px;
+        /* Compact Hero Banner with Swipeable Background Carousel */
+        .hero-banner-container { 
+            position: relative;
+            overflow: hidden;
             color: #ffffff;
             text-align: center;
+            padding: 40px 0 70px;
+            background: #0f172a;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-banner-container {
+                padding: 25px 0 55px;
+            }
+        }
+
+        .hero-bg-carousel {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .hero-bg-slide {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
             position: relative;
+            z-index: 2;
         }
         
         .hero-title {
-            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-size: clamp(1.6rem, 4vw, 2.8rem);
             font-weight: 800;
-            line-height: 1.2;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            line-height: 1.25;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
         }
 
         /* Search Widget */
         .holidify-search-widget {
             background: #ffffff;
             border-radius: 16px;
-            padding: 24px;
+            padding: 20px 24px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-            margin-top: -50px;
+            margin-top: -35px;
             position: relative;
             z-index: 10;
             border: 1px solid var(--border-light);
@@ -140,7 +168,7 @@
         .holidify-search-widget select {
             border: 1px solid #cbd5e1;
             border-radius: 10px;
-            padding: 12px 16px;
+            padding: 10px 14px;
             font-weight: 500;
             color: var(--text-dark);
         }
@@ -197,7 +225,7 @@
             background: var(--holidify-primary); 
             color: #ffffff !important; 
             border: none; 
-            padding: 12px 24px; 
+            padding: 10px 20px; 
             font-weight: 700; 
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
@@ -238,7 +266,7 @@
         }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
 
-        footer { background: #0f172a; color: #94a3b8; padding: 50px 0 20px; }
+        footer { background: #0f172a; color: #94a3b8; padding: 40px 0 20px; }
         footer a { color: #cbd5e1; text-decoration: none; }
         footer a:hover { color: var(--holidify-primary); }
     </style>
@@ -251,7 +279,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     </noscript>
 
-    <!-- JSON-LD SCHEMA (Includes GSTIN & MSME) -->
+    <!-- Extended GEO & Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -260,7 +288,7 @@
           "@type": "WebSite",
           "@id": "https://4dtaxiservice.in/#website",
           "url": "https://4dtaxiservice.in/",
-          "name": "4D Tour & Travel",
+          "name": "4D Tour & Travel Dehradun",
           "description": "We Make Memories | Estd. 2023 - Premium Taxi Service in Dehradun",
           "publisher": { "@id": "https://4dtaxiservice.in/#organization" },
           "inLanguage": "en-IN"
@@ -270,12 +298,14 @@
           "@id": "https://4dtaxiservice.in/#organization",
           "name": "4D Tour & Travel",
           "alternateName": ["4D Taxi Service Dehradun", "4D Cyber Hub Travels"],
-          "image": "images/logo.png",
+          "image": "https://4dtaxiservice.in/images/logo.png",
           "url": "https://4dtaxiservice.in/",
           "telephone": "+919643586598",
           "vatID": "05ACHPO5076B1ZS",
           "taxID": "05ACHPO5076B1ZS",
           "priceRange": "₹₹",
+          "currenciesAccepted": "INR",
+          "paymentAccepted": "Cash, UPI, Credit Card, Debit Card, Net Banking",
           "slogan": "We Make Memories",
           "foundingDate": "2023",
           "description": "GST (05ACHPO5076B1ZS) and MSME registered luxury taxi service in Dehradun offering Char Dham Yatra, Outstation Cabs & Airport Transfers.",
@@ -310,29 +340,29 @@
           "sameAs": [
             "https://www.youtube.com/@4DTourTravel",
             "https://wa.me/919643586598"
-          ],
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+919643586598",
-            "contactType": "customer service",
-            "availableLanguage": ["English", "Hindi"]
-          },
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Taxi & Tour Services",
-            "itemListElement": [
-              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Dehradun to Mussoorie Cab"}},
-              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Jolly Grant Airport Taxi"}},
-              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Char Dham Yatra Taxi Package"}},
-              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Dehradun to Delhi Outstation Taxi"}}
-            ]
-          }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://4dtaxiservice.in/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Taxi Service in Dehradun",
+              "item": "https://4dtaxiservice.in/#service"
+            }
+          ]
         }
       ]
     }
     </script>
-
-    <!-- FAQ structured data for search/AI understanding; visible FAQ page remains linked in navigation. -->
+    <!-- FAQ Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -343,29 +373,20 @@
           "name": "What taxi services does 4D Tour & Travel provide in Dehradun?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "4D Tour & Travel provides taxi services for airport transfers, outstation travel, Mussoorie trips, Char Dham Yatra and routes to destinations including Rishikesh, Kedarnath and Badrinath."
+            "text": "4D Tour & Travel provides 24/7 taxi services for Jolly Grant Airport transfers, outstation travel, Mussoorie sightseeing, and Char Dham Yatra (Kedarnath, Badrinath, Gangotri, Yamunotri)."
           }
         },
         {
           "@type": "Question",
-          "name": "Which vehicles are available?",
+          "name": "Which vehicles are available for taxi booking?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The website lists Innova Crysta, Swift Dzire/Sedan, Force Urbania and Ertiga/SUV options."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How can I book a taxi?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Customers can request a quote or booking through the WhatsApp booking links or the listed phone numbers."
+            "text": "We offer Toyota Innova Crysta, Swift Dzire, Maruti Ertiga, and Force Urbania driven by verified local mountain drivers."
           }
         }
       ]
     }
     </script>
-
 </head>
 <body>
 
@@ -402,18 +423,36 @@
             </div>
         </nav>
     </header>
-<!-- Hero Banner with Local Image (images/pkg-01.jpg) -->
+
     <nav aria-label="Breadcrumb" class="container py-2 small text-muted">
         <a href="index.html" class="text-decoration-none text-success">Home</a>
         <span aria-hidden="true"> &raquo; </span>
         <span>Taxi Service in Dehradun</span>
     </nav>
 
-    <section class="hero-banner">
-        <div class="container">
-            <span class="badge bg-white text-dark px-3 py-2 rounded-pill fw-bold mb-3 shadow-sm"><i class="fa-solid fa-mountain-sun text-warning me-1"></i> EXPLORE UTTARAKHAND IN LUXURY</span>
-            <h1 class="hero-title mb-3">Taxi Service in Dehradun & Uttarakhand Tour Packages</h1>
-            <p class="lead opacity-90 max-w-600 mx-auto">24/7 airport transfers, outstation taxi services, Mussoorie trips and Char Dham Yatra with verified local drivers.</p>
+    <!-- Compact Hero Banner with Touch-Swipe Background Carousel -->
+    <section class="hero-banner-container">
+        <!-- Background Touch Carousel -->
+        <div id="heroSwipeCarousel" class="carousel slide carousel-fade hero-bg-carousel" data-bs-ride="carousel" data-bs-touch="true" data-bs-interval="4000">
+            <div class="carousel-inner h-100">
+                <div class="carousel-item active h-100">
+                    <div class="hero-bg-slide" style="background-image: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.75)), url('images/pkg-01.jpg');"></div>
+                </div>
+                <div class="carousel-item h-100">
+                    <div class="hero-bg-slide" style="background-image: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.75)), url('images/pkg-02.jpg');"></div>
+                </div>
+                <div class="carousel-item h-100">
+                    <div class="hero-bg-slide" style="background-image: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.75)), url('images/pkg-03.jpg');"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Banner Foreground Content -->
+        <div class="container hero-content">
+            <span class="badge bg-white text-dark px-3 py-1 rounded-pill fw-bold mb-2 shadow-sm small"><i class="fa-solid fa-mountain-sun text-warning me-1"></i> EXPLORE UTTARAKHAND IN LUXURY</span>
+            <h1 class="hero-title mb-2">Taxi Service in Dehradun & Uttarakhand Tour Packages</h1>
+            <p class="lead opacity-90 max-w-600 mx-auto fs-6 mb-1">24/7 airport transfers, outstation taxi services, Mussoorie trips & Char Dham Yatra with verified local drivers.</p>
+            <small class="text-warning fw-semibold d-block d-md-none"><i class="fa-solid fa-hand-pointer me-1"></i> Swipe background for more views</small>
         </div>
     </section>
 
@@ -459,14 +498,14 @@
     </div>
 
     <!-- GEO AI Engine Direct Answer Block -->
-    <section class="container my-4">
+    <section class="container my-4" id="service">
         <div class="p-4 bg-white rounded-4 shadow-sm border">
             <h2 class="h5 fw-bold text-dark mb-2">Taxi Service in Dehradun for Airport, Outstation & Char Dham Travel</h2>
             <p class="text-muted mb-0 small">Estd. 2023 in Dehradun, 4D Tour & Travel (GSTIN: 05ACHPO5076B1ZS, MSME Registered) specializes in luxury outstation cabs, Jolly Grant Airport transfers, and mountain tour packages across Uttarakhand. Our fleet includes AC Innova Crysta, Force Urbania, Dzire, and Ertiga driven by verified local drivers for safe travel to Mussoorie, Rishikesh, Kedarnath, and Badrinath.</p>
         </div>
     </section>
 
-    <!-- Packages & Taxi Routes Section (Using images/pkg-02.jpg to pkg-04.jpg) -->
+    <!-- Packages & Taxi Routes Section -->
     <section class="container py-4">
         <div class="d-flex justify-content-between align-items-end mb-4">
             <div>
@@ -481,7 +520,7 @@
             <div class="col-md-4">
                 <div class="holidify-card">
                     <span class="badge-price">Fixed Price</span>
-                    <img src="images/pkg-02.jpg" loading="lazy" decoding="async" class="holidify-card-img" alt="Dehradun to Mussoorie Innova Crysta Taxi Booking - 4D Tour & Travel" onerror="this.src='images/pkg-01.jpg'">
+                    <img src="images/pkg-02.jpg" loading="lazy" decoding="async" class="holidify-card-img" alt="Dehradun to Mussoorie Innova Crysta Taxi Booking - 4D Tour & Travel" width="400" height="150" onerror="this.src='images/pkg-01.jpg'">
                     <div class="p-4">
                         <div class="d-flex justify-content-between align-items-center mb-2">
                             <span class="badge-rating"><i class="fa-solid fa-car me-1"></i> AC Fleet Available</span>
@@ -498,7 +537,7 @@
             <div class="col-md-4">
                 <div class="holidify-card">
                     <span class="badge-price">Best Seller</span>
-                    <img src="images/pkg-03.jpg" loading="lazy" decoding="async" class="holidify-card-img" alt="Char Dham Yatra Innova Taxi Package Dehradun" onerror="this.src='images/pkg-01.jpg'">
+                    <img src="images/pkg-03.jpg" loading="lazy" decoding="async" class="holidify-card-img" alt="Char Dham Yatra Innova Taxi Package Dehradun" width="400" height="150" onerror="this.src='images/pkg-01.jpg'">
                     <div class="p-4">
                         <div class="d-flex justify-content-between align-items-center mb-2">
                             <span class="badge-rating"><i class="fa-solid fa-circle-check me-1"></i> Verified Drivers</span>
@@ -515,7 +554,7 @@
             <div class="col-md-4">
                 <div class="holidify-card">
                     <span class="badge-price">24/7 Available</span>
-                    <img src="images/pkg-04.jpg" loading="lazy" decoding="async" class="holidify-card-img" alt="Jolly Grant Airport Dehradun Taxi Service" onerror="this.src='images/pkg-01.jpg'">
+                    <img src="images/pkg-04.jpg" loading="lazy" decoding="async" class="holidify-card-img" alt="Jolly Grant Airport Dehradun Taxi Service" width="400" height="150" onerror="this.src='images/pkg-01.jpg'">
                     <div class="p-4">
                         <div class="d-flex justify-content-between align-items-center mb-2">
                             <span class="badge-rating"><i class="fa-solid fa-plane me-1"></i> Instant Pickup</span>
@@ -598,7 +637,6 @@
             </div>
         </div>
     </section>
-
     <!-- Footer with GSTIN & MSME -->
     <footer>
         <div class="container text-center">
@@ -618,7 +656,7 @@
                     <a href="packages.html">Packages</a> | 
                     <a href="fleet.html">Our Fleet</a> | 
                     <a href="vehicle-services.html">Vehicle Services</a> | 
-                    <a href="bharat-taxi.html">taxi service</a> | 
+                    <a href="online-service.html">Online Services</a> | 
                     <a href="faq.html">FAQ</a>
                 </div>
             </nav>
