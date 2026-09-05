@@ -65,34 +65,45 @@
         }
         .nav-link:hover, .nav-link.active { color: var(--brand-blue) !important; }
 
-        /* Hero Section */
-        .hero-section {
-            position: relative;
-            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+        /* Sliding Hero Banner Section */
+        .hero-carousel .carousel-item {
             padding: 70px 0 90px;
-            color: #ffffff;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            min-height: 520px;
+        }
+        .hero-slide-1 {
+            background: linear-gradient(rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.82)), url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+        }
+        .hero-slide-2 {
+            background: linear-gradient(rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.82)), url('https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+        }
+        .hero-slide-3 {
+            background: linear-gradient(rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.82)), url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
         }
         .hero-title {
             font-size: clamp(1.8rem, 4vw, 3.2rem);
             font-weight: 800;
             line-height: 1.2;
+            color: #ffffff;
         }
 
         /* Booking Form */
         .booking-card {
             background: #ffffff;
             border-radius: 16px;
-            padding: 28px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            padding: 26px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.25);
             color: var(--brand-dark);
         }
         .booking-card h3 {
-            font-size: 21px;
+            font-size: 20px;
             font-weight: 700;
             color: var(--brand-blue);
         }
 
-        /* Stats & Trust Bar */
+        /* Stats Bar */
         .trust-bar {
             background: #ffffff;
             border-bottom: 1px solid var(--border-color);
@@ -197,10 +208,8 @@
         }
         .btn-brand-green:hover { background-color: #15803d; color: #ffffff; }
 
-        /* Pricing Table */
+        /* Table & Footer */
         .route-table th { background-color: var(--brand-dark); color: #ffffff; }
-
-        /* Footer */
         footer {
             background: var(--brand-dark);
             color: #94a3b8;
@@ -212,7 +221,7 @@
     </style>
 </head>
 <body>
-<!-- Top Contact Bar -->
+    <!-- Top Contact Bar -->
     <div class="top-bar d-none d-md-block">
         <div class="container d-flex justify-content-between align-items-center">
             <div>
@@ -241,7 +250,7 @@
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#fleet">Our Cabs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#packages">Tour Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="package.html">Tour Packages</a></li>
                     <li class="nav-item"><a class="nav-link" href="#pricing">Fare Rates</a></li>
                     <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
                 </ul>
@@ -250,65 +259,123 @@
         </div>
     </nav>
 
-    <!-- Hero Banner + Booking Form -->
-    <section class="hero-section">
-        <div class="container">
-            <div class="row align-items-center g-4">
-                <div class="col-lg-7">
-                    <span class="badge bg-warning text-dark fw-bold px-3 py-2 rounded-pill mb-3"><i class="fa-solid fa-shield-halved me-1"></i> GOVT. REGISTERED TAXI SERVICE</span>
-                    <h1 class="hero-title mb-3">Best Taxi Service in Dehradun & Uttarakhand Tour Packages</h1>
-                    <p class="lead opacity-90 mb-4 fs-6">Looking for reliable cabs in Dehradun? We provide 24/7 Jolly Grant Airport Pickup & Drop, Outstation Trips to Delhi & Chandigarh, Mussoorie Sightseeing, and Customized Char Dham Yatra Tour Packages with local mountain drivers.</p>
-                    
-                    <div class="d-flex gap-3 flex-wrap">
-                        <a href="tel:+919643586598" class="btn btn-warning btn-lg fw-bold text-dark"><i class="fa-solid fa-phone me-2"></i> Call Now: +91 9643586598</a>
-                        <a href="#packages" class="btn btn-outline-light btn-lg fw-bold"><i class="fa-solid fa-compass me-2"></i> Explore Packages</a>
+    <!-- Auto Sliding Hero Banner Carousel -->
+    <div id="heroBannerCarousel" class="carousel slide carousel-fade hero-carousel" data-bs-ride="carousel" data-bs-interval="4000">
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators mb-4">
+            <button type="button" data-bs-target="#heroBannerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#heroBannerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#heroBannerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active hero-slide-1">
+                <div class="container">
+                    <div class="row align-items-center g-4">
+                        <div class="col-lg-7">
+                            <span class="badge bg-warning text-dark fw-bold px-3 py-2 rounded-pill mb-3"><i class="fa-solid fa-shield-halved me-1"></i> GOVT. REGISTERED TAXI SERVICE</span>
+                            <h1 class="hero-title mb-3">Best Taxi Service in Dehradun & Outstation Cabs</h1>
+                            <p class="lead text-light opacity-90 mb-4 fs-6">Looking for reliable cabs in Dehradun? We provide 24/7 Jolly Grant Airport Pickup & Drop, Outstation Trips to Delhi & Chandigarh, Mussoorie Sightseeing, and Char Dham Yatra Taxi.</p>
+                            
+                            <div class="d-flex gap-3 flex-wrap">
+                                <a href="tel:+919643586598" class="btn btn-warning btn-lg fw-bold text-dark"><i class="fa-solid fa-phone me-2"></i> Call Now: +91 9643586598</a>
+                                <a href="package.html" class="btn btn-outline-light btn-lg fw-bold"><i class="fa-solid fa-compass me-2"></i> Explore Packages</a>
+                            </div>
+                        </div>
+
+                        <!-- Fare Inquiry Widget -->
+                        <div class="col-lg-5">
+                            <div class="booking-card">
+                                <h3 class="mb-2 text-center"><i class="fa-solid fa-taxi me-2"></i> Quick Taxi Fare Estimate</h3>
+                                <p class="text-muted small text-center mb-3">Get instant price quote on WhatsApp within 2 minutes</p>
+                                <form onsubmit="return handleFullInquiry();">
+                                    <div class="mb-2">
+                                        <label class="form-label small fw-bold mb-1">Pickup Location</label>
+                                        <input type="text" id="hq_from" class="form-control form-control-sm" placeholder="e.g. Dehradun Airport / ISBT" required>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label small fw-bold mb-1">Drop Destination</label>
+                                        <input type="text" id="hq_to" class="form-control form-control-sm" placeholder="e.g. Mussoorie / Rishikesh / Delhi" required>
+                                    </div>
+                                    <div class="row g-2 mb-2">
+                                        <div class="col-6">
+                                            <label class="form-label small fw-bold mb-1">Vehicle Type</label>
+                                            <select id="hq_fleet" class="form-select form-select-sm">
+                                                <option value="Swift Dzire">Dzire (4 Seater)</option>
+                                                <option value="Ertiga">Ertiga (6 Seater)</option>
+                                                <option value="Innova Crysta">Innova Crysta (Luxury)</option>
+                                                <option value="Tempo Traveller">Urbania / Traveller</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label small fw-bold mb-1">Travel Date</label>
+                                            <input type="date" id="hq_date" class="form-control form-control-sm" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label small fw-bold mb-1">Trip Type</label>
+                                        <select id="hq_type" class="form-select form-select-sm">
+                                            <option value="One Way Trip">One Way Trip</option>
+                                            <option value="Round Trip">Round Trip / Sightseeing</option>
+                                            <option value="Char Dham Package">Char Dham Yatra Package</option>
+                                        </select>
+                                    </div>
+                                    <button type="submit" class="btn btn-brand-primary w-100 py-2"><i class="fab fa-whatsapp me-2"></i> Check Rate & Availability</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Fare Inquiry Widget -->
-                <div class="col-lg-5">
-                    <div class="booking-card">
-                        <h3 class="mb-2 text-center"><i class="fa-solid fa-taxi me-2"></i> Quick Taxi Fare Estimate</h3>
-                        <p class="text-muted small text-center mb-3">Get instant price quote on WhatsApp within 2 minutes</p>
-                        <form onsubmit="return handleFullInquiry();">
-                            <div class="mb-2">
-                                <label class="form-label small fw-bold mb-1">Pickup Location</label>
-                                <input type="text" id="hq_from" class="form-control form-control-sm" placeholder="e.g. Dehradun Airport / ISBT / Railway Station" required>
+            <!-- Slide 2 -->
+            <div class="carousel-item hero-slide-2">
+                <div class="container">
+                    <div class="row align-items-center g-4">
+                        <div class="col-lg-7">
+                            <span class="badge bg-info text-dark fw-bold px-3 py-2 rounded-pill mb-3"><i class="fa-solid fa-mountain me-1"></i> HILL STATION SPECIALIST</span>
+                            <h1 class="hero-title mb-3">Mussoorie & Dhanaulti Local Sightseeing Cabs</h1>
+                            <p class="lead text-light opacity-90 mb-4 fs-6">Explore Kempty Falls, Mall Road, Lal Tibba & Surkanda Devi with experienced hill drivers and sanitized luxury cabs at fixed affordable prices.</p>
+                            
+                            <div class="d-flex gap-3 flex-wrap">
+                                <a href="tel:+919643586598" class="btn btn-warning btn-lg fw-bold text-dark"><i class="fa-solid fa-phone me-2"></i> Call Now: +91 9643586598</a>
+                                <a href="package.html" class="btn btn-outline-light btn-lg fw-bold"><i class="fa-solid fa-compass me-2"></i> Explore Packages</a>
                             </div>
-                            <div class="mb-2">
-                                <label class="form-label small fw-bold mb-1">Drop Destination</label>
-                                <input type="text" id="hq_to" class="form-control form-control-sm" placeholder="e.g. Mussoorie / Rishikesh / Delhi / Kedarnath" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item hero-slide-3">
+                <div class="container">
+                    <div class="row align-items-center g-4">
+                        <div class="col-lg-7">
+                            <span class="badge bg-success text-white fw-bold px-3 py-2 rounded-pill mb-3"><i class="fa-solid fa-om me-1"></i> CHAR DHAM YATRA SPECIALIST</span>
+                            <h1 class="hero-title mb-3">Char Dham Yatra Tour Packages 2026</h1>
+                            <p class="lead text-light opacity-90 mb-4 fs-6">Customized taxi packages for Yamunotri, Gangotri, Kedarnath & Badrinath with commercial hill-permit vehicles & green-card certified local drivers.</p>
+                            
+                            <div class="d-flex gap-3 flex-wrap">
+                                <a href="tel:+919643586598" class="btn btn-warning btn-lg fw-bold text-dark"><i class="fa-solid fa-phone me-2"></i> Call Now: +91 9643586598</a>
+                                <a href="package.html" class="btn btn-outline-light btn-lg fw-bold"><i class="fa-solid fa-compass me-2"></i> Explore Packages</a>
                             </div>
-                            <div class="row g-2 mb-2">
-                                <div class="col-6">
-                                    <label class="form-label small fw-bold mb-1">Vehicle Type</label>
-                                    <select id="hq_fleet" class="form-select form-select-sm">
-                                        <option value="Swift Dzire">Dzire (4 Seater)</option>
-                                        <option value="Ertiga">Ertiga (6 Seater)</option>
-                                        <option value="Innova Crysta">Innova Crysta (Luxury)</option>
-                                        <option value="Tempo Traveller">Urbania / Traveller</option>
-                                    </select>
-                                </div>
-                                <div class="col-6">
-                                    <label class="form-label small fw-bold mb-1">Travel Date</label>
-                                    <input type="date" id="hq_date" class="form-control form-control-sm" required>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label small fw-bold mb-1">Trip Type</label>
-                                <select id="hq_type" class="form-select form-select-sm">
-                                    <option value="One Way Trip">One Way Trip</option>
-                                    <option value="Round Trip">Round Trip / Sightseeing</option>
-                                    <option value="Char Dham Package">Char Dham Yatra Package</option>
-                                </select>
-                            </div>
-                            <button type="submit" class="btn btn-brand-primary w-100 py-2"><i class="fab fa-whatsapp me-2"></i> Check Rate & Availability</button>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroBannerCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroBannerCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
     <!-- Trust Stats Bar -->
     <div class="trust-bar">
@@ -333,8 +400,7 @@
             </div>
         </div>
     </div>
-
-    <!-- Comprehensive Services Section -->
+    <!-- Services Section -->
     <section id="services" class="py-5 bg-white">
         <div class="container">
             <div class="text-center mb-5">
@@ -344,7 +410,6 @@
             </div>
 
             <div class="row g-4">
-                <!-- Service 1 -->
                 <div class="col-md-4 col-sm-6">
                     <div class="service-card">
                         <div class="service-icon"><i class="fa-solid fa-plane-arrival"></i></div>
@@ -352,7 +417,6 @@
                         <p class="text-muted small mb-0">24/7 dedicated airport cab pickup & drop service between Dehradun Airport (DED) and Mussoorie, Rishikesh, Haridwar, or Paonta Sahib.</p>
                     </div>
                 </div>
-                <!-- Service 2 -->
                 <div class="col-md-4 col-sm-6">
                     <div class="service-card">
                         <div class="service-icon"><i class="fa-solid fa-mountain-city"></i></div>
@@ -360,7 +424,6 @@
                         <p class="text-muted small mb-0">Full day and half day local tour cabs for Mussoorie, Kempty Falls, Dhanaulti, Robber's Cave, Sahastradhara, and Mindrolling Monastery.</p>
                     </div>
                 </div>
-                <!-- Service 3 -->
                 <div class="col-md-4 col-sm-6">
                     <div class="service-card">
                         <div class="service-icon"><i class="fa-solid fa-route"></i></div>
@@ -368,7 +431,6 @@
                         <p class="text-muted small mb-0">Comfortable intercity cabs for Delhi NCR, Chandigarh, Jaipur, Shimla, Paonta Sahib, and major North Indian destinations at per-km rates.</p>
                     </div>
                 </div>
-                <!-- Service 4 -->
                 <div class="col-md-4 col-sm-6">
                     <div class="service-card">
                         <div class="service-icon"><i class="fa-solid fa-om"></i></div>
@@ -376,7 +438,6 @@
                         <p class="text-muted small mb-0">Complete customized taxi packages for Kedarnath, Badrinath, Gangotri, Yamunotri, and Do Dham Yatra with mountain-expert drivers.</p>
                     </div>
                 </div>
-                <!-- Service 5 -->
                 <div class="col-md-4 col-sm-6">
                     <div class="service-card">
                         <div class="service-icon"><i class="fa-solid fa-car-side"></i></div>
@@ -384,7 +445,6 @@
                         <p class="text-muted small mb-0">Pay only for one-way drops from Dehradun to Delhi Airport, Indira Gandhi International (IGI), Chandigarh, and Haridwar with zero return fare.</p>
                     </div>
                 </div>
-                <!-- Service 6 -->
                 <div class="col-md-4 col-sm-6">
                     <div class="service-card">
                         <div class="service-icon"><i class="fa-solid fa-file-lines"></i></div>
@@ -408,7 +468,6 @@
             </div>
 
             <div class="row g-4">
-                <!-- Vehicle 1 -->
                 <div class="col-md-3 col-sm-6">
                     <div class="custom-card">
                         <div class="card-img-wrap">
@@ -418,12 +477,10 @@
                         <div class="p-3">
                             <h3 class="h6 fw-bold mb-1">Maruti Swift Dzire</h3>
                             <p class="text-muted small mb-2"><i class="fa-solid fa-check text-success me-1"></i> AC Sedan | 2 Bags | Clean Interiors</p>
-                            <p class="text-dark fw-bold small mb-2">Ideal for: Airport Drops & Small Families</p>
                             <a href="https://wa.me/919643586598?text=Book%20Swift%20Dzire%20Taxi" class="btn btn-sm btn-brand-primary w-100">Book Dzire Taxi</a>
                         </div>
                     </div>
                 </div>
-                <!-- Vehicle 2 -->
                 <div class="col-md-3 col-sm-6">
                     <div class="custom-card">
                         <div class="card-img-wrap">
@@ -433,12 +490,10 @@
                         <div class="p-3">
                             <h3 class="h6 fw-bold mb-1">Maruti Ertiga / XL6</h3>
                             <p class="text-muted small mb-2"><i class="fa-solid fa-check text-success me-1"></i> AC MUV | 4 Luggage Bags</p>
-                            <p class="text-dark fw-bold small mb-2">Ideal for: Family Trips & Mussoorie Tours</p>
                             <a href="https://wa.me/919643586598?text=Book%20Ertiga%20Taxi" class="btn btn-sm btn-brand-primary w-100">Book Ertiga Cab</a>
                         </div>
                     </div>
                 </div>
-                <!-- Vehicle 3 -->
                 <div class="col-md-3 col-sm-6">
                     <div class="custom-card">
                         <div class="card-img-wrap">
@@ -448,12 +503,10 @@
                         <div class="p-3">
                             <h3 class="h6 fw-bold mb-1">Toyota Innova Crysta</h3>
                             <p class="text-muted small mb-2"><i class="fa-solid fa-check text-success me-1"></i> Premium AC SUV | Reclining Seats</p>
-                            <p class="text-dark fw-bold small mb-2">Ideal for: Long Mountain Journeys & Char Dham</p>
                             <a href="https://wa.me/919643586598?text=Book%20Innova%20Crysta" class="btn btn-sm btn-brand-primary w-100">Book Innova Crysta</a>
                         </div>
                     </div>
                 </div>
-                <!-- Vehicle 4 -->
                 <div class="col-md-3 col-sm-6">
                     <div class="custom-card">
                         <div class="card-img-wrap">
@@ -463,7 +516,6 @@
                         <div class="p-3">
                             <h3 class="h6 fw-bold mb-1">Force Urbania / Traveller</h3>
                             <p class="text-muted small mb-2"><i class="fa-solid fa-check text-success me-1"></i> Luxury Group Bus | Pushback Seats</p>
-                            <p class="text-dark fw-bold small mb-2">Ideal for: Large Groups & Pilgrimage Tours</p>
                             <a href="https://wa.me/919643586598?text=Book%20Tempo%20Traveller" class="btn btn-sm btn-brand-primary w-100">Book Urbania / Traveller</a>
                         </div>
                     </div>
@@ -471,79 +523,8 @@
             </div>
         </div>
     </section>
-
-    <!-- Popular Tour Packages -->
-    <section id="packages" class="py-5 bg-white">
-        <div class="container">
-            <div class="text-center mb-5">
-                <span class="text-primary fw-bold text-uppercase small">Best Selling Tours</span>
-                <h2 class="fw-bold fs-3">Popular Uttarakhand Tour Packages</h2>
-                <p class="text-muted">Handcrafted itineraries with hotel stay and taxi included</p>
-            </div>
-
-            <div class="row g-4">
-                <!-- Package 1 -->
-                <div class="col-md-4">
-                    <div class="custom-card">
-                        <div class="card-img-wrap">
-                            <span class="card-badge">3 Days / 2 Nights</span>
-                            <img src="https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?auto=format&fit=crop&w=800&q=80" alt="Mussoorie Dhanaulti Tour Package">
-                        </div>
-                        <div class="p-3">
-                            <h3 class="h6 fw-bold mb-1">Mussoorie & Dhanaulti Hill Station Tour</h3>
-                            <p class="text-muted small mb-2"><i class="fa-solid fa-location-dot text-danger me-1"></i> Dehradun - Kempty Falls - Mall Road - Eco Park</p>
-                            <ul class="list-unstyled small text-muted mb-3">
-                                <li><i class="fa-solid fa-check text-success me-1"></i> Dedicated Cab for 3 Days</li>
-                                <li><i class="fa-solid fa-check text-success me-1"></i> Sightseeing & Toll Taxes Included</li>
-                            </ul>
-                            <a href="https://wa.me/919643586598?text=Inquire%20Mussoorie%20Tour%20Package" class="btn btn-brand-green w-100 btn-sm"><i class="fab fa-whatsapp me-1"></i> Get Tour Quotation</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Package 2 -->
-                <div class="col-md-4">
-                    <div class="custom-card">
-                        <div class="card-img-wrap">
-                            <span class="card-badge">10 Days / 9 Nights</span>
-                            <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=800&q=80" alt="Char Dham Yatra Taxi Package">
-                        </div>
-                        <div class="p-3">
-                            <h3 class="h6 fw-bold mb-1">Complete Char Dham Yatra Tour</h3>
-                            <p class="text-muted small mb-2"><i class="fa-solid fa-location-dot text-danger me-1"></i> Yamunotri - Gangotri - Kedarnath - Badrinath</p>
-                            <ul class="list-unstyled small text-muted mb-3">
-                                <li><i class="fa-solid fa-check text-success me-1"></i> Verified Hill Driver & AC SUV</li>
-                                <li><i class="fa-solid fa-check text-success me-1"></i> Green Permit & Parking Covered</li>
-                            </ul>
-                            <a href="https://wa.me/919643586598?text=Inquire%20Char%20Dham%20Package" class="btn btn-brand-green w-100 btn-sm"><i class="fab fa-whatsapp me-1"></i> Get Tour Quotation</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Package 3 -->
-                <div class="col-md-4">
-                    <div class="custom-card">
-                       <div class="card-img-wrap">
-                            <span class="card-badge">4 Days / 3 Nights</span>
-                            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80" alt="Rishikesh Haridwar Taxi Package">
-                        </div>
-                        <div class="p-3">
-                            <h3 class="h6 fw-bold mb-1">Rishikesh & Haridwar Spiritual Tour</h3>
-                            <p class="text-muted small mb-2"><i class="fa-solid fa-location-dot text-danger me-1"></i> Ganga Aarti - Ram Jhula - Rafting - Temple Tour</p>
-                            <ul class="list-unstyled small text-muted mb-3">
-                                <li><i class="fa-solid fa-check text-success me-1"></i> Flexible Pickup from Dehradun Airport</li>
-                                <li><i class="fa-solid fa-check text-success me-1"></i> Comfortable Sedan / MUV Cabs</li>
-                            </ul>
-                            <a href="https://wa.me/919643586598?text=Inquire%20Spiritual%20Tour%20Package" class="btn btn-brand-green w-100 btn-sm"><i class="fab fa-whatsapp me-1"></i> Get Tour Quotation</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Popular Routes Fare Rate Table -->
-    <section id="pricing" class="py-5">
+<!-- Popular Routes Fare Rate Table -->
+    <section id="pricing" class="py-5 bg-white">
         <div class="container">
             <div class="text-center mb-4">
                 <span class="text-primary fw-bold text-uppercase small">Estimated Taxi Rates</span>
@@ -591,49 +572,10 @@
                             <td>₹ 5,000</td>
                             <td><a href="https://wa.me/919643586598?text=Book%20Mussoorie%20Sightseeing" class="btn btn-sm btn-outline-success fw-bold">Book</a></td>
                         </tr>
-                        <tr>
-                            <td class="fw-bold">Dehradun to Chandigarh Drop</td>
-                            <td>₹ 3,800</td>
-                            <td>₹ 5,200</td>
-                            <td>₹ 7,000</td>
-                            <td><a href="https://wa.me/919643586598?text=Book%20Dehradun%20to%20Chandigarh" class="btn btn-sm btn-outline-success fw-bold">Book</a></td>
-                        </tr>
                     </tbody>
                 </table>
             </div>
-            <p class="text-muted small mt-2 text-center">* Rates may vary during peak holiday seasons & hill permit requirements. Toll tax extra as per actuals.</p>
-        </div>
-    </section>
-
-    <!-- About Company Section -->
-    <section class="py-5 bg-white">
-        <div class="container">
-            <div class="row align-items-center g-4">
-                <div class="col-lg-6">
-                    <span class="text-primary fw-bold text-uppercase small">About 4D Tour & Travel</span>
-                    <h2 class="fw-bold fs-3 mb-3">Dehradun's Trusted Taxi Service Since 2023</h2>
-                    <p class="text-muted">Established in Dehradun, Uttarakhand, 4D Tour & Travel (GSTIN: 05ACHPO5076B1ZS) is a MSME-registered travel organization dedicated to safe, comfortable, and affordable road transport.</p>
-                    <p class="text-muted">Whether you need a late-night Jolly Grant Airport cab, an outstation taxi to Delhi, or a multi-day mountain tour package for Char Dham Yatra, our fleet of sanitized commercial vehicles and verified mountain drivers ensure a smooth journey every time.</p>
-
-                    <div class="row g-3 mt-2">
-                        <div class="col-6">
-                            <div class="p-2 border rounded bg-light">
-                                <span class="d-block fw-bold text-dark"><i class="fa-solid fa-shield text-success me-1"></i> GST Compliant</span>
-                                <small class="text-muted">Valid tax invoice provided</small>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="p-2 border rounded bg-light">
-                                <span class="d-block fw-bold text-dark"><i class="fa-solid fa-user-check text-primary me-1"></i> Local Drivers</span>
-                                <small class="text-muted">Expert hill driving experience</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1000&q=80" alt="4D Tour and Travel Dehradun Taxi Fleet" class="img-fluid rounded-3 shadow">
-                </div>
-            </div>
+            <p class="text-muted small mt-2 text-center">* Rates may vary during peak holiday seasons & hill permit requirements.</p>
         </div>
     </section>
 
@@ -661,41 +603,15 @@
                             </div>
                         </div>
 
-                        <div class="accordion-item mb-2 border rounded">
+                        <div class="accordion-item border rounded">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                                    Are your driver rates inclusive of toll and state taxes?
+                                    Do you provide 24/7 airport taxi service for Jolly Grant (DED)?
                                 </button>
                             </h2>
                             <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body text-muted small">
-                                    We offer transparent pricing. Base fare includes driver charges and vehicle allowance. Toll taxes, parking fees, and interstate permits (if applicable) can be paid directly or included in a fixed all-inclusive package.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item mb-2 border rounded">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                                    Do you provide 24/7 airport taxi service for Jolly Grant (DED)?
-                                </button>
-                            </h2>
-                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted small">
                                     Yes, we operate round-the-clock airport transfer cabs. Even for late night or early morning flights, our driver arrives 15 minutes before your pickup time.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item border rounded">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                                    Are your cabs suitable for hill driving and Char Dham Yatra?
-                                </button>
-                            </h2>
-                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted small">
-                                    Absoutely! All our vehicles (Dzire, Ertiga, Innova Crysta, Urbania) hold commercial yellow plates with hill permits, driven by experienced local drivers familiar with mountain routes.
                                 </div>
                             </div>
                         </div>
@@ -704,22 +620,22 @@
             </div>
         </div>
     </section>
+
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="row g-4 mb-4">
                 <div class="col-md-4">
                     <h5 class="text-white fw-bold mb-3">4D TOUR & TRAVEL</h5>
-                    <p class="small text-muted">Dehradun's premier taxi service provider offering 24/7 airport cabs, outstation taxi service, Mussoorie sightseeing, and mountain tour packages with transparent billing.</p>
+                    <p class="small text-muted">Dehradun's premier taxi service provider offering 24/7 airport cabs, outstation taxi service, Mussoorie sightseeing, and mountain tour packages.</p>
                     <p class="small text-white mb-0"><strong>GSTIN:</strong> 05ACHPO5076B1ZS | MSME Registered</p>
                 </div>
                 <div class="col-md-4">
-                    <h5>Popular Taxi Routes</h5>
+                    <h5>Popular Links</h5>
                     <ul class="list-unstyled small">
-                        <li class="mb-2"><a href="#">Dehradun Airport to Mussoorie Taxi</a></li>
-                        <li class="mb-2"><a href="#">Dehradun to Delhi NCR Outstation Cab</a></li>
-                        <li class="mb-2"><a href="#">Dehradun to Rishikesh & Haridwar Taxi</a></li>
-                        <li class="mb-2"><a href="#">Char Dham Yatra Taxi Package</a></li>
+                        <li class="mb-2"><a href="package.html">Tour Packages</a></li>
+                        <li class="mb-2"><a href="#services">Airport Taxi Service</a></li>
+                        <li class="mb-2"><a href="#fleet">Our Cabs</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
@@ -727,13 +643,11 @@
                     <p class="small mb-2"><i class="fa-solid fa-location-dot me-2 text-warning"></i> Dehradun, Uttarakhand - 248001</p>
                     <p class="small mb-2"><i class="fa-solid fa-phone me-2 text-warning"></i> +91 9643586598</p>
                     <p class="small mb-2"><i class="fa-solid fa-envelope me-2 text-warning"></i> info@4dtaxiservice.in</p>
-                    <p class="small mb-2"><i class="fa-solid fa-globe me-2 text-warning"></i> www.4dtaxiservice.in</p>
                 </div>
             </div>
             <hr class="border-secondary">
             <div class="d-flex justify-content-between flex-wrap small text-muted">
                 <p class="mb-0">&copy; 2026 4D Tour and Travel. All Rights Reserved.</p>
-                <p class="mb-0">Designed for Fast Loading & Local SEO</p>
             </div>
         </div>
     </footer>
@@ -744,7 +658,7 @@
         <a href="https://wa.me/919643586598?text=Hello%204D%20Tour%20%26%20Travel,%20I%20want%20to%20book%20a%20taxi." class="btn btn-success w-45 fw-bold btn-sm"><i class="fab fa-whatsapp me-1"></i> WhatsApp</a>
     </div>
 
-    <!-- Scripts -->
+    <!-- Bootstrap Script for Carousel Animation -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         function handleFullInquiry() {
