@@ -238,31 +238,41 @@
             </div>
         </div>
     </div>
-
-    <!-- Header / Navbar linked to your exact HTML files -->
-    <nav class="navbar navbar-expand-lg sticky-top">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center fw-bold" href="index.html">
-                <img src="images/logo.png" alt="4D Tour & Travel Dehradun" onerror="this.src='https://via.placeholder.com/180x48?text=4D+TOUR+%26+TRAVEL'">
-            </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="mainNav">
-                <ul class="navbar-nav ms-auto gap-1">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="vehicle-services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="fleet.html">Our Cabs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="packages.html">Tour Packages</a></li>
-                    <li class="nav-item"><a class="nav-link" href="online-service.html">Cyber Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
-                </ul>
-                <a href="https://wa.me/919643586598?text=Hello%204D%20Tour%20%26%20Travel,%20I%20want%20to%20book%20a%20taxi." class="btn btn-brand-green ms-lg-3 btn-sm"><i class="fab fa-whatsapp me-1"></i> Instant Booking</a>
+<!-- Header / Navbar with Company Logo & Name -->
+<nav class="navbar navbar-expand-lg bg-white sticky-top shadow-sm py-2">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none" href="index.html">
+            <!-- Company Logo Image -->
+            <img src="images/logo.png" alt="4D Tour & Travel Logo" style="height: 48px; width: auto;" onerror="this.style.display='none'">
+            
+            <!-- Company Name & Tagline Text -->
+            <div class="d-flex flex-column justify-content-center">
+                <span class="lh-1" style="font-size: 19px; font-weight: 800; color: #0f172a; letter-spacing: 0.5px;">4D TOUR & TRAVEL</span>
+                <span style="font-size: 9.5px; font-weight: 700; color: #16a34a; letter-spacing: 0.8px; margin-top: 3px;">WE MAKE MEMORIES • ESTD. 2023</span>
             </div>
-        </div>
-    </nav>
+        </a>
 
-    <!-- Auto Sliding Hero Banner Carousel -->
+        <!-- Mobile Toggle Button -->
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto gap-1">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="vehicle-services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="fleet.html">Our Cabs</a></li>
+                <li class="nav-item"><a class="nav-link" href="packages.html">Tour Packages</a></li>
+                <li class="nav-item"><a class="nav-link" href="online-service.html">Cyber Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+            </ul>
+            <a href="https://wa.me/919643586598?text=Hello%204D%20Tour%20%26%20Travel,%20I%20want%20to%20book%20a%20taxi." class="btn btn-success ms-lg-3 btn-sm fw-bold"><i class="fab fa-whatsapp me-1"></i> Instant Booking</a>
+        </div>
+    </div>
+</nav>
+
+   <!-- Auto Sliding Hero Banner Carousel -->
     <div id="heroBannerCarousel" class="carousel slide carousel-fade hero-carousel" data-bs-ride="carousel" data-bs-interval="3500">
         <!-- Carousel Indicators -->
         <div class="carousel-indicators mb-4">
