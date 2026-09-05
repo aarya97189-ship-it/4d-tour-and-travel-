@@ -4,291 +4,376 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="theme-color" content="#10b981">
+    <meta name="theme-color" content="#0284c7">
 
-    <!-- Fixed Favicons -->
-    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/logo.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/logo.png">
-    <link rel="shortcut icon" type="image/x-icon" href="images/logo.png">
-
-    <!-- Primary SEO -->
-    <title>Taxi Service in Dehradun | 4D Tour & Travel | Airport & Outstation</title>
-    <meta name="title" content="Taxi Service in Dehradun | 4D Tour & Travel | Airport & Outstation">
-    <meta name="description" content="Book 24/7 luxury taxi service in Dehradun with 4D Tour & Travel. Innova Crysta, Dzire & Ertiga for Airport, Mussoorie, Rishikesh & Char Dham Yatra. Call +91 9643586598.">
-    <meta name="robots" content="index, follow, max-image-preview:large">
+    <title>Taxi Service in Dehradun | 4D Tour & Travel | Kartavya Style Cabs</title>
+    <meta name="title" content="Taxi Service in Dehradun | 4D Tour & Travel | Airport & Outstation Cabs">
+    <meta name="description" content="Book 24/7 luxury taxi service in Dehradun with 4D Tour & Travel. Innova Crysta, Dzire, Ertiga for Airport, Mussoorie, Rishikesh & Char Dham. Call +91 9643586598.">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://4dtaxiservice.in/">
 
-    <!-- Speed Preconnects -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-
-    <!-- CSS Dependencies -->
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <!-- Inlined Critical CSS -->
     <style>
-        :root { 
-            --primary: #10b981; 
-            --primary-hover: #059669;
-            --orange: #f97316;
-            --bg: #f8fafc;
-            --dark: #0f172a;
-            --border: #e2e8f0;
+        :root {
+            --brand-blue: #0284c7;
+            --brand-dark: #0f172a;
+            --brand-yellow: #f59e0b;
+            --brand-green: #16a34a;
+            --light-bg: #f8fafc;
+            --border-color: #e2e8f0;
         }
-        
-        body { 
-            background-color: var(--bg); 
-            color: var(--dark); 
-            font-family: system-ui, -apple-system, sans-serif; 
-            padding-bottom: 60px; 
-            line-height: 1.5;
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light-bg);
+            color: #334155;
+            padding-bottom: 60px;
         }
         @media (min-width: 992px) { body { padding-bottom: 0; } }
-        
+
+        /* Top Header Bar */
+        .top-bar {
+            background-color: var(--brand-dark);
+            color: #cbd5e1;
+            font-size: 13px;
+            padding: 8px 0;
+        }
+        .top-bar a { color: #ffffff; text-decoration: none; }
+
         /* Navbar */
-        .navbar { background: #ffffff; border-bottom: 1px solid var(--border); }
-        .brand-logo-img { height: 42px; width: auto; object-fit: contain; }
-        .nav-link { color: #334155 !important; font-weight: 600; font-size: 14px; text-transform: uppercase; }
-        .nav-link.active, .nav-link:hover { color: var(--primary) !important; }
+        .navbar {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        .navbar-brand img { height: 45px; }
+        .nav-link {
+            font-weight: 600;
+            color: var(--brand-dark) !important;
+            font-size: 15px;
+            padding: 8px 16px !important;
+        }
+        .nav-link:hover, .nav-link.active { color: var(--brand-blue) !important; }
 
-        /* Banner Slider CSS */
-        .hero-banner-wrapper {
+        /* Hero Section */
+        .hero-section {
             position: relative;
-            background: var(--dark);
-            overflow: hidden;
-        }
-
-        .hero-carousel .carousel-item {
-            height: 320px;
-        }
-
-        @media (max-width: 768px) {
-            .hero-carousel .carousel-item {
-                height: 260px;
-            }
-        }
-
-        .hero-carousel .carousel-item img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            filter: brightness(0.4);
-        }
-
-        .hero-overlay-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 90%;
-            max-width: 800px;
-            z-index: 5;
+            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            padding: 60px 0 80px;
             color: #ffffff;
+        }
+        .hero-title {
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        /* Booking Form Widget */
+        .booking-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            color: var(--brand-dark);
+        }
+        .booking-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--brand-blue);
+        }
+
+        /* Feature Boxes */
+        .feature-box {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid var(--border-color);
+            transition: 0.3s;
             text-align: center;
         }
-
-        .hero-title { 
-            font-size: clamp(1.4rem, 3.5vw, 2.4rem); 
-            font-weight: 800; 
-            line-height: 1.25; 
-            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+        .feature-box:hover {
+            transform: translateY(-5px);
+            border-color: var(--brand-blue);
+        }
+        .feature-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: #e0f2fe;
+            color: var(--brand-blue);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 12px;
         }
 
-        /* Search Widget */
-        .holidify-search-widget {
+        /* Fleet & Packages Cards */
+        .custom-card {
             background: #ffffff;
             border-radius: 14px;
-            padding: 18px 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            margin-top: -30px;
-            position: relative;
-            z-index: 10;
-            border: 1px solid var(--border);
-        }
-
-        /* Cards & Components */
-        .holidify-card {
-            background: #ffffff;
-            border-radius: 14px;
+            border: 1px solid var(--border-color);
             overflow: hidden;
-            border: 1px solid var(--border);
-            transition: transform 0.2s ease;
+            transition: 0.3s;
             height: 100%;
+        }
+        .custom-card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            transform: translateY(-4px);
+        }
+        .card-img-wrap {
             position: relative;
+            height: 180px;
+            overflow: hidden;
         }
-        .holidify-card:hover { transform: translateY(-4px); }
-        .holidify-card-img { height: 160px; object-fit: cover; width: 100%; }
-        .badge-price { position: absolute; top: 12px; right: 12px; background: var(--orange); color: #fff; font-weight: 700; font-size: 12px; padding: 4px 12px; border-radius: 50px; }
+        .card-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .card-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: var(--brand-yellow);
+            color: #000;
+            font-weight: 700;
+            font-size: 12px;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
 
-        .btn-holidify-primary { 
-            background: var(--primary); 
-            color: #ffffff !important; 
-            border: none; 
-            padding: 9px 18px; 
-            font-weight: 700; 
+        /* Buttons */
+        .btn-brand-primary {
+            background-color: var(--brand-blue);
+            color: #ffffff;
+            font-weight: 700;
+            border: none;
+            padding: 10px 24px;
             border-radius: 8px;
-            text-decoration: none; 
-            display: inline-block; 
+            transition: 0.2s;
         }
-        .btn-holidify-primary:hover { background: var(--primary-hover); }
+        .btn-brand-primary:hover {
+            background-color: #0369a1;
+            color: #ffffff;
+        }
+        .btn-brand-green {
+            background-color: var(--brand-green);
+            color: #ffffff;
+            font-weight: 700;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
 
-        footer { background: var(--dark); color: #94a3b8; padding: 35px 0 20px; }
+        /* Footer */
+        footer {
+            background: var(--brand-dark);
+            color: #94a3b8;
+            padding: 40px 0 20px;
+        }
+        footer h5 { color: #ffffff; font-weight: 700; margin-bottom: 15px; }
         footer a { color: #cbd5e1; text-decoration: none; }
+        footer a:hover { color: var(--brand-blue); }
     </style>
-
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R94QN6RWF3"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-R94QN6RWF3');
-    </script>
 </head>
 <body>
+<!-- Top Contact Bar -->
+    <div class="top-bar d-none d-md-block">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <span class="me-3"><i class="fa-solid fa-phone text-warning me-1"></i> <a href="tel:+919643586598">+91 9643586598</a></span>
+                <span><i class="fa-solid fa-envelope text-warning me-1"></i> info@4dtaxiservice.in</span>
+            </div>
+            <div>
+                <span class="me-3"><i class="fa-solid fa-shield-halved text-success me-1"></i> GSTIN: 05ACHPO5076B1ZS</span>
+                <span><i class="fa-solid fa-location-dot text-warning me-1"></i> Dehradun, Uttarakhand</span>
+            </div>
+        </div>
+    </div>
 
     <!-- Header / Navbar -->
-    <header>
-        <nav class="navbar navbar-expand-lg sticky-top py-2">
-            <div class="container">
-                <a class="navbar-brand d-flex align-items-center fw-bold" href="index.html">
-                    <img src="images/logo.png" alt="4D Tour & Travel logo" class="brand-logo-img me-2" width="180" height="46">
-                    <div>
-                        <span class="d-block fs-5 lh-1 text-dark fw-bold">4D TOUR & TRAVEL</span>
-                        <small class="text-success fw-bold" style="font-size: 10px;">WE MAKE MEMORIES • ESTD. 2023</small>
-                    </div>
-                </a>
-                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navMenu">
-                    <ul class="navbar-nav ms-auto gap-2 align-items-center">
-                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
-                        <li class="nav-item"><a class="nav-link" href="fleet.html">Our Fleet</a></li>
-                        <li class="nav-item"><a class="nav-link" href="vehicle-services.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
-                    </ul>
-                    <a href="https://wa.me/919643586598?text=Hello%204D%20Tour%20%26%20Travel,%20I%20want%20to%20book%20a%20taxi." class="btn-holidify-primary ms-lg-3 btn-sm"><i class="fab fa-whatsapp me-1"></i> Instant Book</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Hero Banner Slider Section -->
-    <section class="hero-banner-wrapper">
-        <div id="heroBannerCarousel" class="carousel slide carousel-fade hero-carousel" data-bs-ride="carousel" data-bs-interval="3500">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="images/pkg-01.jpg" alt="4D Tour & Travel Banner 1" onerror="this.src='https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80'">
-                </div>
-                <div class="carousel-item">
-                    <img src="images/pkg-02.jpg" alt="4D Tour & Travel Banner 2" onerror="this.src='https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?auto=format&fit=crop&w=1200&q=80'">
-                </div>
-                <div class="carousel-item">
-                    <img src="images/pkg-03.jpg" alt="4D Tour & Travel Banner 3" onerror="this.src='https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1200&q=80'">
-                </div>
-            </div>
-            
-            <button class="carousel-control-prev" type="button" data-bs-target="#heroBannerCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center fw-bold" href="index.html">
+                <img src="images/logo.png" alt="4D Tour & Travel Logo" onerror="this.src='https://via.placeholder.com/150x45?text=4D+TRAVELS'">
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#heroBannerCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto gap-1">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="packages.html">Tour Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fleet.html">Our Cabs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="vehicle-services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+                <a href="https://wa.me/919643586598?text=Hello%204D%20Tour%20%26%20Travel,%20I%20want%20to%20book%20a%20cab." class="btn btn-brand-green ms-lg-3 btn-sm"><i class="fab fa-whatsapp me-1"></i> WhatsApp Booking</a>
+            </div>
         </div>
+    </nav>
 
-        <div class="hero-overlay-content">
-            <span class="badge bg-white text-dark px-3 py-1 rounded-pill fw-bold mb-2 small"><i class="fa-solid fa-mountain-sun text-warning me-1"></i> EXPLORE UTTARAKHAND</span>
-            <h1 class="hero-title mb-2">Taxi Service in Dehradun & Tour Packages</h1>
-            <p class="lead opacity-90 mx-auto fs-6 mb-0 d-none d-sm-block">24/7 airport transfers, outstation cabs & Char Dham Yatra.</p>
+    <!-- Kartavya Style Hero Banner + Booking Form -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-7">
+                    <span class="badge bg-warning text-dark fw-bold px-3 py-2 rounded-pill mb-3"><i class="fa-solid fa-star me-1"></i> BEST TAXI SERVICE IN DEHRADUN</span>
+                    <h1 class="hero-title mb-3">Reliable & Affordable Taxi Service in Dehradun</h1>
+                    <p class="lead opacity-90 mb-4">Book Airport Transfers, Outstation Cabs & Char Dham Yatra Tour Packages with local experienced drivers.</p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="tel:+919643586598" class="btn btn-warning btn-lg fw-bold text-dark"><i class="fa-solid fa-phone me-2"></i> Call +91 9643586598</a>
+                        <a href="packages.html" class="btn btn-outline-light btn-lg fw-bold"><i class="fa-solid fa-compass me-2"></i> View Packages</a>
+                    </div>
+                </div>
+
+                <!-- Quick Booking Card -->
+                <div class="col-lg-5">
+                    <div class="booking-card">
+                        <h3 class="mb-3 text-center"><i class="fa-solid fa-taxi me-2"></i> Quick Taxi Fare Inquiry</h3>
+                        <form onsubmit="return handleKartavyaInquiry();">
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold">Pickup Location</label>
+                                <input type="text" id="k_from" class="form-control" placeholder="e.g. Dehradun Airport / Railway Station" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold">Drop Destination</label>
+                                <input type="text" id="k_to" class="form-control" placeholder="e.g. Mussoorie / Rishikesh / Kedarnath" required>
+                            </div>
+                            <div class="row g-2 mb-3">
+                                <div class="col-6">
+                                    <label class="form-label small fw-bold">Select Vehicle</label>
+                                    <select id="k_fleet" class="form-select">
+                                        <option value="Swift Dzire">Swift Dzire (Sedan)</option>
+                                        <option value="Ertiga">Ertiga (6 Seater)</option>
+                                        <option value="Innova Crysta">Innova Crysta (Luxury)</option>
+                                        <option value="Tempo Traveller">Tempo Traveller</option>
+                                    </select>
+                                </div>
+                                <div class="col-6">
+                                    <label class="form-label small fw-bold">Travel Date</label>
+                                    <input type="date" id="k_date" class="form-control" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-brand-primary w-100 py-2"><i class="fab fa-whatsapp me-2"></i> Check Rate on WhatsApp</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Search Box Widget -->
-    <div class="container">
-        <div class="holidify-search-widget">
-            <form onsubmit="return handleQuickInquiry();" class="row g-3 align-items-center">
-                <div class="col-md-3">
-                    <label class="form-label small fw-bold mb-1">Pickup Location</label>
-                    <input type="text" id="p_from" class="form-control form-control-sm" placeholder="Dehradun / Airport" required>
-                </div>
-                <div class="col-md-3">
-                    <label class="form-label small fw-bold mb-1">Destination</label>
-                    <input type="text" id="p_to" class="form-control form-control-sm" placeholder="Mussoorie / Kedarnath" required>
-                </div>
-                <div class="col-md-3">
-                    <label class="form-label small fw-bold mb-1">Vehicle</label>
-                    <select id="p_fleet" class="form-select form-select-sm">
-                        <option value="Innova Crysta">Innova Crysta</option>
-                        <option value="Swift Dzire">Swift Dzire</option>
-                        <option value="Force Urbania">Force Urbania</option>
-                        <option value="Ertiga">Ertiga</option>
-                    </select>
-                </div>
-                <div class="col-md-3">
-                    <label class="form-label d-none d-md-block mb-1">&nbsp;</label>
-                    <button type="submit" class="btn-holidify-primary w-100 text-uppercase fw-bold"><i class="fab fa-whatsapp me-1"></i> Get Quote</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- Trust Badges -->
-    <div class="bg-white py-2 border-bottom mt-3">
-        <div class="container d-flex justify-content-around flex-wrap text-center gap-2 small fw-bold text-dark">
-            <span><i class="fa-solid fa-file-invoice-dollar text-success me-1"></i> GSTIN: 05ACHPO5076B1ZS</span>
-            <span><i class="fa-solid fa-building-columns text-primary me-1"></i> MSME Registered</span>
-            <span><i class="fa-solid fa-shield-halved text-success me-1"></i> Zero Hidden Charges</span>
-            <span><i class="fa-solid fa-user-check text-primary me-1"></i> Local Drivers</span>
-        </div>
-    </div>
-
-    <!-- Packages Section -->
-    <section class="container py-4">
-        <div class="d-flex justify-content-between align-items-center mb-3">
-            <div>
-                <span class="text-success fw-bold small text-uppercase d-block">Top Recommended</span>
-                <h2 class="fw-bold fs-4 text-dark mb-0">Popular Packages & Taxi Routes</h2>
+    <!-- Why Choose Us Grid -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold fs-3">Why Choose 4D Tour & Travel?</h2>
+                <p class="text-muted">Your trusted travel partner across Uttarakhand mountain routes</p>
             </div>
-            <a href="packages.html" class="text-success text-decoration-none fw-bold small">View All Packages &rarr;</a>
-        </div>
-        
-        <div class="row g-3">
-            <div class="col-md-4">
-                <div class="holidify-card">
-                    <span class="badge-price">Fixed Price</span>
-                    <img src="images/pkg-02.jpg" loading="lazy" class="holidify-card-img" alt="Dehradun to Mussoorie Taxi" onerror="this.src='images/pkg-01.jpg'">
-                    <div class="p-3">
-                        <h3 class="h6 fw-bold text-dark mb-1">Dehradun to Mussoorie Cab</h3>
-                        <p class="text-muted small mb-3">Kempty Falls, Mall Road & Sightseeing.</p>
-                        <a href="https://wa.me/919643586598?text=Book%20Mussoorie%20Taxi" class="btn btn-sm btn-outline-success w-100 fw-bold">Book Now</a>
+            <div class="row g-3">
+                <div class="col-md-3 col-6">
+                    <div class="feature-box">
+                        <div class="feature-icon"><i class="fa-solid fa-clock"></i></div>
+                        <h5 class="fw-bold fs-6 mb-1">On-Time Pickup</h5>
+                        <p class="text-muted small mb-0">24/7 punctual service guaranteed.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="feature-box">
+                        <div class="feature-icon"><i class="fa-solid fa-user-shield"></i></div>
+                        <h5 class="fw-bold fs-6 mb-1">Verified Drivers</h5>
+                        <p class="text-muted small mb-0">Experienced local mountain drivers.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="feature-box">
+                        <div class="feature-icon"><i class="fa-solid fa-car-clean"></i></div>
+                        <h5 class="fw-bold fs-6 mb-1">Clean & Sanitized</h5>
+                        <p class="text-muted small mb-0">Well-maintained commercial cabs.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="feature-box">
+                        <div class="feature-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                        <h5 class="fw-bold fs-6 mb-1">Transparent Pricing</h5>
+                        <p class="text-muted small mb-0">No hidden costs or extra charges.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="holidify-card">
-                    <span class="badge-price">Best Seller</span>
-                    <img src="images/pkg-03.jpg" loading="lazy" class="holidify-card-img" alt="Char Dham Yatra Taxi" onerror="this.src='images/pkg-01.jpg'">
-                    <div class="p-3">
-                        <h3 class="h6 fw-bold text-dark mb-1">Char Dham Yatra Package</h3>
-                        <p class="text-muted small mb-3">Kedarnath, Badrinath, Gangotri & Yamunotri.</p>
-                        <a href="https://wa.me/919643586598?text=Inquire%20Char%20Dham" class="btn btn-sm btn-outline-success w-100 fw-bold">Inquire Package</a>
+        </div>
+    </section>
+
+    <!-- Our Fleet / Cabs Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <span class="text-primary fw-bold small text-uppercase">Commercial Fleet</span>
+                    <h2 class="fw-bold fs-3 mb-0">Our Available Vehicles</h2>
+                </div>
+                <a href="fleet.html" class="btn btn-outline-primary btn-sm fw-bold">View All Vehicles &rarr;</a>
+            </div>
+            <div class="row g-4">
+                <!-- Vehicle 1 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="custom-card">
+                        <div class="card-img-wrap">
+                            <span class="card-badge">4+1 Seater</span>
+                            <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=600&q=80" alt="Swift Dzire Taxi">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="h6 fw-bold mb-1">Swift Dzire</h3>
+                            <p class="text-muted small mb-2"><i class="fa-solid fa-snowflake text-info me-1"></i> AC Sedan | Local & Outstation</p>
+                            <a href="https://wa.me/919643586598?text=Book%20Dzire%20Taxi" class="btn btn-sm btn-brand-primary w-100">Book Now</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="holidify-card">
-                    <span class="badge-price">24/7 Service</span>
-                    <img src="images/pkg-04.jpg" loading="lazy" class="holidify-card-img" alt="Airport Taxi Dehradun" onerror="this.src='images/pkg-01.jpg'">
-                    <div class="p-3">
-                        <h3 class="h6 fw-bold text-dark mb-1">Jolly Grant Airport Taxi</h3>
-                        <p class="text-muted small mb-3">On-time pickup & drop to all cities.</p>
-                        <a href="https://wa.me/919643586598?text=Book%20Airport%20Taxi" class="btn btn-sm btn-outline-success w-100 fw-bold">Book Airport Taxi</a>
+                <!-- Vehicle 2 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="custom-card">
+                        <div class="card-img-wrap">
+                            <span class="card-badge">6+1 Seater</span>
+                            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80" alt="Ertiga Cab">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="h6 fw-bold mb-1">Maruti Ertiga</h3>
+                            <p class="text-muted small mb-2"><i class="fa-solid fa-snowflake text-info me-1"></i> AC MUV | Family Trips</p>
+                            <a href="https://wa.me/919643586598?text=Book%20Ertiga%20Taxi" class="btn btn-sm btn-brand-primary w-100">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Vehicle 3 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="custom-card">
+                        <div class="card-img-wrap">
+                            <span class="card-badge">6+1 Luxury</span>
+                            <img src="https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?auto=format&fit=crop&w=600&q=80" alt="Innova Crysta">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="h6 fw-bold mb-1">Innova Crysta</h3>
+                            <p class="text-muted small mb-2"><i class="fa-solid fa-snowflake text-info me-1"></i> Premium SUV | Mountain Journeys</p>
+                            <a href="https://wa.me/919643586598?text=Book%20Innova%20Crysta" class="btn btn-sm btn-brand-primary w-100">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Vehicle 4 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="custom-card">
+                        <div class="card-img-wrap">
+                            <span class="card-badge">12-26 Seater</span>
+                            <img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=600&q=80" alt="Force Urbania">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="h6 fw-bold mb-1">Force Urbania / Traveller</h3>
+                            <p class="text-muted small mb-2"><i class="fa-solid fa-snowflake text-info me-1"></i> Large Groups | Char Dham</p>
+                            <a href="https://wa.me/919643586598?text=Book%20Tempo%20Traveller" class="btn btn-sm btn-brand-primary w-100">Book Now</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -297,36 +382,52 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container text-center">
-            <div class="d-flex align-items-center justify-content-center mb-2">
-                <img src="images/logo.png" alt="4D Tour & Travel logo" class="brand-logo-img me-2" width="180" height="46">
-                <div class="text-start">
-                    <span class="fw-bold fs-6 text-white d-block">4D TOUR & TRAVEL</span>
-                    <small class="text-success fw-bold" style="font-size: 10px;">WE MAKE MEMORIES</small>
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-md-4">
+                    <h5 class="text-white fw-bold mb-3">4D TOUR & TRAVEL</h5>
+                    <p class="small">Leading taxi service provider in Dehradun offering reliable outstation cabs, Jolly Grant Airport pickups, and Uttarakhand tour packages.</p>
+                    <p class="small mb-0"><strong>GSTIN:</strong> 05ACHPO5076B1ZS | MSME Registered</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="index.html">Home</a></li>
+                        <li class="mb-2"><a href="packages.html">Tour Packages</a></li>
+                        <li class="mb-2"><a href="fleet.html">Our Fleet & Rates</a></li>
+                        <li class="mb-2"><a href="vehicle-services.html">RTO & Travel Services</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Info</h5>
+                    <p class="small mb-2"><i class="fa-solid fa-location-dot me-2 text-warning"></i> Dehradun, Uttarakhand - 248001</p>
+                    <p class="small mb-2"><i class="fa-solid fa-phone me-2 text-warning"></i> +91 9643586598</p>
+                    <p class="small mb-2"><i class="fa-solid fa-envelope me-2 text-warning"></i> info@4dtaxiservice.in</p>
                 </div>
             </div>
-            <p class="text-light small mb-2"><strong>GSTIN:</strong> 05ACHPO5076B1ZS | <strong>MSME Registered</strong></p>
-            <p class="text-muted small mb-0">&copy; 2026 4D Tour and Travel. All Rights Reserved.</p>
+            <hr class="border-secondary">
+            <p class="text-center small mb-0">&copy; 2026 4D Tour and Travel. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- Mobile Bottom Action Bar -->
+    <!-- Mobile Bottom Fixed Buttons -->
     <div class="d-lg-none fixed-bottom bg-white p-2 d-flex justify-content-around shadow border-top" style="z-index: 9999;">
         <a href="tel:+919643586598" class="btn btn-warning w-45 fw-bold text-dark btn-sm"><i class="fa fa-phone me-1"></i> Call Now</a>
-        <a href="https://wa.me/919643586598?text=Hello%204D%20Tour%20%26%20Travel,%20I%20want%20to%20book%20a%20taxi." class="btn btn-success w-45 fw-bold btn-sm"><i class="fab fa-whatsapp me-1"></i> WhatsApp</a>
+        <a href="https://wa.me/919643586598?text=Hello%204D%20Tour%20%26%20Travel,%20I%20want%20to%20book%20a%20cab." class="btn btn-success w-45 fw-bold btn-sm"><i class="fab fa-whatsapp me-1"></i> WhatsApp</a>
     </div>
 
-    <!-- Bootstrap JS -->
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-    function handleQuickInquiry() {
-        var from = document.getElementById('p_from').value;
-        var to = document.getElementById('p_to').value;
-        var fleet = document.getElementById('p_fleet').value;
-        var msg = "Hello 4D Tour & Travel, I want to inquiry for taxi:%0AFrom: " + encodeURIComponent(from) + "%0ATo: " + encodeURIComponent(to) + "%0AFleet: " + encodeURIComponent(fleet);
-        window.open("https://wa.me/919643586598?text=" + msg, '_blank');
-        return false;
-    }
+        function handleKartavyaInquiry() {
+            var from = document.getElementById('k_from').value;
+            var to = document.getElementById('k_to').value;
+            var fleet = document.getElementById('k_fleet').value;
+            var date = document.getElementById('k_date').value;
+            var msg = "Hello 4D Tour & Travel, I need taxi fare inquiry:%0APickup: " + encodeURIComponent(from) + "%0ADrop: " + encodeURIComponent(to) + "%0AVehicle: " + encodeURIComponent(fleet) + "%0ADate: " + encodeURIComponent(date);
+            window.open("https://wa.me/919643586598?text=" + msg, '_blank');
+            return false;
+        }
     </script>
 </body>
 </html>
