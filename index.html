@@ -14,12 +14,15 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://4dtaxiservice.in/">
 
-    <!-- Fonts & CSS Dependencies -->
+    <!-- Fonts & External CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <!-- Your Custom Project Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 
     <style>
         :root {
@@ -221,7 +224,7 @@
     </style>
 </head>
 <body>
-    <!-- Top Contact Bar -->
+<!-- Top Contact Bar -->
     <div class="top-bar d-none d-md-block">
         <div class="container d-flex justify-content-between align-items-center">
             <div>
@@ -236,7 +239,7 @@
         </div>
     </div>
 
-    <!-- Header / Navbar -->
+    <!-- Header / Navbar linked to your exact HTML files -->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center fw-bold" href="index.html">
@@ -248,11 +251,11 @@
             <div class="collapse navbar-collapse" id="mainNav">
                 <ul class="navbar-nav ms-auto gap-1">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#fleet">Our Cabs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="package.html">Tour Packages</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#pricing">Fare Rates</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="vehicle-services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fleet.html">Our Cabs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="packages.html">Tour Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="online-service.html">Cyber Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
                 </ul>
                 <a href="https://wa.me/919643586598?text=Hello%204D%20Tour%20%26%20Travel,%20I%20want%20to%20book%20a%20taxi." class="btn btn-brand-green ms-lg-3 btn-sm"><i class="fab fa-whatsapp me-1"></i> Instant Booking</a>
             </div>
@@ -260,7 +263,7 @@
     </nav>
 
     <!-- Auto Sliding Hero Banner Carousel -->
-    <div id="heroBannerCarousel" class="carousel slide carousel-fade hero-carousel" data-bs-ride="carousel" data-bs-interval="4000">
+    <div id="heroBannerCarousel" class="carousel slide carousel-fade hero-carousel" data-bs-ride="carousel" data-bs-interval="3500">
         <!-- Carousel Indicators -->
         <div class="carousel-indicators mb-4">
             <button type="button" data-bs-target="#heroBannerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -280,7 +283,7 @@
                             
                             <div class="d-flex gap-3 flex-wrap">
                                 <a href="tel:+919643586598" class="btn btn-warning btn-lg fw-bold text-dark"><i class="fa-solid fa-phone me-2"></i> Call Now: +91 9643586598</a>
-                                <a href="package.html" class="btn btn-outline-light btn-lg fw-bold"><i class="fa-solid fa-compass me-2"></i> Explore Packages</a>
+                                <a href="packages.html" class="btn btn-outline-light btn-lg fw-bold"><i class="fa-solid fa-compass me-2"></i> Explore Packages</a>
                             </div>
                         </div>
 
@@ -340,7 +343,7 @@
                             
                             <div class="d-flex gap-3 flex-wrap">
                                 <a href="tel:+919643586598" class="btn btn-warning btn-lg fw-bold text-dark"><i class="fa-solid fa-phone me-2"></i> Call Now: +91 9643586598</a>
-                                <a href="package.html" class="btn btn-outline-light btn-lg fw-bold"><i class="fa-solid fa-compass me-2"></i> Explore Packages</a>
+                                <a href="packages.html" class="btn btn-outline-light btn-lg fw-bold"><i class="fa-solid fa-compass me-2"></i> Explore Packages</a>
                             </div>
                         </div>
                     </div>
@@ -358,7 +361,7 @@
                             
                             <div class="d-flex gap-3 flex-wrap">
                                 <a href="tel:+919643586598" class="btn btn-warning btn-lg fw-bold text-dark"><i class="fa-solid fa-phone me-2"></i> Call Now: +91 9643586598</a>
-                                <a href="package.html" class="btn btn-outline-light btn-lg fw-bold"><i class="fa-solid fa-compass me-2"></i> Explore Packages</a>
+                                <a href="packages.html" class="btn btn-outline-light btn-lg fw-bold"><i class="fa-solid fa-compass me-2"></i> Explore Packages</a>
                             </div>
                         </div>
                     </div>
@@ -366,7 +369,7 @@
             </div>
         </div>
 
-        <!-- Controls -->
+        <!-- Carousel Navigation Controls -->
         <button class="carousel-control-prev" type="button" data-bs-target="#heroBannerCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
@@ -400,8 +403,9 @@
             </div>
         </div>
     </div>
+
     <!-- Services Section -->
-    <section id="services" class="py-5 bg-white">
+    <section class="py-5 bg-white">
         <div class="container">
             <div class="text-center mb-5">
                 <span class="text-primary fw-bold text-uppercase small">What We Offer</span>
@@ -448,7 +452,7 @@
                 <div class="col-md-4 col-sm-6">
                     <div class="service-card">
                         <div class="service-icon"><i class="fa-solid fa-file-lines"></i></div>
-                        <h3 class="h6 fw-bold">RTO & Vehicle Services</h3>
+                        <h3 class="h6 fw-bold">RTO & Cyber Services</h3>
                         <p class="text-muted small mb-0">Assistance with commercial tax payment, state border permit, online challan clearance, and travel paperwork under 4D Cyber Hub.</p>
                     </div>
                 </div>
@@ -456,75 +460,8 @@
         </div>
     </section>
 
-    <!-- Commercial Fleet Section -->
-    <section id="fleet" class="py-5">
-        <div class="container">
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <div>
-                    <span class="text-primary fw-bold small text-uppercase">Commercial Fleet</span>
-                    <h2 class="fw-bold fs-3 mb-0">Choose Your Vehicle</h2>
-                </div>
-                <a href="tel:+919643586598" class="btn btn-outline-primary btn-sm fw-bold"><i class="fa-solid fa-phone me-1"></i> Call Fleet Manager</a>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-md-3 col-sm-6">
-                    <div class="custom-card">
-                        <div class="card-img-wrap">
-                            <span class="card-badge">4+1 Seater</span>
-                            <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=600&q=80" alt="Maruti Swift Dzire Taxi Dehradun">
-                        </div>
-                        <div class="p-3">
-                            <h3 class="h6 fw-bold mb-1">Maruti Swift Dzire</h3>
-                            <p class="text-muted small mb-2"><i class="fa-solid fa-check text-success me-1"></i> AC Sedan | 2 Bags | Clean Interiors</p>
-                            <a href="https://wa.me/919643586598?text=Book%20Swift%20Dzire%20Taxi" class="btn btn-sm btn-brand-primary w-100">Book Dzire Taxi</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="custom-card">
-                        <div class="card-img-wrap">
-                            <span class="card-badge">6+1 Seater</span>
-                            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80" alt="Maruti Ertiga Taxi Dehradun">
-                        </div>
-                        <div class="p-3">
-                            <h3 class="h6 fw-bold mb-1">Maruti Ertiga / XL6</h3>
-                            <p class="text-muted small mb-2"><i class="fa-solid fa-check text-success me-1"></i> AC MUV | 4 Luggage Bags</p>
-                            <a href="https://wa.me/919643586598?text=Book%20Ertiga%20Taxi" class="btn btn-sm btn-brand-primary w-100">Book Ertiga Cab</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="custom-card">
-                        <div class="card-img-wrap">
-                            <span class="card-badge">6+1 Luxury</span>
-                            <img src="https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?auto=format&fit=crop&w=600&q=80" alt="Innova Crysta Taxi Dehradun">
-                        </div>
-                        <div class="p-3">
-                            <h3 class="h6 fw-bold mb-1">Toyota Innova Crysta</h3>
-                            <p class="text-muted small mb-2"><i class="fa-solid fa-check text-success me-1"></i> Premium AC SUV | Reclining Seats</p>
-                            <a href="https://wa.me/919643586598?text=Book%20Innova%20Crysta" class="btn btn-sm btn-brand-primary w-100">Book Innova Crysta</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="custom-card">
-                        <div class="card-img-wrap">
-                            <span class="card-badge">12-26 Seater</span>
-                            <img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=600&q=80" alt="Force Urbania Tempo Traveller Dehradun">
-                        </div>
-                        <div class="p-3">
-                            <h3 class="h6 fw-bold mb-1">Force Urbania / Traveller</h3>
-                            <p class="text-muted small mb-2"><i class="fa-solid fa-check text-success me-1"></i> Luxury Group Bus | Pushback Seats</p>
-                            <a href="https://wa.me/919643586598?text=Book%20Tempo%20Traveller" class="btn btn-sm btn-brand-primary w-100">Book Urbania / Traveller</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-<!-- Popular Routes Fare Rate Table -->
-    <section id="pricing" class="py-5 bg-white">
+    <!-- Popular Routes Fare Rate Table -->
+    <section class="py-5 bg-white border-top">
         <div class="container">
             <div class="text-center mb-4">
                 <span class="text-primary fw-bold text-uppercase small">Estimated Taxi Rates</span>
@@ -579,48 +516,6 @@
         </div>
     </section>
 
-    <!-- FAQ Accordion -->
-    <section id="faq" class="py-5">
-        <div class="container">
-            <div class="text-center mb-5">
-                <span class="text-primary fw-bold text-uppercase small">Got Questions?</span>
-                <h2 class="fw-bold fs-3">Frequently Asked Questions</h2>
-            </div>
-
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="accordion" id="faqAccordion">
-                        <div class="accordion-item mb-2 border rounded">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                                    How do I book a taxi with 4D Tour & Travel?
-                                </button>
-                            </h2>
-                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted small">
-                                    You can easily book a cab by calling us directly at +91 9643586598 or sending your travel details on WhatsApp. Our booking team confirms vehicle availability instantly.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item border rounded">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                                    Do you provide 24/7 airport taxi service for Jolly Grant (DED)?
-                                </button>
-                            </h2>
-                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted small">
-                                    Yes, we operate round-the-clock airport transfer cabs. Even for late night or early morning flights, our driver arrives 15 minutes before your pickup time.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -631,11 +526,13 @@
                     <p class="small text-white mb-0"><strong>GSTIN:</strong> 05ACHPO5076B1ZS | MSME Registered</p>
                 </div>
                 <div class="col-md-4">
-                    <h5>Popular Links</h5>
+                    <h5>Quick Navigation</h5>
                     <ul class="list-unstyled small">
-                        <li class="mb-2"><a href="package.html">Tour Packages</a></li>
-                        <li class="mb-2"><a href="#services">Airport Taxi Service</a></li>
-                        <li class="mb-2"><a href="#fleet">Our Cabs</a></li>
+                        <li class="mb-2"><a href="packages.html">Tour Packages</a></li>
+                        <li class="mb-2"><a href="fleet.html">Our Fleet & Cabs</a></li>
+                        <li class="mb-2"><a href="vehicle-services.html">Vehicle Services</a></li>
+                        <li class="mb-2"><a href="online-service.html">Online & RTO Services</a></li>
+                        <li class="mb-2"><a href="faq.html">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
@@ -652,13 +549,13 @@
         </div>
     </footer>
 
-    <!-- Mobile Sticky Buttons -->
+    <!-- Mobile Sticky Call Buttons -->
     <div class="d-lg-none fixed-bottom bg-white p-2 d-flex justify-content-around shadow border-top" style="z-index: 9999;">
         <a href="tel:+919643586598" class="btn btn-warning w-45 fw-bold text-dark btn-sm"><i class="fa fa-phone me-1"></i> Call Now</a>
         <a href="https://wa.me/919643586598?text=Hello%204D%20Tour%20%26%20Travel,%20I%20want%20to%20book%20a%20taxi." class="btn btn-success w-45 fw-bold btn-sm"><i class="fab fa-whatsapp me-1"></i> WhatsApp</a>
     </div>
 
-    <!-- Bootstrap Script for Carousel Animation -->
+    <!-- Bootstrap JS Bundle for Carousel Animation -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         function handleFullInquiry() {
