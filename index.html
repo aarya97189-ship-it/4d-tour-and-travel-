@@ -238,28 +238,27 @@
             </div>
         </div>
     </div>
-<!-- Header / Navbar with Company Logo & Name -->
+<!-- Header / Navbar (Mobile Fixed: Logo & 3-Line Menu Side-by-Side) -->
 <nav class="navbar navbar-expand-lg bg-white sticky-top shadow-sm py-2">
-    <div class="container">
-        <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none" href="index.html">
-            <!-- Company Logo Image -->
-            <img src="images/logo.png" alt="4D Tour & Travel Logo" style="height: 48px; width: auto;" onerror="this.style.display='none'">
-            
-            <!-- Company Name & Tagline Text -->
+    <div class="container d-flex align-items-center justify-content-between flex-nowrap">
+        
+        <!-- Logo & Company Name (Left Side) -->
+        <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none m-0 p-0" href="index.html">
+            <img src="images/logo.png" alt="4D Tour & Travel Logo" style="height: 38px; width: auto;" onerror="this.style.display='none'">
             <div class="d-flex flex-column justify-content-center">
-                <span class="lh-1" style="font-size: 19px; font-weight: 800; color: #0f172a; letter-spacing: 0.5px;">4D TOUR & TRAVEL</span>
-                <span style="font-size: 9.5px; font-weight: 700; color: #16a34a; letter-spacing: 0.8px; margin-top: 3px;">WE MAKE MEMORIES • ESTD. 2023</span>
+                <span class="lh-1 text-nowrap" style="font-size: 16px; font-weight: 800; color: #0f172a; letter-spacing: 0.3px;">4D TOUR & TRAVEL</span>
+                <span class="text-nowrap" style="font-size: 8px; font-weight: 700; color: #16a34a; letter-spacing: 0.5px; margin-top: 2px;">WE MAKE MEMORIES • ESTD. 2023</span>
             </div>
         </a>
 
-        <!-- Mobile Toggle Button -->
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <!-- 3-Line Menu Button (Right Side) -->
+        <button class="navbar-toggler border-0 p-1 ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Navigation Links -->
+        <!-- Menu Links -->
         <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav ms-auto gap-1">
+            <ul class="navbar-nav ms-auto gap-1 pt-3 pt-lg-0">
                 <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="vehicle-services.html">Services</a></li>
                 <li class="nav-item"><a class="nav-link" href="fleet.html">Our Cabs</a></li>
@@ -267,8 +266,9 @@
                 <li class="nav-item"><a class="nav-link" href="online-service.html">Cyber Services</a></li>
                 <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
             </ul>
-            <a href="https://wa.me/919643586598?text=Hello%204D%20Tour%20%26%20Travel,%20I%20want%20to%20book%20a%20taxi." class="btn btn-success ms-lg-3 btn-sm fw-bold"><i class="fab fa-whatsapp me-1"></i> Instant Booking</a>
+            <a href="https://wa.me/919643586598?text=Hello%204D%20Tour%20%26%20Travel,%20I%20want%20to%20book%20a%20taxi." class="btn btn-success ms-lg-3 btn-sm fw-bold my-2 my-lg-0"><i class="fab fa-whatsapp me-1"></i> Instant Booking</a>
         </div>
+
     </div>
 </nav>
 
