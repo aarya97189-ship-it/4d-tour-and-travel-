@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="theme-color" content="#0284c7">
 
+    <!-- Favicon Tag -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
+
     <!-- SEO & Local GEO Tags -->
     <title>Taxi Service in Dehradun | 4D Tour & Travel | Airport & Outstation Cabs</title>
     <meta name="title" content="Taxi Service in Dehradun | 4D Tour & Travel | Airport & Outstation Cabs">
@@ -21,7 +25,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     
-    <!-- Your Custom Project Stylesheet -->
+    <!-- Custom Project Stylesheet -->
     <link rel="stylesheet" href="style.css">
 
     <style>
@@ -76,15 +80,24 @@
             position: relative;
             min-height: 520px;
         }
+        
+        /* Hero Carousel Vehicle Background Images */
         .hero-slide-1 {
-            background: linear-gradient(rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.82)), url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            background: linear-gradient(rgba(15, 23, 42, 0.80), rgba(15, 23, 42, 0.80)), url('images/Innova.jpg') center/cover no-repeat;
         }
         .hero-slide-2 {
-            background: linear-gradient(rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.82)), url('https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            background: linear-gradient(rgba(15, 23, 42, 0.80), rgba(15, 23, 42, 0.80)), url('images/urbania.jpg') center/cover no-repeat;
         }
         .hero-slide-3 {
-            background: linear-gradient(rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.82)), url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            background: linear-gradient(rgba(15, 23, 42, 0.80), rgba(15, 23, 42, 0.80)), url('images/tempotraveller.jpg') center/cover no-repeat;
         }
+        .hero-slide-4 {
+            background: linear-gradient(rgba(15, 23, 42, 0.80), rgba(15, 23, 42, 0.80)), url('images/dzire.jpg') center/cover no-repeat;
+        }
+        .hero-slide-5 {
+            background: linear-gradient(rgba(15, 23, 42, 0.80), rgba(15, 23, 42, 0.80)), url('images/ertiga.jpg') center/cover no-repeat;
+        }
+
         .hero-title {
             font-size: clamp(1.8rem, 4vw, 3.2rem);
             font-weight: 800;
@@ -125,7 +138,7 @@
             font-weight: 600;
         }
 
-        /* Cards & Service Boxes */
+        /* Service Cards */
         .service-card {
             background: #ffffff;
             border-radius: 14px;
@@ -152,7 +165,7 @@
             margin-bottom: 16px;
         }
 
-        /* Vehicle Cards */
+        /* Fleet Showcase Cards */
         .custom-card {
             background: #ffffff;
             border-radius: 14px;
@@ -167,8 +180,9 @@
         }
         .card-img-wrap {
             position: relative;
-            height: 190px;
+            height: 200px;
             overflow: hidden;
+            background-color: #f1f5f9;
         }
         .card-img-wrap img {
             width: 100%;
@@ -201,15 +215,6 @@
             background-color: #0369a1;
             color: #ffffff;
         }
-        .btn-brand-green {
-            background-color: var(--brand-green);
-            color: #ffffff;
-            font-weight: 700;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-        }
-        .btn-brand-green:hover { background-color: #15803d; color: #ffffff; }
 
         /* Table & Footer */
         .route-table th { background-color: var(--brand-dark); color: #ffffff; }
@@ -224,7 +229,8 @@
     </style>
 </head>
 <body>
-<!-- Top Contact Bar -->
+
+    <!-- Top Contact Bar -->
     <div class="top-bar d-none d-md-block">
         <div class="container d-flex justify-content-between align-items-center">
             <div>
@@ -238,56 +244,56 @@
             </div>
         </div>
     </div>
-<!-- Header / Navbar (Mobile Fixed: Logo & 3-Line Menu Side-by-Side) -->
-<nav class="navbar navbar-expand-lg bg-white sticky-top shadow-sm py-2">
-    <div class="container d-flex align-items-center justify-content-between flex-nowrap">
-        
-        <!-- Logo & Company Name (Left Side) -->
-        <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none m-0 p-0" href="index.html">
-            <img src="images/logo.png" alt="4D Tour & Travel Logo" style="height: 38px; width: auto;" onerror="this.style.display='none'">
-            <div class="d-flex flex-column justify-content-center">
-                <span class="lh-1 text-nowrap" style="font-size: 16px; font-weight: 800; color: #0f172a; letter-spacing: 0.3px;">4D TOUR & TRAVEL</span>
-                <span class="text-nowrap" style="font-size: 8px; font-weight: 700; color: #16a34a; letter-spacing: 0.5px; margin-top: 2px;">WE MAKE MEMORIES • ESTD. 2023</span>
+
+    <!-- Header / Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white sticky-top shadow-sm py-2">
+        <div class="container d-flex align-items-center justify-content-between flex-nowrap">
+            
+            <!-- Logo & Brand Header -->
+            <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none m-0 p-0" href="index.html">
+                <img src="images/logo.png" alt="4D Tour & Travel Logo" style="height: 42px; width: auto;" onerror="this.style.display='none'">
+                <div class="d-flex flex-column justify-content-center">
+                    <span class="lh-1 text-nowrap" style="font-size: 16px; font-weight: 800; color: #0f172a; letter-spacing: 0.3px;">4D TOUR & TRAVEL</span>
+                    <span class="text-nowrap" style="font-size: 8px; font-weight: 700; color: #16a34a; letter-spacing: 0.5px; margin-top: 2px;">WE MAKE MEMORIES • ESTD. 2023</span>
+                </div>
+            </a>
+
+            <button class="navbar-toggler border-0 p-1 ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto gap-1 pt-3 pt-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="vehicle-services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fleet.html">Our Cabs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="packages.html">Tour Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="online-service.html">Cyber Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                </ul>
+                <a href="https://wa.me/919643586598?text=Hello%204D%20Tour%20%26%20Travel,%20I%20want%20to%20book%20a%20taxi." class="btn btn-success ms-lg-3 btn-sm fw-bold my-2 my-lg-0"><i class="fab fa-whatsapp me-1"></i> Instant Booking</a>
             </div>
-        </a>
 
-        <!-- 3-Line Menu Button (Right Side) -->
-        <button class="navbar-toggler border-0 p-1 ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Menu Links -->
-        <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav ms-auto gap-1 pt-3 pt-lg-0">
-                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="vehicle-services.html">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="fleet.html">Our Cabs</a></li>
-                <li class="nav-item"><a class="nav-link" href="packages.html">Tour Packages</a></li>
-                <li class="nav-item"><a class="nav-link" href="online-service.html">Cyber Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
-            </ul>
-           <a href="https://wa.me/919643586598?text=Hello%204D%20Tour%20%26%20Travel,%20I%20want%20to%20book%20a%20taxi." class="btn btn-success ms-lg-3 btn-sm fw-bold my-2 my-lg-0"><i class="fab fa-whatsapp me-1"></i> Instant Booking</a>
         </div>
+    </nav>
 
-    </div>
-</nav>
-
-   <!-- Auto Sliding Hero Banner Carousel -->
+    <!-- Auto Sliding Hero Banner Carousel -->
     <div id="heroBannerCarousel" class="carousel slide carousel-fade hero-carousel" data-bs-ride="carousel" data-bs-interval="3500">
-        <!-- Carousel Indicators -->
         <div class="carousel-indicators mb-4">
             <button type="button" data-bs-target="#heroBannerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#heroBannerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#heroBannerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#heroBannerCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#heroBannerCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
         </div>
 
         <div class="carousel-inner">
-            <!-- Slide 1 -->
+            <!-- Slide 1: Innova -->
             <div class="carousel-item active hero-slide-1">
                 <div class="container">
                     <div class="row align-items-center g-4">
                         <div class="col-lg-7">
-                            <span class="badge bg-warning text-dark fw-bold px-3 py-2 rounded-pill mb-3"><i class="fa-solid fa-shield-halved me-1"></i> GOVT. REGISTERED TAXI SERVICE</span>
+                            <span class="badge bg-warning text-dark fw-bold px-3 py-2 rounded-pill mb-3"><i class="fa-solid fa-shield-halved me-1"></i> LUXURY INNOVA CRYSTA</span>
                             <h1 class="hero-title mb-3">Best Taxi Service in Dehradun & Outstation Cabs</h1>
                             <p class="lead text-light opacity-90 mb-4 fs-6">Looking for reliable cabs in Dehradun? We provide 24/7 Jolly Grant Airport Pickup & Drop, Outstation Trips to Delhi & Chandigarh, Mussoorie Sightseeing, and Char Dham Yatra Taxi.</p>
                             
@@ -297,7 +303,7 @@
                             </div>
                         </div>
 
-                        <!-- Fare Inquiry Widget -->
+                        <!-- Fare Estimation Form -->
                         <div class="col-lg-5">
                             <div class="booking-card">
                                 <h3 class="mb-2 text-center"><i class="fa-solid fa-taxi me-2"></i> Quick Taxi Fare Estimate</h3>
@@ -315,10 +321,11 @@
                                         <div class="col-6">
                                             <label class="form-label small fw-bold mb-1">Vehicle Type</label>
                                             <select id="hq_fleet" class="form-select form-select-sm">
-                                                <option value="Swift Dzire">Dzire (4 Seater)</option>
+                                                <option value="Swift Dzire">Swift Dzire (4 Seater)</option>
                                                 <option value="Ertiga">Ertiga (6 Seater)</option>
-                                                <option value="Innova Crysta">Innova Crysta (Luxury)</option>
-                                                <option value="Tempo Traveller">Urbania / Traveller</option>
+                                                <option value="Innova Crysta">Innova Crysta (7 Seater)</option>
+                                                <option value="Urbania">Force Urbania</option>
+                                                <option value="Tempo Traveller">Tempo Traveller</option>
                                             </select>
                                         </div>
                                         <div class="col-6">
@@ -342,44 +349,71 @@
                 </div>
             </div>
 
-            <!-- Slide 2 -->
+            <!-- Slide 2: Urbania -->
             <div class="carousel-item hero-slide-2">
                 <div class="container">
                     <div class="row align-items-center g-4">
                         <div class="col-lg-7">
-                            <span class="badge bg-info text-dark fw-bold px-3 py-2 rounded-pill mb-3"><i class="fa-solid fa-mountain me-1"></i> HILL STATION SPECIALIST</span>
-                            <h1 class="hero-title mb-3">Mussoorie & Dhanaulti Local Sightseeing Cabs</h1>
-                            <p class="lead text-light opacity-90 mb-4 fs-6">Explore Kempty Falls, Mall Road, Lal Tibba & Surkanda Devi with experienced hill drivers and sanitized luxury cabs at fixed affordable prices.</p>
-                            
+                            <span class="badge bg-info text-dark fw-bold px-3 py-2 rounded-pill mb-3"><i class="fa-solid fa-van-shuttle me-1"></i> FORCE URBANIA LUXURY VAN</span>
+                            <h1 class="hero-title mb-3">Premium Force Urbania for Group Trips & Corporate Tours</h1>
+                            <p class="lead text-light opacity-90 mb-4 fs-6">Experience ultimate luxury with pushback seats, ambient lighting, dual AC, and maximum luggage space for outstation family trips.</p>
                             <div class="d-flex gap-3 flex-wrap">
-                                <a href="tel:+919643586598" class="btn btn-warning btn-lg fw-bold text-dark"><i class="fa-solid fa-phone me-2"></i> Call Now: +91 9643586598</a>
-                                <a href="packages.html" class="btn btn-outline-light btn-lg fw-bold"><i class="fa-solid fa-compass me-2"></i> Explore Packages</a>
+                                <a href="tel:+919643586598" class="btn btn-warning btn-lg fw-bold text-dark"><i class="fa-solid fa-phone me-2"></i> Book Urbania Now</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Slide 3 -->
+            <!-- Slide 3: Tempo Traveller -->
             <div class="carousel-item hero-slide-3">
                 <div class="container">
                     <div class="row align-items-center g-4">
                         <div class="col-lg-7">
-                            <span class="badge bg-success text-white fw-bold px-3 py-2 rounded-pill mb-3"><i class="fa-solid fa-om me-1"></i> CHAR DHAM YATRA SPECIALIST</span>
-                            <h1 class="hero-title mb-3">Char Dham Yatra Tour Packages 2026</h1>
-                            <p class="lead text-light opacity-90 mb-4 fs-6">Customized taxi packages for Yamunotri, Gangotri, Kedarnath & Badrinath with commercial hill-permit vehicles & green-card certified local drivers.</p>
-                            
+                            <span class="badge bg-success text-white fw-bold px-3 py-2 rounded-pill mb-3"><i class="fa-solid fa-om me-1"></i> CHAR DHAM TEMPO TRAVELLER</span>
+                            <h1 class="hero-title mb-3">Tempo Traveller Rental for Char Dham Yatra</h1>
+                            <p class="lead text-light opacity-90 mb-4 fs-6">12, 17 & 26 Seater Luxury Tempo Travellers with mountain experienced drivers for Kedarnath, Badrinath, Gangotri & Yamunotri.</p>
                             <div class="d-flex gap-3 flex-wrap">
-                                <a href="tel:+919643586598" class="btn btn-warning btn-lg fw-bold text-dark"><i class="fa-solid fa-phone me-2"></i> Call Now: +91 9643586598</a>
-                                <a href="packages.html" class="btn btn-outline-light btn-lg fw-bold"><i class="fa-solid fa-compass me-2"></i> Explore Packages</a>
+                                <a href="tel:+919643586598" class="btn btn-warning btn-lg fw-bold text-dark"><i class="fa-solid fa-phone me-2"></i> Call: +91 9643586598</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+<!-- Slide 4: Dzire -->
+            <div class="carousel-item hero-slide-4">
+                <div class="container">
+                    <div class="row align-items-center g-4">
+                        <div class="col-lg-7">
+                            <span class="badge bg-primary text-white fw-bold px-3 py-2 rounded-pill mb-3"><i class="fa-solid fa-car me-1"></i> SWIFT DZIRE CAB</span>
+                            <h1 class="hero-title mb-3">Affordable Sedan Cabs for Airport & Local Drop</h1>
+                            <p class="lead text-light opacity-90 mb-4 fs-6">Book clean, AC Swift Dzire cabs at lowest prices for Jolly Grant Airport, Delhi drop, and Dehradun local sightseeing.</p>
+                            <div class="d-flex gap-3 flex-wrap">
+                                <a href="tel:+919643586598" class="btn btn-warning btn-lg fw-bold text-dark"><i class="fa-solid fa-phone me-2"></i> Book Dzire Cab</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: Ertiga -->
+            <div class="carousel-item hero-slide-5">
+                <div class="container">
+                    <div class="row align-items-center g-4">
+                        <div class="col-lg-7">
+                            <span class="badge bg-warning text-dark fw-bold px-3 py-2 rounded-pill mb-3"><i class="fa-solid fa-mountain-city me-1"></i> ERTIGA 6 SEATER MPV</span>
+                            <h1 class="hero-title mb-3">Mussoorie & Dhanaulti Hill Sightseeing</h1>
+                            <p class="lead text-light opacity-90 mb-4 fs-6">Explore Kempty Falls, Mall Road, Lal Tibba & Surkanda Devi in comfortable Ertiga cabs with experienced local drivers.</p>
+                            <div class="d-flex gap-3 flex-wrap">
+                                <a href="tel:+919643586598" class="btn btn-warning btn-lg fw-bold text-dark"><i class="fa-solid fa-phone me-2"></i> Book Ertiga Taxi</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <!-- Carousel Navigation Controls -->
         <button class="carousel-control-prev" type="button" data-bs-target="#heroBannerCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
@@ -390,7 +424,7 @@
         </button>
     </div>
 
-    <!-- Trust Stats Bar -->
+    <!-- Stats Bar -->
     <div class="trust-bar">
         <div class="container">
             <div class="row text-center g-3">
@@ -414,7 +448,110 @@
         </div>
     </div>
 
-    <!-- Services Section -->
+    <!-- OUR FLEET SHOWCASE SECTION -->
+    <section class="py-5 bg-light border-bottom">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="text-primary fw-bold text-uppercase small">Our Taxi Fleet</span>
+                <h2 class="fw-bold fs-3 text-dark">Choose From Our Wide Range Of Vehicles</h2>
+                <p class="text-muted mx-auto" style="max-width: 650px;">Well-maintained, commercial permit, GPS-enabled luxury cabs for all your travel needs.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Vehicle 1: Dzire -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="custom-card">
+                        <div class="card-img-wrap">
+                            <img src="images/dzire.jpg" alt="Swift Dzire Taxi Dehradun" onerror="this.src='https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=500&q=80'">
+                            <span class="card-badge">4 Seater</span>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="h5 fw-bold mb-2">Maruti Swift Dzire</h3>
+                            <p class="text-muted small mb-3">Ideal for Airport Pickups, Dehradun local rides & budget outstation drops.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">₹ 12 / km</span>
+                                <a href="https://wa.me/919643586598?text=I%20want%20to%20book%20Swift%20Dzire" class="btn btn-sm btn-outline-success fw-bold"><i class="fab fa-whatsapp me-1"></i> Book Dzire</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle 2: Ertiga -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="custom-card">
+                        <div class="card-img-wrap">
+                            <img src="images/ertiga.jpg" alt="Ertiga Taxi Dehradun" onerror="this.src='https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=500&q=80'">
+                            <span class="card-badge">6 Seater</span>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="h5 fw-bold mb-2">Maruti Ertiga MPV</h3>
+                            <p class="text-muted small mb-3">Perfect for small families visiting Mussoorie, Rishikesh & Haridwar sightseeing.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">₹ 16 / km</span>
+                                <a href="https://wa.me/919643586598?text=I%20want%20to%20book%20Ertiga" class="btn btn-sm btn-outline-success fw-bold"><i class="fab fa-whatsapp me-1"></i> Book Ertiga</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle 3: Innova -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="custom-card">
+                        <div class="card-img-wrap">
+                            <img src="images/Innova.jpg" alt="Innova Crysta Rental Dehradun" onerror="this.src='https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=500&q=80'">
+                            <span class="card-badge bg-danger">Luxury 7 Seater</span>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="h5 fw-bold mb-2">Toyota Innova / Crysta</h3>
+                            <p class="text-muted small mb-3">Premium choice for long outstation trips, hill tours, and VIP airport transfers.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">₹ 20 / km</span>
+                                <a href="https://wa.me/919643586598?text=I%20want%20to%20book%20Innova%20Crysta" class="btn btn-sm btn-outline-success fw-bold"><i class="fab fa-whatsapp me-1"></i> Book Innova</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle 4: Urbania -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="custom-card">
+                        <div class="card-img-wrap">
+                            <img src="images/urbania.jpg" alt="Force Urbania Dehradun" onerror="this.src='https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=500&q=80'">
+                            <span class="card-badge bg-info text-dark">VIP Luxury Van</span>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="h5 fw-bold mb-2">Force Urbania (Luxury Mini Van)</h3>
+                            <p class="text-muted small mb-3">Ultra luxury 10-17 seater van with pushback seats and spacious interior for high-end group tours.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">Best Rates Guaranteed</span>
+                                <a href="https://wa.me/919643586598?text=I%20want%20to%20book%20Force%20Urbania" class="btn btn-sm btn-outline-success fw-bold"><i class="fab fa-whatsapp me-1"></i> Book Urbania</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle 5: Tempo Traveller -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="custom-card">
+                        <div class="card-img-wrap">
+                            <img src="images/tempotraveller.jpg" alt="Tempo Traveller Dehradun" onerror="this.src='https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=500&q=80'">
+                            <span class="card-badge bg-success">12 - 26 Seater</span>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="h5 fw-bold mb-2">Tempo Traveller</h3>
+                            <p class="text-muted small mb-3">Spacious group vehicle specially tailored for Char Dham Yatra, weddings, and hill station tours.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">Group Package Available</span>
+                                <a href="https://wa.me/919643586598?text=I%20want%20to%20book%20Tempo%20Traveller" class="btn btn-sm btn-outline-success fw-bold"><i class="fab fa-whatsapp me-1"></i> Book Traveller</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+<!-- Services Section -->
     <section class="py-5 bg-white">
         <div class="container">
             <div class="text-center mb-5">
@@ -470,7 +607,7 @@
         </div>
     </section>
 
-    <!-- Popular Routes Fare Rate Table -->
+    <!-- Popular Routes Rate Table -->
     <section class="py-5 bg-white border-top">
         <div class="container">
             <div class="text-center mb-4">
@@ -543,14 +680,11 @@
                         <li class="mb-2"><a href="vehicle-services.html">Vehicle Services</a></li>
                         <li class="mb-2"><a href="online-service.html">Online & RTO Services</a></li>
                         <li class="mb-2"><a href="faq.html">FAQ</a></li>
-<li class="mb-2"><a href="local-seo-schema.html"></a></li>
+                        <li class="mb-2"><a href="kedarnath-tour-package.html">Kedarnath Yatra Taxi</a></li>
+                        <li class="mb-2"><a href="haridwar-taxi-service.html">Haridwar Taxi Service</a></li>
+                        <li class="mb-2"><a href="dehradun-taxi-service.html">Dehradun Taxi</a></li>
+                        <li class="mb-2"><a href="char-dham-yatra-package.html">Char Dham Yatra Package</a></li>
                     </ul>
-<li><a href="kedarnath-tour-package.html">Kedarnath Yatra Taxi</a></li>
-<li><a href="haridwar-taxi-service.html">Haridwar Taxi Service</a></li>
-<li><a href="dehradun-taxi-service.html">dehradun taxi</a></li>
-<li><a href="char-dham-yatra-package.html">Char Dham Yatra Package</a></li>
-
-
                 </div>
                 <div class="col-md-4">
                     <h5>Contact Info</h5>
@@ -572,7 +706,7 @@
         <a href="https://wa.me/919643586598?text=Hello%204D%20Tour%20%26%20Travel,%20I%20want%20to%20book%20a%20taxi." class="btn btn-success w-45 fw-bold btn-sm"><i class="fab fa-whatsapp me-1"></i> WhatsApp</a>
     </div>
 
-    <!-- Bootstrap JS Bundle for Carousel Animation -->
+    <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         function handleFullInquiry() {
@@ -588,3 +722,4 @@
     </script>
 </body>
 </html>
+            
