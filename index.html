@@ -72,31 +72,72 @@
         }
         .nav-link:hover, .nav-link.active { color: var(--brand-blue) !important; }
 
-        /* Sliding Hero Banner Section */
-        .hero-carousel .carousel-item {
-            padding: 30px 0 40px;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            min-height: 300px;
+        /* Hero Banner ki Height & Size Compact Karne ka CSS */
+.hero-carousel .carousel-item {
+    padding: 25px 0 !important;   /* Inner spacing kam kar di */
+    min-height: 280px !important; /* Banner height (pehle 520px) ab half kar di hai */
+}
+
+/* Heading aur Description text ka size chota */
+.hero-title {
+    font-size: 1.6rem !important;
+    margin-bottom: 10px !important;
+    color: #ffffff !important;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.95);
+}
+
+.hero-carousel p.lead {
+    font-size: 0.9rem !important;
+    margin-bottom: 15px !important;
+    color: #ffffff !important;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.95);
+}
+
+/* Fare Booking Form ko bhi Compact Size diya gaya hai */
+.booking-card {
+    padding: 16px !important;
+}
+
+.booking-card h3 {
+    font-size: 16px !important;
+}
+
+.booking-card .form-control-sm, 
+.booking-card .form-select-sm {
+    font-size: 12px !important;
+    padding: 4px 8px !important;
+}
+
         }
         
-        /* Hero Carousel Vehicle Background Images */
-        .hero-slide-1 {
-            background: linear-gradient(rgba(15, 23, 42, 0.80), rgba(15, 23, 42, 0.80)), url('images/pkg-03.jpg') center/cover no-repeat;
-        }
-        .hero-slide-2 {
-            background: linear-gradient(rgba(15, 23, 42, 0.80), rgba(15, 23, 42, 0.80)), url('images/pkg-02.jpg') center/cover no-repeat;
-        }
-        .hero-slide-3 {
-            background: linear-gradient(rgba(15, 23, 42, 0.80), rgba(15, 23, 42, 0.80)), url('images/pkg-01.jpg') center/cover no-repeat;
-        }
-        .hero-slide-4 {
-            background: linear-gradient(rgba(15, 23, 42, 0.80), rgba(15, 23, 42, 0.80)), url('images/pkg-04.jpg') center/cover no-repeat;
-        }
-        .hero-slide-5 {
-            background: linear-gradient(rgba(15, 23, 42, 0.80), rgba(15, 23, 42, 0.80)), url('images/pkg-05.jpg') center/cover no-repeat;
-        }
+     /* Original HD Photo CSS (Bina kisi dark overlay ke) */
+.hero-slide-1 {
+    background: url('images/Innova.jpg') center/cover no-repeat !important;
+}
+.hero-slide-2 {
+    background: url('images/urbania.jpg') center/cover no-repeat !important;
+}
+.hero-slide-3 {
+    background: url('images/tempotraveller.jpg') center/cover no-repeat !important;
+}
+.hero-slide-4 {
+    background: url('images/dzire.jpg') center/cover no-repeat !important;
+}
+.hero-slide-5 {
+    background: url('images/ertiga.jpg') center/cover no-repeat !important;
+}
+
+/* Bright Original Photo par Text saaf padhne ke liye Strong Shadow */
+.hero-title {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.95), -2px -2px 10px rgba(0, 0, 0, 0.95);
+}
+
+.hero-carousel p {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.95);
+}
+
 
         .hero-title {
             font-size: clamp(1.8rem, 4vw, 3.2rem);
