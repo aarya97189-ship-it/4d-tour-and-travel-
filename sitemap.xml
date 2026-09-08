@@ -1,63 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Main Homepage -->
-  <url>
-    <loc>https://4dtaxiservice.in/</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
+    <!-- Homepage -->
+    <url>
+        <loc>https://4dtaxiservice.in/</loc>
+        <lastmod>2026-09-09</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
 
-  <!-- Core Business Pages -->
-  <url>
-    <loc>https://4dtaxiservice.in/packages.html</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+    <!-- Core City Taxi Pages -->
+    <url>
+        <loc>https://4dtaxiservice.in/dehradun-taxi-service.html</loc>
+        <lastmod>2026-09-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
 
-  <url>
-    <loc>https://4dtaxiservice.in/fleet.html</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+    <url>
+        <loc>https://4dtaxiservice.in/haridwar-taxi-service.html</loc>
+        <lastmod>2026-09-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
 
-  <url>
-    <loc>https://4dtaxiservice.in/vehicle-services.html</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+    <!-- Tour Package Pages -->
+    <url>
+        <loc>https://4dtaxiservice.in/kedarnath-tour-package.html</loc>
+        <lastmod>2026-09-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
 
-  <url>
-    <loc>https://4dtaxiservice.in/online-service.html</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+    <url>
+        <loc>https://4dtaxiservice.in/char-dham-yatra-package.html</loc>
+        <lastmod>2026-09-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
 
-  <url>
-    <loc>https://4dtaxiservice.in/faq.html</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+    <!-- Main Website Pages -->
+    <url>
+        <loc>https://4dtaxiservice.in/packages.html</loc>
+        <lastmod>2026-09-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <!-- SEO & Additional Content Pages -->
-  <url>
-    <loc>https://4dtaxiservice.in/bharat-taxi.html</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
+    <url>
+        <loc>https://4dtaxiservice.in/fleet.html</loc>
+        <lastmod>2026-09-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <url>
-    <loc>https://4dtaxiservice.in/seo-content.html</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+    <url>
+        <loc>https://4dtaxiservice.in/vehicle-services.html</loc>
+        <lastmod>2026-09-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://4dtaxiservice.in/faq.html</loc>
+        <lastmod>2026-09-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
 
 </urlset>
